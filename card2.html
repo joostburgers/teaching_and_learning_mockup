@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Webpage Example</title>
+    <style>
+
+        .section {
+            max-width: 85%;
+            margin: 20px auto;
+            background-color: #f7f7f7;
+           
+        }
+        .collapsible {
+            background-color: #f9f9f9;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+            .active, .collapsible:hover {
+                background-color: #ddd;
+            }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+        }
+
+        .info {
+            position: relative;
+            text-align: center;
+            color: white;
+            max-width:300px;
+            margin-left:30%;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .story {
+            font-weight: bold;
+        }
+
+        .glance-box{
+            padding:20px;
+            border:1px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="glance-box">
+        <div class="info">
+            <img src="background2.png" alt="Card 1 Image" width="300px">
+            <div class="centered">
+                <h1>Barn Burning and Archives</h1>
+            </div>
+        </div>
+        <p class="story">Text: A Rose for Emily</p>
+        <p>Description: A brief description of the lesson plan.</p>
+        <p>Modality: In-person</p>
+        </div>
+        <button class="collapsible">For Teachers</button>
+        <div class="content">
+            <ul>
+                <li><strong id="piloted-in">Piloted in:</strong> Example Institution</li>
+                <li><strong id="modality">Modality:</strong> Online Synchronous</li>
+                <li><strong id="learning-objective">Learning Objective:</strong> Example Learning Objective</li>
+                <li><strong id="common-core">Common Core:</strong> Example Common Core Standard</li>
+                <li><strong id="creator">Creator:</strong> John Doe</li>
+                <li><strong id="institution">Institution:</strong> Example University</li>
+                <li><strong id="notes">Notes:</strong> Additional notes or comments</li>
+            </ul>
+        </div>
+
+        <button class="collapsible">Lesson</button>
+        <div class="content">
+            <h2 id="activity1">Introduction</></h2>
+            <p>Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2 id="materials">Materials</h2>
+            <p>Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2 id="activities">Activities</h2>
+            <p>Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2 id="assessment">Assessment</h2>
+            <p>Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2 id="additional-resources">Additional Resources</h2>
+            <p>Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
+</body>
+</html>
