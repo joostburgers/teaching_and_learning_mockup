@@ -1,0 +1,367 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Faulkner Lesson Plans</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(94%, 97%, 100%, 0.60);
+            font-size: 200%;
+        }
+        /* Container Styles */
+        .container {
+            display: flex;
+        }
+
+        /* Facet Styles */
+        .facet {
+            flex: 20%;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+
+            .facet h2 {
+                margin-top: 0;
+            }
+
+            .facet .filter-group {
+                margin-bottom: 10px;
+            }
+
+                .facet .filter-group label {
+                    font-weight: bold;
+                }
+
+        /* Card Gallery Styles */
+        .card-gallery {
+            flex: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5%;
+            
+            padding: 5% 20px;
+            
+        }
+
+        .card {
+            flex-basis: calc(50% - 10%);
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin:20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .card img {
+                width: 300px;
+                height: auto;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+
+            .card h3 {
+                margin-top: 10px;
+                font-size: 16px;
+            }
+
+            .card p {
+                margin-bottom: 10px;
+            }
+
+            .card .info {
+                position: relative;
+                text-align: center;
+                color: darkred;
+            }
+
+                .card .info p {
+                    margin-right: 10px;
+                }
+
+        /* Clearfix */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .facet {
+                flex: 100%;
+            }
+
+            .card {
+                flex-basis: 100%;
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="family.css">
+
+</head>
+
+
+
+
+<body>
+
+    <div id="page_header">
+        <div id="header_logo"><a class="logo" href="http://faulkner.iath.virginia.edu/"><span class="digital">DIGITAL</span> Yoknapatawpha</a> · Teaching &amp; Learning</div>
+        <div id="main-menu">
+            <ul id="main-menu-links">
+                <li>
+                    <a href="http://faulkner.iath.virginia.edu/family/index-about.php">About</a>
+                    <ul>
+                        <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/credits.php">Credits</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/dedication" target="_blank">Dedication</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-bibliography" target="_blank">Bibliography</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/dysocialmedia.php">DY on Social Media</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-articles-presentations" target="_blank">Re-Presenting DY</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/videos-2016demos.php">2016 Demos</a></li>
+                    </ul>
+                </li>
+                <li class="bullet-link">
+                    <a href="http://faulkner.iath.virginia.edu/family/index-search.php">Search</a>
+                    <ul>
+                        <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/events/">Events</a></li>
+                        <li>
+                            <span class="nav-blank">Characters</span>
+                            <ul>
+                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/characters/">By Text</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters/">Cumulative</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="nav-blank">Locations</span>
+                            <ul>
+                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/locations/">By Text</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations/">Cumulative</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bullet-link">
+                    <a href="http://faulkner.iath.virginia.edu/family/index-visualizations.php">Visualizations</a>
+                    <ul>
+                        <li class="first-item">
+                            <span class="nav-blank">Location-Character</span>
+                            <ul>
+                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/characters-force.html">Force Directed</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/characters-bipart.html">Bipartite</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://faulkner.iath.virginia.edu/char-char-force.html">Character-Character</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/characters-graph.html">Character-Event</a></li>
+                        <li>
+                            <span class="nav-blank">Heatmaps</span>
+                            <ul>
+                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/heatmaps/spatial_heatmaps.php">Spatial</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/heatmaps/temporal_heatmaps.php">Temporal</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="nav-blank">Photographs</span>
+                            <ul>
+                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/photograph_locations.php">by Location</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/photograph_repositories.php">by Repository</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://faulkner.iath.virginia.edu/narrativeanalysis.html" target="_blank">Narrative Analysis</a></li>
+                    </ul>
+                </li>
+                <li class="bullet-link">
+                    <a href="http://faulkner.iath.virginia.edu/family/index-commentaries.php">Commentaries</a>
+                    <ul>
+                        <li class="first-item"><a href="http://faulkner.iath.virginia.edu/media/resources/DISPLAYS/FaulknerMapsHP.html" target="_blank">Faulkner &amp; Maps</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/YokCemeteries.html">Cemeteries</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/">Genealogies</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/racial_demography/">Race &amp; Place</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/aa_sources.php">Analyzing <em>Absalom, Absalom!</em></a></li>
+                    </ul>
+                </li>
+                <li class="bullet-link">
+                    <a href="http://faulkner.iath.virginia.edu/family/index-teaching_and_learning.php">Teaching &amp; Learning</a>
+                    <ul>
+                        <li class="first-item">
+                            <span class="nav-blank">Resources by Text</span>
+                            <ul>
+                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/resources-re.php">"A Rose for Emily"</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/resources-ld.php">As I Lay Dying</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/resources-sf.php">The Sound and the Fury</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/resources-aa.php">Absalom, Absalom!</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/resources-ds.php">"Dry September"</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/videos-teaching_and_learning.php">Videos</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/pedagogyarticles" target="_blank">Articles</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/tlworksheethomepage" target="_blank">Worksheets</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/swhomepage" target="_blank">Student Work</a></li>
+                    </ul>
+                </li>
+                <li class="bullet-link">
+                    <a href="http://faulkner.iath.virginia.edu/family/index-indexes.php">Indexes</a>
+                    <ul>
+                        <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters.php">Cumulative Characters</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations.php">Cumulative Locations</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/recurring_events.php">Recurring Events</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmssetc" target="_blank">Manuscripts</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmagazineillustrations" target="_blank">Illustrations</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofaudioclips" target="_blank">Audio Clips</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/contributors.php">Scholarly Collaborators</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/videos-index.php">DY Videos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="facet">
+            <h2>Filter By</h2>
+
+            <div class="filter-group">
+                <label for="modality">Modality:</label>
+                <div>
+                    <input type="checkbox" id="in-person" class="filter" value="in-person">
+                    <label for="in-person">In-person</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="online-synchronous" class="filter" value="online-synchronous">
+                    <label for="online-synchronous">Online Synchronous</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="online-asynchronous" class="filter" value="online-asynchronous">
+                    <label for="online-asynchronous">Online Asynchronous</label>
+                </div>
+            </div>
+       
+
+
+        <div class="filter-group">
+            <label for="story">Story:</label>
+            <select id="story" class="filter" multiple>
+                <option value="">All</option>
+                <option value="A Rose for Emily">A Rose for Emily</option>
+                <option value="Barn Burning">Barn Burning</option>
+                <option value="Elly">Elly</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="length">Length:</label>
+            <select id="length" class="filter">
+                <option value="">All</option>
+                <option value="Activity">Activity</option>
+                <option value="Lesson">Lesson</option>
+                <option value="Project">Project</option>
+            </select>
+        </div>
+    </div>
+
+        <div class="card-gallery">
+            <div class="card">
+                <a href="card1.html">
+
+                    <div class="info">
+                        <img src="background1.png" alt="Card 1 Image">
+                        <div class="centered"><h1>Using a Rose for Emily with a Tool</h1></div>
+                    </div>
+                    <p class="story">Text: A Rose for Emily</p>
+                    <p>Description: A brief description of the lesson plan.</p>
+                    <p>Modality: In-person</p>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="card1.html">
+
+                    <div class="info">
+                        <img src="background1.png" alt="Card 1 Image">
+                        <div class="centered"><h1>Fun with Bipartite Graphs!</h1></div>
+                    </div>
+                    <p class="story">Text: Multiple</p>
+                    <p>Description: A brief description of the lesson plan.</p>
+                    <p>Modality: Synchronous Online</p>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="card2.html">
+
+                    <div class="info">
+                        <img src="background2.png" alt="Card 1 Image">
+                        <div class="centered"><h1>Barn Burning and Archives</h1></div>
+                    </div>
+                    <p class="story">Text: Barn Burning</p>
+                    <p>Description: A brief description of the lesson plan.</p>
+                    <p>Modality: Asynchronous</p>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="card1.html">
+
+                    <div class="info">
+                        <img src="background3.png" alt="Card 1 Image">
+                        <div class="centered"><h1>Elly and Networks</h1></div>
+                    </div>
+                    <p class="story">Text: Elly</p>
+                    <p>Description: A brief description of the lesson plan.</p>
+                    <p>Modality: Asynchronous Online</p>
+                </a>
+            </div>
+
+            
+</div>
+
+
+
+
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Faceted Search
+        $(document).ready(function () {
+            $(".filter").change(filterCards);
+
+            function filterCards() {
+                var modality = $("#modality").val();
+                var story = $("#story").val();
+                var length = $("#length").val();
+
+                $(".card").each(function () {
+                    var cardModality = $(this).find("p:nth-child(4)").text().trim().split(": ")[1];
+                    var cardStory = $(this).find(".story").text().toLowerCase();
+                    var cardLength = $(this).find("p:nth-child(3)").text().trim().split(": ")[1];
+
+                    var showCard =
+                        (modality === "" || cardModality === modality) &&
+                        (story === "" || cardStory === story) &&
+                        (length === "" || cardLength === length);
+
+                    $(this).toggle(showCard);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
