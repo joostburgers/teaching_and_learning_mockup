@@ -1,81 +1,57 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Faulkner Lesson Plans</title>
+    <title>Faceted Search</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="family.css">
     <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(94%, 97%, 100%, 0.60);
-            font-size: 200%;
-        }
-        /* Container Styles */
-        .container {
-            display: flex;
-        }
 
-        /* Facet Styles */
-        .facet {
-            flex: 20%;
-            background-color: #f7f7f7;
-            padding: 20px;
-        }
+        .facet-outline{
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding:10px;
+        margin-bottom:10px;
+        margin-left:5%;
 
-            .facet h2 {
-                margin-top: 0;
-            }
-
-            .facet .filter-group {
-                margin-bottom: 10px;
-            }
-
-                .facet .filter-group label {
-                    font-weight: bold;
-                }
-
-        /* Card Gallery Styles */
-        .card-gallery {
-            flex: 80%;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5%;
-            
-            padding: 5% 20px;
-            
         }
 
         .card {
+            transition: box-shadow 0.3s;
             flex-basis: calc(50% - 10%);
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            margin:20px;
+            margin: 20px;
             display: flex;
             flex-direction: column;
         }
 
+            .card:hover {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            }
+
             .card img {
-                width: 300px;
+                max-width: 50%;
                 height: auto;
                 object-fit: cover;
                 border-radius: 5px;
             }
 
-            .card h3 {
+            .card h5 {
                 margin-top: 10px;
-                font-size: 16px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(94%, 97%, 100%, 0.60);
+                font-size: 150%;
             }
+
+
 
             .card p {
                 margin-bottom: 10px;
+                color: #1a1a1a;
             }
 
             .card .info {
@@ -87,39 +63,9 @@
                 .card .info p {
                     margin-right: 10px;
                 }
-
-        /* Clearfix */
-        .clearfix::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Media Queries */
-        @media screen and (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .facet {
-                flex: 100%;
-            }
-
-            .card {
-                flex-basis: 100%;
-                margin-bottom: 40px;
-            }
-        }
     </style>
-    <link rel="stylesheet" href="family.css">
-
 </head>
-
-
-
-
 <body>
-
     <div id="page_header">
         <div id="header_logo"><a class="logo" href="http://faulkner.iath.virginia.edu/"><span class="digital">DIGITAL</span> Yoknapatawpha</a> · Teaching &amp; Learning</div>
         <div id="main-menu">
@@ -230,155 +176,151 @@
         </div>
     </div>
 
-    <div class="container"><center><h2>Some introductory text as to how these lessons were created</h2></center></div>
-
-    <div class="container">
-        
-        
-        <div class="facet">
-            <h2>Filter By</h2>
-
-            <div class="filter-group">
-                <label for="modality">Modality:</label>
-                <div>
-                    <input type="checkbox" id="in-person" class="filter" value="in-person">
-                    <label for="in-person">In-person</label>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-med-auto">
+                <h2>Filters</h2>
+                <div class="facet-outline">
+                    <h3>Story</h3>
+                    <div id="story-filters">
+                        <!-- Story filters will be populated dynamically -->
+                    </div>
                 </div>
-                <div>
-                    <input type="checkbox" id="online-synchronous" class="filter" value="online-synchronous">
-                    <label for="online-synchronous">Online Synchronous</label>
+                <div class="facet-outline">
+                <h3>Modality</h3>
+                <div id="modality-filters">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="in-person" value="In-Person" checked>
+                        <label class="form-check-label" for="in-person">
+                            In-Person
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="online-sync" value="Online Synchronous" checked>
+                        <label class="form-check-label" for="online-sync">
+                            Online Synchronous
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="online-async" value="Online Asynchronous" checked>
+                        <label class="form-check-label" for="online-async">
+                            Online Asynchronous
+                        </label>
+                    </div>
                 </div>
-                <div>
-                    <input type="checkbox" id="online-asynchronous" class="filter" value="online-asynchronous">
-                    <label for="online-asynchronous">Online Asynchronous</label>
                 </div>
             </div>
-       
-            <!--I need a function that collects the name of each story title on each card and populates the filter group
--->
 
-        <div class="filter-group">
-            <label for="story">Story:</label>
-            <select id="story" class="filter" multiple>
-                <option value="">All</option>
-                <option value="A Rose for Emily">A Rose for Emily</option>
-                <option value="Barn Burning">Barn Burning</option>
-                <option value="Elly">Elly</option>
-            </select>
-        </div>
-
-        <div class="filter-group">
-            <label for="length">Length:</label>
-            <select id="length" class="filter">
-                <option value="">All</option>
-                <option value="Activity">Activity</option>
-                <option value="Lesson">Lesson</option>
-                <option value="Project">Project</option>
-            </select>
-        </div>
-    </div>
-
-        <div class="card-gallery">
-            <div class="card">
-                <a href="card1.html">
-
-                    <div class="info">
-                        <img src="background1.png" alt="Card 1 Image">
-                        <div class="centered"><h1>Using a Rose for Emily with a Tool</h1></div>
-                    </div>
-                    <p class="story">Text: A Rose for Emily</p>
-                    <p>Description: A brief description of the lesson plan.</p>
-                    <p>Modality: In-person</p>
-                </a>
+            <div class="col-6">
+                <h2>Information Cards</h2>
+                <div id="card-container" class="row">
+                    <!-- Information cards will be populated dynamically -->
+                </div>
             </div>
-
-            <div class="card">
-                <a href="card1.html">
-
-                    <div class="info">
-                        <img src="background1.png" alt="Card 1 Image">
-                        <div class="centered"><h1>Fun with Bipartite Graphs!</h1></div>
-                    </div>
-                    <p class="story">Text: Multiple</p>
-                    <p>Description: A brief description of the lesson plan.</p>
-                    <p>Modality: Synchronous Online</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="card2.html">
-
-                    <div class="info">
-                        <img src="background2.png" alt="Card 1 Image">
-                        <div class="centered"><h1>Barn Burning and Archives</h1></div>
-                    </div>
-                    <p class="story">Text: Barn Burning</p>
-                    <p>Description: A brief description of the lesson plan.</p>
-                    <p>Modality: Asynchronous</p>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="card1.html">
-
-                    <div class="info">
-                        <img src="background3.png" alt="Card 1 Image">
-                        <div class="centered"><h1>Elly and Networks</h1></div>
-                    </div>
-                    <p class="story">Text: Elly</p>
-                    <p>Description: A brief description of the lesson plan.</p>
-                    <p>Modality: Asynchronous Online</p>
-                </a>
-            </div>
-
-            
-</div>
-
-
-
-
-
-            <div class="clearfix"></div>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // Faceted Search
-        $(document).ready(function () {
+        // Sample data for information cards
+        var cards = [
+            {
+                title: "Faulkner's Racial Revisions in A Rose for Emily",
+                image: "background2.png",
+                story: "A Rose for Emily",
+                description: "Students will look through archival documents that show how Faulkner wrote an entire backstory for Tobe in earlier versions of the story",
+                modality: "In-Person"
+            },
+            {
+                title: "Analyzing Social Networks in Dry September",
+                image: "background3.png",
+                story: "Dry September",
+                description: "Students will use social network analysis to understand how race and gender are interdependent and lead to the story's volatile conclusion",
+                modality: "Online Asynchronous"
 
-            var storyFilter = $('.story');
-            var stories = storyFilter.map(function () {
-                return $(this).val();
-            }).get();
+            },
+            {
+                title: "Racial Passing in Elly and Nella Larsen",
+                story: "Elly",
+                image: "background4.png",
+                description: "This lesson explores how Faulkner and Nella Larsen both wrote Elly and Passing at the same time and treated racial passing from radically different perspectives",
+                modality: "Online Synchronous"
+            },
+            // Add more cards here...
+        ];
+
+        // Function to populate the story filters based on available stories in the cards
+        function populateStoryFilters() {
+            var stories = [];
+
+            $.each(cards, function (index, card) {
+                if (stories.indexOf(card.story) === -1) {
+                    stories.push(card.story);
+                }
+            });
+
+            var storyFilters = $("#story-filters");
+            storyFilters.empty();
 
             $.each(stories, function (index, story) {
-                storyFilter.eq(index).next().text(story);
+                var checkbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='" + story + "'checked><label class='form-check-label'>" + story + "</label></div>");
+                storyFilters.append(checkbox);
             });
-        });
+        }
+
+        // Function to filter and display the information cards based on selected filters
+        function filterCards() {
+            var selectedStories = [];
+            var selectedModalities = [];
+
+            // Get selected story filters
+            $("#story-filters input:checked").each(function () {
+                selectedStories.push($(this).val());
+            });
+
+            // Get selected modality filters
+            $("#modality-filters input:checked").each(function () {
+                selectedModalities.push($(this).val());
+            });
+
+            // Filter cards based on selected filters
+            var filteredCards = [];
+
+            $.each(cards, function (index, card) {
+                if (
+                    (selectedStories.length === 0 || selectedStories.indexOf(card.story) !== -1) &&
+                    (selectedModalities.length === 0 || selectedModalities.indexOf(card.modality) !== -1)
+                ) {
+                    filteredCards.push(card);
+                }
+            });
+
+            // Display filtered cards
+            var cardContainer = $("#card-container");
+            cardContainer.empty();
+
+            $.each(filteredCards, function (index, card) {
+                var cardHtml = $("<div class='col-md-6'><a href='" + getCardPageURL(card.title) + "'><div class='card'><div class = 'info'><img src=" + card.image + " class='card-img-top'><h5 class='card-title'>" + card.title + "</h5></div><div class='card-body'><p class='card-text'>Story: " + card.story + "</p><p class='card-text'>Description: " + card.description + "</p><p class='card-text'>Modality: " + card.modality + "</p></div></div></a></div>");
+                cardContainer.append(cardHtml);
+            });
+        }
+
+        // Function to generate the URL for the card page
+        function getCardPageURL(title) {
+            // Replace spaces and special characters in the title with dashes
+            var formattedTitle = title.replace(/[^a-zA-Z0-9 ]/g, "").replace(/\s+/g, "-").toLowerCase();
+            return formattedTitle + ".html"; // Assuming the card pages have .html extensions
+        }
 
 
+        // Initialize the page
+        $(document).ready(function () {
+            populateStoryFilters();
+            filterCards();
 
-            $(".filter").change(filterCards);
-
-            function filterCards() {
-                var modality = $("#modality").val();
-                var story = $("#story").val();
-                var length = $("#length").val();
-
-                $(".card").each(function () {
-                    var cardModality = $(this).find("p:nth-child(4)").text().trim().split(": ")[1];
-                    var cardStory = $(this).find(".story").text().toLowerCase();
-                    var cardLength = $(this).find("p:nth-child(3)").text().trim().split(": ")[1];
-
-                    var showCard =
-                        (modality === "" || cardModality === modality) &&
-                        (story === "" || cardStory === story) &&
-                        (length === "" || cardLength === length);
-
-                    $(this).toggle(showCard);
-                });
-            }
+            // Handle filter changes
+            $("#story-filters input").change(filterCards);
+            $("#modality-filters input").change(filterCards);
         });
     </script>
 </body>

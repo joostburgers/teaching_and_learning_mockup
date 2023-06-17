@@ -1,123 +1,33 @@
 ﻿<!DOCTYPE html>
-<html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Faulkner Lesson Plans</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(94%, 97%, 100%, 0.60);
-            font-size: 200%;
-        }
-        /* Container Styles */
-        .container {
-            display: flex;
-        }
+    <meta charset="utf-8" />
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-        /* Facet Styles */
-        .facet {
-            flex: 20%;
-            background-color: #f7f7f7;
-            padding: 20px;
-        }
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-            .facet h2 {
-                margin-top: 0;
-            }
-
-            .facet .filter-group {
-                margin-bottom: 10px;
-            }
-
-                .facet .filter-group label {
-                    font-weight: bold;
-                }
-
-        /* Card Gallery Styles */
-        .card-gallery {
-            flex: 80%;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5%;
-            
-            padding: 5% 20px;
-            
-        }
-
-        .card {
-            flex-basis: calc(50% - 10%);
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin:20px;
-            display: flex;
-            flex-direction: column;
-        }
-
-            .card img {
-                width: 300px;
-                height: auto;
-                object-fit: cover;
-                border-radius: 5px;
-            }
-
-            .card h3 {
-                margin-top: 10px;
-                font-size: 16px;
-            }
-
-            .card p {
-                margin-bottom: 10px;
-            }
-
-            .card .info {
-                position: relative;
-                text-align: center;
-                color: darkred;
-            }
-
-                .card .info p {
-                    margin-right: 10px;
-                }
-
-        /* Clearfix */
-        .clearfix::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Media Queries */
-        @media screen and (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .facet {
-                flex: 100%;
-            }
-
-            .card {
-                flex-basis: 100%;
-                margin-bottom: 40px;
-            }
-        }
-    </style>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="family.css">
 
+    <style>
+   /* .card {
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .card.show {
+    opacity: 1;
+    transform: translateY(0);
+    }*/
+    </style>
 </head>
-
-
-
-
 <body>
 
     <div id="page_header">
@@ -230,156 +140,177 @@
         </div>
     </div>
 
-    <div class="container"><center><h2>Some introductory text as to how these lessons were created</h2></center></div>
 
     <div class="container">
-        
-        
-        <div class="facet">
-            <h2>Filter By</h2>
-
-            <div class="filter-group">
-                <label for="modality">Modality:</label>
-                <div>
-                    <input type="checkbox" id="in-person" class="filter" value="in-person">
-                    <label for="in-person">In-person</label>
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Filters:</h3>
+                <div id="story-facet">
+                    <h4>Story:</h4>
                 </div>
-                <div>
-                    <input type="checkbox" id="online-synchronous" class="filter" value="online-synchronous">
-                    <label for="online-synchronous">Online Synchronous</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="online-asynchronous" class="filter" value="online-asynchronous">
-                    <label for="online-asynchronous">Online Asynchronous</label>
+                <div id="modality-facet">
+                    <h4>Modality:</h4>
+                    <label><input type="checkbox" value="in-person"> In-Person</label>
+                    <label><input type="checkbox" value="online-synchronous"> Online Synchronous</label>
+                    <label><input type="checkbox" value="online-asynchronous"> Online Asynchronous</label>
                 </div>
             </div>
-       
-            <!--I need a function that collects the name of each story title on each card and populates the filter group
--->
+            <div class="col-md-9">
+                <div id="gallery" class="row">
 
-        <div class="filter-group">
-            <label for="story">Story:</label>
-            <select id="story" class="filter" multiple>
-                <option value="">All</option>
-                <option value="A Rose for Emily">A Rose for Emily</option>
-                <option value="Barn Burning">Barn Burning</option>
-                <option value="Elly">Elly</option>
-            </select>
-        </div>
-
-        <div class="filter-group">
-            <label for="length">Length:</label>
-            <select id="length" class="filter">
-                <option value="">All</option>
-                <option value="Activity">Activity</option>
-                <option value="Lesson">Lesson</option>
-                <option value="Project">Project</option>
-            </select>
-        </div>
-    </div>
-
-        <div class="card-gallery">
-            <div class="card">
-                <a href="card1.html">
-
-                    <div class="info">
-                        <img src="background1.png" alt="Card 1 Image">
-                        <div class="centered"><h1>Using a Rose for Emily with a Tool</h1></div>
+                    <div class="card" data-story="story1" data-modality="in-person">
+                        <div class="image">
+                            <img src="card1.jpg" alt="Card 1">
+                            <h2 class="title">Title 1</h2>
+                        </div>
+                        <div class="details">
+                            <p class="story">"A Rose for Emily"</p>
+                            <p class="description">Description 1</p>
+                            <p class="modality">Modality: In-Person</p>
+                        </div>
                     </div>
-                    <p class="story">Text: A Rose for Emily</p>
-                    <p>Description: A brief description of the lesson plan.</p>
-                    <p>Modality: In-person</p>
-                </a>
-            </div>
 
-            <div class="card">
-                <a href="card1.html">
-
-                    <div class="info">
-                        <img src="background1.png" alt="Card 1 Image">
-                        <div class="centered"><h1>Fun with Bipartite Graphs!</h1></div>
+                    <div class="card" data-story="story2" data-modality="in-person">
+                        <div class="image">
+                            <img src="card1.jpg" alt="Card 1">
+                            <h2 class="title">Title 1</h2>
+                        </div>
+                        <div class="details">
+                            <p class="story">"Barn Burning"</p>
+                            <p class="description">Description 1</p>
+                            <p class="modality">Modality: In-Person</p>
+                        </div>
                     </div>
-                    <p class="story">Text: Multiple</p>
-                    <p>Description: A brief description of the lesson plan.</p>
-                    <p>Modality: Synchronous Online</p>
-                </a>
-            </div>
 
-            <div class="card">
-                <a href="card2.html">
 
-                    <div class="info">
-                        <img src="background2.png" alt="Card 1 Image">
-                        <div class="centered"><h1>Barn Burning and Archives</h1></div>
+                    <div class="card" data-story="story1" data-modality="in-person">
+                        <div class="image">
+                            <img src="card1.jpg" alt="Card 1">
+                            <h2 class="title">Title 1</h2>
+                        </div>
+                        <div class="details">
+                            <p class="story"><i>As I Lay Dying</i></p>
+                            <p class="description">Description 1</p>
+                            <p class="modality">Modality: In-Person</p>
+                        </div>
                     </div>
-                    <p class="story">Text: Barn Burning</p>
-                    <p>Description: A brief description of the lesson plan.</p>
-                    <p>Modality: Asynchronous</p>
-                </a>
-            </div>
 
-            <div class="card">
-                <a href="card1.html">
 
-                    <div class="info">
-                        <img src="background3.png" alt="Card 1 Image">
-                        <div class="centered"><h1>Elly and Networks</h1></div>
+                    <div class="card" data-story="story1" data-modality="in-person">
+                        <div class="image">
+                            <img src="card1.jpg" alt="Card 1">
+                            <h2 class="title">Title 1</h2>
+                        </div>
+                        <div class="details">
+                            <p class="story">As I Lay Dying</p>
+                            <p class="description">Description 1</p>
+                            <p class="modality">Modality: Online Synchronous</p>
+                        </div>
                     </div>
-                    <p class="story">Text: Elly</p>
-                    <p>Description: A brief description of the lesson plan.</p>
-                    <p>Modality: Asynchronous Online</p>
-                </a>
-            </div>
 
-            
-</div>
+                    <div class="card" data-story="story1" data-modality="in-person">
+                        <div class="image">
+                            <img src="card1.jpg" alt="Card 1">
+                            <h2 class="title">Title 1</h2>
+                        </div>
+                        <div class="details">
+                            <p class="story">Story 1</p>
+                            <p class="description">Description 1</p>
+                            <p class="modality">Modality: Online Asynchronous</p>
+                        </div>
+                    </div>
 
 
-
-
-
-            <div class="clearfix"></div>
+                </div>
         </div>
     </div>
-
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // Faceted Search
         $(document).ready(function () {
+            var stories = [];
 
-            var storyFilter = $('.story');
-            var stories = storyFilter.map(function () {
-                return $(this).val();
-            }).get();
-
-            $.each(stories, function (index, story) {
-                storyFilter.eq(index).next().text(story);
+            // Extract available story fields from the cards
+            $('.card').each(function () {
+                var story = $(this).data('story');
+                if (stories.indexOf(story) === -1) {
+                    stories.push(story);
+                }
             });
-        });
 
+            // Populate the story facet with checkboxes
+            var storyFacet = $('#story-facet');
+            $.each(stories, function (index, story) {
+                var checkbox = $('<label><input type="checkbox" value="' + story + '"> ' + story + '</label>');
+                storyFacet.append(checkbox);
+            });
 
+            $('input[type="checkbox"]').change(function () {
+                var selectedStory = [];
+                var selectedModality = [];
 
-            $(".filter").change(filterCards);
-
-            function filterCards() {
-                var modality = $("#modality").val();
-                var story = $("#story").val();
-                var length = $("#length").val();
-
-                $(".card").each(function () {
-                    var cardModality = $(this).find("p:nth-child(4)").text().trim().split(": ")[1];
-                    var cardStory = $(this).find(".story").text().toLowerCase();
-                    var cardLength = $(this).find("p:nth-child(3)").text().trim().split(": ")[1];
-
-                    var showCard =
-                        (modality === "" || cardModality === modality) &&
-                        (story === "" || cardStory === story) &&
-                        (length === "" || cardLength === length);
-
-                    $(this).toggle(showCard);
+                // Get the selected story filters
+                $('#story-facet input:checked').each(function () {
+                    selectedStory.push($(this).val());
                 });
-            }
+
+                // Get the selected modality filters
+                $('#modality-facet input:checked').each(function () {
+                    selectedModality.push($(this).val());
+                });
+
+                // Filter the cards based on the selected filters
+                $('.card').each(function () {
+                    var story = $(this).data('story');
+                    var modality = $(this).data('modality');
+
+                    // Hide the card if it doesn't match the selected filters
+                    if ((selectedStory.length > 0 && selectedStory.indexOf(story) === -1) ||
+                        (selectedModality.length > 0 && selectedModality.indexOf(modality) === -1)) {
+                        $(this).hide();
+                    } else {
+                        $(this).show();
+                    }
+                });
+
+                // Disable checkboxes for unavailable story options
+                $('#story-facet input').each(function () {
+                    var storyOption = $(this).val();
+                    if (selectedStory.length > 0 && selectedStory.indexOf(storyOption) === -1) {
+                        $(this).prop('disabled', true);
+                    } else {
+                        $(this).prop('disabled', false);
+                    }
+                });
+            });
+        
+
+
+        if (selectedModality.length > 0) {
+            $('#story-facet input').each(function () {
+                var story = $(this).val();
+                var isAvailable = false;
+                $('.card').each(function () {
+                    var cardStory = $(this).data('story');
+                    var cardModality = $(this).data('modality');
+                    if (selectedModality.indexOf(cardModality) !== -1 && cardStory === story) {
+                        isAvailable = true;
+                        return false; // Exit the loop if the story is available
+                    }
+                });
+                $(this).prop('disabled', !isAvailable);
+            });
+        } else {
+            // Enable all story checkboxes if no modality filters are selected
+            $('#story-facet input').prop('disabled', false);
+        }
         });
     </script>
+
+
+
 </body>
+
+
+
 </html>
