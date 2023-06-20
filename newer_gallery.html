@@ -11,9 +11,12 @@
         border-radius: 5px;
         padding:10px;
         margin-bottom:10px;
-        margin-left:5%;
+        margin-left:15%;
+        margin-top:20px;
 
         }
+
+        
 
         .card {
             transition: box-shadow 0.3s;
@@ -31,7 +34,7 @@
             }
 
             .card img {
-                max-width: 50%;
+                max-width: 75%;
                 height: auto;
                 object-fit: cover;
                 border-radius: 5px;
@@ -44,7 +47,7 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 background-color: rgba(94%, 97%, 100%, 0.60);
-                font-size: 150%;
+                font-size: 125%;
             }
 
 
@@ -63,6 +66,10 @@
                 .card .info p {
                     margin-right: 10px;
                 }
+           .facet-title {
+           font-size: 110%;
+			font-weight: bold;
+            }
     </style>
 </head>
 <body>
@@ -177,48 +184,54 @@
     </div>
 
     <div class="container-fluid">
+    <div class="row">
+    <div class="col-5"></div>This is where the introductory text goes</div></div>
         <div class="row">
             <div class="col-med-auto">
-                <h2>Filters</h2>
+               
                 <div class="facet-outline">
-                    <h3>Story</h3>
+                    <div class="facet-title">Story</div>
                     <div id="story-filters">
                         <!-- Story filters will be populated dynamically -->
                     </div>
                 </div>
                 <div class="facet-outline">
-                <h3>Modality</h3>
-                <div id="modality-filters">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="in-person" value="In-Person" checked>
-                        <label class="form-check-label" for="in-person">
-                            In-Person
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="online-sync" value="Online Synchronous" checked>
-                        <label class="form-check-label" for="online-sync">
-                            Online Synchronous
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="online-async" value="Online Asynchronous" checked>
-                        <label class="form-check-label" for="online-async">
-                            Online Asynchronous
-                        </label>
+                    <div class="facet-title">Modality</div>
+                    <div id="modality-filters">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="in-person" value="In-Person" checked>
+                            <label class="form-check-label" for="in-person">
+                                In-Person
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="online-sync" value="Online Synchronous" checked>
+                            <label class="form-check-label" for="online-sync">
+                                Online Synchronous
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="online-async" value="Online Asynchronous" checked>
+                            <label class="form-check-label" for="online-async">
+                                Online Asynchronous
+                            </label>
+                        </div>
                     </div>
                 </div>
+                <div class="facet-outline">
+                    <div class="facet-title">Paired Author </div>
+                    <div id="author-filters">
+                    </div>
+                    </div>
+</div>
+                    <div class="col-6">
+                        
+                        <div id="card-container" class="row">
+                            <!-- Information cards will be populated dynamically -->
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-6">
-                <h2>Information Cards</h2>
-                <div id="card-container" class="row">
-                    <!-- Information cards will be populated dynamically -->
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -227,29 +240,42 @@
             {
                 title: "Faulkner's Racial Revisions in A Rose for Emily",
                 image: "background2.png",
-                story: "A Rose for Emily",
+                story: ["A Rose for Emily"],
                 description: "Students will look through archival documents that show how Faulkner wrote an entire backstory for Tobe in earlier versions of the story",
-                modality: "In-Person"
+                modality: "In-Person",
+                paired_author: null
             },
             {
                 title: "Analyzing Social Networks in Dry September",
                 image: "background3.png",
-                story: "Dry September",
+                story: ["Dry September"],
                 description: "Students will use social network analysis to understand how race and gender are interdependent and lead to the story's volatile conclusion",
-                modality: "Online Asynchronous"
+                modality: "Online Asynchronous",
+                paired_author:null
 
             },
             {
                 title: "Racial Passing in Elly and Nella Larsen",
-                story: "Elly",
+                story: ["Elly","Passing"], // Can have multiple stories
                 image: "background4.png",
                 description: "This lesson explores how Faulkner and Nella Larsen both wrote Elly and Passing at the same time and treated racial passing from radically different perspectives",
-                modality: "Online Synchronous"
+                modality: "Online Synchronous",
+                paired_author:"Nella Larsen"
             },
+            {
+				title: "'Barn Burning' and 'The Man Who Was Almost a Man': Sharecropping and Coming of Age in Mississippi",
+				story: ["Barn Burning", "The Man Who Was Almost A Man"], // Can have multiple stories
+				image: "background4.png",
+				description: "This lesson explores how Faulkner and Richard Wright portray coming of age",
+				modality: "Online Synchronous",
+				paired_author: "Richard Wright"
+
+            }
             // Add more cards here...
         ];
 
         // Function to populate the story filters based on available stories in the cards
+        // loop over each card, to get multiple stories for each card and add them to the storyFilters.
         function populateStoryFilters() {
             var stories = [];
 
@@ -257,53 +283,105 @@
                 if (stories.indexOf(card.story) === -1) {
                     stories.push(card.story);
                 }
+                //if there are multiple stories in the object then loop over them and add them to the stories array
+                
             });
-
+            console.log(stories);
+            // turn stories into one array of stories
+            stories = stories.flat();
+            console.log(stories)
             var storyFilters = $("#story-filters");
             storyFilters.empty();
 
+            
             $.each(stories, function (index, story) {
                 var checkbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='" + story + "'checked><label class='form-check-label'>" + story + "</label></div>");
                 storyFilters.append(checkbox);
             });
         }
 
+
+		function populateAuthorFilters() {
+			var authors = [];
+
+			$.each(cards, function (index, card) {
+				if (authors.indexOf(card.paired_author) === -1 && card.paired_author !== null) {
+					authors.push(card.paired_author);
+				}
+				//if there are multiple stories in the object then loop over them and add them to the stories array
+
+			});
+			
+			// turn stories into one array of stories
+			authors = authors.flat();
+			console.log(authors)
+			var authorFilters = $("#author-filters");
+			authorFilters.empty();
+
+
+			$.each(authors, function (index, author) {
+				var checkbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='" + author + "'checked><label class='form-check-label'>" + author + "</label></div>");
+				authorFilters.append(checkbox);
+			});
+		}
+
+
+
         // Function to filter and display the information cards based on selected filters
-        function filterCards() {
-            var selectedStories = [];
-            var selectedModalities = [];
+		function filterCards() {
+			var selectedStories = [];
+			var selectedModalities = [];
+            var selectedAuthors = [];
+			// Get selected story filters
+			$("#story-filters input:checked").each(function () {
+				selectedStories.push($(this).val());
+			});
 
-            // Get selected story filters
-            $("#story-filters input:checked").each(function () {
-                selectedStories.push($(this).val());
+			// Get selected modality filters
+			$("#modality-filters input:checked").each(function () {
+				selectedModalities.push($(this).val());
+			});
+
+			$("#author-filters input:checked").each(function () {
+				selectedAuthors.push($(this).val());
             });
+            console.log("selected authors " +selectedAuthors)
+			// Filter cards based on selected filters
+			var filteredCards = [];
 
-            // Get selected modality filters
-            $("#modality-filters input:checked").each(function () {
-                selectedModalities.push($(this).val());
-            });
+			$.each(cards, function (index, card) {
+				console.log(card.story);
+				var selected = false;
+				$.each(card.story, function (index, story) {
+					selectedStories.forEach(function (selectedStory) {
+						if (story.includes(selectedStory)) {
+							selected = true;
+						}
+					})
+				});
 
-            // Filter cards based on selected filters
-            var filteredCards = [];
-
-            $.each(cards, function (index, card) {
-                if (
-                    (selectedStories.length === 0 || selectedStories.indexOf(card.story) !== -1) &&
+				if (
+					(selected || selectedStories.length === 0) &&
                     (selectedModalities.length === 0 || selectedModalities.indexOf(card.modality) !== -1)
-                ) {
-                    filteredCards.push(card);
-                }
-            });
+                    &&
+                    (selectedAuthors.indexOf(card.paired_author) !== -1 || card.paired_author===null)
+				) {
+					filteredCards.push(card);
+				}
+			});
 
-            // Display filtered cards
-            var cardContainer = $("#card-container");
-            cardContainer.empty();
+			console.log(filteredCards);
 
-            $.each(filteredCards, function (index, card) {
-                var cardHtml = $("<div class='col-md-6'><a href='" + getCardPageURL(card.title) + "'><div class='card'><div class = 'info'><img src=" + card.image + " class='card-img-top'><h5 class='card-title'>" + card.title + "</h5></div><div class='card-body'><p class='card-text'>Story: " + card.story + "</p><p class='card-text'>Description: " + card.description + "</p><p class='card-text'>Modality: " + card.modality + "</p></div></div></a></div>");
-                cardContainer.append(cardHtml);
-            });
-        }
+			// Display filtered cards
+			var cardContainer = $("#card-container");
+			cardContainer.empty();
+
+			$.each(filteredCards, function (index, card) {
+				var cardHtml = $("<div class='col-md-6'><a href='" + getCardPageURL(card.title) + "'><div class='card'><div class = 'info'><img src=" + card.image + " class='card-img-top'><h5 class='card-title'>" + card.title + "</h5></div><div class='card-body'><p class='card-text'>" + ((card.story.length > 1) ? 'Stories: ' : 'Story: ') + card.story + "</p><p class='card-text'>Description: " + card.description + "</p><p class='card-text'>Modality: " + card.modality + "</p><p class='card-text'>" + ((card.paired_author !== null) ? 'Paired author: ' +card.paired_author : '') +"</p></div ></div ></a ></div > ");
+				cardContainer.append(cardHtml);
+			});
+		}
+
 
         // Function to generate the URL for the card page
         function getCardPageURL(title) {
@@ -316,11 +394,13 @@
         // Initialize the page
         $(document).ready(function () {
             populateStoryFilters();
+            populateAuthorFilters();
             filterCards();
 
             // Handle filter changes
             $("#story-filters input").change(filterCards);
             $("#modality-filters input").change(filterCards);
+            $("#author-filters input").change(filterCards);
         });
     </script>
 </body>
