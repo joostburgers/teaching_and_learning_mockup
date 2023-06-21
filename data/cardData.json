@@ -1,0 +1,37 @@
+[
+  {
+	"title": "Faulkner's Racial Revisions in A Rose for Emily",
+	"image": "background2.png",
+	"story": [ "A Rose for Emily" ],
+	"description": "Students will look through archival documents that show how Faulkner wrote an entire backstory for Tobe in earlier versions of the story",
+	"modality": "In-Person",
+	"paired_author": null
+  },
+  {
+	"title": "Analyzing Social Networks in Dry September",
+	"image": "background3.png",
+	"story": [ "Dry September" ],
+	"description": "Students will use social network analysis to understand how race and gender are interdependent and lead to the story's volatile conclusion",
+	"modality": "Online Asynchronous",
+	"paired_author": null
+
+  },
+  {
+	"title": "Racial Passing in Elly and Nella Larsen",
+	"story": [ "Elly", "Passing" ], // Can have multiple stories
+	"image": "background4.png",
+	"description": "This lesson explores how Faulkner and Nella Larsen both wrote Elly and Passing at the same time and treated racial passing from radically different perspectives",
+	"modality": "Online Synchronous",
+	"paired_author": "Nella Larsen"
+  },
+  {
+	"title": "'Barn Burning' and 'The Man Who Was Almost a Man': Sharecropping and Coming of Age in Mississippi",
+	"story": [ "Barn Burning", "The Man Who Was Almost A Man" ], // Can have multiple stories
+	"image": "background4.png",
+	"description": "This lesson explores how Faulkner and Richard Wright portray coming of age",
+	"modality": "Online Synchronous",
+	"paired_author": "Richard Wright"
+
+  }
+  // Add more cards here...
+];

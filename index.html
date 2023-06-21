@@ -23,10 +23,12 @@
             flex-basis: calc(50% - 10%);
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            padding: 5px;
             margin: 20px;
             display: flex;
             flex-direction: column;
+            width:325px;
+            min-height: 425px;
         }
 
             .card:hover {
@@ -41,7 +43,8 @@
             }
 
             .card h5 {
-                margin-top: 10px;
+                margin: 5px;
+                width:100%;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -225,7 +228,7 @@
                     </div>
                     </div>
 </div>
-                    <div class="col-6">
+                    <div class="col">
                         
                         <div id="card-container" class="row">
                             <!-- Information cards will be populated dynamically -->
@@ -237,43 +240,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         // Sample data for information cards
-        var cards = [
-            {
-                title: "Faulkner's Racial Revisions in A Rose for Emily",
-                image: "background2.png",
-                story: ["A Rose for Emily"],
-                description: "Students will look through archival documents that show how Faulkner wrote an entire backstory for Tobe in earlier versions of the story",
-                modality: "In-Person",
-                paired_author: null
-            },
-            {
-                title: "Analyzing Social Networks in Dry September",
-                image: "background3.png",
-                story: ["Dry September"],
-                description: "Students will use social network analysis to understand how race and gender are interdependent and lead to the story's volatile conclusion",
-                modality: "Online Asynchronous",
-                paired_author:null
+        var cards = []
 
-            },
-            {
-                title: "Racial Passing in Elly and Nella Larsen",
-                story: ["Elly","Passing"], // Can have multiple stories
-                image: "background4.png",
-                description: "This lesson explores how Faulkner and Nella Larsen both wrote Elly and Passing at the same time and treated racial passing from radically different perspectives",
-                modality: "Online Synchronous",
-                paired_author:"Nella Larsen"
-            },
-            {
-				title: "'Barn Burning' and 'The Man Who Was Almost a Man': Sharecropping and Coming of Age in Mississippi",
-				story: ["Barn Burning", "The Man Who Was Almost A Man"], // Can have multiple stories
-				image: "background4.png",
-				description: "This lesson explores how Faulkner and Richard Wright portray coming of age",
-				modality: "Online Synchronous",
-				paired_author: "Richard Wright"
-
-            }
-            // Add more cards here...
-        ];
+// Function to get the cards from the JSON file
+		function getCards() {
+			$.getJSON('data/cardData.json', function (data) {
+				var cards = data;
+				
+			});
+		}
 
         // Function to populate the story filters based on available stories in the cards
         // loop over each card, to get multiple stories for each card and add them to the storyFilters.
@@ -378,7 +353,7 @@
 			cardContainer.empty();
 
 			$.each(filteredCards, function (index, card) {
-				var cardHtml = $("<div class='col-md-6'><a href='" + getCardPageURL(card.title) + "'><div class='card'><div class = 'info'><img src=" + card.image + " class='card-img-top'><h5 class='card-title'>" + card.title + "</h5></div><div class='card-body'><p class='card-text'>" + ((card.story.length > 1) ? 'Stories: ' : 'Story: ') + card.story + "</p><p class='card-text'>Description: " + card.description + "</p><p class='card-text'>Modality: " + card.modality + "</p><p class='card-text'>" + ((card.paired_author !== null) ? 'Paired author: ' +card.paired_author : '') +"</p></div ></div ></a ></div > ");
+				var cardHtml = $("<div class='col'><a href='" + getCardPageURL(card.title) + "'><div class='card'><div class = 'info'><img src=" + card.image + " class='card-img-top'><h5 class='card-title'>" + card.title + "</h5></div><div class='card-body'><p class='card-text'>" + ((card.story.length > 1) ? 'Stories: ' : 'Story: ') + card.story + "</p><p class='card-text'>Description: " + card.description + "</p><p class='card-text'>Modality: " + card.modality + "</p><p class='card-text'>" + ((card.paired_author !== null) ? 'Paired author: ' +card.paired_author : '') +"</p></div ></div ></a ></div > ");
 				cardContainer.append(cardHtml);
 			});
 		}
@@ -394,6 +369,7 @@
 
         // Initialize the page
         $(document).ready(function () {
+            getCards();
             populateStoryFilters();
             populateAuthorFilters();
             filterCards();
