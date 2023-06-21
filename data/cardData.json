@@ -18,7 +18,7 @@
   },
   {
 	"title": "Racial Passing in Elly and Nella Larsen",
-	"story": [ "Elly", "Passing" ], // Can have multiple stories
+	"story": [ "Elly", "Passing" ],
 	"image": "background4.png",
 	"description": "This lesson explores how Faulkner and Nella Larsen both wrote Elly and Passing at the same time and treated racial passing from radically different perspectives",
 	"modality": "Online Synchronous",
@@ -26,12 +26,12 @@
   },
   {
 	"title": "'Barn Burning' and 'The Man Who Was Almost a Man': Sharecropping and Coming of Age in Mississippi",
-	"story": [ "Barn Burning", "The Man Who Was Almost A Man" ], // Can have multiple stories
+	"story": [ "Barn Burning", "The Man Who Was Almost A Man" ],
 	"image": "background4.png",
 	"description": "This lesson explores how Faulkner and Richard Wright portray coming of age",
 	"modality": "Online Synchronous",
 	"paired_author": "Richard Wright"
 
   }
-  // Add more cards here...
+
 ];
