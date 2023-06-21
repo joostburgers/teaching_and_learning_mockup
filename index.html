@@ -189,7 +189,9 @@
 
     <div class="container-fluid">
     <div class="row">
-    <div class="col-5"></div>This is where the introductory text goes</div></div>
+		<div class="container">
+			The following learning modules were developed with the help of a generous grant from the National Endowement for the Humanities. They have been piloted at institutions ranging from high school to college.
+		</div></div></div>
         <div class="row">
             <div class="col-med-auto">
                
@@ -361,7 +363,7 @@
 			cardContainer.empty();
 
 			$.each(filteredCards, function (index, card) {
-				var cardHtml = $("<div class='col'><a href='" + getCardPageURL(card.title) + "'><div class='card'><div class = 'info'><img src=images/" + ((card.image.length < 1) ? 'background2.png' : card.image) + " class='card-img-top'><h5 class='card-title'>" + card.title + "</h5></div><div class='card-body'><p class='card-text'>" + ((card.story.length > 1) ? 'Stories: ' : 'Story: ') + card.story + "</p><p class='card-text'>Description: " + card.description + "</p><p class='card-text'>Modality: " + card.modality + "</p><p class='card-text'>" + ((card.paired_author !== null) ? 'Paired author: ' +card.paired_author : '') +"</p></div ></div ></a ></div > ");
+				var cardHtml = $("<div class='col'><a href='" + getCardPageURL(card.title) + "'><div class='card'><div class = 'info'><img src=images/" + ((card.image=="") ? 'background2.png' : card.image) + " class='card-img-top'><h5 class='card-title'>" + card.title + "</h5></div><div class='card-body'><p class='card-text'>" + ((card.story.length > 1) ? 'Stories: ' : 'Story: ') + card.story + "</p><p class='card-text'>Description: " + card.description + "</p><p class='card-text'>Modality: " + card.modality + "</p><p class='card-text'>" + ((card.paired_author !== null) ? 'Paired author: ' +card.paired_author : '') +"</p></div ></div ></a ></div > ");
 				cardContainer.append(cardHtml);
 			});
 		}
