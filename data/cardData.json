@@ -29,7 +29,7 @@
 	"image": "little_girl.png",
 	"story": ["The Sound and the Fury", "A Rose for Emily", "Dry September"],
 	  "description":"Students will use multiple features of DY to consider how Faulkner writes his female characters. This lesson is focused on The Sound and the Fury but can be adapted for other Faulkner stories featuring central female characters.",
-	"modality": [ "In-Person, Online Synchronous" ],
+	"modality": "In-Person",
 	  "paired_author":null
   },
   {
