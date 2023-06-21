@@ -240,16 +240,19 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         // Sample data for information cards
-        var cards = []
-
+        
+        var cards;
+        console.log("is it getting here" + cards)
 // Function to get the cards from the JSON file
 		function getCards() {
-			$.getJSON('data/cardData.json', function (data) {
-				var cards = data;
+			$.getJSON('https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/cardData.json', function (data) {
+            console.log("why is it not calling this?" + data)
+                cards = data;
 				
 			});
-		}
+        }
 
+		getCards();
         // Function to populate the story filters based on available stories in the cards
         // loop over each card, to get multiple stories for each card and add them to the storyFilters.
         function populateStoryFilters() {
@@ -369,7 +372,7 @@
 
         // Initialize the page
         $(document).ready(function () {
-            getCards();
+           
             populateStoryFilters();
             populateAuthorFilters();
             filterCards();
