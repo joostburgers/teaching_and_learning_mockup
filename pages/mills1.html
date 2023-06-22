@@ -45,9 +45,9 @@
             line-height: 1.5em;
         }
 
-            .activity.explore {
-                background-color: oldlace;
-            }
+			.activity.explore {
+				background-color: rgba(253, 245, 230, 0.37);
+			}
 
         .menu {
             color: #ffffff;
@@ -97,14 +97,54 @@
 		}
 
         .activity-section{
-        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;
         padding: 5px;
         }
 
+		.bi::before {
+			padding-right: 0.5em;
+		}
         
+      div.video {
+        display:none;
+        position:fixed;
+        z-index:10001;
+        padding-top:100px;
+        
+        left:25%;
+        top:0%;
+        width:50%;
+        height:50%;
+        overflow:visible;
+        background-color: none;
+        }
+
+		.thumbnail-container {
+			transition: box-shadow 0.3s;
+			
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			
+			
+		}
+
+			.thumbnail-container:hover {
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			}
+
     </style>
 </head>
 <body>
+    <!--Modal for looping instructional video-->
+    <div id="myModal" class="video">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <video autoplay loop muted>
+                <source src="../video/cummulative_characters_quickdemo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
     <div id="page_header">
         <div id="header_logo"><a class="logo" href="http://faulkner.iath.virginia.edu/"><span class="digital">DIGITAL</span> Yoknapatawpha</a> · Teaching &amp; Learning</div>
         <div id="main-menu">
@@ -227,99 +267,120 @@
                 <li><a href="#About">About</a></li>
             </ul>
         </div>
-		<div class="main">
-			<h1 class="content_title" id="Preface">Lesson Plan</h1>
-			<h2 class="content_sub_title" id="Preface">Preface</h2>
-			<p>What does Faulkner think of his female characters? How does he write them? How does Faulkner’s world influence his writing of them? What does Faulkner think of Caddy?</p>
-			<p>This lesson is part one of a four-part lesson designed for a junior/senior elective English course at an all-boys independent high school. In order to fuel an in-class discussion, we will use Digital Yoknapatawpha to attempt to better understand Caddy’s world in <i>The Sound and the Fury</i>. This lesson can be in-person or synchronous online and is designed to take place after students have read all or most of the novel.</p>
+        <div class="main">
+            <h1 class="content_title" id="Preface">Lesson Plan</h1>
+            <h2 class="content_sub_title" id="Preface">Preface</h2>
+            <p>What does Faulkner think of his female characters? How does he write them? How does Faulkner’s world influence his writing of them? What does Faulkner think of Caddy?</p>
+            <p>This lesson is part one of a four-part lesson designed for a junior/senior elective English course at an all-boys independent high school. In order to fuel an in-class discussion, we will use Digital Yoknapatawpha to attempt to better understand Caddy’s world in <i>The Sound and the Fury</i>. This lesson can be in-person or synchronous online and is designed to take place after students have read all or most of the novel.</p>
 
 
-			<h2 class="content_sub_title" id="Activities">Activities</h2>
-			<h3 class="content_sub_title" id="Activity 1">Activity 1: Who Narrates Faulkner’s works?</h3>
+            <h2 class="content_sub_title" id="Activities">Activities</h2>
             <div class="activity explore">
+                <h3 class="content_sub_title" id="Activity 1">Activity 1: Who Narrates Faulkner’s works?</h3>
+
                 <div class="activity-section">
                     <div class="activity-title">
                         <i class="bi bi-display"></i>
                         Explore: Digital Yoknapatawpha: Cumulative Characters
                     </div>
                 </div>
-                <div class="activity-section">
-                    <div class="row">
 
-                        <div class="col">
-
-                            <div class="activity-instructions">
-                                Walkthrough
-                                <ol class="activity-list" type="1">
-                                    <li>Go to the <a href="http://faulkner.iath.virginia.edu/">Digital Yoknapatawpha</a> website</li>
-                                    <li>Click <span class="menu">Search </span><i class="bi bi-arrow-right"></i><span class=" menu sub">Characters</span><i class="bi bi-arrow-right"></i><span class="menu sub">Cumulative</span></li>
-                                    <li>
-                                        Select <span class="field_name">Gender: </span><select name="gender" id="gender">
-                                            <option value="">Female</option>
-
-                                        </select> and <span class="field_name">Narrator: </span><select name="gender" id="gender">
-                                            <option value="">First Person</option>
-
-                                        </select>
-                                    </li>
-                                    <li>Click <input type="submit" name="form_submit_button" id="form_submit_button" value="Search"></li>
-
-                                    <li>
-                                        Select <span class="field_name">Gender: </span><select name="gender" id="gender">
-                                            <option value="">Female</option>
-
-                                        </select> and <span class="field_name">Narrator: </span><select name="gender" id="gender">
-                                            <option value="">Stream-of-Consciousness?</option>
-
-                                        </select>
-                                    </li>
-                                    <li>Click <input type="submit" name="form_submit_button" id="form_submit_button" value="Search"></li>
-                                    <li>
-                                        Select <span class="field_name">Gender: </span><select name="gender" id="gender">
-                                            <option value="">Female</option>
-
-                                        </select> and <span class="field_name">Rank: </span><select name="gender" id="gender">
-                                            <option value="">Major</option>
-
-                                        </select>
-                                    </li>
-                                    <li>Click <input type="submit" name="form_submit_button" id="form_submit_button" value="Search"></li>
-                                </ol>
-                            </div>
-                        </div>
-
-
-                        <div class="col-4">
-                            <div class="activity-instructions">Video Tutorial
-                                <img src="../images/search.png" alt="lesson1-1" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="activity-section">
                 <div class="row">
+
                     <div class="col">
 
                         <div class="activity-instructions">
-                            Questions
-                            <div class="activity-questions">
-                                <div>What do you find out? </div>
-                                <div>Compare your results if you change Gender to Male, or Race to Black</div>
+                            Walkthrough
+                            <ol class="activity-list" type="1">
+                                <li>Go to the <a href="http://faulkner.iath.virginia.edu/">Digital Yoknapatawpha</a> website</li>
+                                <li>Click <span class="menu">Search </span><i class="bi bi-arrow-right"></i><span class=" menu sub">Characters</span><i class="bi bi-arrow-right"></i><span class="menu sub">Cumulative</span></li>
+                                <li>
+                                    Select <span class="field_name">Gender: </span><select name="gender" id="gender">
+                                        <option value="">Female</option>
+
+                                    </select> and <span class="field_name">Narrator: </span><select name="gender" id="gender">
+                                        <option value="">First Person</option>
+
+                                    </select>
+                                </li>
+                                <li>Click <input type="submit" name="form_submit_button" id="form_submit_button" value="Search"></li>
+
+                                <li>
+                                    Select <span class="field_name">Gender: </span><select name="gender" id="gender">
+                                        <option value="">Female</option>
+
+                                    </select> and <span class="field_name">Narrator: </span><select name="gender" id="gender">
+                                        <option value="">Stream-of-Consciousness?</option>
+
+                                    </select>
+                                </li>
+                                <li>Click <input type="submit" name="form_submit_button" id="form_submit_button" value="Search"></li>
+                                <li>
+                                    Select <span class="field_name">Gender: </span><select name="gender" id="gender">
+                                        <option value="">Female</option>
+
+                                    </select> and <span class="field_name">Rank: </span><select name="gender" id="gender">
+                                        <option value="">Major</option>
+
+                                    </select>
+                                </li>
+                                <li>Click <input type="submit" name="form_submit_button" id="form_submit_button" value="Search"></li>
+                            </ol>
+                        </div>
+                    </div>
+
+
+                    <div class="col-4">
+                        <div class="activity-instructions">
+                            Video Tutorial
+                            <div class="thumbnail-container">
+                                <img src="../images/search.png" alt="Cummulative Character Video" class="img-fluid">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="activity-section">
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="activity-title">
+                                <i class="bi bi-chat-left-text"></i>Respond: Discussion Questions
+                                <div class="activity-questions">
+                                    <ul>
+
+                                        <li>What do you find out? </li>
+                                        <li>Compare your results if you change Gender to Male, or Race to Black</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                </div>
             </div>
-				
 
 
-				<h2 class="content_sub_title" id="Final Product">Final Product</h2>
-				<h2 class="content_sub_title" id="Resources">Resources</h2>
-				<h1 class="content_title" id="For Teachers">For Teachers</h1>
-				<h1 class="content_title" id="About">About</h1>
-			</div>
-		</div>
+
+            <h2 class="content_sub_title" id="Final Product">Final Product</h2>
+            <h2 class="content_sub_title" id="Resources">Resources</h2>
+            <h1 class="content_title" id="For Teachers">For Teachers</h1>
+            <h1 class="content_title" id="About">About</h1>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".thumbnail-container img").click(function () {
+                $("#myModal").show();
+            });
+
+            $(".close").click(function () {
+                $("#myModal").hide();
+            });
+        });
+    </script>
 </body>
+
 </html>
