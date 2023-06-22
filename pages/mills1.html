@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Module Faulkner</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="family.css">
+	<style>
+		.container {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			height: 100%;
+		}
+
+		.sidebar {
+			width: 15%;
+			background-color: #f1f1f1;
+			padding: 20px;
+		}
+
+		.main {
+			width: 85%;
+			background-color: white;
+			padding: 20px;
+		}
+
+		h3.content_sub_title {
+			font-size: 1.5em;
+			margin: 10px;
+		}
+
+
+		.material-symbols-outlined {
+			
+
+		
+			font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48
+		}
+	
+
+	.activity {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+	margin-bottom: 10px;
+
+	}
+
+    .activity.explore {
+    background-color:bisque;
+    }
+
+		.menu {
+			float: left;
+			color: #ffffff;
+			background: #999999;
+			font-family: Geneva, Helvetica, Arial, sans-serif;
+			font-style: normal;
+			font-weight: normal;
+			/* text-transform: uppercase; */
+			font-size: 1.0em;
+			line-height: 2.4em;
+			letter-spacing: 0.075em;
+			padding: 0 0.6em;
+			text-decoration: none;
+		}
+
+	</style>
+</head>
+<body>
+    <div id="page_header">
+        <div id="header_logo"><a class="logo" href="http://faulkner.iath.virginia.edu/"><span class="digital">DIGITAL</span> Yoknapatawpha</a> · Teaching &amp; Learning</div>
+        <div id="main-menu">
+            <ul id="main-menu-links">
+                <li>
+                    <a href="http://faulkner.iath.virginia.edu/family/index-about.php">About</a>
+                    <ul>
+                        <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/credits.php">Credits</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/dedication" target="_blank">Dedication</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-bibliography" target="_blank">Bibliography</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/dysocialmedia.php">DY on Social Media</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-articles-presentations" target="_blank">Re-Presenting DY</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/videos-2016demos.php">2016 Demos</a></li>
+                    </ul>
+                </li>
+                <li class="bullet-link">
+                    <a href="http://faulkner.iath.virginia.edu/family/index-search.php">Search</a>
+                    <ul>
+                        <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/events/">Events</a></li>
+                        <li>
+                            <span class="nav-blank">Characters</span>
+                            <ul>
+                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/characters/">By Text</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters/">Cumulative</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="nav-blank">Locations</span>
+                            <ul>
+                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/locations/">By Text</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations/">Cumulative</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bullet-link">
+                    <a href="http://faulkner.iath.virginia.edu/family/index-visualizations.php">Visualizations</a>
+                    <ul>
+                        <li class="first-item">
+                            <span class="nav-blank">Location-Character</span>
+                            <ul>
+                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/characters-force.html">Force Directed</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/characters-bipart.html">Bipartite</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://faulkner.iath.virginia.edu/char-char-force.html">Character-Character</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/characters-graph.html">Character-Event</a></li>
+                        <li>
+                            <span class="nav-blank">Heatmaps</span>
+                            <ul>
+                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/heatmaps/spatial_heatmaps.php">Spatial</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/heatmaps/temporal_heatmaps.php">Temporal</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="nav-blank">Photographs</span>
+                            <ul>
+                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/photograph_locations.php">by Location</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/photograph_repositories.php">by Repository</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://faulkner.iath.virginia.edu/narrativeanalysis.html" target="_blank">Narrative Analysis</a></li>
+                    </ul>
+                </li>
+                <li class="bullet-link">
+                    <a href="http://faulkner.iath.virginia.edu/family/index-commentaries.php">Commentaries</a>
+                    <ul>
+                        <li class="first-item"><a href="http://faulkner.iath.virginia.edu/media/resources/DISPLAYS/FaulknerMapsHP.html" target="_blank">Faulkner &amp; Maps</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/YokCemeteries.html">Cemeteries</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/">Genealogies</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/racial_demography/">Race &amp; Place</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/aa_sources.php">Analyzing <em>Absalom, Absalom!</em></a></li>
+                    </ul>
+                </li>
+                <li class="bullet-link">
+                    <a href="http://faulkner.iath.virginia.edu/family/index-teaching_and_learning.php">Teaching &amp; Learning</a>
+                    <ul>
+                        <li class="first-item">
+                            <span class="nav-blank">Resources by Text</span>
+                            <ul>
+                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/resources-re.php">"A Rose for Emily"</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/resources-ld.php">As I Lay Dying</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/resources-sf.php">The Sound and the Fury</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/resources-aa.php">Absalom, Absalom!</a></li>
+                                <li><a href="http://faulkner.iath.virginia.edu/family/resources-ds.php">"Dry September"</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/videos-teaching_and_learning.php">Videos</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/pedagogyarticles" target="_blank">Articles</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/tlworksheethomepage" target="_blank">Worksheets</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/swhomepage" target="_blank">Student Work</a></li>
+                    </ul>
+                </li>
+                <li class="bullet-link">
+                    <a href="http://faulkner.iath.virginia.edu/family/index-indexes.php">Indexes</a>
+                    <ul>
+                        <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters.php">Cumulative Characters</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations.php">Cumulative Locations</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/recurring_events.php">Recurring Events</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmssetc" target="_blank">Manuscripts</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmagazineillustrations" target="_blank">Illustrations</a></li>
+                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofaudioclips" target="_blank">Audio Clips</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/contributors.php">Scholarly Collaborators</a></li>
+                        <li><a href="http://faulkner.iath.virginia.edu/family/videos-index.php">DY Videos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="content_title">Table of Contents</h1>
+            <ul>
+                <li><a href="#Preface">Preface</a></li>
+                <li><a href="#Activities">Activities</a></li>
+                <li><a href="#Final Product">Final Product</a></li>
+                <li><a href="#Resources">Resources</a></li>
+                <li><a href="#For Teachers">For Teachers</a></li>
+                <li><a href="#About">About</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1 class="content_title" id="Preface">Lesson Plan</h1>
+            <h2 class="content_sub_title" id="Preface">Preface</h2>
+            <p>What does Faulkner think of his female characters? How does he write them? How does Faulkner’s world influence his writing of them? What does Faulkner think of Caddy?</p>
+            <p>This lesson is part one of a four-part lesson designed for a junior/senior elective English course at an all-boys independent high school. In order to fuel an in-class discussion, we will use Digital Yoknapatawpha to attempt to better understand Caddy’s world in <i>The Sound and the Fury</i>. This lesson can be in-person or synchronous online and is designed to take place after students have read all or most of the novel.</p>
+
+
+            <h2 class="content_sub_title" id="Activities">Activities</h2>
+            <h3 class="content_sub_title" id="Activity 1">Activity 1: Who Narrates Faulkner’s works?</h3>
+            <div class="activity explore">
+                <span class="material-symbols-outlined">
+                    Explore
+                </span>
+                <div>
+                    <ol>
+                        <li>Go to the <a href="http://faulkner.iath.virginia.edu/">Digital Yoknapatawpha</a> website</li>
+                        <li>Click <span class="menu">Search </span><span class="material-symbols-outlined">
+    subdirectory_arrow_right
+</span></li>
+                        <li>Select Gender: Female and Narrator: First Person; then search</li>
+                        <li>Select Gender: Female and Narrator: Stream of Consciousness; then search</li>
+                        <li>Select Gender: Female and Rank: Major; then search</li>
+                        <li>What do you find out?</li>
+                        <li>Compare your results if you change Gender to Male, or Race to Black</li>
+                    </ol>
+                </div>
+            
+            </div>
+
+
+            <h2 class="content_sub_title" id="Final Product">Final Product</h2>
+            <h2 class="content_sub_title" id="Resources">Resources</h2>
+            <h1 class="content_title" id="For Teachers">For Teachers</h1>
+            <h1 class="content_title" id="About">About</h1>
+        </div>
+    </div>
+</body>
+</html>

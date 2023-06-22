@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Faceted Search</title>
+    <title>Faulkner Learning Modules</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="family.css">
     <style>
@@ -192,7 +192,7 @@
     <div class="row">
 		<div class="container">
 			The following learning modules were developed with the help of a generous grant from the National Endowement for the Humanities. They have been piloted at institutions ranging from high school to college.
-		</div></div></div>
+		</div></div>
         <div class="row">
             <div class="col-med-auto">
                
@@ -364,7 +364,7 @@
 			cardContainer.empty();
 
 			$.each(filteredCards, function (index, card) {
-				var cardHtml = $("<div class='col'><a href='" + getCardPageURL(card.title) + "'><div class='card'><div class = 'info'><img src=images/" + ((card.image=="") ? 'background2.png' : card.image) + " class='card-img-top'><h5 class='card-title'>" + card.title + "</h5></div><div class='card-body'><p class='card-text'>" + ((card.story.length > 1) ? 'Stories: ' : 'Story: ') + card.story + "</p><p class='card-text'>Description: " + card.description + "</p><p class='card-text'>Modality: " + card.modality + "</p><p class='card-text'>" + ((card.paired_author !== null) ? 'Paired author: ' +card.paired_author : '') +"</p></div ></div ></a ></div > ");
+				var cardHtml = $("<div class='col'><a href='pages/" + card.url + "'><div class='card'><div class = 'info'><img src=images/" + ((card.image=="") ? 'background2.png' : card.image) + " class='card-img-top'><h5 class='card-title'>" + card.title + "</h5></div><div class='card-body'><p class='card-text'>" + ((card.story.length > 1) ? 'Stories: ' : 'Story: ') + card.story + "</p><p class='card-text'>Description: " + card.description + "</p><p class='card-text'>Modality: " + card.modality + "</p><p class='card-text'>" + ((card.paired_author !== null) ? 'Paired author: ' +card.paired_author : '') +"</p></div ></div ></a ></div > ");
 				cardContainer.append(cardHtml);
 			});
 		}
