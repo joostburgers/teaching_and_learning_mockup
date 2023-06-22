@@ -41,13 +41,12 @@
         .activity {
             border: 1px solid #ddd;
             border-radius: 4px;
-            padding: 5px;
             margin-bottom: 10px;
             line-height: 1.5em;
         }
 
             .activity.explore {
-                background-color: bisque;
+                background-color: oldlace;
             }
 
         .menu {
@@ -67,11 +66,42 @@
         }
 
         .activity-title {
-font-size: 120%;
+            font-size: 120%;
             padding: 15px;
             font-weight: bold;
-            border-bottom: 1px solid #ddd;
+           
         }
+
+		.activity-list {
+			list-style-type: decimal;
+            list-style-position: outside;
+            margin-left: 10px;
+			padding: 15px;
+            font-weight:400;
+            line-height: 1.5em;
+            
+		}
+		.activity-instructions {
+			padding: 15px;
+			font-weight: bold;
+			
+		}
+		.activity-questions {
+			padding: 15px;
+			font-weight: 400;
+			line-height: 1.5em;
+			margin-left: 10px;
+            font-style: italic;
+            
+			
+		}
+
+        .activity-section{
+        border-bottom: 1px solid #ddd;
+        padding: 5px;
+        }
+
+        
     </style>
 </head>
 <body>
@@ -197,41 +227,99 @@ font-size: 120%;
                 <li><a href="#About">About</a></li>
             </ul>
         </div>
-        <div class="main">
-            <h1 class="content_title" id="Preface">Lesson Plan</h1>
-            <h2 class="content_sub_title" id="Preface">Preface</h2>
-            <p>What does Faulkner think of his female characters? How does he write them? How does Faulkner’s world influence his writing of them? What does Faulkner think of Caddy?</p>
-            <p>This lesson is part one of a four-part lesson designed for a junior/senior elective English course at an all-boys independent high school. In order to fuel an in-class discussion, we will use Digital Yoknapatawpha to attempt to better understand Caddy’s world in <i>The Sound and the Fury</i>. This lesson can be in-person or synchronous online and is designed to take place after students have read all or most of the novel.</p>
+		<div class="main">
+			<h1 class="content_title" id="Preface">Lesson Plan</h1>
+			<h2 class="content_sub_title" id="Preface">Preface</h2>
+			<p>What does Faulkner think of his female characters? How does he write them? How does Faulkner’s world influence his writing of them? What does Faulkner think of Caddy?</p>
+			<p>This lesson is part one of a four-part lesson designed for a junior/senior elective English course at an all-boys independent high school. In order to fuel an in-class discussion, we will use Digital Yoknapatawpha to attempt to better understand Caddy’s world in <i>The Sound and the Fury</i>. This lesson can be in-person or synchronous online and is designed to take place after students have read all or most of the novel.</p>
 
 
-            <h2 class="content_sub_title" id="Activities">Activities</h2>
-            <h3 class="content_sub_title" id="Activity 1">Activity 1: Who Narrates Faulkner’s works?</h3>
+			<h2 class="content_sub_title" id="Activities">Activities</h2>
+			<h3 class="content_sub_title" id="Activity 1">Activity 1: Who Narrates Faulkner’s works?</h3>
             <div class="activity explore">
-                <div class="activity-title"><i class="bi bi-display"></i>
-                    Explore
+                <div class="activity-section">
+                    <div class="activity-title">
+                        <i class="bi bi-display"></i>
+                        Explore: Digital Yoknapatawpha: Cumulative Characters
+                    </div>
                 </div>
-                <div>
-                    <ol type="1">
-                        <li>Go to the <a href="http://faulkner.iath.virginia.edu/">Digital Yoknapatawpha</a> website</li>
-                        <li>Click <span class="menu">Search </span><i class="bi bi-arrow-right"></i><span class=" menu sub">Characters</span><i class="bi bi-arrow-right"></i><span class="menu sub">Cumulative</span></li>
-                        <li>Select Gender: Female and Narrator: First Person; then search</li>
-                        <li>Select Gender: Female and Narrator: Stream of Consciousness; then search</li>
-                        <li>Select Gender: Female and Rank: Major; then search</li>
-                        <li>What do you find out? <i class="bi-alarm"></i></li>
-                        <li>Compare your results if you change Gender to Male, or Race to Black</li>
-                    </ol>
-                       
+                <div class="activity-section">
+                    <div class="row">
+
+                        <div class="col">
+
+                            <div class="activity-instructions">
+                                Walkthrough
+                                <ol class="activity-list" type="1">
+                                    <li>Go to the <a href="http://faulkner.iath.virginia.edu/">Digital Yoknapatawpha</a> website</li>
+                                    <li>Click <span class="menu">Search </span><i class="bi bi-arrow-right"></i><span class=" menu sub">Characters</span><i class="bi bi-arrow-right"></i><span class="menu sub">Cumulative</span></li>
+                                    <li>
+                                        Select <span class="field_name">Gender: </span><select name="gender" id="gender">
+                                            <option value="">Female</option>
+
+                                        </select> and <span class="field_name">Narrator: </span><select name="gender" id="gender">
+                                            <option value="">First Person</option>
+
+                                        </select>
+                                    </li>
+                                    <li>Click <input type="submit" name="form_submit_button" id="form_submit_button" value="Search"></li>
+
+                                    <li>
+                                        Select <span class="field_name">Gender: </span><select name="gender" id="gender">
+                                            <option value="">Female</option>
+
+                                        </select> and <span class="field_name">Narrator: </span><select name="gender" id="gender">
+                                            <option value="">Stream-of-Consciousness?</option>
+
+                                        </select>
+                                    </li>
+                                    <li>Click <input type="submit" name="form_submit_button" id="form_submit_button" value="Search"></li>
+                                    <li>
+                                        Select <span class="field_name">Gender: </span><select name="gender" id="gender">
+                                            <option value="">Female</option>
+
+                                        </select> and <span class="field_name">Rank: </span><select name="gender" id="gender">
+                                            <option value="">Major</option>
+
+                                        </select>
+                                    </li>
+                                    <li>Click <input type="submit" name="form_submit_button" id="form_submit_button" value="Search"></li>
+                                </ol>
+                            </div>
+                        </div>
+
+
+                        <div class="col-4">
+                            <div class="activity-instructions">Video Tutorial
+                                <img src="../images/search.png" alt="lesson1-1" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
-            
+                <div class="activity-section">
+                <div class="row">
+                    <div class="col">
+
+                        <div class="activity-instructions">
+                            Questions
+                            <div class="activity-questions">
+                                <div>What do you find out? </div>
+                                <div>Compare your results if you change Gender to Male, or Race to Black</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
+				
 
 
-            <h2 class="content_sub_title" id="Final Product">Final Product</h2>
-            <h2 class="content_sub_title" id="Resources">Resources</h2>
-            <h1 class="content_title" id="For Teachers">For Teachers</h1>
-            <h1 class="content_title" id="About">About</h1>
-        </div>
-    </div>
+				<h2 class="content_sub_title" id="Final Product">Final Product</h2>
+				<h2 class="content_sub_title" id="Resources">Resources</h2>
+				<h1 class="content_title" id="For Teachers">For Teachers</h1>
+				<h1 class="content_title" id="About">About</h1>
+			</div>
+		</div>
 </body>
 </html>
