@@ -24,25 +24,25 @@
 	"image": "background3.png",
 	"story": [ "<em>As I Lay Dying</em>" ],
 	"description": "Students will use various DY tools to complete an escape room and acquire information regarding historical, geographical, and cultural context of the novel.",
-	"modality": "In-Person",
+	"modality": [ "In-Person" ],
 	"paired_author": null,
 	"url": "bryant1.html"
   },
   {
-	"title": "Racial Passing in Elly and Nella Larsen",
+	"title": "Love and Family in <em>As I Lay Dying</em> and <em>Getting Mother’s Body</em>",
 	"story": [ "Elly", "Passing" ],
-	"image": "",
-	"description": "This lesson explores how Faulkner and Nella Larsen both wrote Elly and Passing at the same time and treated racial passing from radically different perspectives",
-	"modality": "Online Synchronous",
-	"paired_author": "Nella Larsen",
-	"url": "burgers3.html"
+	"image": "background1.png",
+	"description": "Students will read both novels and consider how Parks’ work speaks both back to and alongside Faulkner, particularly in terms of questions regarding family, obligation, and the possibilities of love in the midst of material and social marginalization. In studying AILD, students will use DY tools as well as archival material.",
+	"modality": ["In-Person", "Online Synchronous" ],
+	"paired_author": "Suzan Lori-Parks",
+	"url": "watson1.html"
   },
   {
 	"title": "Exploring the Worlds of Faulkner's Female Characters",
 	"image": "little_girl.png",
 	"story": [ "The Sound and the Fury", "A Rose for Emily", "Dry September" ],
 	"description": "Students will use multiple features of DY to consider how Faulkner writes his female characters. This lesson is focused on The Sound and the Fury but can be adapted for other Faulkner stories featuring central female characters.",
-	"modality": "In-Person",
+	"modality": ["In-Person"],
 	"paired_author": null,
 	"url": "mills1.html"
   },
@@ -51,7 +51,7 @@
 	"story": [ "Barn Burning", "The Man Who Was Almost A Man" ],
 	"image": "background4.png",
 	"description": "This lesson explores how Faulkner and Richard Wright portray coming of age",
-	"modality": "Online Synchronous",
+	"modality": ["Online Synchronous"],
 	"paired_author": "Richard Wright",
 	"url": "dimmock1.html"
 

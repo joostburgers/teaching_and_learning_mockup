@@ -104,9 +104,20 @@ function filterCards(data) {
 			})
 		});
 
+		var Modalityselected = false;
+
+		$.each(card.modality, function (index, modality) {
+			selectedModalities.forEach(function (selectedModality) {
+				if (modality.includes(selectedModality)) {
+					Modalityselected = true;
+				}
+			})
+		});
+
+
 		if (
 			(selected || selectedStories.length === 0) &&
-			(selectedModalities.length === 0 || selectedModalities.indexOf(card.modality) !== -1)
+			(selectedModalities.length === 0 || Modalityselected)
 			&&
 			(selectedAuthors.indexOf(card.paired_author) !== -1 || card.paired_author === null)
 		) {
