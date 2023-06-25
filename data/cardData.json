@@ -1,22 +1,32 @@
 [
   {
-	"title": "Faulkner's Racial Revisions in A Rose for Emily",
+	"title": "Multimodal Composition, Research Writing, and Digital Yoknapatawpha",
 	"image": "background2.png",
-	"story": [ "A Rose for Emily" ],
-	"description": "Students will look through archival documents that show how Faulkner wrote an entire backstory for Tobe in earlier versions of the story",
-	"modality": "In-Person",
+	"story": [ "Any" ],
+	"description": "This activity prompts students at any level to compose literary analysis essays on any Faulkner text(s), incorporating Digital Yoknapatawpha tools as secondary research sources.",
+	"modality": [ "In-Person", "Online Asynchronous", "Online Synchronous" ],
 	"paired_author": null,
-	"url": "burgers1.html"
+	"url": "hayes1.html"
   },
 
   {
-	"title": "Analyzing Social Networks in Dry September",
-	"image": "background3.png",
-	"story": [ "Dry September" ],
-	"description": "Students will use social network analysis to understand how race and gender are interdependent and lead to the story's volatile conclusion",
-	"modality": "Online Asynchronous",
+	"title": "Visualizing Race, Class, and Gender in “A Rose for Emily",
+	"image": "background2.png",
+	"story": [ "A Rose for Emily" ],
+	"description": "Students will use a visual tool to generate critical thinking about social relations in 'A Rose for Emily,' focusing on race, class, and gender.",
+	"modality": [ "In-Person", "Online Asynchronous", "Online Synchronous" ],
 	"paired_author": null,
-	"url": "burgers2.html"
+	"url": "hayes2.html"
+  },
+
+  {
+	"title": "<em>As I Lay Dying</em> Digital Escape Room",
+	"image": "background3.png",
+	"story": [ "<em>As I Lay Dying</em>" ],
+	"description": "Students will use various DY tools to complete an escape room and acquire information regarding historical, geographical, and cultural context of the novel.",
+	"modality": "In-Person",
+	"paired_author": null,
+	"url": "bryant1.html"
   },
   {
 	"title": "Racial Passing in Elly and Nella Larsen",
@@ -30,8 +40,8 @@
   {
 	"title": "Exploring the Worlds of Faulkner's Female Characters",
 	"image": "little_girl.png",
-	"story": ["The Sound and the Fury", "A Rose for Emily", "Dry September"],
-	  "description":"Students will use multiple features of DY to consider how Faulkner writes his female characters. This lesson is focused on The Sound and the Fury but can be adapted for other Faulkner stories featuring central female characters.",
+	"story": [ "The Sound and the Fury", "A Rose for Emily", "Dry September" ],
+	"description": "Students will use multiple features of DY to consider how Faulkner writes his female characters. This lesson is focused on The Sound and the Fury but can be adapted for other Faulkner stories featuring central female characters.",
 	"modality": "In-Person",
 	"paired_author": null,
 	"url": "mills1.html"

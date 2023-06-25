@@ -1,0 +1,69 @@
+﻿
+.facet-outline {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 10px;
+	margin-left: 15%;
+	margin-top: 20px;
+}
+
+
+
+.card {
+	transition: box-shadow 0.3s;
+	flex-basis: calc(50% - 10%);
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 5px;
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	width: 325px;
+	min-height: 425px;
+}
+
+	.card:hover {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	}
+
+	.card img {
+		max-width: 75%;
+		height: auto;
+		object-fit: cover;
+		border-radius: 5px;
+	}
+
+	.card h5 {
+		width: 90%;
+		position: absolute;
+		text-align: left;
+		top: 10%;
+		left: 10%;
+		transform: translate(-5%, -5%);
+		background-color: rgba(94%, 97%, 100%, 0.40);
+		font-size: 125%;
+	}
+
+
+
+	.card p {
+		margin-bottom: 10px;
+		color: #1a1a1a;
+	}
+
+	.card .info {
+		position: relative;
+		text-align: center;
+		color: darkred;
+	}
+
+		.card .info p {
+			margin-right: 10px;
+		}
+
+.facet-title {
+	font-size: 110%;
+	font-weight: bold;
+}
+
