@@ -1,7 +1,11 @@
 // JavaScript source code
 //Source code loads the cards from index.html and displays them on the page
 
+let cards;
 
+$.getJSON('../data/cardData.json', function (data) {
+	cards = data;
+});
 
 //function to load the cards from the json file
 function getCards() {
@@ -15,10 +19,13 @@ function getCards() {
 }
 
 
+
+
+
 // Function to populate the story filters based on available stories in the cards
 // loop over each card, to get multiple stories for each card and add them to the storyFilters.
 function populateStoryFilters(data) {
-	cards = data
+
 	var stories = [];
 
 	$.each(cards, function (index, card) {
@@ -72,7 +79,7 @@ function populateAuthorFilters(data) {
 
 // Function to filter and display the information cards based on selected filters
 function filterCards(data) {
-	cards = data
+
 	var selectedStories = [];
 	var selectedModalities = [];
 	var selectedAuthors = [];
@@ -93,6 +100,8 @@ function filterCards(data) {
 	// Filter cards based on selected filters
 	var filteredCards = [];
 
+	console.log("cards: " + cards)
+
 	$.each(cards, function (index, card) {
 		console.log(card.story);
 		var selected = false;
@@ -107,6 +116,7 @@ function filterCards(data) {
 		var Modalityselected = false;
 
 		$.each(card.modality, function (index, modality) {
+			console.log("modalities: " + card.modality)
 			selectedModalities.forEach(function (selectedModality) {
 				if (modality.includes(selectedModality)) {
 					Modalityselected = true;

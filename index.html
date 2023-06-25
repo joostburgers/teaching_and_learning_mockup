@@ -174,7 +174,7 @@
             </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
+   <!-- <script>
         // Sample data for information cards
         
         
@@ -309,15 +309,14 @@
             var formattedTitle = title.replace(/[^a-zA-Z0-9 ]/g, "").replace(/\s+/g, "-").toLowerCase();
             return formattedTitle + ".html"; // Assuming the card pages have .html extensions
         }
+-->
+<script>
+    getCards();     // Initialize the page
 
-
-        // Initialize the page
         $(document).ready(function () {
 			
 
-            getCards();
-			
-            
+                       
 
             // Handle filter changes
             $("#story-filters input").change(filterCards);
