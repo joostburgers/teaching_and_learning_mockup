@@ -311,18 +311,16 @@
         }
 -->
 <script>
-    getCards();     // Initialize the page
+	getCards();     // Initialize the page
 
-        $(document).ready(function () {
-			
+    $(document).ready(function () {
 
-                       
+        $("#story-filters input").change(filterCards(myData));
+        $("#modality-filters input").change(filterCards(myData));
+        $("#author-filters input").change(filterCards(myData));
 
-            // Handle filter changes
-            $("#story-filters input").change(filterCards);
-            $("#modality-filters input").change(filterCards);
-            $("#author-filters input").change(filterCards);
-        });
+    });
+          
     </script>
 </body>
 </html>

@@ -33,7 +33,7 @@
 	"story": [ "Elly", "Passing" ],
 	"image": "background1.png",
 	"description": "Students will read both novels and consider how Parks’ work speaks both back to and alongside Faulkner, particularly in terms of questions regarding family, obligation, and the possibilities of love in the midst of material and social marginalization. In studying AILD, students will use DY tools as well as archival material.",
-	"modality": ["In-Person", "Online Synchronous" ],
+	"modality": [ "In-Person", "Online Synchronous" ],
 	"paired_author": "Suzan Lori-Parks",
 	"url": "watson1.html"
   },
@@ -42,7 +42,7 @@
 	"image": "little_girl.png",
 	"story": [ "The Sound and the Fury", "A Rose for Emily", "Dry September" ],
 	"description": "Students will use multiple features of DY to consider how Faulkner writes his female characters. This lesson is focused on The Sound and the Fury but can be adapted for other Faulkner stories featuring central female characters.",
-	"modality": ["In-Person"],
+	"modality": [ "In-Person" ],
 	"paired_author": null,
 	"url": "mills1.html"
   },
@@ -51,9 +51,29 @@
 	"story": [ "Barn Burning", "The Man Who Was Almost A Man" ],
 	"image": "background4.png",
 	"description": "This lesson explores how Faulkner and Richard Wright portray coming of age",
-	"modality": ["Online Synchronous"],
+	"modality": [ "Online Synchronous" ],
 	"paired_author": "Richard Wright",
 	"url": "dimmock1.html"
+
+  },
+  {
+	"title": "Collaborating on a Genealogy for  <em>As I Lay Dying</em>",
+	"story": [ "<em>As I Lay Dying</em>" ],
+	"image": "background4.png",
+	"description": "Since each member of the Bundren family in As I Lay Dying has a different view of what it means to be a “family,” in this project we replace a one-size-fits-all genealogical chart with an evolving genealogy that reflects characters’ changing perspectives as the story unfolds.  This is a multi-media project that connects writing and visual art, and pairs at-home student work with in-class collaboration and presentation.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"url": "penner1.html"
+
+  },
+  {
+	"title": "Faulkner Fan Fic: Practicing Character Development and Scene Building in Faulkner’s Universe",
+	"story": [ "Barn Burning" ],
+	"image": "background4.png",
+	"description": "This is a creative writing exercise which gives voice to minor characters in William Faulkner’s universe. Students will use Digital Yoknapatawpha to flesh out minor characters and rewrite scenes in Faulkner’s fiction.",
+	"modality": ["In-person", "Online Asynchronous"],
+	  "paired_author": null,
+	  "url": "beach1.html"
 
   }
 

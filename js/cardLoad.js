@@ -1,31 +1,46 @@
 // JavaScript source code
 //Source code loads the cards from index.html and displays them on the page
 
-let cards;
 
-$.getJSON('../data/cardData.json', function (data) {
-	cards = data;
-});
 
 //function to load the cards from the json file
-function getCards() {
-	$.getJSON('https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/cardData.json', function (data) {
 
+var myData = [];
+
+function getCards() {
+
+	$.ajax({
+		url: 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/cardData.json',
+		dataType: 'json',
+		async: false,
+		data: myData,
+		success: function (data) {
+			myData = data;
+			populateStoryFilters(data);
+			populateAuthorFilters(data);
+			return myData;
+		}
+	});
+
+	/*$.getJSON(, function (data) {
+		myData = data;
 		populateStoryFilters(data);
 		populateAuthorFilters(data);
 		filterCards(data);
 
-	});
+
+	});*/
+
 }
 
-
+console.log("This is where it should initialize: " + myData)
 
 
 
 // Function to populate the story filters based on available stories in the cards
 // loop over each card, to get multiple stories for each card and add them to the storyFilters.
 function populateStoryFilters(data) {
-
+	cards = data
 	var stories = [];
 
 	$.each(cards, function (index, card) {
@@ -79,7 +94,8 @@ function populateAuthorFilters(data) {
 
 // Function to filter and display the information cards based on selected filters
 function filterCards(data) {
-
+	console.log(data)
+	cards = data
 	var selectedStories = [];
 	var selectedModalities = [];
 	var selectedAuthors = [];
