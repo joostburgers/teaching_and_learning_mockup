@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Module Faulkner</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="../css/family.css">
+	<link rel="stylesheet" href="../css/learning_module.css">
+
+
+	<style>
+	</style>
+</head>
+<body>
+	<!--Modal for looping instructional video-->
+	<div id="myModal" class="video">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<video autoplay loop muted>
+				<source src="../video/cummulative_characters_quickdemo.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+	</div>
+
+	<div class="modal bd-example-modal-lg" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">
+						Title of Picture
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-image">
+						<img src="../images/little_girl.png" class="img-fluid">
+					</div>
+				</div>
+				<div class="modal-footer">
+					Footer text with full citation.
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<!--This is the header menus no need to touch this.-->
+	<div id="page_header">
+		<div id="header_logo"><a class="logo" href="http://faulkner.iath.virginia.edu/"><span class="digital">DIGITAL</span> Yoknapatawpha</a> · Teaching &amp; Learning</div>
+		<div id="main-menu">
+			<ul id="main-menu-links">
+				<li>
+					<a href="http://faulkner.iath.virginia.edu/family/index-about.php">About</a>
+					<ul>
+						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/credits.php">Credits</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/dedication" target="_blank">Dedication</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-bibliography" target="_blank">Bibliography</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/dysocialmedia.php">DY on Social Media</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-articles-presentations" target="_blank">Re-Presenting DY</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/videos-2016demos.php">2016 Demos</a></li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-search.php">Search</a>
+					<ul>
+						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/events/">Events</a></li>
+						<li>
+							<span class="nav-blank">Characters</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/characters/">By Text</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters/">Cumulative</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="nav-blank">Locations</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/locations/">By Text</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations/">Cumulative</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-visualizations.php">Visualizations</a>
+					<ul>
+						<li class="first-item">
+							<span class="nav-blank">Location-Character</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/characters-force.html">Force Directed</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/characters-bipart.html">Bipartite</a></li>
+							</ul>
+						</li>
+						<li><a href="http://faulkner.iath.virginia.edu/char-char-force.html">Character-Character</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/characters-graph.html">Character-Event</a></li>
+						<li>
+							<span class="nav-blank">Heatmaps</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/heatmaps/spatial_heatmaps.php">Spatial</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/heatmaps/temporal_heatmaps.php">Temporal</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="nav-blank">Photographs</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/photograph_locations.php">by Location</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/photograph_repositories.php">by Repository</a></li>
+							</ul>
+						</li>
+						<li><a href="http://faulkner.iath.virginia.edu/narrativeanalysis.html" target="_blank">Narrative Analysis</a></li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-commentaries.php">Commentaries</a>
+					<ul>
+						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/media/resources/DISPLAYS/FaulknerMapsHP.html" target="_blank">Faulkner &amp; Maps</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/YokCemeteries.html">Cemeteries</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/">Genealogies</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/racial_demography/">Race &amp; Place</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/aa_sources.php">Analyzing <em>Absalom, Absalom!</em></a></li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-teaching_and_learning.php">Teaching &amp; Learning</a>
+					<ul>
+						<li class="first-item">
+							<span class="nav-blank">Resources by Text</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/resources-re.php">"A Rose for Emily"</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/resources-ld.php">As I Lay Dying</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/resources-sf.php">The Sound and the Fury</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/resources-aa.php">Absalom, Absalom!</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/resources-ds.php">"Dry September"</a></li>
+							</ul>
+						</li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/videos-teaching_and_learning.php">Videos</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/pedagogyarticles" target="_blank">Articles</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/tlworksheethomepage" target="_blank">Worksheets</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/swhomepage" target="_blank">Student Work</a></li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-indexes.php">Indexes</a>
+					<ul>
+						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters.php">Cumulative Characters</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations.php">Cumulative Locations</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/recurring_events.php">Recurring Events</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmssetc" target="_blank">Manuscripts</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmagazineillustrations" target="_blank">Illustrations</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofaudioclips" target="_blank">Audio Clips</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/contributors.php">Scholarly Collaborators</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/videos-index.php">DY Videos</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+<!--This is where the header ends-->
+
+	<!--This is the TOC menu. No need to touch this-->
+	<div class="container">
+
+
+		<div class="sidebar">
+			<h1 class="content_title">Table of Contents</h1>
+			<ul>
+				<li><a href="#Preface">Preface</a></li>
+				<li><a href="#Activities">Activities</a></li>
+				<li><a href="#Final Product">Final Product</a></li>
+				<li><a href="#Resources">Resources</a></li>
+				<li><a href="#For Teachers">For Teachers</a></li>
+				<li><a href="#About">About</a></li>
+			</ul>
+		</div>
+<!--This is where the TOC ends-->
+
+
+		<!--This is where all the content for the lesson plan sits-->
+		<div class="main">
+			<h1 class="content_title" id="Preface">Lesson Plan</h1>
+
+			<h2 class="content_sub_title" id="Preface">Preface</h2>
+			<!--Enter the paragraph for Preface here. Put each individual paragaraph between <p></p>-->
+			
+			
+
+			<!--The activities section is probably the most complex because there are a lot of components and not all of them will be there simultaneously-->
+			<h2 class="content_sub_title" id="Activities">Activities</h2>
+			
+
+
+			<div class="activity">
+
+				<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1. 
+					Grab the line below to create a new activity heading.-->
+				<h3 class="content_sub_title activity-title" id="Activity 1">Activity + Number: Title </h3>
+
+				
+<!--This is a stub for the "Study Acivity section"-->
+				
+				<div class="activity-section">
+					
+					<!--This is the section title-->
+					
+					<div class="activity-title">
+						<i class="bi bi-file-earmark-text"></i>
+						Study: The Sound and the Fury
+					</div>
+					
+				</div>
+
+
+				<div class="row">
+					<div class="col">
+						
+						<!--This is where the list on the left hand side is populated-->
+						<div class="activity-instructions">
+							Instructions
+							<ul class="activity-list-unordered">
+								<li><em>Read</em> the online article <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Why Digital Yoknapatawpha is the best site ever.</a></li>
+								<li><em>Watch </em> the video of <a href="https://www.youtube.com/watch?v=ENIj5oNtapw" target="_blank" rel="noopener noreferrer">Faulkner's Nobel Prize acceptance speech.</a></li>
+								<li><em>Reflect: </em> on the quote at the right.</li>
+							</ul>
+						</div>
+					</div>
+
+<!--This is where the fancy quote on the right is created.-->
+					<div class="col-4">
+						<blockquote class="blockquote text-right activity-quote">
+							<p class="mb-0">This is a deep quote that students can read and reflect upon. It could also be something that pops out of the reading as being particularly salient.</p>
+							<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+						</blockquote>
+					</div>
+				</div>
+
+<!--This is where the activity section Study Ends-->
+
+
+<!--This is where the activity section Explore begins-->
+				<div class="activity-section">
+					<div class="activity-title">
+						<i class="bi bi-globe"></i>
+						Explore: Digital Yoknapatawpha: Cumulative Characters
+					</div>
+					
+				</div>
+
+				<div class="row">
+
+<!--Walthrough instructions on the left-->
+					<div class="col">
+						<div class="activity-instructions">
+							Walkthrough
+							<ol class="activity-list" type="1">
+								<li>Instruction 1</li>
+								<li>Instruciton 2</li>
+								<li>Instruction 3</li>
+							</ol>
+						</div>
+					</div>
+
+<!--Video on the right-->
+					<div class="col-4">
+						<div class="activity-instructions">
+							Video Tutorial
+							<div class="thumbnail-container">
+								<img src="../images/search.png" alt="Cummulative Character Video" class="img-fluid">
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+<!--This is where the activity section Explore ends-->
+
+
+<!--This is where the activity section Respond Begins -->
+
+				
+<!--This section stub contains the layout-->				
+				<div class="activity-section">
+					
+					<!--This is the title stub-->
+					
+					<div class="activity-title">
+						<i class="bi bi-chat-left-text"></i>Respond: Discussion Questions
+					</div>
+
+<!--Each section is placed into a row below the title. This allows us to split it into columns-->
+					<div class="row">
+
+						<!--This is the list of questions on the left. The div class="col" places all this in the column on the left-->
+						<div class="col">
+							<div class="activity-instructions">
+								Please write a response to the following questions:
+
+								<div>
+									<ul class="activity-list-unordered">
+
+										<li>What do you find out? </li>
+										<li>Compare your results if you change Gender to Male, or Race to Black</li>
+										<li>A third question about the little girl in the picture.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+<!--List end-->
+
+<!--This is the image on the right-->
+						<div class="col-4"> <!--This is a column created on the right-->
+						<div class="activity-image">
+								<div class="thumbnail-container">
+									<img src="../images/little_girl.png" alt="Cummulative Character Video" class="img-fluid">
+								</div>
+							</div>
+						</div>
+<!--Image end-->
+
+					</div>
+				</div>
+			</div>
+
+
+			<h2 class="content_sub_title" id="Final Product">Final Product</h2>
+			
+
+			<h2 class="content_sub_title" id="Resources">Resources</h2>
+			
+
+			<h1 class="content_title" id="For Teachers">For Teachers</h1>
+			
+			<p>Pilot Classroom: </p>
+
+			<p>
+				Learning Goals:
+			<p>
+
+
+				<ul class="activity-list-unordered">
+					<li>Learning Goal 1</li>
+					<li>Learning Goal 2</li>
+					<li>Learning Goal 3</li>
+				</ul>
+
+			<p>Common Core: </p>
+
+
+			<ul class="activity-list-unordered">
+				<li>Common Core 1</li>
+				<li>Common Core 2</li>
+				<li>Common Core 3</li>
+			</ul>
+
+			<p> Student Samples: </p>
+
+			<p> Original Lesson Plan: </p>
+
+
+
+
+			<h1 class="content_title" id="About">About</h1>
+			<div class="note"><em>Note: </em> About section that includes all extra information </div>
+			<p>Instructor: </p>
+			<p>Contact: </p>
+			<p>Created: </p>
+			<p>Notes: </p>
+
+
+		</div>
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".thumbnail-container img").click(function () {
+				$("#myModal").show();
+			});
+
+			$(".close").click(function () {
+				$("#myModal").hide();
+			});
+
+
+			$(".activity-image img").click(function () {
+				$("#imageModal").show();
+			});
+
+			$(".close").click(function () {
+				$("#imageModal").hide();
+			});
+
+		});
+	</script>
+</body>
+
+</html>
