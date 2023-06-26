@@ -178,3 +178,11 @@ ul.note-list {
     padding-left: 20px;
     line-height: 1.5em;
 }
+
+div.activity-text{
+	padding: 15px;
+	font-weight: 400;
+	line-height: 1.5em;
+	margin-left: 10px;
+	
+}
