@@ -1,0 +1,842 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning Module Faulkner</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="../css/family.css">
+	<link rel="stylesheet" href="../css/learning_module.css">
+
+
+	<style>
+	</style>
+</head>
+<body>
+	<!--Modal for looping instructional video-->
+	<div id="myModal" class="video">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<video autoplay loop muted>
+				<source src="../video/cummulative_characters_quickdemo.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+	</div>
+
+	<div class="modal bd-example-modal-lg" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">
+						Title of Picture
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-image">
+						<img src="../images/little_girl.png" class="img-fluid">
+					</div>
+				</div>
+				<div class="modal-footer">
+					Footer text with full citation.
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<!--This is the header menus no need to touch this.-->
+	<div id="page_header">
+		<div id="header_logo"><a class="logo" href="http://faulkner.iath.virginia.edu/"><span class="digital">DIGITAL</span> Yoknapatawpha</a> · Teaching &amp; Learning</div>
+		<div id="main-menu">
+			<ul id="main-menu-links">
+				<li>
+					<a href="http://faulkner.iath.virginia.edu/family/index-about.php">About</a>
+					<ul>
+						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/credits.php">Credits</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/dedication" target="_blank">Dedication</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-bibliography" target="_blank">Bibliography</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/dysocialmedia.php">DY on Social Media</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-articles-presentations" target="_blank">Re-Presenting DY</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/videos-2016demos.php">2016 Demos</a></li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-search.php">Search</a>
+					<ul>
+						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/events/">Events</a></li>
+						<li>
+							<span class="nav-blank">Characters</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/characters/">By Text</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters/">Cumulative</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="nav-blank">Locations</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/locations/">By Text</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations/">Cumulative</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-visualizations.php">Visualizations</a>
+					<ul>
+						<li class="first-item">
+							<span class="nav-blank">Location-Character</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/characters-force.html">Force Directed</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/characters-bipart.html">Bipartite</a></li>
+							</ul>
+						</li>
+						<li><a href="http://faulkner.iath.virginia.edu/char-char-force.html">Character-Character</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/characters-graph.html">Character-Event</a></li>
+						<li>
+							<span class="nav-blank">Heatmaps</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/heatmaps/spatial_heatmaps.php">Spatial</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/heatmaps/temporal_heatmaps.php">Temporal</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="nav-blank">Photographs</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/photograph_locations.php">by Location</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/photograph_repositories.php">by Repository</a></li>
+							</ul>
+						</li>
+						<li><a href="http://faulkner.iath.virginia.edu/narrativeanalysis.html" target="_blank">Narrative Analysis</a></li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-commentaries.php">Commentaries</a>
+					<ul>
+						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/media/resources/DISPLAYS/FaulknerMapsHP.html" target="_blank">Faulkner &amp; Maps</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/YokCemeteries.html">Cemeteries</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/">Genealogies</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/racial_demography/">Race &amp; Place</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/aa_sources.php">Analyzing <em>Absalom, Absalom!</em></a></li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-teaching_and_learning.php">Teaching &amp; Learning</a>
+					<ul>
+						<li class="first-item">
+							<span class="nav-blank">Resources by Text</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/resources-re.php">"A Rose for Emily"</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/resources-ld.php">As I Lay Dying</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/resources-sf.php">The Sound and the Fury</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/resources-aa.php">Absalom, Absalom!</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/resources-ds.php">"Dry September"</a></li>
+							</ul>
+						</li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/videos-teaching_and_learning.php">Videos</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/pedagogyarticles" target="_blank">Articles</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/tlworksheethomepage" target="_blank">Worksheets</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/swhomepage" target="_blank">Student Work</a></li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-indexes.php">Indexes</a>
+					<ul>
+						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters.php">Cumulative Characters</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations.php">Cumulative Locations</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/recurring_events.php">Recurring Events</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmssetc" target="_blank">Manuscripts</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmagazineillustrations" target="_blank">Illustrations</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofaudioclips" target="_blank">Audio Clips</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/contributors.php">Scholarly Collaborators</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/videos-index.php">DY Videos</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+<!--This is where the header ends-->
+
+	<!--This is the TOC menu. No need to touch this-->
+	<div class="container">
+
+
+		<div class="sidebar">
+			<h1 class="content_title">Table of Contents</h1>
+			<ul>
+				<li><a href="#Preface">Preface</a></li>
+				<li><a href="#Activities">Activities</a></li>
+				<li><a href="#Final Product">Final Product</a></li>
+				<li><a href="#Resources">Resources</a></li>
+				<li><a href="#For Teachers">For Teachers</a></li>
+				<li><a href="#About">About</a></li>
+			</ul>
+		</div>
+<!--This is where the TOC ends-->
+
+
+		<!--This is where all the content for the lesson plan sits-->
+		<div class="main">
+			<h1 class="content_title" id="Preface">Lesson Plan</h1>
+
+			<h2 class="content_sub_title" id="Preface">Preface</h2>
+			<!--Enter the paragraph for Preface here. Put each individual paragaraph between <p></p>-->
+			<li>This creative writing project appeals to students who are familiar with writing fan fiction in established universes such as Harry Potter or Star Wars but is designed for any novice creative writing student.  The project empowers students to control the narrative by enhancing and changing a problematic story’s perspective. </li>
+			<li>The project teaches writing students how to develop characters, write dialogue, play with both perspective and point of view, work within an already established universe for setting, and write scenes.  Students will give voice to minor characters in William Faulkner’s universe using Digital Yoknapatwpha tools to flesh out characters and rewrite scenes in Faulkner’s fiction.</li>
+
+
+			<!--The activities section is probably the most complex because there are a lot of components and not all of them will be there simultaneously-->
+			<h2 class="content_sub_title" id="Activities">Activities</h2>
+
+
+
+			<div class="activity">
+
+				<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
+		Grab the line below to create a new activity heading.-->
+				<h3 class="content_sub_title activity-title" id="Activity 1">Activity #1:  Analysis of Elements of Fiction in “Barn Burning” and Alice Walker’s “Everyday Use”</h3>
+
+
+				<!--This is a stub for the "Study Acivity section"-->
+
+				<div class="activity-section">
+
+					<!--This is the section title-->
+
+					<div class="activity-title">
+						<i class="bi bi-file-earmark-text"></i>
+						Study
+					</div>
+
+				</div>
+
+
+				<div class="row">
+					<div class="col">
+
+						<!--This is where the list on the left hand side is populated-->
+						<div class="activity-instructions">
+							Instructions
+							<ul class="activity-list-unordered">
+								<li>Read William Faulkner’s “Barn Burning” and Alice Walker’s “Everyday Use”</li>
+							</ul>
+						</div>
+					</div>
+
+					<!--This is where the fancy quote on the right is created.-->
+					<div class="col-4">
+						<blockquote class="blockquote text-right activity-quote">
+							<p class="mb-0">This is a deep quote that students can read and reflect upon. It could also be something that pops out of the reading as being particularly salient.</p>
+							<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+						</blockquote>
+					</div>
+				</div>
+
+				<!--This is where the activity section Study Ends-->
+				<!--This is where the activity section Explore begins-->
+				<div class="activity-section">
+					<div class="activity-title">
+						<i class="bi bi-globe"></i>
+						Explore
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<!--Walthrough instructions on the left-->
+					<div class="col">
+						<div class="activity-instructions">
+							For more information on each story visit:
+							<ol class="activity-list" type="1">
+								<li><a href="https://alicewalkersgarden.com/about/" target="_blank" rel="noopener noreferrer">Alice Walker’s official web page</a></li>
+								<li><a href="https://faulkner.iath.virginia.edu" target="_blank" rel="noopener noreferrer">Digital Yoknpatwpha’s “Barn Burning” pages</a></li>
+							</ol>
+						</div>
+					</div>
+
+					<!--Video on the right-->
+					<div class="col-4">
+						<div class="activity-instructions">
+							Video Tutorial
+							<div class="thumbnail-container">
+								<img src="../images/search.png" alt="Cummulative Character Video" class="img-fluid">
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!--This is where the activity section Explore ends-->
+				<!--This is where the activity section Respond Begins -->
+				<!--This section stub contains the layout-->
+				<div class="activity-section">
+
+					<!--This is the title stub-->
+
+					<div class="activity-title">
+						<i class="bi bi-chat-left-text"></i>Respond
+					</div>
+
+					<!--Each section is placed into a row below the title. This allows us to split it into columns-->
+					<div class="row">
+
+						<!--This is the list of questions on the left. The div class="col" places all this in the column on the left-->
+						<div class="col">
+							<div class="activity-instructions">
+								In small groups, compare and contrast the main character, the setting, the point of view, the conflict, and the climax of each story. In groups  discuss the following questions:
+
+								<div>
+									<ul class="activity-list-unordered">
+
+										<li>What information from DY or Walker’s webpage helped you understand the story?</li>
+										<li>How does the author’s choice of central character and point of view inform the story?</li>
+										<li>Whose voices are silenced in each story?</li>
+										<li>How many scenes are in each story?</li>
+										<li>How do the settings add to the conflict in the stories?</li>
+										<li>How does each story use fire both literally and symbolically?</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--List end-->
+						<!--This is the image on the right-->
+						<div class="col-4">
+							<!--This is a column created on the right-->
+							<div class="activity-image">
+								<div class="thumbnail-container">
+									<img src="../images/little_girl.png" alt="Cummulative Character Video" class="img-fluid">
+								</div>
+							</div>
+						</div>
+						<!--Image end-->
+
+					</div>
+				</div>
+			</div>
+			<div class="activity">
+
+				<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
+		Grab the line below to create a new activity heading.-->
+				<h3 class="content_sub_title activity-title" id="Activity 1">Activity #2: Creating a Character Chart using DY</h3>
+
+
+				<!--This is a stub for the "Study Acivity section"-->
+				<!--This is where the activity section Study Ends-->
+				<!--This is where the activity section Explore begins-->
+				<div class="activity-section">
+					<div class="activity-title">
+						<i class="bi bi-globe"></i>
+						Explore: Visit <a href="https://faulkner.iath.virginia.edu" target="_blank" rel="noopener noreferrer">Digital Yoknapatwpha</a>
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<!--Walthrough instructions on the left-->
+					<div class="col">
+						<div class="activity-instructions">
+							Walkthrough
+							<ol class="activity-list" type="1">
+								<li>Select “Barn Burning” from the list of Faulkner’s body of work (see book icons on home page).</li>
+								<li>Once you’ve selected “Barn Burning,” you will be on a page with a map of the story you selected (in this case “Barn Burning”).</li>
+								<li>On the left-hand side of the page is a box labeled “Display Controls.”  Select “All” or “Major and Secondary” under “Show Characters.”</li>
+								<li>Slide your cursor over the characters on the map until you chose a character to use for the fan fic.  You may also click the “Alphabetic List” box under “Show Characters.” A new box with an alphabetical list of characters from the story appears.  Find your chosen character and check their name and click “Show” at the bottom of the box.  The character will appear on the map.</li>
+								<li>Click on your chosen character.  An informational box will open with the following tabs: Biography, Information, Events, Location.  Use the information from this box to complete the questions on the attached character chart.</li>
+							</ol>
+						</div>
+					</div>
+
+					<!--Video on the right-->
+					<div class="col-4">
+						<div class="activity-instructions">
+							Video Tutorial
+							<div class="thumbnail-container">
+								<img src="../images/search.png" alt="Cummulative Character Video" class="img-fluid">
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!--This is where the activity section Explore ends-->
+				<!--This is where the activity section Respond Begins -->
+				<!--This section stub contains the layout-->
+				<div class="activity-section">
+
+					<!--This is the title stub-->
+
+					<div class="activity-title">
+						<i class="bi bi-chat-left-text"></i>Create
+					</div>
+
+					<!--Each section is placed into a row below the title. This allows us to split it into columns-->
+					<div class="row">
+
+						<!--This is the list of questions on the left. The div class="col" places all this in the column on the left-->
+						<div class="col">
+							<div class="activity-instructions">
+								Complete a character chart for one of the minor characters in “Barn Burning.”
+
+								<div>
+									<ul class="activity-list-unordered">
+
+										<li>You should select a minor character you are interested in writing for a revision of a scene in “Barn Burning.”  You should use as much information as you from the Digital Yoknapatwpha’s character listing for the character chart.  On the character chart, designate what information you gleaned from DY and the story and what information you are inventing.</li>
+										<li>Character Chart</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--List end-->
+						<!--This is the image on the right-->
+						<div class="col-4">
+							<!--This is a column created on the right-->
+							<div class="activity-image">
+								<div class="thumbnail-container">
+									<img src="../images/little_girl.png" alt="Cummulative Character Video" class="img-fluid">
+								</div>
+							</div>
+						</div>
+						<!--Image end-->
+
+					</div>
+				</div>
+			</div>
+			<div class="activity">
+
+				<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
+		Grab the line below to create a new activity heading.-->
+				<h3 class="content_sub_title activity-title" id="Activity 1">Activity #3: Researching Setting using DY and other sites to set the scene</h3>
+
+
+				<!--This is a stub for the "Study Acivity section"-->
+
+				<div class="activity-section">
+
+					<!--This is the section title-->
+
+					<div class="activity-title">
+						<i class="bi bi-file-earmark-text"></i>
+						Study
+					</div>
+
+				</div>
+
+
+				<div class="row">
+					<div class="col">
+
+						<!--This is where the list on the left hand side is populated-->
+						<div class="activity-instructions">
+							Instructions
+							<ul class="activity-list-unordered">
+								<li>Select one event/scene from “Barn Burning” in which your character appears.  This will be the scene you will later re-vision when you write from your chosen character’s point of view.  Research the scene by visiting <a href="https://stfm.astate.edu" target="_blank" rel="noopener noreferrer">Southern Tenant Farmers Museum</a> and the <a href="https://www.okhistory.org/publications/enc/entry.php?entry=TE009" target="_blank" rel="noopener noreferrer">Oklahoma Historical Society.</a></li>
+								<li>Next, return to <a href="https://faulkner.iath.virginia.edu" target="_blank" rel="noopener noreferrer">Digital Yoknapatwpha.</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<!--This is where the fancy quote on the right is created.-->
+					<div class="col-4">
+						<blockquote class="blockquote text-right activity-quote">
+							<p class="mb-0">This is a deep quote that students can read and reflect upon. It could also be something that pops out of the reading as being particularly salient.</p>
+							<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+						</blockquote>
+					</div>
+				</div>
+
+				<!--This is where the activity section Study Ends-->
+				<!--This is where the activity section Explore begins-->
+				<div class="activity-section">
+					<div class="activity-title">
+						<i class="bi bi-globe"></i>
+						Explore
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<!--Walthrough instructions on the left-->
+					<div class="col">
+						<div class="activity-instructions">
+							Walkthrough
+							<ol class="activity-list" type="1">
+								<li>Return to the “Barn Burning” map in <a href="https://faulkner.iath.virginia.edu" target="_blank" rel="noopener noreferrer">Digital Yoknapatwpha.</a></li>
+								<li>Look at the timeline at the bottom of the “Barn Burning” map page to establish the setting’s time period.</li>
+								<li>On the left-hand side of the page is a box labeled “Display Controls.” Select “Event Locations.”</li>
+								<li>Click on the locations on the map until you find an event your character is in.</li>
+								<li>An informational box will open with the following tabs: Biography, Information, Events, Location. Use the information from this box to write a description of the event/scene.</li>
+
+							</ol>
+						</div>
+					</div>
+
+					<!--Video on the right-->
+					<div class="col-4">
+						<div class="activity-instructions">
+							Video Tutorial
+							<div class="thumbnail-container">
+								<img src="../images/search.png" alt="Cummulative Character Video" class="img-fluid">
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!--This is where the activity section Explore ends-->
+				<!--This is where the activity section Respond Begins -->
+				<!--This section stub contains the layout-->
+				<div class="activity-section">
+
+					<!--This is the title stub-->
+
+					<div class="activity-title">
+						<i class="bi bi-chat-left-text"></i>Respond
+					</div>
+
+					<!--Each section is placed into a row below the title. This allows us to split it into columns-->
+					<div class="row">
+
+						<!--This is the list of questions on the left. The div class="col" places all this in the column on the left-->
+						<div class="col">
+							<div class="activity-instructions">
+								Answer the following:
+
+								<div>
+									<ul class="activity-list-unordered">
+
+										<li>What information did you glean from the three sites that will help you re-create the Faulkner scene?</li>
+										<li>Where does the scene take place?  </li>
+										<li>Describe the scene through the viewpoint of your chosen character:</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--List end-->
+						<!--This is the image on the right-->
+						<div class="col-4">
+							<!--This is a column created on the right-->
+							<div class="activity-image">
+								<div class="thumbnail-container">
+									<img src="../images/little_girl.png" alt="Cummulative Character Video" class="img-fluid">
+								</div>
+							</div>
+						</div>
+						<!--Image end-->
+
+					</div>
+				</div>
+			</div>
+			<div class="activity">
+
+				<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
+		Grab the line below to create a new activity heading.-->
+				<h3 class="content_sub_title activity-title" id="Activity 1">Activity #4: Writing the Scene</h3>
+
+
+
+				<!--This is where the activity section Explore ends-->
+				<!--This is where the activity section Respond Begins -->
+				<!--This section stub contains the layout-->
+				<div class="activity-section">
+
+					<!--This is the title stub-->
+
+					<div class="activity-title">
+						<i class="bi bi-chat-left-text"></i>Create
+					</div>
+
+					<!--Each section is placed into a row below the title. This allows us to split it into columns-->
+					<div class="row">
+
+						<!--This is the list of questions on the left. The div class="col" places all this in the column on the left-->
+						<div class="col">
+							<div class="activity-instructions">
+
+
+								<div>
+									<ul class="activity-list-unordered">
+
+										<li>Now that you have selected and thoroughly developed a character and researched tenant farming and the time period the story takes place, you should re-vision a scene from “Barn Burning” from the point of view of your selected character.  For instance, if you select the Black servant at the deSpain mansion, you may re-envision the scene when Abner sullies the entrance rug. You will write the scene from the servant’s point of view. </li>
+										<li>Each scene should include action, description, narration, dialogue, and interiority and should give the chosen scene dimension based their alternative perspective.</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--List end-->
+						<!--This is the image on the right-->
+						<div class="col-4">
+							<!--This is a column created on the right-->
+							<div class="activity-image">
+								<div class="thumbnail-container">
+									<img src="../images/little_girl.png" alt="Cummulative Character Video" class="img-fluid">
+								</div>
+							</div>
+						</div>
+						<!--Image end-->
+
+					</div>
+				</div>
+			</div>
+			<div class="activity">
+
+				<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
+		Grab the line below to create a new activity heading.-->
+				<h3 class="content_sub_title activity-title" id="Activity 1">Activity #5: Workshopping Scenes</h3>
+
+
+				<!--This is a stub for the "Study Acivity section"-->
+
+				<div class="activity-section">
+
+					<!--This is the section title-->
+
+					<div class="activity-title">
+						<i class="bi bi-file-earmark-text"></i>
+						Study
+					</div>
+
+				</div>
+
+
+				<div class="row">
+					<div class="col">
+
+						<!--This is where the list on the left hand side is populated-->
+						<div class="activity-instructions">
+							Instructions
+							<ul class="activity-list-unordered">
+								<li>Read each classmate’s scene and make notes about what works and doesn’t work.</li>
+</ul>
+						</div>
+					</div>
+
+					<!--This is where the fancy quote on the right is created.-->
+					<div class="col-4">
+						<blockquote class="blockquote text-right activity-quote">
+							<p class="mb-0">This is a deep quote that students can read and reflect upon. It could also be something that pops out of the reading as being particularly salient.</p>
+							<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+						</blockquote>
+					</div>
+				</div>
+
+				<!--This is where the activity section Study Ends-->
+				<!--This is where the activity section Explore begins-->
+				
+				<div class="activity-section">
+
+					<!--This is the title stub-->
+
+					<div class="activity-title">
+						<i class="bi bi-chat-left-text"></i>Respond
+					</div>
+
+					<!--Each section is placed into a row below the title. This allows us to split it into columns-->
+					<div class="row">
+
+						<!--This is the list of questions on the left. The div class="col" places all this in the column on the left-->
+						<div class="col">
+							<div class="activity-instructions">
+								
+
+								<div>
+									<ul class="activity-list-unordered">
+
+										<li>The class will work together to help one another improve their scenes.  If two students chose the same character and scene, they should work together to align the scenes so they “match.”  For instance, if two students chose to write from the same judge’s perspective, they should decide which of their names to use.  Names from the overall Faulkner universe are preferred.</li>
+
+</ul>
+								</div>
+							</div>
+						</div>
+						<!--List end-->
+						<!--This is the image on the right-->
+						<div class="col-4">
+							<!--This is a column created on the right-->
+							<div class="activity-image">
+								<div class="thumbnail-container">
+									<img src="../images/little_girl.png" alt="Cummulative Character Video" class="img-fluid">
+								</div>
+							</div>
+						</div>
+						<!--Image end-->
+
+					</div>
+				</div>
+			</div>
+			<div class="activity">
+
+				<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
+		Grab the line below to create a new activity heading.-->
+				<h3 class="content_sub_title activity-title" id="Activity 1">Activity #6: Putting it all together</h3>
+
+
+				<!--This is a stub for the "Study Acivity section"-->
+
+				<div class="activity-section">
+
+					<!--This is the section title-->
+
+					<div class="activity-title">
+						<i class="bi bi-file-earmark-text"></i>
+						Revise
+					</div>
+
+				</div>
+
+
+				<div class="row">
+					<div class="col">
+
+						<!--This is where the list on the left hand side is populated-->
+						<div class="activity-instructions">
+							
+							<ul class="activity-list-unordered">
+								<li>Revise, edit, improve your scene based on the feedback from workshop.</li>
+</ul>
+						</div>
+					</div>
+
+					<!--This is where the fancy quote on the right is created.-->
+					<div class="col-4">
+						<blockquote class="blockquote text-right activity-quote">
+							<p class="mb-0">This is a deep quote that students can read and reflect upon. It could also be something that pops out of the reading as being particularly salient.</p>
+							<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+						</blockquote>
+					</div>
+				</div>
+
+				<!--This is where the activity section Study Ends-->
+				<!--This is where the activity section Explore begins-->
+				<div class="activity-section">
+					<div class="activity-title">
+						<i class="bi bi-globe"></i>
+						Collaborate
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<!--Walthrough instructions on the left-->
+					<div class="col">
+						<div class="activity-instructions">
+							
+							<ol class="activity-list" type="1">
+								<li>The class will rewrite/revision various scenes from the viewpoint of minor characters in Faulkner’s short story, workshop and align those scenes, and then collaboratively decide on an order of the scenes for their final longer Fan Fic.</li>
+
+</ol>
+						</div>
+					</div>
+
+					<!--Video on the right-->
+					<div class="col-4">
+						<div class="activity-instructions">
+							Video Tutorial
+							<div class="thumbnail-container">
+								<img src="../images/search.png" alt="Cummulative Character Video" class="img-fluid">
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!--This is where the activity section Explore ends-->
+				<!--This is where the activity section Respond Begins -->
+				<!--This section stub contains the layout-->
+				
+
+			<h2 class="content_sub_title" id="Final Product">Final Product</h2>
+
+
+			<h2 class="content_sub_title" id="Resources">Resources</h2>
+
+
+			<h1 class="content_title" id="For Teachers">For Teachers</h1>
+
+			<p>Pilot Classroom: </p>
+
+			<p>
+				Learning Goals:
+			<p>
+
+
+				<ul class="activity-list-unordered">
+					<li>Learning Goal 1</li>
+					<li>Learning Goal 2</li>
+					<li>Learning Goal 3</li>
+				</ul>
+
+			<p>Common Core: </p>
+
+
+			<ul class="activity-list-unordered">
+				<li>Common Core 1</li>
+				<li>Common Core 2</li>
+				<li>Common Core 3</li>
+			</ul>
+
+			<p> Student Samples: </p>
+
+			<p> Original Lesson Plan: </p>
+
+
+
+
+			<h1 class="content_title" id="About">About</h1>
+			<div class="note"><em>Note: </em> About section that includes all extra information </div>
+			<p>Instructor: </p>
+			<p>Contact: </p>
+			<p>Created: </p>
+			<p>Notes: </p>
+
+
+		</div>
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".thumbnail-container img").click(function () {
+				$("#myModal").show();
+			});
+
+			$(".close").click(function () {
+				$("#myModal").hide();
+			});
+
+
+			$(".activity-image img").click(function () {
+				$("#imageModal").show();
+			});
+
+			$(".close").click(function () {
+				$("#imageModal").hide();
+			});
+
+		});
+	</script>
+</body>
+
+</html>
