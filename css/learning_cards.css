@@ -46,7 +46,16 @@
 	}
 
 
+	.card-body{
+	
+	font-weight: 600;
+	
+	}
 
+.card-text {
+	
+	font-weight: 400;
+}
 	.card p {
 		margin-bottom: 10px;
 		color: #1a1a1a;

@@ -205,3 +205,33 @@ div.activity-text {
 	line-height: 1.5em;
 	margin-left: 10px;
 }
+
+.glance-title {
+	font-size:2.5em;
+	color: #9d4040
+}
+
+.glance-info {
+	position: relative;
+	text-align: left;
+	color: white;
+}
+
+.glance-centered {
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	background: rgba(255, 255, 255, 0.4);
+	padding: 20px;
+}
+
+.glance-body {
+	font-weight: 600;
+	padding: 10px;
+}
+
+.glance-text {
+	display: inline;
+	font-weight: 400;
+}
