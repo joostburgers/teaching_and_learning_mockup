@@ -221,6 +221,7 @@ div.activity-text {
 	position: relative;
 	text-align: left;
 	color: white;
+	max-width: 75%;
 }
 
 .glance-centered {
