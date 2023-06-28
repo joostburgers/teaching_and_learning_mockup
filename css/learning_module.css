@@ -193,6 +193,11 @@ div.note {
 	padding: 10px;
 }
 
+.activity-paragraph{
+margin-bottom:10px;
+font-weight:400;
+}
+
 ul.note-list {
 	list-style-type: circle;
 	padding-left: 20px;
@@ -234,4 +239,11 @@ div.activity-text {
 .glance-text {
 	display: inline;
 	font-weight: 400;
+}
+
+.tip {
+	border: 1px solid rgba(24%, 24%, 24%, 0.15);
+	margin: 10px;
+	padding: 10px;
+	box-shadow: 3px 3px 0px 0px rgba(52, 88, 77, 0.15);
 }
