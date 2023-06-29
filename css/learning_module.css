@@ -186,6 +186,10 @@ div.modal-image {
 .img-fluid {
 	vertical-align: bottom;
 }
+
+.img-fluid-opacity-50{
+	opacity: 0.25;
+}
 /*For any notes on the sample page*/
 div.note {
 	border: 1px solid red;
@@ -214,7 +218,8 @@ div.activity-text {
 
 .glance-title {
 	font-size:2.5em;
-	color: #9d4040
+	color: #9d4040;
+	width:100%;
 }
 
 .glance-info {
@@ -227,9 +232,9 @@ div.activity-text {
 .glance-centered {
 	position: absolute;
 	top: 50%;
-	left: 40%;
-	transform: translate(-50%, -50%);
-	background: rgba(255, 255, 255, 0.4);
+	left: 25%;
+	transform: translate(-25%, -50%);
+	background: rgba(255, 255, 255, 0.5);
 	padding: 20px;
 }
 
@@ -268,6 +273,7 @@ div.activity-text {
 .toc-h3 a {
 color:#474646;
 }
+
 
 .google-slides-container {
 position:relative;
