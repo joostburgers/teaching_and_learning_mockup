@@ -227,11 +227,13 @@ div.activity-text {
 	text-align: left;
 	color: white;
 	max-width: 75%;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 .glance-centered {
 	position: absolute;
-	top: 50%;
+	top: 35%;
 	left: 25%;
 	transform: translate(-25%, -50%);
 	background: rgba(255, 255, 255, 0.5);
@@ -241,6 +243,8 @@ div.activity-text {
 .glance-body {
 	font-weight: 600;
 	padding: 10px;
+	color:black;
+
 }
 
 .glance-text {
