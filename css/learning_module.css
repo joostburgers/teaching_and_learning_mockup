@@ -268,3 +268,19 @@ div.activity-text {
 .toc-h3 a {
 color:#474646;
 }
+
+.google-slides-container {
+position:relative;
+width:100%;
+padding-top: 60%;
+overflow:hidden;
+
+}
+
+.google-slides-container iframe{
+position:absolute;
+top:0;
+left:5%;
+width:90%;
+height:90%;
+}
