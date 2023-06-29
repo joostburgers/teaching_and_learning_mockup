@@ -3,14 +3,13 @@
 <head>
 	<title>Learning Module Faulkner</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+	<script src="../js/pageLoad.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="../css/family.css">
 	<link rel="stylesheet" href="../css/learning_module.css">
 
 
-	<style>
-	</style>
+
 </head>
 <body>
 	<!--Modal for looping instructional video-->
@@ -167,15 +166,15 @@
 
 
 		<div class="sidebar">
-			<h1 class="content_title">Table of Contents</h1>
-			<ul>
+			<div class="table-of-contents"></div>
+			<!--<ul>
 				<li><a href="#Preface">Preface</a></li>
 				<li><a href="#Activities">Activities</a></li>
 				<li><a href="#Final Product">Final Product</a></li>
 				<li><a href="#Resources">Resources</a></li>
 				<li><a href="#For Teachers">For Teachers</a></li>
 				<li><a href="#About">About</a></li>
-			</ul>
+			</ul>-->
 		</div>
 <!--This is where the TOC ends-->
 
@@ -770,7 +769,7 @@
 				<!--This is where the activity section Respond Begins -->
 				<!--This section stub contains the layout-->
 				
-
+				</div>
 			<h2 class="content_sub_title" id="Final Product">Final Product: Faulkner Fan Fic</h2>
 			<p>Teachers and students may use a free education website creator, <a href="https://wakelet.com" target="_blank" rel="noopener noreferrer">Wakelet</a>, or any online platform to display their final work.</p>
 
@@ -791,7 +790,7 @@
 
 			<p>
 				Learning Goals:
-			<p>
+			</p>
 
 
 				<ul class="activity-list-unordered">
@@ -834,7 +833,7 @@
 
 
 
-
+	</div>
 
 
 
@@ -842,6 +841,9 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>
 		$(document).ready(function () {
+
+			loadTOC();
+
 			$(".thumbnail-container img").click(function () {
 				$("#myModal").show();
 			});

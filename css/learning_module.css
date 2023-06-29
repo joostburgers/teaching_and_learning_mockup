@@ -250,11 +250,21 @@ div.activity-text {
 	box-shadow: 3px 3px 0px 0px rgba(52, 88, 77, 0.15);
 }
 
-.sub-menu {
-margin-left:10px;
-
+.toc-h2 {
+	padding-left: 0;
+	margin-bottom: 5px;
+	font-family: Geneva, Helvetica, Arial, sans-serif;
+	font-weight:600;
 }
 
-.sub-menu-item {
-	padding-bottom: 10px;
+.toc-h3 {
+	list-style-type: none;
+	padding-left: 5%;
+	border-left: 1px solid lightgray;
+	padding-bottom:10px;
+	
+}
+
+.toc-h3 a {
+color:#474646;
 }
