@@ -1,0 +1,17 @@
+[
+  {
+	"description": "Description for Image 1",
+	"author": "Author 1",
+	"src": "../images/little_girl.png"
+  },
+  {
+	"description": "Description for Image 2",
+	"author": "Author 2",
+	"src": "../images/go_down_moses_map.png",
+  },
+  {
+	"description": "Description for Image 3",
+	"author": "Author 3",
+	"src": "../images/bundren_genealogy.jpg"
+  }
+]
