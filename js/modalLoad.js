@@ -1,9 +1,13 @@
 // JavaScript source code
 var imageData = null; // global variable to store image metadata
 
-$.getJSON("../data/imageData.json", function (data) {
+var imageDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/imageData.json'
+
+$.getJSON("imageDataURL", function (data) {
 	imageData = data; // store the data object globally
 });
+
+///This is not running properly. Need to get JSON sync?
 
 console.log(imageData)
 
