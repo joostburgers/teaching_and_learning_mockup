@@ -9,23 +9,19 @@ function loadImageData() {
 		url: imageDataURL,
 		dataType: 'json',
 		async: false,
-		/*data: myData,*/
-		success: function (data) {
-			console.log(data)
-			data = imageData;
 
+		success: function (data) {
 
 		}
+
 	});
 
 }
-///This is not running properly. Need to get JSON sync?
-function getImageData() {
-	loadImageData();
-	console.log(imageData); // imageData now contains all the data from imageData.json
-}
 
-getImageData();
+loadImageData();
+///This is not running properly. Need to get JSON sync?
+
+
 console.log(imageData)
 $(".activity-image img").click(function () {
 	var imageName = $(this).attr("src"); // get the image source

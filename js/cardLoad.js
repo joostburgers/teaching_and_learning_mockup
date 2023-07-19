@@ -21,7 +21,7 @@ function getCards() {
 			return myData;
 		}
 	});
-	
+
 }
 
 console.log("This is where it should initialize: " + myData)
