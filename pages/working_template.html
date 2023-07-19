@@ -30,18 +30,18 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 id="modalTitle" class="modal-title"></h5>
+					<h5 id="imageTitle" class="modal-title"></h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
 					<div class="modal-image">
-						<img id="modalImage" src="" alt ="" class="img-fluid">
+						<img id="imageSource" src="" alt ="" class="img-fluid">
 					</div>
 				</div>
 				<div class="modal-footer">
-					<div id="imageCaption"></div>
+					<div id="imageCitation"></div>
 				</div>
 			</div>
 		</div>
@@ -341,30 +341,78 @@
 		$(document).ready(function () {
 
 			loadTOC();
-			
-			
+
+			//Load images dynamically
+			//TODO: Create write data to modal fields
+
+			function getImageData(source) {
+				var filename = source.substring (source.lastIndexOf('/') + 1)
 
 
+				const tempImageData = imageData.find(object => object.src === filename);
 
-			/*var modal = $('#imageModal')
-			var title = $('#modalTitle')
-			var modalImg = $("#modalImage");
-			var captionText = document.getElementById("caption");
-			var metadataField = document.getElementById("metadata");
-			var span = document.getElementsByClassName("close")[0];
+				return tempImageData
 
-			$.getJSON("metadata.json", function (data) {
-				$('.modal-trigger').click(function () {
-					var index = $(this).data('index');
-					var imageMetadata = data[index];
-					modal.style.display = "block";
-					modalImg.src = $(this).attr('src');
-					captionText.innerHTML = $(this).attr('alt');
-					metadataField.innerHTML = "Description: " + imageMetadata.description + ", Author: " + imageMetadata.author;
-				});
+				/*$.getJSON(source, function (data) {
+					console.log(data);
+				});*/
+			}
+
+
+			var imageData = [
+				{
+					"description": "Description for Image 1",
+					"author": "Author 1",
+					"src": "little_girl.png"
+				},
+				{
+					"description": "Description for Image 2",
+					"author": "Author 2",
+					"src": "go_down_moses_map.png",
+				},
+				{
+					"description": "Description for Image 3",
+					"author": "Author 3",
+					"src": "bundren_genealogy.jpg"
+				}
+			]
+
+			//This sets up all the variables to be populated in the DOM.
+			var modal = $('#imageModal')
+			var title = $('#imageTitle')
+			var filesource = $("#imageSource");
+			var citation = $("#imageCitation");
+			/*document.getElementsByClassName("close")[0];
+*/
+
+			//When image is clicked then populate the Modal html.
+			$('.activity-image img').click(function () {
+				//get image filename
+
+				var source = $(this).attr('src')
+
+				var modalImageData = getImageData(source);
+
+				console.log(modalImageData)
+				/*var filename = source.substring(source.lastIndexOf('/') + 1)
+				
+				
+				const modalImageData = imageData.find(object => object.src === filename);
+
+				console.log(modalImageData);*/
+				
+				
+
+
+				/*var index = $(this).data('index');
+				var imageMetadata = data[index];
+				modal.style.display = "block";
+				modalImg.src = $(this).attr('src');
+				captionText.innerHTML = $(this).attr('alt');
+				metadataField.innerHTML = "Description: " + imageMetadata.description + ", Author: " + imageMetadata.author;*/
 			});
 
-			span.onclick = function () {
+			/*span.onclick = function () {
 				modal.style.display = "none";
 			}
 */
@@ -374,17 +422,28 @@
 
 			$(".close").click(function () {
 				$("#myModal").hide();
-			});
+			});*/
 
-			$(".activity-image img").click(function () {
+			/*$(".activity-image img").click(function () {
 				$("#imageModal").show();
-			});
+			});*//*
 
 			$(".close").click(function () {
 				$("#imageModal").hide();
 			});*/
+			/*
+					});
+			*/
+
+
+			//TODO: Get data from object
+			//TODO: Get object from JSON
+
+
+
 
 		});
+;
 	</script>
 </body>
 </html>
