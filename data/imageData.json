@@ -2,7 +2,7 @@
   {
 	"description": "Description for Image 1",
 	"author": "Author 1",
-	"src": "../images/little_girl.png"
+	"src": "little_girl.png"
   },
   {
 	"description": "Description for Image 2",

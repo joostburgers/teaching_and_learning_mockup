@@ -342,6 +342,17 @@
 
 			loadTOC();
 
+			var jsonURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/imageData.json'; // replace with the URL of your JSON file
+
+			$.getJSON(jsonURL, function (jsonData) {
+				var foundObject = jsonData.find(function (object) {
+					// replace 'filename' with the actual name of your file property
+					return object.filename === "your_filename_here";
+				});
+
+				console.log(foundObject); // prints the found object to the console
+			});
+
 
 			/*var modal = $('#imageModal')
 			var title = $('#modalTitle')

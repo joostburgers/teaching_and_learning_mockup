@@ -21,16 +21,7 @@ function getCards() {
 			return myData;
 		}
 	});
-
-	/*$.getJSON(, function (data) {
-		myData = data;
-		populateStoryFilters(data);
-		populateAuthorFilters(data);
-		filterCards(data);
-
-
-	});*/
-
+	
 }
 
 console.log("This is where it should initialize: " + myData)
