@@ -37,7 +37,7 @@
 				</div>
 				<div class="modal-body">
 					<div class="modal-image">
-						<img id="imageSource" src="" alt ="" class="img-fluid">
+						<img id="imageSource" src="" alt="" class="img-fluid">
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -162,12 +162,12 @@
 	<!--This is the TOC menu. No need to touch this-->
 	<div class="container">
 
-		
-			<div class="sidebar">
-				<div class="table-of-contents"></div>
-				
-			</div>
-		
+
+		<div class="sidebar">
+			<div class="table-of-contents"></div>
+
+		</div>
+
 		<!--This is where the TOC ends-->
 		<!--This is where all the content for the lesson plan sits-->
 		<div class="main">
@@ -351,49 +351,35 @@
 			//Load images dynamically
 			//TODO: Create write data to modal fields
 
+			
+
+
 			imageDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/imageData.json'
 
 			$.getJSON(imageDataURL, function (jsonData) {
 
 				$('.activity-image img').click(function () {
 
-					console.log(jsonData)
-					var newImageData = null;
-					var source = $(this).attr('src')
-					var currentFilename = source.substring(source.lastIndexOf('/') + 1)
-					console.log(source, currentfilename)
+				var source = $(this).attr('src')
 
-
-					// find the clicked object in 
-					var clickedObject = jsonData.filter(function (obj) {
-								
-						
-						return obj.filename === tempFilename;
-
-						console.log(clickedObject)
-					});
-				});
-			});
-
-			/*function getImageData(source) {
-
-				
-
-				var newImageData = null;
-
-			 
-
-					var filename = source.substring(source.lastIndexOf('/') + 1)
-
-
-					const tempImageData = jsonData.find(object => object.src === filename);
+					var tempImageData = getImageData(source, jsonData)	
 
 					console.log(tempImageData)
 
-					return tempImageData
-				};
+				})
+			});
 
-			*/
+
+			function getImageData(source, jsonData) {
+				var currentFilename = source.substring(source.lastIndexOf('/') + 1)
+
+				const tempImageData = jsonData.find(object => object.filename === currentFilename);
+				return tempImageData
+			}
+
+
+			
+
 
 
 			var imageData = [
@@ -432,22 +418,22 @@
 
 				console.log(modalImageData)
 				*//*var filename = source.substring(source.lastIndexOf('/') + 1)
-				
-				
-				const modalImageData = imageData.find(object => object.src === filename);
-
-				console.log(modalImageData);*//*
-				
-				
 
 
-				*//*var index = $(this).data('index');
-				var imageMetadata = data[index];
-				modal.style.display = "block";
-				modalImg.src = $(this).attr('src');
-				captionText.innerHTML = $(this).attr('alt');
-				metadataField.innerHTML = "Description: " + imageMetadata.description + ", Author: " + imageMetadata.author;*//*
-			});
+			const modalImageData = imageData.find(object => object.src === filename);
+
+			console.log(modalImageData);*//*
+
+
+
+
+			*//*var index = $(this).data('index');
+			var imageMetadata = data[index];
+			modal.style.display = "block";
+			modalImg.src = $(this).attr('src');
+			captionText.innerHTML = $(this).attr('alt');
+			metadataField.innerHTML = "Description: " + imageMetadata.description + ", Author: " + imageMetadata.author;*//*
+		});
 */
 			/*span.onclick = function () {
 				modal.style.display = "none";
@@ -480,7 +466,7 @@
 
 
 		});
-;
+
 	</script>
 </body>
 </html>
