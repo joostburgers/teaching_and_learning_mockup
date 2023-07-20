@@ -288,7 +288,7 @@
 							<!--This is a column created on the right-->
 							<div class="activity-image">
 								<div class="thumbnail-container">
-									<img src="../images/little_girl.png" alt="Cummulative Character Video" class="img-fluid">
+									<img src="../images/tenant_child_inside_house.png" alt="Cummulative Character Video" class="img-fluid">
 								</div>
 							</div>
 							<div class="activity-image">
@@ -366,6 +366,8 @@
 
 					console.log(tempImageData)
 
+			setImageData(source, tempImageData)
+
 				})
 			});
 
@@ -380,7 +382,28 @@
 
 			//TODO update JSON file to include more sophisticated data.
 
+
+
+
 			//TODO create a setdata function
+
+			function setImageData(source, tempImageData) {
+
+				
+				var title = $('#imageTitle')
+				var imageSource = $("#imageSource");
+				var citation = $("#imageCitation");
+
+
+				imageSource.src = source;
+				title = tempImageData.title;
+
+
+
+			}
+
+
+
 			//TODO launch modal
 			//TODO refactor
 			//TODO launch function from separate js file to reduce clutter.
@@ -389,7 +412,7 @@
 
 
 
-			var imageData = [
+			/*var imageData = [
 				{
 					"description": "Description for Image 1",
 					"author": "Author 1",
@@ -405,7 +428,7 @@
 					"author": "Author 3",
 					"src": "bundren_genealogy.jpg"
 				}
-			]
+			]*/
 
 			//This sets up all the variables to be populated in the DOM.
 			var modal = $('#imageModal')

@@ -1,17 +1,48 @@
 [
   {
-	"description": "Description for Image 1",
-	"author": "Author 1",
-	"filename": "little_girl.png"
+	"artist_last_name": "Russel",
+	"artist_first_name": "Lee",
+	"image_title": "A child of Scarbrough's in front of a dresser",
+	"year": "1939",
+	"image_place": "Laurel, Mississippi",
+	"image_description": "description",
+	"filename": "tenant_child_inside_house.png",
+	"media_type": "site_photograph",
+	"alt_text": "Tenant child inside house",
+	"repository_name": "Library of Congress Prints and Photographs Division",
+	"repository_place": "Washington, D.C. 20540 USA",
+	"repository_url": "http://hdl.loc.gov/loc.pnp/pp.print"
+
+  },
+
+  {
+	"artist_last_name": "Last Name",
+	"artist_first_name": "First Name",
+	"image_title": "Go Down, Moses (Map)",
+	"year": "year",
+	"image_place": "place",
+	"image_description": "description",
+	"filename": "go_down_moses_map.png",
+	"media_type": "screen_capture",
+	"alt_text": "alt text",
+	"repository_name": "repository name",
+	"repository_place": "repository place",
+	"repository_url": "repository url"
+
   },
   {
-	"description": "Description for Image 2",
-	"author": "Author 2",
-	"filename": "go_down_moses_map.png"
-  },
-  {
-	"description": "Description for Image 3",
-	"author": "Author 3",
-	"filename": "bundren_genealogy.jpg"
+	"artist_last_name": "Last Name",
+	"artist_first_name": "First Name",
+	"image_title": "Title",
+	"year": "year",
+	"image_place": "place",
+	"image_description": "description",
+	"filename": "bundren_genealogy.jpg",
+	"media_type": "external_image",
+	"alt_text": "alt text",
+	"repository_name": "repository name",
+	"repository_place": "repository place",
+	"repository_url": "repository url",
+	"access_date": "access date"
   }
 ]
