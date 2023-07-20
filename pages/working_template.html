@@ -351,18 +351,49 @@
 			//Load images dynamically
 			//TODO: Create write data to modal fields
 
-			function getImageData(source) {
-				var filename = source.substring (source.lastIndexOf('/') + 1)
+			imageDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/imageData.json'
+
+			$.getJSON(imageDataURL, function (jsonData) {
+
+				$('.activity-image img').click(function () {
+
+					console.log(jsonData)
+					var newImageData = null;
+					var source = $(this).attr('src')
+					var currentFilename = source.substring(source.lastIndexOf('/') + 1)
+					console.log(source, currentfilename)
 
 
-				const tempImageData = imageData.find(object => object.src === filename);
+					// find the clicked object in 
+					var clickedObject = jsonData.filter(function (obj) {
+								
+						
+						return obj.filename === tempFilename;
 
-				return tempImageData
+						console.log(clickedObject)
+					});
+				});
+			});
 
-				/*$.getJSON(source, function (data) {
-					console.log(data);
-				});*/
-			}
+			/*function getImageData(source) {
+
+				
+
+				var newImageData = null;
+
+			 
+
+					var filename = source.substring(source.lastIndexOf('/') + 1)
+
+
+					const tempImageData = jsonData.find(object => object.src === filename);
+
+					console.log(tempImageData)
+
+					return tempImageData
+				};
+
+			*/
 
 
 			var imageData = [
@@ -392,7 +423,7 @@
 */
 
 			//When image is clicked then populate the Modal html.
-			$('.activity-image img').click(function () {
+			/*$('.activity-image img').click(function () {
 				//get image filename
 
 				var source = $(this).attr('src')
@@ -400,24 +431,24 @@
 				var modalImageData = getImageData(source);
 
 				console.log(modalImageData)
-				/*var filename = source.substring(source.lastIndexOf('/') + 1)
+				*//*var filename = source.substring(source.lastIndexOf('/') + 1)
 				
 				
 				const modalImageData = imageData.find(object => object.src === filename);
 
-				console.log(modalImageData);*/
+				console.log(modalImageData);*//*
 				
 				
 
 
-				/*var index = $(this).data('index');
+				*//*var index = $(this).data('index');
 				var imageMetadata = data[index];
 				modal.style.display = "block";
 				modalImg.src = $(this).attr('src');
 				captionText.innerHTML = $(this).attr('alt');
-				metadataField.innerHTML = "Description: " + imageMetadata.description + ", Author: " + imageMetadata.author;*/
+				metadataField.innerHTML = "Description: " + imageMetadata.description + ", Author: " + imageMetadata.author;*//*
 			});
-
+*/
 			/*span.onclick = function () {
 				modal.style.display = "none";
 			}
