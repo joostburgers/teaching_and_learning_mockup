@@ -368,7 +368,13 @@
 
 			setImageData(source, tempImageData)
 
+					$("#imageModal").show();
+
 				})
+			});
+
+			$(".close").click(function () {
+				$("#imageModal").hide();
 			});
 
 
@@ -380,25 +386,21 @@
 			}
 
 
-			//TODO update JSON file to include more sophisticated data.
+function setImageData(source, image) {
+	$('#imageTitle').html(image.alt_text)
+	$("#imageSource").attr('src', source);
+	$('#imageSource').attr('alt', image.alt_text)
+
+	if (image.media_type == 'site_photograph') {
+		$("#imageCitation").html(image.artist_last_name + ", " + image.artist_first_name + ". " + "&quot;" + image.image_title + ".&quot; " + image.year + ", " + image.image_place + ". " + image.repository_name + ", " + image.repository_place + ". URL: " + "<a href=&quot;" + image.repository_url + "&quot;>" + image.repository_url + "</a>"
+			);
+		} else if (image.media_type == 'external_image') {
+			$("#imageCitation").html(image.artist_last_name + ", " + image.artist_first_name + ". " + "&quot;" + image.image_title + ".&quot; " + image.year + ", " + image.image_place + ". ")
+				}
 
 
-
-
-			//TODO create a setdata function
-
-			function setImageData(source, tempImageData) {
-
-				
-				var title = $('#imageTitle')
-				var imageSource = $("#imageSource");
-				var citation = $("#imageCitation");
-
-
-				imageSource.src = source;
-				title = tempImageData.title;
-
-
+			
+				console.log(image.image_title)
 
 			}
 

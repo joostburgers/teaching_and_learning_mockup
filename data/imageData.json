@@ -31,18 +31,20 @@
 
   },
   {
-	"artist_last_name": "Last Name",
-	"artist_first_name": "First Name",
-	"image_title": "Title",
-	"year": "year",
-	"image_place": "place",
-	"image_description": "description",
+	"artist_last_name": "Padgett",
+	"artist_first_name": "John",
+	"image_title": "The Bundren Family",
+	"year": "1998",
+	"image_place": null,
+	"image_description": "Genealogy of the Bundren family",
 	"filename": "bundren_genealogy.jpg",
 	"media_type": "external_image",
-	"alt_text": "alt text",
-	"repository_name": "repository name",
-	"repository_place": "repository place",
-	"repository_url": "repository url",
-	"access_date": "access date"
+	"alt_text": "Genealogy of the Bundren family",
+	"repository_name": null,
+	"repository_place": null,
+	"repository_url": null,
+	"access_date": "2023-07-21",
+	"website_title": "William Faulkner on the Web",
+	"original_url": "http://cypress.mcsr.olemiss.edu/~egjbp/faulkner/images/bundren.jpg"
   }
 ]
