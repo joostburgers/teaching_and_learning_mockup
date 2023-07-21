@@ -355,7 +355,7 @@
 			//Load images dynamically
 			//TODO: Create write data to modal fields
 
-			
+
 
 
 			imageDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/imageData.json'
@@ -364,13 +364,13 @@
 
 				$('.activity-image img').click(function () {
 
-				var source = $(this).attr('src')
+					var source = $(this).attr('src')
 
-					var tempImageData = getImageData(source, jsonData)	
+					var tempImageData = getImageData(source, jsonData)
 
 					console.log(tempImageData)
 
-			setImageData(source, tempImageData)
+					setImageData(source, tempImageData)
 
 					$("#imageModal").show();
 
@@ -390,41 +390,53 @@
 			}
 
 
-function setImageData(source, image) {
-	const imageTitle = $('#imageTitle');
-	const imageSource = $('#imageSource');
-	const imageCitation = $('#imageCitation')
+			function setImageData(source, image) {
+				const imageTitle = $('#imageTitle');
+				const imageSource = $('#imageSource');
+				const imageCitation = $('#imageCitation')
 
-	const creators = image.creators
-	console.log(creators)
+				const creators = image.creators.map((creator, index) => {
+					if (index === 0) {
+						return `${creator.last_name}, ${creator.first_name}`;
+					}
+					return `${creator.first_name} ${creator.last_name}`;
+				})
+				const creatorsString = creators.join(', ');
 
-	const sitePhotographTemplate = 
-		`${image.artist_last_name}, ${image.artist_first_name}. "${image.image_title}." ${image.year}, ${image.image_place}. ${image.repository_name}, ${image.repository_place}. URL: <a href="${image.repository_url}">${image.repository_url}</a>`;
+				const sitePhotographTemplate =
+					`${creatorsString}.
+			"${image.image_title}." ${image.year}, ${image.image_place}. ${image.repository_name}, ${image.repository_place}. URL: <a href="${image.repository_url}">${image.repository_url}</a>`;
 
-	const externalMediaTemplate = 
-		`${image.artist_last_name}, ${image.artist_first_name}. "${image.image_title}." <em>${image.website_title}</em>, ${image.year}, <a href="${image.original_url}">${image.original_url}</a>. Accessed ${new Date(image.access_date).toLocaleDateString('en-US', {
-			month: 'short',
-			day: 'numeric',
-			year: 'numeric'
-		})}.`;
+				const externalMediaTemplate =
+					`${creatorsString}. "${image.image_title}." <em>${image.website_title}</em>, ${image.year}, <a href="${image.original_url}">${image.original_url}</a>. Accessed ${new Date(image.access_date).toLocaleDateString('en-US', {
+						month: 'short',
+						day: 'numeric',
+						year: 'numeric'
+					})}.`;
 
-	const screenCaptureTemplate = 
-		`${image.artist_last_name}, ${image.artist_first_name}. "${image.image_title}." ${image.year}, ${image.image_place}. ${image.repository_name}, ${image.repository_place}. URL: <a href="${image.repository_url}">${image.repository_url}</a>. Accessed ${new Date(image.access_date).toLocaleDateString()}.`;
+				const screenCaptureTemplate =
+					`${creatorsString}. "${image.image_title}."
+					${image.year}.
+			<em>${image.repository_name},</em> ${image.repository_place}, 
+			<a href="${image.repository_url}">${image.repository_url}</a>`;
 
 
-	imageTitle.html(image.alt_text)
-	imageSource.attr('src', source);
-	imageSource.attr('alt', image.alt_text)
+				imageTitle.html(image.alt_text)
+				imageSource.attr('src', source);
+				imageSource.attr('alt', image.alt_text)
 
-	if (image.media_type == 'site_photograph') {
-		imageCitation.html(sitePhotographTemplate);
-	} else if (image.media_type == 'external_image') {
-		imageCitation.html(externalMediaTemplate)
+				if (image.media_type == 'site_photograph') {
+					imageCitation.html(sitePhotographTemplate);
+				} else if (image.media_type == 'external_image') {
+					imageCitation.html(externalMediaTemplate)
+				}
+				else if (image.media_type == 'screen_capture') {
+					imageCitation.html(screenCaptureTemplate)
 				}
 
 
-			
-				
+
+
 
 			}
 
@@ -476,9 +488,9 @@ function setImageData(source, image) {
 				*//*var filename = source.substring(source.lastIndexOf('/') + 1)
 
 
-			const modalImageData = imageData.find(object => object.src === filename);
+		const modalImageData = imageData.find(object => object.src === filename);
 
-			console.log(modalImageData);*//*
+		console.log(modalImageData);*//*
 
 
 

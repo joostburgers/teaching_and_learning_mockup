@@ -22,24 +22,34 @@
   {
 	"creators": [
 	  {
-		"last_name": "Russel",
-		"first_name": "Lee"
+		"last_name": "Towner",
+		"first_name": "Theresa"
 	  },
-	  { "last_name": "Evans",
-"first_name": "Walker"
+	  {
+		"last_name": "Coleman",
+		"first_name": "Robert"
+	  },
+	  {
+		"last_name": "Penner",
+		"first_name": "Erin"
+	  },
+	  {
+		"last_name": "Robbins",
+		"first_name": "Ben"
 	  }
+
 	],
-	
+
 	"image_title": "Go Down, Moses (Map)",
-	"year": "year",
-	"image_place": "place",
-	"image_description": "description",
+	"year": "2016",
+	"image_place": null,
+	"image_description": "Digital Yoknapatawpha map of Go Down, Moses",
 	"filename": "go_down_moses_map.png",
 	"media_type": "screen_capture",
-	"alt_text": "alt text",
-	"repository_name": "repository name",
-	"repository_place": "repository place",
-	"repository_url": "repository url"
+	"alt_text": "Digital Yoknapatawpha map of Go Down, Moses",
+	"repository_name": "Digital Yoknapatawpha",
+	"repository_place": "University of Virginia",
+	"repository_url": "http://faulkner.iath.virginia.edu/?text=GDM"
 
   },
   {
