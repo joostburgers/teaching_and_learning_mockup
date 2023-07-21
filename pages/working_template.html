@@ -296,7 +296,11 @@
 									<img src="../images/bundren_genealogy.jpg" alt="Cummulative Character Video" class="img-fluid">
 								</div>
 							</div>
-
+							<div class="activity-image">
+								<div class="thumbnail-container">
+									<img src="../images/go_down_moses_map.png" alt="Cummulative Character Video" class="img-fluid">
+								</div>
+							</div>
 						</div>
 						<!--Image end-->
 					</div>
@@ -387,20 +391,40 @@
 
 
 function setImageData(source, image) {
-	$('#imageTitle').html(image.alt_text)
-	$("#imageSource").attr('src', source);
-	$('#imageSource').attr('alt', image.alt_text)
+	const imageTitle = $('#imageTitle');
+	const imageSource = $('#imageSource');
+	const imageCitation = $('#imageCitation')
+
+	const creators = image.creators
+	console.log(creators)
+
+	const sitePhotographTemplate = 
+		`${image.artist_last_name}, ${image.artist_first_name}. "${image.image_title}." ${image.year}, ${image.image_place}. ${image.repository_name}, ${image.repository_place}. URL: <a href="${image.repository_url}">${image.repository_url}</a>`;
+
+	const externalMediaTemplate = 
+		`${image.artist_last_name}, ${image.artist_first_name}. "${image.image_title}." <em>${image.website_title}</em>, ${image.year}, <a href="${image.original_url}">${image.original_url}</a>. Accessed ${new Date(image.access_date).toLocaleDateString('en-US', {
+			month: 'short',
+			day: 'numeric',
+			year: 'numeric'
+		})}.`;
+
+	const screenCaptureTemplate = 
+		`${image.artist_last_name}, ${image.artist_first_name}. "${image.image_title}." ${image.year}, ${image.image_place}. ${image.repository_name}, ${image.repository_place}. URL: <a href="${image.repository_url}">${image.repository_url}</a>. Accessed ${new Date(image.access_date).toLocaleDateString()}.`;
+
+
+	imageTitle.html(image.alt_text)
+	imageSource.attr('src', source);
+	imageSource.attr('alt', image.alt_text)
 
 	if (image.media_type == 'site_photograph') {
-		$("#imageCitation").html(image.artist_last_name + ", " + image.artist_first_name + ". " + "&quot;" + image.image_title + ".&quot; " + image.year + ", " + image.image_place + ". " + image.repository_name + ", " + image.repository_place + ". URL: " + "<a href=&quot;" + image.repository_url + "&quot;>" + image.repository_url + "</a>"
-			);
-		} else if (image.media_type == 'external_image') {
-			$("#imageCitation").html(image.artist_last_name + ", " + image.artist_first_name + ". " + "&quot;" + image.image_title + ".&quot; " + image.year + ", " + image.image_place + ". ")
+		imageCitation.html(sitePhotographTemplate);
+	} else if (image.media_type == 'external_image') {
+		imageCitation.html(externalMediaTemplate)
 				}
 
 
 			
-				console.log(image.image_title)
+				
 
 			}
 

@@ -1,7 +1,11 @@
 [
   {
-	"artist_last_name": "Russel",
-	"artist_first_name": "Lee",
+	"creators": [
+	  {
+		"last_name": "Russel",
+		"first_name": "Lee"
+	  }
+	],
 	"image_title": "A child of Scarbrough's in front of a dresser",
 	"year": "1939",
 	"image_place": "Laurel, Mississippi",
@@ -16,8 +20,16 @@
   },
 
   {
-	"artist_last_name": "Last Name",
-	"artist_first_name": "First Name",
+	"creators": [
+	  {
+		"last_name": "Russel",
+		"first_name": "Lee"
+	  },
+	  { "last_name": "Evans",
+"first_name": "Walker"
+	  }
+	],
+	
 	"image_title": "Go Down, Moses (Map)",
 	"year": "year",
 	"image_place": "place",
@@ -31,6 +43,13 @@
 
   },
   {
+	
+	"creators": [
+	  {
+		"last_name": "Padgett",
+		"first_name": "John"
+	  }
+	],
 	"artist_last_name": "Padgett",
 	"artist_first_name": "John",
 	"image_title": "The Bundren Family",
