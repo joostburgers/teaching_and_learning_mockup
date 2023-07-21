@@ -1,0 +1,98 @@
+[
+  {
+	"creators": [
+	  {
+		"last_name": "Russel",
+		"first_name": "Lee"
+	  }
+	],
+	"image_title": "A child of Scarbrough's in front of a dresser",
+	"year": "1939",
+	"image_place": "Laurel, Mississippi",
+	"image_description": "description",
+	"filename": "tenant_child_inside_house.png",
+	"media_type": "site_photograph",
+	"alt_text": "Tenant child inside house",
+	"repository_name": "Library of Congress Prints and Photographs Division",
+	"repository_place": "Washington, D.C. 20540 USA",
+	"repository_url": "http://hdl.loc.gov/loc.pnp/pp.print"
+
+  },
+
+  {
+	"creators": [
+	  {
+		"last_name": "Towner",
+		"first_name": "Theresa"
+	  },
+	  {
+		"last_name": "Coleman",
+		"first_name": "Robert"
+	  },
+	  {
+		"last_name": "Penner",
+		"first_name": "Erin"
+	  },
+	  {
+		"last_name": "Robbins",
+		"first_name": "Ben"
+	  }
+
+	],
+
+	"image_title": "Go Down, Moses (Map)",
+	"year": "2016",
+	"image_place": null,
+	"image_description": "Digital Yoknapatawpha map of Go Down, Moses",
+	"filename": "go_down_moses_map.png",
+	"media_type": "screen_capture",
+	"alt_text": "Digital Yoknapatawpha map of Go Down, Moses",
+	"repository_name": "Digital Yoknapatawpha",
+	"repository_place": "University of Virginia",
+	"repository_url": "http://faulkner.iath.virginia.edu/?text=GDM"
+
+  },
+  {
+
+	"creators": [
+	  {
+		"last_name": "Padgett",
+		"first_name": "John"
+	  }
+	],
+	"artist_last_name": "Padgett",
+	"artist_first_name": "John",
+	"image_title": "The Bundren Family",
+	"year": "1998",
+	"image_place": null,
+	"image_description": "Genealogy of the Bundren family",
+	"filename": "bundren_genealogy.jpg",
+	"media_type": "external_image",
+	"alt_text": "Genealogy of the Bundren family",
+	"repository_name": null,
+	"repository_place": null,
+	"repository_url": null,
+	"access_date": "2023-07-21",
+	"website_title": "William Faulkner on the Web",
+	"original_url": "http://cypress.mcsr.olemiss.edu/~egjbp/faulkner/images/bundren.jpg"
+  },
+  {
+
+	"creators": [
+	  {
+		"last_name": null,
+		"first_name": null
+	  }
+	],
+	"image_title": "Video tutorial of cumulative character search",
+	"year": "1998",
+	"image_place": null,
+	"image_description": "Instructional video for understanding cummulative character search",
+	"filename": "cummulative_characters_quickdemo.mp4",
+	"media_type": "quick_tutorial",
+	"alt_text": "Video tutorial of using cumulative characters search",
+	"url": "http://faulkner.iath.virginia.edu/family/cumulative_characters/"
+  }
+]
+
+}
