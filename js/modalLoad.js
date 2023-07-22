@@ -77,6 +77,7 @@ function loadVideoData() {
 			const tempVideoData = getVideoData(source, jsonData);
 			console.log(tempVideoData)
 			setVideoData(source, tempVideoData);
+			$('video')[0].load();
 			$("#videoModal").show();
 		});
 	});
