@@ -69,6 +69,7 @@ function loadVideoData() {
 	const videoDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/videoData.json';
 
 	$.getJSON(videoDataURL, function (jsonData) {
+		console.log(jsonData)
 		$('.activity-video img').click(function () {
 			console.log("clicked")
 			const source = $(this).attr('src');
@@ -84,10 +85,12 @@ function loadVideoData() {
 
 	function getVideoData(source, jsonData) {
 		const currentFilename = source.substring(source.lastIndexOf('/') + 1);
-		return jsonData.find(object => object.filename === currentFilename);
+		return jsonData.find(object => object.preview_filename === currentFilename);
 	}
 
 	function setVideoData(source, video) {
+		console.log(video)
+		const currentVideoDirectory = "../video/"
 		const videoTitle = $('#videoTitle');
 		const videoSource = $('#videoSource');
 		const videoCitation = $('#videoCitation')
@@ -118,7 +121,7 @@ function loadVideoData() {
 		}
 
 		videoTitle.html(video.video_title);
-		videoSource.attr('src', source);
+		videoSource.attr('src', currentVideoDirectory + video.source_filename);
 		videoCitation.html(citationTemplate);
 
 	}
