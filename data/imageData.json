@@ -1,5 +1,7 @@
 [
   {
+	"media_type": "site_photograph",
+
 	"creators": [
 	  {
 		"last_name": "Russel",
@@ -11,15 +13,18 @@
 	"image_place": "Laurel, Mississippi",
 	"image_description": "description",
 	"filename": "tenant_child_inside_house.png",
-	"media_type": "site_photograph",
+
 	"alt_text": "Tenant child inside house",
-	"repository_name": "Library of Congress Prints and Photographs Division",
-	"repository_place": "Washington, D.C. 20540 USA",
-	"repository_url": "http://hdl.loc.gov/loc.pnp/pp.print"
+	"repository": {
+	  "name": "Library of Congress Prints and Photographs Division",
+	  "place": "Washington, D.C. 20540 USA",
+	  "url": "http://hdl.loc.gov/loc.pnp/pp.print"
+	}
 
   },
 
   {
+	"media_type": "screen_capture",
 	"creators": [
 	  {
 		"last_name": "Towner",
@@ -45,15 +50,17 @@
 	"image_place": null,
 	"image_description": "Digital Yoknapatawpha map of Go Down, Moses",
 	"filename": "go_down_moses_map.png",
-	"media_type": "screen_capture",
+
 	"alt_text": "Digital Yoknapatawpha map of Go Down, Moses",
-	"repository_name": "Digital Yoknapatawpha",
-	"repository_place": "University of Virginia",
-	"repository_url": "http://faulkner.iath.virginia.edu/?text=GDM"
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia",
+	  "url": "http://faulkner.iath.virginia.edu/?text=GDM"
+	}
 
   },
   {
-	
+	"media_type": "external_image",
 	"creators": [
 	  {
 		"last_name": "Padgett",
@@ -67,13 +74,15 @@
 	"image_place": null,
 	"image_description": "Genealogy of the Bundren family",
 	"filename": "bundren_genealogy.jpg",
-	"media_type": "external_image",
+
 	"alt_text": "Genealogy of the Bundren family",
 	"repository_name": null,
 	"repository_place": null,
 	"repository_url": null,
 	"access_date": "2023-07-21",
-	"website_title": "William Faulkner on the Web",
-	"original_url": "http://cypress.mcsr.olemiss.edu/~egjbp/faulkner/images/bundren.jpg"
+	"website": {
+	  "title": "William Faulkner on the Web",
+	  "url": "http://cypress.mcsr.olemiss.edu/~egjbp/faulkner/images/bundren.jpg"
+	}
   }
 ]
