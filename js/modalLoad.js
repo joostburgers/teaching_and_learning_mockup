@@ -71,9 +71,11 @@ function loadVideoData() {
 	$.getJSON(videoDataURL, function (jsonData) {
 		console.log(jsonData)
 		$('.activity-video img').click(function () {
-			console.log("clicked")
+
 			const source = $(this).attr('src');
+			console.log(source)
 			const tempVideoData = getVideoData(source, jsonData);
+			console.log(tempVideoData)
 			setVideoData(source, tempVideoData);
 			$("#videoModal").show();
 		});
@@ -89,6 +91,7 @@ function loadVideoData() {
 	}
 
 	function setVideoData(source, video) {
+
 		console.log(video)
 		const currentVideoDirectory = "../video/"
 		const videoTitle = $('#videoTitle');
@@ -108,8 +111,8 @@ function loadVideoData() {
 		switch (video.media_type) {
 			case 'quick_tutorial':
 				citationTemplate =
-					`"${video.video_title}." ${video.repository_name}, ${video.repository_place}. 
-			href="${video.url}">${video.url}</a>.`;
+					`"${video.video_title}." <em>${video.repository_name}</em>, ${video.repository_place}. 
+			<a href="${video.url}">${video.url}</a>.`;
 				break;
 			case 'external_video':
 				citationTemplate =

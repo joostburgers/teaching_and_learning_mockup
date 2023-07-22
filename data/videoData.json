@@ -84,10 +84,10 @@
 		"first_name": null
 	  }
 	],
-	"image_title": "Video tutorial of cumulative character search",
+	"video_title": "Video tutorial of cumulative character search",
 	"year": "1998",
 	"image_place": null,
-	"image_description": "Instructional video for understanding cummulative character search",
+	"video_description": "Instructional video for understanding cummulative character search",
 	"preview_filename": "cumulative_character_search.png",
 	"source_filename": "cummulative_characters_quickdemo.mp4",
 	"media_type": "quick_tutorial",
