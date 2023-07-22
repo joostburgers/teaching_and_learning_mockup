@@ -104,8 +104,8 @@ function loadVideoData() {
 		switch (video.media_type) {
 			case 'quick_tutorial':
 				citationTemplate =
-					`${creatorsString}.
-          "${video.video_title}." ${video.date}. ${video.institution_place}: ${video.institution}, ${video.course_title}.`;
+					`"${video.video_title}." ${video.repository_name}, ${video.repository_place}. 
+			href="${video.url}">${video.url}</a>.`;
 				break;
 			case 'external_video':
 				citationTemplate =
