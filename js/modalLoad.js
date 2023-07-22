@@ -124,7 +124,7 @@ function loadVideoData() {
 				break;
 		}
 
-		console.log(currentVideoDirectory + video.source_filename)
+
 		videoTitle.html(video.video_title);
 		videoSource.attr('src', currentVideoDirectory + video.source_filename);
 		videoCitation.html(citationTemplate);
