@@ -70,6 +70,7 @@ function loadVideoData() {
 
 	$.getJSON(videoDataURL, function (jsonData) {
 		$('.activity-video img').click(function () {
+			console.log("clicked")
 			const source = $(this).attr('src');
 			const tempVideoData = getVideoData(source, jsonData);
 			setVideoData(source, tempVideoData);
@@ -112,7 +113,7 @@ function loadVideoData() {
 					`${creatorsString}. "${video.video_title}." <em>${video.website_title}</em>, ${video.date}, <a href="${video.original_url}">${video.original_url}</a>. Accessed ${new Date(video.access_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}.`;
 				break;
 			default:
-				// Default case if video type is not provided
+				citationTemplate = 'Video not found'
 				break;
 		}
 
