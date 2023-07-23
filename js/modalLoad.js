@@ -5,16 +5,16 @@
  */
 function loadImageData() {
 	const imageDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/imageData.json';
-
+	console.log(imageDataURL)
 	// Get the JSON data via AJAX request
 	$.getJSON(imageDataURL, function (jsonData) {
 		// Set up click event listeners for all image elements within an element with class ".activity-image"
 		$('.activity-image').on('click', 'img', function () {
 			const source = $(this).attr('src');
-
+			console.log(source)
 			// Get the image data object corresponding to the clicked image
 			const tempImageData = getImageData(source, jsonData);
-
+			console.log(tempImageData)
 			// Set the image modal data using the obtained data object and show the modal
 			setImageData(source, tempImageData);
 			$("#imageModal").show();
@@ -62,8 +62,28 @@ function loadVideoData() {
  * @returns {Object} The image data object corresponding to the provided image source URL
  */
 function getImageData(source, jsonData) {
-	const currentFilename = source.substring(source.lastIndexOf('/') + 1)
-	return jsonData.find(object => object.filename === currentFilename)
+	console.log(source)
+	const currentFilename = source.substring(source.lastIndexOf('/') + 1);
+	let imageData = null;
+	try {
+		imageData = jsonData.find(object => object.filename === currentFilename);
+		if (!imageData) {
+			throw new Error('Image metadata not found');
+		}
+	} catch (error) {
+		console.error(`Error loading ${currentFilename}. ${error.message}`);
+		imageData = {
+			"creators": [{
+				"first_name": "Error",
+				"last_name": "Error"
+			}],
+			"media_type": "error",
+			"description":"File metadata not found",
+			"alt_text": "File not found",
+			}
+		}
+	
+	return imageData;
 }
 
 /**
@@ -104,11 +124,11 @@ function setImageData(source, image) {
           <a href="${image.repository.url}">${image.repository.url}</a>`;
 			break;
 		default:
-			// Default case if image type is not provided
+			citationTemplate="Image metadata not found."
 			break;
 	}
 
-	imageTitle.html(image.alt_text)
+	imageTitle.html(image.image_title)
 	imageSource.attr('src', source)
 	imageSource.attr('alt', image.alt_text)
 	imageCitation.html(citationTemplate)
