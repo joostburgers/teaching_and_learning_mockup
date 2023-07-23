@@ -123,6 +123,16 @@ function setImageData(source, image) {
           <em>${image.repository.name},</em> ${image.repository.place}, 
           <a href="${image.repository.url}">${image.repository.url}</a>`;
 			break;
+
+		case 'archive':
+			citationTemplate = `${ creatorsString }. "${image.image_title}."
+            
+			<b>${image.repository.collection},</b>
+			${image.repository.accession},
+			${image.repository.name },
+			${image.repository.place },
+			<a href="${image.repository.url}">${image.repository.url}</a>`;
+			break;
 		default:
 			citationTemplate="Image metadata not found."
 			break;
