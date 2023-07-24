@@ -247,7 +247,10 @@
 						<div class="activity-instructions">
 							Video Tutorial
 							<div class="thumbnail-container">
-								<img src="../images/video_preview_character_character_force_directed_graph.png" alt="Video Preview for the Character-Character Force Directed Graph" class="img-fluid">
+								<figure>
+									<img src="../images/video_preview_character_character_force_directed_graph.png" alt="Video Preview for the Character-Character Force Directed Graph" class="img-fluid">
+									<figcaption></figcaption>
+								</figure>
 							</div>
 
 						</div>
@@ -292,8 +295,8 @@
 							<!--This is a column created on the right-->
 							<div class="activity-image">
 								<div class="thumbnail-container">
-									<img src="../images/screen_capture_character_character_force_directed_graph_a_rose_for_emily.png" alt="Screen capture: Character-Character Force Directed Graph 'A Rose for Emily'" class="img-fluid">
-			
+	<img src="../images/screen_capture_character_character_force_directed_graph_a_rose_for_emily.png" alt="Screen capture: Character-Character Force Directed Graph 'A Rose for Emily'" class="img-fluid">
+	
 								</div>
 								<div class= "activity-image-caption">
 	Alvarado, R.C., Robbie Bingler, Martin Worthy, Steve Railton. "Screen Capture: Character-Character Force Directed Graph: 'A Rose for Emily'."
@@ -647,7 +650,7 @@
 			loadTOC();
 			loadImageData();
 			loadVideoData();
-			fetch('../data/imageData.json')
+			/*fetch('../data/imageData.json')
 				.then(response => response.json())
 				.then(data => {
 					document.querySelectorAll('.thumbnail-container img').forEach(img => {
@@ -658,7 +661,7 @@
 							caption.innerHTML = `${matchingImage.title} by ${matchingImage.creators[0].first_name}`;
 						}
 					});
-				});
+				});*/
 
 		});
 	</script>

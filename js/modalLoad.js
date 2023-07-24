@@ -5,10 +5,14 @@
  */
 function loadImageData() {
 	const imageDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/imageData.json';
-	console.log(imageDataURL)
+	
 	// Get the JSON data via AJAX request
 	$.getJSON(imageDataURL, function (jsonData) {
 		// Set up click event listeners for all image elements within an element with class ".activity-image"
+
+		setImageCaptions(jsonData);
+
+
 		$('.activity-image').on('click', 'img', function () {
 			const source = $(this).attr('src');
 			console.log(source)
@@ -33,9 +37,14 @@ function loadImageData() {
 function loadVideoData() {
 	const videoDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/videoData.json';
 
+	
+
 	// Get the JSON data via AJAX request
 	$.getJSON(videoDataURL, function (jsonData) {
 		// Set up click event listeners for all image elements within an element with class ".activity-video"
+
+		setVideoCaptions(jsonData);
+
 		$('.activity-video').on('click', 'img', function () {
 			const source = $(this).attr('src');
 
@@ -96,13 +105,9 @@ function setImageData(source, image) {
 	const imageSource = $('#imageSource')
 	const imageCitation = $('#imageCitation')
 
-	const creators = image.creators.map((creator, index) => {
-		if (index === 0) {
-			return `${creator.last_name}, ${creator.first_name}`
-		}
-		return `${creator.first_name} ${creator.last_name}`
-	})
-	const creatorsString = creators.join(', ')
+	const creatorsString = extractCreators(image);
+
+	
 
 	let citationTemplate
 
@@ -165,14 +170,7 @@ function setVideoData(video) {
 	const videoSource = $('#videoSource')
 	const videoCitation = $('#videoCitation')
 
-	const creators = video.creators.map((creator, index) => {
-		if (index === 0) {
-			return `${creator.last_name}, ${creator.first_name}`
-		}
-		return `${creator.first_name} ${creator.last_name}`
-	})
-
-	const creatorsString = creators.join(', ')
+	const creatorsString = extractCreators(video);
 
 	let citationTemplate = '';
 
@@ -197,4 +195,46 @@ function setVideoData(video) {
 	videoTitle.html(video.video_title)
 	videoSource.attr('src', currentVideoDirectory + video.source_filename)
 	videoCitation.html(citationTemplate)
+}
+
+function extractCreators(object) {
+	const creators = object.creators.map((creator, index) => {
+		if (index === 0) {
+			return `${creator.last_name}, ${creator.first_name}`
+		}
+		return `${creator.first_name} ${creator.last_name}`
+	})
+	const creatorsString = creators.join(', ')
+return creatorsString
+}
+
+function setImageCaptions(jsonData) {
+
+	$('.thumbnail-container img').each(function () {
+		const img = $(this);
+		const matchingImage = jsonData.find(x => x.filename === img.attr('src').split('/').pop());
+		
+		if (matchingImage) {
+			const creatorsString = extractCreators(matchingImage);
+			const figure = img.closest('.activity-image');
+			const caption = figure.find('.activity-image-caption');
+			caption.html(`"${matchingImage.image_title}" by ${creatorsString}`);
+		}
+	});
+
+}
+
+function setVideoCaptions(jsonData) {
+
+	$('.thumbnail-container img').each(function () {
+		const img = $(this);
+		const matchingImage = jsonData.find(x => x.preview_filename === img.attr('src').split('/').pop());
+
+		if (matchingImage) {
+			const creatorsString = extractCreators(matchingImage);
+			const figure = img.closest('.activity-image');
+			const caption = figure.find('.activity-image-caption');
+			caption.html(`"${matchingImage.image_title}" by ${creatorsString}`);
+		}
+	});
 }
