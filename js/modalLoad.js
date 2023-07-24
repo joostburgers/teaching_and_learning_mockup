@@ -242,6 +242,7 @@ function setVideoCaptions(jsonData) {
 			console.log(figure)
 			const caption = figure.find('.activity-video-caption');
 			console.log(caption)
+			console.log(matchingImage.url)
 			caption.html(`<b>${matchingImage.media_label}</b>: <a href=${matchingImage.url}>${matchingImage.tool}</a>`);
 		}
 	});

@@ -109,7 +109,7 @@
 	"video_description": "Instructional video for understanding force directed graph",
 	"preview_filename": "video_preview_character_character_force_directed_graph.png",
 	"source_filename": "cumulative_characters_quickdemo.mp4",
-
+	"random": "data",
 	"media_type": "quick_tutorial",
 	"media_label": "Tutorial",
 	"tool": "Character-Character Force Directed Graph",
