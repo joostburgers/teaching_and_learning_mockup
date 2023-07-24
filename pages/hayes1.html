@@ -647,7 +647,7 @@
 			loadTOC();
 			loadImageData();
 			loadVideoData();
-			fetch('../imageData.json')
+			fetch('../data/imageData.json')
 				.then(response => response.json())
 				.then(data => {
 					document.querySelectorAll('.thumbnail-container img').forEach(img => {
