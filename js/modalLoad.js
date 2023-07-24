@@ -242,7 +242,7 @@ function setVideoCaptions(jsonData) {
 			console.log(figure)
 			const caption = figure.find('.activity-video-caption');
 			console.log(caption)
-			caption.html(`Text goes here`);
+			caption.html(`<b>${matchingImage.media_label}</b>: <a href=${matchingImage.url}>${matchingImage.tool}</a>`);
 		}
 	});
 }
