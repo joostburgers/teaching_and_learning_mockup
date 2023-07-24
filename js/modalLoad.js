@@ -226,15 +226,23 @@ function setImageCaptions(jsonData) {
 
 function setVideoCaptions(jsonData) {
 
-	$('.thumbnail-container img').each(function () {
+	$('.activity-video img').each(function () {
 		const img = $(this);
-		const matchingImage = jsonData.find(x => x.preview_filename === img.attr('src').split('/').pop());
 
+		console.log(img.attr('src'))
+		const matchingImage = jsonData.find(x => x.preview_filename === img.attr('src').split('/').pop());
+		
+		console.log("Video caption ", img)
+		console.log("Matching image", matchingImage)
 		if (matchingImage) {
 			const creatorsString = extractCreators(matchingImage);
-			const figure = img.closest('.activity-image');
-			const caption = figure.find('.activity-image-caption');
-			caption.html(`"${matchingImage.image_title}" by ${creatorsString}`);
+			console.log("title", matchingImage.video_title)
+			console.log("created by", creatorsString)
+			const figure = img.closest('.activity-video');
+			console.log(figure)
+			const caption = figure.find('.activity-video-caption');
+			console.log(caption)
+			caption.html(`Text goes here`);
 		}
 	});
 }
