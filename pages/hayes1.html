@@ -655,7 +655,7 @@
 						if (matchingImage) {
 							const figure = img.closest('figure');
 							const caption = figure.querySelector('figcaption');
-							caption.innerHTML = `${matchingImage.title} by ${matchingImage.creator}`;
+							caption.innerHTML = `${matchingImage.title} by ${matchingImage.creators[0].first_name}`;
 						}
 					});
 				});
