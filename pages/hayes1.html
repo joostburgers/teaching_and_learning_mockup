@@ -463,7 +463,10 @@
 					<div class="activity-instructions">
 						Video Tutorial
 						<div class="thumbnail-container">
-							<img src="../images/screen_capture_main_map_a_rose_for_emily.png" alt="Cummulative Character Video" class="img-fluid">
+							<figure>
+								<img src="../images/screen_capture_main_map_a_rose_for_emily.png" alt="Cummulative Character Video" class="img-fluid">	 
+								<figcaption></figcaption>
+							</figure>
 						</div>
 					</div>
 				</div>
@@ -644,7 +647,18 @@
 			loadTOC();
 			loadImageData();
 			loadVideoData();
-
+			fetch('../imageData.json')
+				.then(response => response.json())
+				.then(data => {
+					document.querySelectorAll('.thumbnail-container img').forEach(img => {
+						const matchingImage = data.find(x => x.fileName === img.getAttribute('src').split('/').pop());
+						if (matchingImage) {
+							const figure = img.closest('figure');
+							const caption = figure.querySelector('figcaption');
+							caption.innerHTML = `${matchingImage.title} by ${matchingImage.creator}`;
+						}
+					});
+				});
 
 		});
 	</script>
