@@ -121,8 +121,15 @@ h3.content_sub_title {
 	margin: 15px;
 }
 
+.activity-video-caption{
+font-weight:400;
+font-size: 80%;
+color: rgba(0,0,0,0.8);
+}
+
 .activity-image-caption {
 	font-size: 80%;
+	color: rgba(0,0,0,0.8);
 }
 
 .activity-resource-list{
