@@ -5,7 +5,7 @@
  */
 function loadImageData() {
 	const imageDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/imageData.json';
-	
+
 	// Get the JSON data via AJAX request
 	$.getJSON(imageDataURL, function (jsonData) {
 		// Set up click event listeners for all image elements within an element with class ".activity-image"
@@ -37,13 +37,13 @@ function loadImageData() {
 function loadVideoData() {
 	const videoDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/videoData.json';
 
-	
+
 
 	// Get the JSON data via AJAX request
 	$.getJSON(videoDataURL, function (jsonData) {
 		// Set up click event listeners for all image elements within an element with class ".activity-video"
 		setVideoCaptions(jsonData);
-	
+
 	});
 
 }
@@ -71,11 +71,11 @@ function getImageData(source, jsonData) {
 				"last_name": "Error"
 			}],
 			"media_type": "error",
-			"description":"File metadata not found",
+			"description": "File metadata not found",
 			"alt_text": "File not found",
-			}
 		}
-	
+	}
+
 	return imageData;
 }
 
@@ -91,7 +91,7 @@ function setImageData(source, image) {
 
 	const creatorsString = extractCreators(image);
 
-	
+
 
 	let citationTemplate
 
@@ -114,16 +114,16 @@ function setImageData(source, image) {
 			break;
 
 		case 'archive':
-			citationTemplate = `${ creatorsString }. "${image.image_title}."
+			citationTemplate = `${creatorsString}. "${image.image_title}."
             
 			<b>${image.repository.collection},</b>
 			${image.repository.accession},
-			${image.repository.name },
-			${image.repository.place },
+			${image.repository.name},
+			${image.repository.place},
 			<a href="${image.repository.url}">${image.repository.url}</a>`;
 			break;
 		default:
-			citationTemplate="Image metadata not found."
+			citationTemplate = "Image metadata not found."
 			break;
 	}
 
@@ -190,7 +190,7 @@ function extractCreators(object) {
 		return `${creator.first_name} ${creator.last_name}`
 	})
 	const creatorsString = creators.join(', ')
-return creatorsString
+	return creatorsString
 }
 
 function setImageCaptions(jsonData) {
@@ -207,18 +207,19 @@ function setImageCaptions(jsonData) {
 			caption.html(`"${matchingImage.image_title}" by ${creatorsString}`);
 
 
-			setImageMetaData(img, matchingImage);
+			setElementMetaData(img, matchingImage);
 
 
 		}
 
 	}
-)};
+	)
+};
 
-function setImageMetaData(img, matchingImage) {
+function setElementMetaData(element, data) {
 
-	const imageSourceName = img.attr('src').split('/').pop()
-	for (const [key, value] of Object.entries(matchingImage)) {
+	const elementSourceName = element.attr('src').split('/').pop()
+	for (const [key, value] of Object.entries(data)) {
 		allvalues = [];
 
 		if (value !== null) {
@@ -231,47 +232,38 @@ function setImageMetaData(img, matchingImage) {
 
 							if (nestedvalue !== null) {
 								objectvalues += nestedvalue + ' '
-								console.log(objectvalues)
-
-
-
-							}
-							console.log(objectvalues)
-							console.log(arrayIndex)
-							console.log(arrayValue)
-
+								}
+							
 						}
 						allvalues.push(objectvalues.trim())
 						const objectstring = allvalues.join(', ')
-						console.log(objectstring)
-						console.log(allvalues)
-						console.log(key)
-						img.attr(`data-${key}`, objectstring)
+						element.attr(`data-${key}`, objectstring)
 					}
 				} else {
 					for (const [nestedkey, nestedvalue] of Object.entries(value)) {
 						if (nestedvalue !== null) {
-							console.log(value)
-							console.log(key)
 							const nestedDataKey = `data-${key}-${nestedkey}`;
-							img.attr(nestedDataKey, nestedvalue);
+							element.attr(nestedDataKey, nestedvalue);
 						}
 					}
 				}
 			} else {
 				const dataKey = `data-${key}`;
-				img.attr(dataKey, value);
+				element.attr(dataKey, value);
 			}
 		}
 
 		else {
-
-			const figure = img.closest('.activity-image');
+			console.log(element)
+			console.log("this is the caption element: $('[caption]')")
+			console.log(element.closest('[caption]'))
+			const figure = element.closest('.activity-image');
 			const caption = figure.find('.activity-image-caption');
 			console.log('No matching image found')
-			caption.html(`${imageSourceName}`)
+			caption.html(`${elementSourceName}`)
 		}
 	}
+	
 }
 
 
