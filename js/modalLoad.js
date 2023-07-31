@@ -210,7 +210,15 @@ function setImageCaptions(jsonData) {
 			setElementMetaData(img, matchingImage);
 
 
+		} else {
+
+			const figure = img.closest('.activity-image');
+			const caption = figure.find('.activity-image-caption');
+			console.log('No matching image found')
+			caption.html(`${imageSourceName}`)
 		}
+
+
 
 	}
 	)
@@ -218,52 +226,51 @@ function setImageCaptions(jsonData) {
 
 function setElementMetaData(element, data) {
 
-	const elementSourceName = element.attr('src').split('/').pop()
+	//Loop through the data object
 	for (const [key, value] of Object.entries(data)) {
-		allvalues = [];
+		if (value === null) {
+			continue;
+		}
 
-		if (value !== null) {
+		// If the value is an object, it may contain nested properties 
+		if (typeof (value) === 'object' && value !== null) {
+			// If value is an array, loop through the nested objects' properties and set them as a comma-separated string
+			if (Array.isArray(value)) {
 
-			if (typeof (value) === 'object' && value !== null) {
-				if (Array.isArray(value)) {
-					for (const [arrayIndex, arrayValue] of value.entries()) {
-						objectvalues = '';
-						for (const [nestedkey, nestedvalue] of Object.entries(arrayValue)) {
+				var allvalues = [];
+				// loop through the array and get the values of the nested objects
+				for (const [arrayIndex, arrayValue] of value.entries()) {
+					objectvalues = '';
+					for (const [nestedkey, nestedvalue] of Object.entries(arrayValue)) {
 
-							if (nestedvalue !== null) {
-								objectvalues += nestedvalue + ' '
-								}
-							
-						}
-						allvalues.push(objectvalues.trim())
-						const objectstring = allvalues.join(', ')
-						element.attr(`data-${key}`, objectstring)
-					}
-				} else {
-					for (const [nestedkey, nestedvalue] of Object.entries(value)) {
 						if (nestedvalue !== null) {
-							const nestedDataKey = `data-${key}-${nestedkey}`;
-							element.attr(nestedDataKey, nestedvalue);
+							objectvalues += nestedvalue + ' '
 						}
+					}
+				/** add object values to 
+				 * @param {array} allvalues 
+				 - array of all values. Generally, first name last name
+				 **/
+
+					allvalues.push(objectvalues.trim())
+					const objectstring = allvalues.join(', ')
+					element.attr(`data-${key}`, objectstring)
+				}
+
+			} else {
+				//if not a nested object. Name the label the key and the nested key and the value the nested value
+				for (const [nestedkey, nestedvalue] of Object.entries(value)) {
+					if (nestedvalue !== null) {
+						const nestedDataKey = `data-${key}-${nestedkey}`;
+						element.attr(nestedDataKey, nestedvalue);
 					}
 				}
-			} else {
-				const dataKey = `data-${key}`;
-				element.attr(dataKey, value);
 			}
-		}
-
-		else {
-			console.log(element)
-			console.log("this is the caption element: $('[caption]')")
-			console.log(element.closest('[caption]'))
-			const figure = element.closest('.activity-image');
-			const caption = figure.find('.activity-image-caption');
-			console.log('No matching image found')
-			caption.html(`${elementSourceName}`)
+		} else {
+			const dataKey = `data-${key}`;
+			element.attr(dataKey, value);
 		}
 	}
-	
 }
 
 
@@ -288,15 +295,17 @@ function setVideoCaptions(jsonData) {
 			// Set the video caption with matchingVideo metadata
 			caption.innerHTML = `${matchingVideo.media_label}: <a href=${matchingVideo.url}  target="_blank" rel="noopener noreferrer">${matchingVideo.tool}</a>`;
 
-			// Set each matchingVideo metadata to data-* attributes 
-			video.attr({
+			// Set each matchingVideo metadata to data-* attributes
+			setElementMetaData(video, matchingVideo);
+
+			/*video.attr({
 				"data-title": matchingVideo.video_title,
 				"data-creators": creatorsString,
 				"data-description": matchingVideo.video_description,
 				"data-date-created": matchingVideo.created,
 				"data-duration": matchingVideo.duration,
 				"data-file-size": matchingVideo.file_size
-			});
+			});*/
 		} else {
 			// If there's no matching video metadata, just display the video source filename
 			const frame = video.closest('.activity-video');
