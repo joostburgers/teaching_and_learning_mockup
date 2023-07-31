@@ -22,12 +22,15 @@
 
 	"creators": [
 	  {
-		"last_name": null,
-		"first_name": null
+		"last_name": "Burgers",
+		"first_name": "Johannes"
 	  }
 	],
 	"video_title": "Video Tutorial of Force Directed Graph",
 	"video_description": "Instructional video for understanding force directed graph",
+	"duration": "00:00:13",
+	"file_size": "899 KB",
+	"created": "2023-06-22T00:00:00Z",
 	"filename": "cumulative_characters_quickdemo.mp4",
 	"media_type": "quick_tutorial",
 	"media_label": "Tutorial",

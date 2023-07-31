@@ -45,7 +45,7 @@ function loadVideoData() {
 
 		setVideoCaptions(jsonData);
 
-		$('.activity-video').on('click', 'img', function () {
+		/*$('.activity-video').on('click', 'img', function () {
 			const source = $(this).attr('src');
 
 			// Get the video data object corresponding to the clicked image
@@ -55,13 +55,13 @@ function loadVideoData() {
 			setVideoData(tempVideoData);
 			$('video')[0].load();
 			$("#videoModal").show();
-		});
+		});*/
 	});
 
 	// Closes the video modal on click of elements with class ".close"
-	$(".close").click(function () {
+	/*$(".close").click(function () {
 		$("#videoModal").hide();
-	});
+	});*/
 }
 
 /**
@@ -157,7 +157,7 @@ function setImageData(source, image) {
  */
 function getVideoData(source, jsonData) {
 	const currentFilename = source.substring(source.lastIndexOf('/') + 1)
-	return jsonData.find(object => object.preview_filename === currentFilename)
+	return jsonData.find(object => object.filename === currentFilename)
 }
 
 /**
@@ -226,24 +226,33 @@ function setImageCaptions(jsonData) {
 
 function setVideoCaptions(jsonData) {
 
-	$('.activity-video img').each(function () {
-		const img = $(this);
 
-		console.log(img.attr('src'))
-		const matchingImage = jsonData.find(x => x.filename === img.attr('src').split('/').pop());
-		
-		console.log("Video caption ", img)
-		console.log("Matching image", matchingImage)
-		if (matchingImage) {
-			const creatorsString = extractCreators(matchingImage);
-			console.log("title", matchingImage.video_title)
-			console.log("created by", creatorsString)
-			const figure = img.closest('.activity-video');
-			console.log(figure)
-			const caption = figure.find('.activity-video-caption');
-			console.log(caption)
-			console.log(matchingImage.url)
-			caption.html(`${matchingImage.media_label}: <a href=${matchingImage.url}  target="_blank" rel="noopener noreferrer">${matchingImage.tool}</a>`);
+	console.log($('video').attr('src'))
+	console.log($('video'))
+
+	$('video').each(function () {
+		const video = $(this);
+		const videoSourceName = video.attr('src').split('/').pop();
+		const matchingVideo = jsonData.find(x => x.filename === videoSourceName);
+				
+		if (matchingVideo) {
+			const creatorsString = extractCreators(matchingVideo);
+			const frame = video.closest('.activity-video');
+			const caption = frame.find('.activity-video-caption');
+
+			caption.html(`${matchingVideo.media_label}: <a href=${matchingVideo.url}  target="_blank" rel="noopener noreferrer">${matchingVideo.tool}</a>`);
+			video.attr("data-title", matchingVideo.video_title)
+			video.attr("data-description", matchingVideo.video_description)
+			video.attr("data-authors", creatorsString)
+
+			
+
+		} else { 
+			
+			const frame = video.closest('.activity-video');
+			const caption = frame.find('.activity-video-caption');
+			console.log("File not found: ", videoSourceName)
+			caption.html(`Video: ${videoSourceName}`);
 		}
 	});
 }
