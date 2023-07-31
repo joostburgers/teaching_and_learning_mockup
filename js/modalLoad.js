@@ -42,26 +42,10 @@ function loadVideoData() {
 	// Get the JSON data via AJAX request
 	$.getJSON(videoDataURL, function (jsonData) {
 		// Set up click event listeners for all image elements within an element with class ".activity-video"
-
 		setVideoCaptions(jsonData);
-
-		/*$('.activity-video').on('click', 'img', function () {
-			const source = $(this).attr('src');
-
-			// Get the video data object corresponding to the clicked image
-			const tempVideoData = getVideoData(source, jsonData);
-
-			// Set the video modal data using the obtained data object and show the modal
-			setVideoData(tempVideoData);
-			$('video')[0].load();
-			$("#videoModal").show();
-		});*/
+	
 	});
 
-	// Closes the video modal on click of elements with class ".close"
-	/*$(".close").click(function () {
-		$("#videoModal").hide();
-	});*/
 }
 
 /**
@@ -146,6 +130,7 @@ function setImageData(source, image) {
 	imageTitle.html(image.image_title)
 	imageSource.attr('src', source)
 	imageSource.attr('alt', image.alt_text)
+
 	imageCitation.html(citationTemplate)
 }
 
@@ -212,47 +197,120 @@ function setImageCaptions(jsonData) {
 
 	$('.thumbnail-container img').each(function () {
 		const img = $(this);
-		const matchingImage = jsonData.find(x => x.filename === img.attr('src').split('/').pop());
-		
+		const imageSourceName = img.attr('src').split('/').pop()
+		const matchingImage = jsonData.find(x => x.filename === imageSourceName);
+
 		if (matchingImage) {
 			const creatorsString = extractCreators(matchingImage);
 			const figure = img.closest('.activity-image');
 			const caption = figure.find('.activity-image-caption');
 			caption.html(`"${matchingImage.image_title}" by ${creatorsString}`);
-		}
-	});
 
+
+			setImageMetaData(img, matchingImage);
+
+
+		}
+
+	}
+)};
+
+function setImageMetaData(img, matchingImage) {
+
+	const imageSourceName = img.attr('src').split('/').pop()
+	for (const [key, value] of Object.entries(matchingImage)) {
+		allvalues = [];
+
+		if (value !== null) {
+
+			if (typeof (value) === 'object' && value !== null) {
+				if (Array.isArray(value)) {
+					for (const [arrayIndex, arrayValue] of value.entries()) {
+						objectvalues = '';
+						for (const [nestedkey, nestedvalue] of Object.entries(arrayValue)) {
+
+							if (nestedvalue !== null) {
+								objectvalues += nestedvalue + ' '
+								console.log(objectvalues)
+
+
+
+							}
+							console.log(objectvalues)
+							console.log(arrayIndex)
+							console.log(arrayValue)
+
+						}
+						allvalues.push(objectvalues.trim())
+						const objectstring = allvalues.join(', ')
+						console.log(objectstring)
+						console.log(allvalues)
+						console.log(key)
+						img.attr(`data-${key}`, objectstring)
+					}
+				} else {
+					for (const [nestedkey, nestedvalue] of Object.entries(value)) {
+						if (nestedvalue !== null) {
+							console.log(value)
+							console.log(key)
+							const nestedDataKey = `data-${key}-${nestedkey}`;
+							img.attr(nestedDataKey, nestedvalue);
+						}
+					}
+				}
+			} else {
+				const dataKey = `data-${key}`;
+				img.attr(dataKey, value);
+			}
+		}
+
+		else {
+
+			const figure = img.closest('.activity-image');
+			const caption = figure.find('.activity-image-caption');
+			console.log('No matching image found')
+			caption.html(`${imageSourceName}`)
+		}
+	}
 }
 
+
+
+// Sets captions and metadata for all videos on the page.
+// jsonData: an array containing objects with filenames and their corresponding metadata.
 function setVideoCaptions(jsonData) {
-
-
-	console.log($('video').attr('src'))
-	console.log($('video'))
-
 	$('video').each(function () {
 		const video = $(this);
 		const videoSourceName = video.attr('src').split('/').pop();
 		const matchingVideo = jsonData.find(x => x.filename === videoSourceName);
-				
+
 		if (matchingVideo) {
+			// Get the creators string for the metadata
 			const creatorsString = extractCreators(matchingVideo);
+
+			//Find the closest ancestor element with .activity-video class for the frame
 			const frame = video.closest('.activity-video');
-			const caption = frame.find('.activity-video-caption');
+			//Find the .activity-video-caption element for the caption
+			const caption = frame.children('.activity-video-caption').get(0);
 
-			caption.html(`${matchingVideo.media_label}: <a href=${matchingVideo.url}  target="_blank" rel="noopener noreferrer">${matchingVideo.tool}</a>`);
-			video.attr("data-title", matchingVideo.video_title)
-			video.attr("data-description", matchingVideo.video_description)
-			video.attr("data-authors", creatorsString)
+			// Set the video caption with matchingVideo metadata
+			caption.innerHTML = `${matchingVideo.media_label}: <a href=${matchingVideo.url}  target="_blank" rel="noopener noreferrer">${matchingVideo.tool}</a>`;
 
-			
-
-		} else { 
-			
+			// Set each matchingVideo metadata to data-* attributes 
+			video.attr({
+				"data-title": matchingVideo.video_title,
+				"data-creators": creatorsString,
+				"data-description": matchingVideo.video_description,
+				"data-date-created": matchingVideo.created,
+				"data-duration": matchingVideo.duration,
+				"data-file-size": matchingVideo.file_size
+			});
+		} else {
+			// If there's no matching video metadata, just display the video source filename
 			const frame = video.closest('.activity-video');
-			const caption = frame.find('.activity-video-caption');
-			console.log("File not found: ", videoSourceName)
-			caption.html(`Video: ${videoSourceName}`);
+			const caption = frame.children('.activity-video-caption').get(0);
+			console.log("File not found: ", videoSourceName);
+			caption.innerHTML = `Video: ${videoSourceName}`;
 		}
 	});
 }
