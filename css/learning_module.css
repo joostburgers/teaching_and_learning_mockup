@@ -121,6 +121,12 @@ h3.content_sub_title {
 	margin: 15px;
 }
 
+.activity-video video{
+max-width:100%;
+vertical-align: bottom;
+}
+
+
 .activity-video-caption{
 font-weight:400;
 font-size: 80%;

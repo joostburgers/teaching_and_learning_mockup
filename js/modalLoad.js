@@ -230,7 +230,7 @@ function setVideoCaptions(jsonData) {
 		const img = $(this);
 
 		console.log(img.attr('src'))
-		const matchingImage = jsonData.find(x => x.preview_filename === img.attr('src').split('/').pop());
+		const matchingImage = jsonData.find(x => x.filename === img.attr('src').split('/').pop());
 		
 		console.log("Video caption ", img)
 		console.log("Matching image", matchingImage)
