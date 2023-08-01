@@ -322,7 +322,9 @@ function loadLessonData() {
 	$.getJSON(lessonDataURL, function (jsonData) {
 		// Set up click event listeners for all image elements within an element with class ".activity-image"
 
-		getLessonData(jsonData);
+		const lessonData = getLessonData(jsonData);
+		console.log(lessonData)
+		setLessonData(lessonData)
 
 	})
 }
@@ -331,4 +333,33 @@ function getLessonData(jsonData) {
 	
 	const currentFilename = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1);
 		return jsonData.find(object => object.filename === currentFilename)
+}
+
+function setLessonData(data) {
+
+	const teachers = $('#TeacherInfo');
+	const about = $('#AboutInfo');
+
+	const learningGoals = createList(data.learning_goals)
+	const commonCore = createList(data.common_core)
+
+
+
+	console.log(commonCore)
+
+	teachers.html(`<p>Pilot classroom: ${data.pilot_classroom}</p><p>Learning Goals: <ul class="activity-list">${learningGoals}</ul></p>`)
+	about.html(`<p>Instructor: ${data.instructor}</p>
+	<p>Contact: <a href = "mailto: ${data.contact}">${data.contact}</p>
+	<p>Date created: ${data.created}</p>
+	<p>Notes: ${data.notes}</p>`)
+
+}
+
+function createList(array) {
+	if (array && Array.isArray(array)) {
+		const list = array.map(items => `<li>${items}</li>`).join('');
+		return list;
 	}
+	return null
+
+}
