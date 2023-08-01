@@ -45,9 +45,17 @@
 		"last_name": "Doe",
 		"title": "Faulkner essay2",
 		"filename": "doe1.html",
-		"file_type": "doc"
-	  }
+		"file_type": "word"
+	  },
 
+
+	  {
+		"first_name": null,
+		"last_name": null,
+		"title": "Image of the lesson",
+		"filename": "doe1.html",
+		"file_type": "image"
+	  }
 
 
 	],

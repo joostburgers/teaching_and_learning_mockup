@@ -342,12 +342,14 @@ function setLessonData(data) {
 
 	const learningGoals = createList(data.learning_goals)
 	const commonCore = createList(data.common_core)
+	const studentSamples = createSamples(data.student_samples)
+		
 
 
 
 	console.log(commonCore)
 
-	teachers.html(`<p>Pilot classroom: ${data.pilot_classroom}</p><p>Learning Goals: <ul class="activity-list">${learningGoals}</ul></p>`)
+	teachers.html(`<p>Pilot classroom: ${data.pilot_classroom}</p><p>Learning Goals: <ul class="activity-list">${learningGoals}</ul></p><p>${studentSamples}</p>`)
 	about.html(`<p>Instructor: ${data.instructor}</p>
 	<p>Contact: <a href = "mailto: ${data.contact}">${data.contact}</p>
 	<p>Date created: ${data.created}</p>
@@ -362,4 +364,19 @@ function createList(array) {
 	}
 	return null
 
+}
+
+function createSamples(data) {
+	const samples = data.map(item => {
+		let file = `<a href = '${item.filename}'>${item.title}</a>`;
+		let icon = `${item.file_type}`
+		if (item.first_name && item.last_name) {
+			file = `${item.first_name} ${item.last_name}: <a href = '${item.filename}'>${item.title}</a>`
+		}
+		
+		return `<span><i class="bi bi-file-${icon}"></i> ${file}</span>`;
+
+	
+	})
+	return samples
 }
