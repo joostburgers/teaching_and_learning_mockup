@@ -486,53 +486,22 @@
 					</ul>
 					<p> Essays lengths will depend on level of students (secondary, undergraduate, or graduate) and course objectives, and essay formats (Word, Google document, etc.) will vary depending on instructor preference. </p>
 				</div>
-				<div class="col-6">
-					
-				</div>
+				
 			</div>
 
 
 			<h2 class="content_sub_title" id="Resources">Resources</h2>
 
 
-			<h1 class="content_title" id="For Teachers">For Teachers</h1>
-
-			<p>Pilot Classroom: </p>
-
-			<p>
-				Learning Goals:
-			<p>
-
-
-				<ul class="activity-list-unordered">
-					<li>Learning Goal 1</li>
-					<li>Learning Goal 2</li>
-					<li>Learning Goal 3</li>
-				</ul>
-
-			<p>Common Core: </p>
-
-
-			<ul class="activity-list-unordered">
-				<li>Common Core 1</li>
-				<li>Common Core 2</li>
-				<li>Common Core 3</li>
-			</ul>
-
-			<p> Student Samples: </p>
-
-			<p> Original Lesson Plan: </p>
+			<h2 class="content_sub_title" id="For Teachers">For Teachers</h2>
+			<div id="TeacherInfo"></div>
+			
 
 
 
 
-			<h1 class="content_title" id="About">About</h1>
-			<div class="note"><em>Note: </em> About section that includes all extra information </div>
-			<p>Instructor: </p>
-			<p>Contact: </p>
-			<p>Created: </p>
-			<p>Notes: </p>
-
+			<h2 class="content_sub_title" id="About">About</h2>
+			<div id="AboutInfo"></div>
 
 
 
@@ -547,18 +516,7 @@
 					loadTOC();
 					loadImageData();
 					loadVideoData();
-					/*fetch('../data/imageData.json')
-						.then(response => response.json())
-						.then(data => {
-							document.querySelectorAll('.thumbnail-container img').forEach(img => {
-								const matchingImage = data.find(x => x.fileName === img.getAttribute('src').split('/').pop());
-								if (matchingImage) {
-									const figure = img.closest('figure');
-									const caption = figure.querySelector('figcaption');
-									caption.innerHTML = `${matchingImage.title} by ${matchingImage.creators[0].first_name}`;
-								}
-							});
-						});*/
+					
 
 				});
 			</script>

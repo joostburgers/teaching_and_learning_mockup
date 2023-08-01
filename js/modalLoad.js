@@ -315,3 +315,20 @@ function setVideoCaptions(jsonData) {
 		}
 	});
 }
+
+
+function loadLessonData() {
+	const lessonDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/lessonData.json';
+	$.getJSON(lessonDataURL, function (jsonData) {
+		// Set up click event listeners for all image elements within an element with class ".activity-image"
+
+		getLessonData(jsonData);
+
+	})
+}
+
+function getLessonData(jsonData) {
+	
+	const currentFilename = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1);
+		return jsonData.find(object => object.filename === currentFilename)
+	}
