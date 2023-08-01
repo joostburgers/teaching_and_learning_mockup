@@ -91,16 +91,19 @@
 	  {
 		"last_name": "Burgers",
 		"first_name": "Johannes"
+	  },
+	  {
+		"last_name": "Bingler",
+		"first_name": "Robbie"
 	  }
 
 	],
 
-	"image_title": "Narrative Structure: `A Rose for Emily`",
-	"year": "2018",
+	"image_title": "Plot Structure: `A Rose for Emily` (Date Order)",
+	"year": "2019",
 	"image_place": null,
-	"image_description": "Digital Yoknapatawpha screen shot of the plot structure of `A Rose for Emily`",
+	"image_description": "Digital Yoknapatawpha screen shot of the plot structure of `A Rose for Emily`. The order of events weighted by date.",
 	"filename": "screen_capture_narrative structure_a_rose_for_emily_date_order.png",
-
 	"alt_text": "Screen capture of narrative structure of `A Rose for Emily`",
 	"repository": {
 	  "name": "Digital Yoknapatawpha",
