@@ -9,11 +9,11 @@
 
 "student_samples": null,
 
-  "original_lesson_plan": [
+"original_lesson_plan": [
 	{
 	  "title":"Piloted Assignment",
 	  "filename":"penner_piloted_assignment.pdf",
-	  "filetype":"pdf"
+	  "file_type":"pdf"
 	}
   ],
 
