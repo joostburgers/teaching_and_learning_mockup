@@ -204,7 +204,7 @@ function setImageCaptions(jsonData) {
 			const creatorsString = extractCreators(matchingImage);
 			const figure = img.closest('.activity-image');
 			const caption = figure.find('.activity-image-caption');
-			caption.html(`"${matchingImage.image_title}" by ${creatorsString}`);
+			caption.html(`"${matchingImage.title}" by ${creatorsString}`);
 
 
 			setElementMetaData(img, matchingImage);
@@ -293,19 +293,11 @@ function setVideoCaptions(jsonData) {
 			const caption = frame.children('.activity-video-caption').get(0);
 
 			// Set the video caption with matchingVideo metadata
-			caption.innerHTML = `${matchingVideo.media_label}: <a href=${matchingVideo.url}  target="_blank" rel="noopener noreferrer">${matchingVideo.tool}</a>`;
+			caption.innerHTML = `${matchingVideo.media_label}: <a href=${matchingVideo.url} target="_blank" rel="noopener noreferrer">${matchingVideo.tool}</a>`;
 
 			// Set each matchingVideo metadata to data-* attributes
 			setElementMetaData(video, matchingVideo);
-
-			/*video.attr({
-				"data-title": matchingVideo.video_title,
-				"data-creators": creatorsString,
-				"data-description": matchingVideo.video_description,
-				"data-date-created": matchingVideo.created,
-				"data-duration": matchingVideo.duration,
-				"data-file-size": matchingVideo.file_size
-			});*/
+				
 		} else {
 			// If there's no matching video metadata, just display the video source filename
 			const frame = video.closest('.activity-video');
@@ -320,8 +312,7 @@ function setVideoCaptions(jsonData) {
 function loadLessonData() {
 	const lessonDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/lessonData.json';
 	$.getJSON(lessonDataURL, function (jsonData) {
-		// Set up click event listeners for all image elements within an element with class ".activity-image"
-
+		
 		const lessonData = getLessonData(jsonData);
 		setLessonData(lessonData)
 	})
@@ -339,7 +330,7 @@ function setLessonData(data) {
 	const about = $('#AboutInfo');
 
 	//Each HTML stub is created if the value in the at the key is actually a value and not null. This prevents everyone having to fill out all the exact same metadata
-
+	console.log(data)
 	const pilotClassroomHTML = data.pilot_classroom !== null ? `<p> Pilot classroom: ${data.pilot_classroom}</p>` : '';
 
 	const learningGoalsHTML = data.learning_goals !== null ? `<p>Learning Goals: <ul class="activity-list">${createList(data.learning_goals)}</ul></p>` : ''; 
@@ -382,6 +373,8 @@ function createSamples(data, filename) {
 		const filepath = `../supplementary_files/${folder}/`
 
 	//maps out the data into an array of HTML elements as long as there is a filename present in the json.
+	console.log(data, filename)
+
 
 	const samples = data.map(item => {
 		if (item.filename !== null && item.filename !== undefined) {
