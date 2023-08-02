@@ -340,25 +340,20 @@ function setLessonData(data) {
 	const teachers = $('#TeacherInfo');
 	const about = $('#AboutInfo');
 
-	const learningGoals = createList(data.learning_goals)
-	const commonCore = createList(data.common_core)
-	const studentSamples = createSamples(data.student_samples)
-	const originalLessons = createSamples(data.original_lesson_plan)
+	//Each HTML stub is created if the value in the at the key is actually a value and not null. This prevents everyone having to fill out all the exact same metadata
 
-	//This is where I throw exceptions for null values.
+	const pilotClassroomHTML = data.pilot_classroom !== null ? `<p> Pilot classroom: ${data.pilot_classroom}</p>` : '';
 
+	const learningGoalsHTML = data.learning_goals !== null ? `<p>Learning Goals: <ul class="activity-list">${createList(data.learning_goals)}</ul></p>` : ''; 
 
-	let learningGoalsHTML = '';
-	if (learningGoalsHTML !== null) {
-		learningGoalsHTML = `<p>Learning Goals: <ul class="activity-list">${learningGoals}</ul></p>`;
-	}
+	const commonCoreHTML = data.common_core !== null ? `<p>Common Core: <ul class="activity-list">${createList(data.common_core)}</ul></p>` : '';
 
+	const studentSamplesHTML = data.student_samples !== null ? `<p>Student samples: <ul class="activity-list">${createSamples(data.student_samples)}</ul></p>` : '';
 
-	console.log(learningGoalsHTML)
+	const originalLessonsHTML = data.original_lesson_plan !== null ? `<p>Original lesson plan: <ul class="activity-list">${createSamples(data.original_lesson_plan)}</ul></p>` : '';
+		
 
-	console.log(commonCore)
-
-	teachers.html(`<p>Pilot classroom: ${data.pilot_classroom}</p><p>Student samples: <ul class="activity-list-unordered-blank">${studentSamples}</ul></p><p>Original Lesson Plans: <ul class="activity-list-unordered-blank">${originalLessons}</ul></p>`)
+	teachers.html(`${pilotClassroomHTML}${ learningGoalsHTML } ${studentSamplesHTML}${commonCoreHTML}${originalLessonsHTML}`)
 
 
 
