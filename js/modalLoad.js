@@ -344,13 +344,21 @@ function setLessonData(data) {
 	const commonCore = createList(data.common_core)
 	const studentSamples = createSamples(data.student_samples)
 	const originalLessons = createSamples(data.original_lesson_plan)
-		
+
+	//This is where I throw exceptions for null values.
 
 
+	let learningGoalsHTML = '';
+	if (learningGoalsHTML !== null) {
+		learningGoalsHTML = `<p>Learning Goals: <ul class="activity-list">${learningGoals}</ul></p>`;
+	}
+
+
+	console.log(learningGoalsHTML)
 
 	console.log(commonCore)
 
-	teachers.html(`<p>Pilot classroom: ${data.pilot_classroom}</p><p>Learning Goals: <ul class="activity-list">${learningGoals}</ul></p><p>Student samples: <ul class="activity-list-unordered-blank">${studentSamples}</ul></p><p>Original Lesson Plans: <ul class="activity-list-unordered-blank">${originalLessons}</ul></p>`)
+	teachers.html(`<p>Pilot classroom: ${data.pilot_classroom}</p><p>Student samples: <ul class="activity-list-unordered-blank">${studentSamples}</ul></p><p>Original Lesson Plans: <ul class="activity-list-unordered-blank">${originalLessons}</ul></p>`)
 
 
 
