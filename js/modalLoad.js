@@ -310,7 +310,7 @@ function setVideoCaptions(jsonData) {
 
 
 function loadLessonData() {
-
+	
 
 	const lessonDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/lessonData.json';
 	$.getJSON(lessonDataURL, function (jsonData) {
@@ -319,6 +319,12 @@ function loadLessonData() {
 		console.log(lessonData)
 		setLessonData(lessonData)
 	})
+		.done(function () {
+			console.log("JSON data loaded successfully");
+		})
+		.fail(function () {
+			console.warn("JSON data could not be loaded");
+		});
 }
 
 function getLessonData(jsonData) {
