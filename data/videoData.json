@@ -1,22 +1,6 @@
 [
   
-  {
-  	"creators": [
-	  {
-		"last_name": null,
-		"first_name": null
-	  }
-	],
-	"video_title": "Video Tutorial of Cumulative Character Search",
-	"video_description": "Instructional video for understanding cummulative character search",
-	"preview_filename": "cumulative_character_search.png",
-	"source_filename": "cumulative_characters_quickdemo.mp4",
-	"media_type": "quick_tutorial",
-	"repository_name": "Digital Yoknapatawpha",
-	"repository_place": "University of Virginia",
-	"alt_text": "Video tutorial of using cumulative characters search",
-	"url": "http://faulkner.iath.virginia.edu/family/cumulative_characters/"
-  },
+ 
 
   {
 
@@ -26,8 +10,8 @@
 		"first_name": "Johannes"
 	  }
 	],
-	"video_title": "Video Tutorial of Force Directed Graph",
-	"video_description": "Instructional video for understanding force directed graph",
+	"title": "Video Tutorial of Force Directed Graph",
+	"description": "Instructional video for understanding force directed graph",
 	"duration": "00:00:13",
 	"file_size": "899 KB",
 	"created": "2023-06-22T00:00:00Z",
@@ -35,11 +19,13 @@
 	"media_type": "quick_tutorial",
 	"media_label": "Tutorial",
 	"tool": "Character-Character Force Directed Graph",
-	"repository_name": "Digital Yoknapatawpha",
-	"repository_place": "University of Virginia",
-	"alt_text": "Video tutorial of Force Directed Graph",
-	"url": "http://faulkner.iath.virginia.edu/char-char-force.html"
-  },
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	  "alt_text": "Video tutorial of Force Directed Graph",
+	  "url": "http://faulkner.iath.virginia.edu/char-char-force.html"
+	},
 
   {
 	"creators": [

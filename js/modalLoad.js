@@ -162,12 +162,12 @@ function setVideoData(video) {
 	switch (video.media_type) {
 		case 'quick_tutorial':
 			citationTemplate =
-				`"${video.video_title}." <em>${video.repository_name}</em>, ${video.repository_place}. 
+				`"${video.title}." <em>${video.repository.name}</em>, ${video.repository.place}. 
               <a href="${video.url}">${video.url}</a>.`;
 			break;
 		case 'external_video':
 			citationTemplate =
-				`${creatorsString}. "${video.video_title}." <em>${video.website_title}</em>, ${video.date}, <a href="${video.original_url}">${video.original_url}</a>. Accessed ${new Date(video.access_date).toLocaleDateString(
+				`${creatorsString}. "${video.title}." <em>${video.website_title}</em>, ${video.date}, <a href="${video.original_url}">${video.original_url}</a>. Accessed ${new Date(video.access_date).toLocaleDateString(
 					'en-US',
 					{ month: 'short', day: 'numeric', year: 'numeric' }
 				)}.`;
@@ -177,7 +177,7 @@ function setVideoData(video) {
 			break;
 	}
 
-	videoTitle.html(video.video_title)
+	videoTitle.html(video.title)
 	videoSource.attr('src', currentVideoDirectory + video.source_filename)
 	videoCitation.html(citationTemplate)
 }
