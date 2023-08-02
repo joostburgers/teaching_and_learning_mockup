@@ -310,10 +310,13 @@ function setVideoCaptions(jsonData) {
 
 
 function loadLessonData() {
+
+
 	const lessonDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/lessonData.json';
 	$.getJSON(lessonDataURL, function (jsonData) {
-		
+		console.log("getting lesson data")	
 		const lessonData = getLessonData(jsonData);
+		console.log(lessonData)
 		setLessonData(lessonData)
 	})
 }
@@ -321,6 +324,7 @@ function loadLessonData() {
 function getLessonData(jsonData) {
 	
 	const currentFilename = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1);
+
 		return jsonData.find(object => object.filename === currentFilename)
 }
 
