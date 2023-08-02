@@ -9,7 +9,13 @@
 
 "student_samples": null,
 
-"original_lesson_plan": "Please link Piloted Assignment",
+  "original_lesson_plan": [
+	{
+	  "title":"",
+	  "filename":"",
+	  "filetype":""
+	}
+  ],
 
 "instructor": "Erin Penner",
 
