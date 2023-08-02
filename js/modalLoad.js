@@ -99,22 +99,22 @@ function setImageData(source, image) {
 		case 'site_photograph':
 			citationTemplate =
 				`${creatorsString}.
-           "${image.image_title}." ${image.year}, ${image.image_place}. ${image.repository.name}, ${image.repository.place}. URL: <a href="${image.repository.url}">${image.repository.url}</a>`;
+           "${image.title}." ${image.year}, ${image.place}. ${image.repository.name}, ${image.repository.place}. URL: <a href="${image.repository.url}">${image.repository.url}</a>`;
 			break;
 		case 'external_image':
 			citationTemplate =
-				`${creatorsString}. "${image.image_title}." <em>${image.website.title}</em>, ${image.year}, <a href="${image.website.url}">${image.website.url}</a>. Accessed ${new Date(image.access_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}.`;
+				`${creatorsString}. "${image.title}." <em>${image.website.title}</em>, ${image.year}, <a href="${image.website.url}">${image.website.url}</a>. Accessed ${new Date(image.access_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}.`;
 			break;
 		case 'screen_capture':
 			citationTemplate =
-				`${creatorsString}. "${image.image_title}."
+				`${creatorsString}. "${image.title}."
             ${image.year}.
           <em>${image.repository.name},</em> ${image.repository.place}, 
           <a href="${image.repository.url}">${image.repository.url}</a>`;
 			break;
 
 		case 'archive':
-			citationTemplate = `${creatorsString}. "${image.image_title}."
+			citationTemplate = `${creatorsString}. "${image.title}."
             
 			<b>${image.repository.collection},</b>
 			${image.repository.accession},
@@ -127,7 +127,7 @@ function setImageData(source, image) {
 			break;
 	}
 
-	imageTitle.html(image.image_title)
+	imageTitle.html(image.title)
 	imageSource.attr('src', source)
 	imageSource.attr('alt', image.alt_text)
 
@@ -323,9 +323,7 @@ function loadLessonData() {
 		// Set up click event listeners for all image elements within an element with class ".activity-image"
 
 		const lessonData = getLessonData(jsonData);
-		console.log(lessonData)
 		setLessonData(lessonData)
-
 	})
 }
 
@@ -346,21 +344,26 @@ function setLessonData(data) {
 
 	const learningGoalsHTML = data.learning_goals !== null ? `<p>Learning Goals: <ul class="activity-list">${createList(data.learning_goals)}</ul></p>` : ''; 
 
-	const commonCoreHTML = data.common_core !== null ? `<p>Common Core: <ul class="activity-list">${createList(data.common_core)}</ul></p>` : '';
+	const commonCoreHTML = data.common_core !== null ? `<p>Common Core: <ul class="activity-list-unordered-blank">${createList(data.common_core)}</ul></p>` : '';
 
-	const studentSamplesHTML = data.student_samples !== null ? `<p>Student samples: <ul class="activity-list">${createSamples(data.student_samples)}</ul></p>` : '';
+	const studentSamplesHTML = data.student_samples !== null ? `<p>Student samples: <ul class="activity-list-unordered-blank">${createSamples(data.student_samples, data.filename)}</ul></p>` : '';
 
-	const originalLessonsHTML = data.original_lesson_plan !== null ? `<p>Original lesson plan: <ul class="activity-list">${createSamples(data.original_lesson_plan)}</ul></p>` : '';
+	const originalLessonsHTML = data.original_lesson_plan !== null ? `<p>Original lesson plan: <ul class="activity-list-unordered-blank">${createSamples(data.original_lesson_plan, data.filename)}</ul></p>` : '';
 		
 
 	teachers.html(`${pilotClassroomHTML}${ learningGoalsHTML } ${studentSamplesHTML}${commonCoreHTML}${originalLessonsHTML}`)
 
 
 
-	about.html(`<p>Instructor: ${data.instructor}</p>
-	<p>Contact: <a href = "mailto: ${data.contact}">${data.contact}</p>
-	<p>Date created: ${data.created}</p>
-	<p>Notes: ${data.notes}</p>`)
+	const instructorHTML = data.instructor !== null ? `<p>Instructor: ${data.instructor}</p>` : '';
+
+	const contactHTML = data.contact !== null ? `<p>Contact: <a href = "mailto: ${data.contact}">${data.contact}</a></p>` : '';
+
+	const createdHTML = data.created !== null ? `<p>Date created: ${data.created}</p>` : '';
+
+	const notesHTML = data.notes !== null ? `<p>Notes: ${data.notes}</p>` : '';
+
+	about.html(`${instructorHTML}${contactHTML}${createdHTML}${notesHTML}`)
 
 }
 
@@ -370,27 +373,30 @@ function createList(array) {
 		return list;
 	}
 	return null
-
 }
 
-function createSamples(data) {
-	console.log (data.filename)
+function createSamples(data, filename) {
+
+	//sets relative path to files. The folder name is the first part of the filename, before the first number.
+	const folder = filename.split(/\d/)[0];
+		const filepath = `../supplementary_files/${folder}/`
+
+	//maps out the data into an array of HTML elements as long as there is a filename present in the json.
+
 	const samples = data.map(item => {
 		if (item.filename !== null && item.filename !== undefined) {
-			let file = `<a href = '${item.filename}'>${item.title}</a>`;
+			let file = `<a href = '${filepath}${item.filename}'>${item.title}</a>`;
 				let icon = `${item.file_type}`
 				if (item.first_name && item.last_name) {
 					file = `${item.first_name} ${item.last_name}: <a href = '${item.filename}'>${item.title}</a>`
 				}
-
 				return `<li><i class="bi bi-file-${icon}"></i>${file}</li>`;
-
-			}
-
+		}
+		//if filename not present return null
 			return null
-		}).join('')
-		return samples
-	} 
+	}).join('')
+	return samples
+} 
 
 	
 

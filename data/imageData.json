@@ -8,10 +8,10 @@
 		"first_name": "Lee"
 	  }
 	],
-	"image_title": "A child of Scarbrough's in front of a dresser",
+	"title": "A child of Scarbrough's in front of a dresser",
 	"year": "1939",
-	"image_place": "Laurel, Mississippi",
-	"image_description": "description",
+	"place": "Laurel, Mississippi",
+	"description": "description",
 	"filename": "tenant_child_inside_house.png",
 
 	"alt_text": "Tenant child inside house",
@@ -32,9 +32,9 @@
 		"first_name": "William"
 	  }
 	],
-	"image_title": "'A Rose for Emily', Detail: page 15, carbon typescript.",
+	"title": "'A Rose for Emily', Detail: page 15, carbon typescript.",
 
-	"image_description": "'A Rose for Emily,' Carbon typescript, 17 p. (17 R, 0 V) on 17 l.",
+	"description": "'A Rose for Emily,' Carbon typescript, 17 p. (17 R, 0 V) on 17 l.",
 	"filename": "archive_typescript_a_rose_for_emily_15.jpg",
 
 	"alt_text": "'A Rose for Emily,' Carbon typescript, 17 p. (17 R, 0 V) on 17 l.",
@@ -70,10 +70,10 @@
 
 	],
 
-	"image_title": "Go Down, Moses (Map)",
+	"title": "Go Down, Moses (Map)",
 	"year": "2016",
-	"image_place": null,
-	"image_description": "Digital Yoknapatawpha map of Go Down, Moses",
+	"place": null,
+	"description": "Digital Yoknapatawpha map of Go Down, Moses",
 	"filename": "go_down_moses_map.png",
 
 	"alt_text": "Digital Yoknapatawpha map of Go Down, Moses",
@@ -99,10 +99,10 @@
 
 	],
 
-	"image_title": "Plot Structure: `A Rose for Emily` (Date Order)",
+	"title": "Plot Structure: `A Rose for Emily` (Date Order)",
 	"year": "2019",
-	"image_place": null,
-	"image_description": "Digital Yoknapatawpha screen shot of the plot structure of `A Rose for Emily`. The order of events weighted by date.",
+	"place": null,
+	"description": "Digital Yoknapatawpha screen shot of the plot structure of `A Rose for Emily`. The order of events weighted by date.",
 	"filename": "screen_capture_plot_structure_a_rose_for_emily_date_order.png",
 	"alt_text": "Screen capture of narrative structure of `A Rose for Emily`",
 	"repository": {
@@ -135,10 +135,10 @@
 
 	],
 
-	"image_title": "Screen Capture: Character-Character Force Directed Graph: 'A Rose for Emily'",
+	"title": "Screen Capture: Character-Character Force Directed Graph: 'A Rose for Emily'",
 	"year": "2018",
-	"image_place": null,
-	"image_description": "Visualization of upper-class social relations in 'A Rose for Emily.'",
+	"place": null,
+	"description": "Visualization of upper-class social relations in 'A Rose for Emily.'",
 	"filename": "screen_capture_character_character_force_directed_graph_a_rose_for_emily.png",
 
 	"alt_text": "Visualization of upper-class social relations in 'A Rose for Emily.'",
@@ -157,18 +157,13 @@
 		"first_name": "John"
 	  }
 	],
-	"artist_last_name": "Padgett",
-	"artist_first_name": "John",
-	"image_title": "The Bundren Family",
+	"title": "The Bundren Family",
 	"year": "1998",
-	"image_place": null,
-	"image_description": "Genealogy of the Bundren family",
+	"place": null,
+	"description": "Genealogy of the Bundren family",
 	"filename": "bundren_genealogy.jpg",
 
 	"alt_text": "Genealogy of the Bundren family",
-	"repository_name": null,
-	"repository_place": null,
-	"repository_url": null,
 	"access_date": "2023-07-21",
 	"website": {
 	  "title": "William Faulkner on the Web",
