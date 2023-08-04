@@ -1,46 +1,38 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<title>Learning Module Faulkner</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<title>Faulkner Fan Fic: Practicing Character Development and Scene Building in Faulkner's Universe</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="../js/pageLoad.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<script src="../js/modalLoad.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="../css/family.css">
 	<link rel="stylesheet" href="../css/learning_module.css">
-
 
 
 </head>
 <body>
 	<!--Modal for looping instructional video-->
-	<div id="myModal" class="video">
-		<div class="modal-content">
-			<span class="close">&times;</span>
-			<video autoplay loop muted>
-				<source src="../video/cummulative_characters_quickdemo.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video>
-		</div>
-	</div>
+
 
 	<div class="modal bd-example-modal-lg" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">
-						Title of Picture
-					</h5>
+					<h5 id="imageTitle" class="modal-title"></h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
 					<div class="modal-image">
-						<img src="../images/little_girl.png" class="img-fluid">
+						<img id="imageSource" src="" alt="" class="img-fluid">
 					</div>
 				</div>
 				<div class="modal-footer">
-					Footer text with full citation.
+					<div id="imageCitation"></div>
 				</div>
 			</div>
 		</div>
@@ -167,21 +159,32 @@
 
 		<div class="sidebar">
 			<div class="table-of-contents"></div>
-			<!--<ul>
-				<li><a href="#Preface">Preface</a></li>
-				<li><a href="#Activities">Activities</a></li>
-				<li><a href="#Final Product">Final Product</a></li>
-				<li><a href="#Resources">Resources</a></li>
-				<li><a href="#For Teachers">For Teachers</a></li>
-				<li><a href="#About">About</a></li>
-			</ul>-->
+			
 		</div>
 <!--This is where the TOC ends-->
 
 
 		<!--This is where all the content for the lesson plan sits-->
 		<div class="main">
-			<h1 class="content_title" id="Preface">Faulkner Fan Fic: Practicing Character Development and Scene Building in Faulkner's Universe</h1>
+			<div class="glance-info">
+				<img src="../images/archive_manuscript_barn_burning_1.jpg" alt="As I Lay Dying" class="img-fluid">
+				<h1 class="glance-title glance-centered">Faulkner Fan Fic: Practicing Character Development and Scene Building in Faulkner's Universe</h1>
+			</div>
+			<div class="glance-body">
+				Description:
+				<div class="glance-text">Short description of lesson</div>
+
+
+			</div>
+			<div class="glance-body">
+				Modality:
+				<p class="glance-text"> In-Person</p>
+			</div>
+
+
+
+
+
 
 			<h2 class="content_sub_title" id="Preface">Preface</h2>
 			<!--Enter the paragraph for Preface here. Put each individual paragaraph between <p></p>-->
@@ -203,8 +206,8 @@
 				</div>
 
 			</div>
-			
-			
+
+
 			<!--The activities section is probably the most complex because there are a lot of components and not all of them will be there simultaneously-->
 			<h2 class="content_sub_title" id="Activities">Activities</h2>
 
@@ -632,7 +635,7 @@
 							Instructions
 							<ul class="activity-list-unordered">
 								<li>Read each classmate’s scene and make notes about what works and doesn’t work.</li>
-</ul>
+							</ul>
 						</div>
 					</div>
 
@@ -647,7 +650,7 @@
 
 				<!--This is where the activity section Study Ends-->
 				<!--This is where the activity section Explore begins-->
-				
+
 				<div class="activity-section">
 
 					<!--This is the title stub-->
@@ -662,14 +665,14 @@
 						<!--This is the list of questions on the left. The div class="col" places all this in the column on the left-->
 						<div class="col">
 							<div class="activity-instructions">
-								
+
 
 								<div>
 									<ul class="activity-list-unordered">
 
 										<li>The class will work together to help one another improve their scenes.  If two students chose the same character and scene, they should work together to align the scenes so they “match.”  For instance, if two students chose to write from the same judge’s perspective, they should decide which of their names to use.  Names from the overall Faulkner universe are preferred.</li>
 
-</ul>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -714,10 +717,10 @@
 
 						<!--This is where the list on the left hand side is populated-->
 						<div class="activity-instructions">
-							
+
 							<ul class="activity-list-unordered">
 								<li>Revise, edit, improve your scene based on the feedback from workshop.</li>
-</ul>
+							</ul>
 						</div>
 					</div>
 
@@ -745,11 +748,11 @@
 					<!--Walthrough instructions on the left-->
 					<div class="col">
 						<div class="activity-instructions">
-							
+
 							<ol class="activity-list" type="1">
 								<li>The class will rewrite/revision various scenes from the viewpoint of minor characters in Faulkner’s short story, workshop and align those scenes, and then collaboratively decide on an order of the scenes for their final longer Fan Fic.</li>
 
-</ol>
+							</ol>
 						</div>
 					</div>
 
@@ -768,8 +771,8 @@
 				<!--This is where the activity section Explore ends-->
 				<!--This is where the activity section Respond Begins -->
 				<!--This section stub contains the layout-->
-				
-				</div>
+
+			</div>
 			<h2 class="content_sub_title" id="Final Product">Final Product: Faulkner Fan Fic</h2>
 			<p>Teachers and students may use a free education website creator, <a href="https://wakelet.com" target="_blank" rel="noopener noreferrer">Wakelet</a>, or any online platform to display their final work.</p>
 
@@ -793,11 +796,11 @@
 			</p>
 
 
-				<ul class="activity-list-unordered">
-					<li>The project teaches writing students how to develop characters, write dialogue, play with both perspective and point of view, work within an already established universe for setting, and write scenes.  </li>
-						<li>Students will give voice to minor characters in William Faulkner’s universe using Digital Yoknapatwpha tools to flesh out characters and rewrite scenes in Faulkner’s fiction.</li>
-					<li>Learning Goal 3</li>
-				</ul>
+			<ul class="activity-list-unordered">
+				<li>The project teaches writing students how to develop characters, write dialogue, play with both perspective and point of view, work within an already established universe for setting, and write scenes.  </li>
+				<li>Students will give voice to minor characters in William Faulkner’s universe using Digital Yoknapatwpha tools to flesh out characters and rewrite scenes in Faulkner’s fiction.</li>
+				<li>Learning Goal 3</li>
+			</ul>
 
 			<p>Common Core: </p>
 
