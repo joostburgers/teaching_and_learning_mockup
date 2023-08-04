@@ -35,6 +35,7 @@ function loadImageData() {
 	// Get the JSON data via AJAX request
 	$.getJSON(imageDataURL, function (jsonData) {
 		// Set up click event listeners for all image elements within an element with class ".activity-image"
+		
 
 		setImageCaptions(jsonData);
 

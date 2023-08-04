@@ -319,14 +319,7 @@
 						</div>
 						<!--List end-->
 						<!--This is the image on the right-->
-						<div class="col-4">
-							<!--This is a column created on the right-->
-							<div class="activity-image">
-								<div class="thumbnail-container">
-									<img src="../images/little_girl.png" alt="Cummulative Character Video" class="img-fluid">
-								</div>
-							</div>
-						</div>
+						
 						<!--Image end-->
 
 					</div>
@@ -840,24 +833,11 @@
 	<script>
 		$(document).ready(function () {
 
+
 			loadTOC();
-
-			$(".thumbnail-container img").click(function () {
-				$("#myModal").show();
-			});
-
-			$(".close").click(function () {
-				$("#myModal").hide();
-			});
-
-
-			$(".activity-image img").click(function () {
-				$("#imageModal").show();
-			});
-
-			$(".close").click(function () {
-				$("#imageModal").hide();
-			});
+			loadImageData();
+			loadVideoData();
+			loadLessonData();
 
 		});
 	</script>
