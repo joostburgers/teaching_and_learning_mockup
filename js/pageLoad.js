@@ -396,7 +396,7 @@ function setLessonData(data) {
 
 	const createdHTML = data.created !== null ? `<p>Date created: ${data.created}</p>` : '';
 
-	const notesHTML = data.notes !== null ? `<p>Notes: ${data.notes}</p>` : '';
+	const notesHTML = data.notes !== null ? `<p>Notes: <ul class="activity-list_unordered>" ${createList(data.notes)}</ul></p>` : '';
 
 	about.html(`${instructorHTML}${contactHTML}${createdHTML}${notesHTML}`)
 
