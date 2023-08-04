@@ -1,33 +1,72 @@
 [
 
-{
-"pilot_classroom": "Entry-level English major seminar at a liberal arts university.",
+  {
+	"filename": "penner1.html",
 
-"learning_goals": ["Analyze text that emphasizes the significance of perspective in narrative texts", "Critique implicit assumptions and limitations of reference tools such as genealogical charts", "Work collaboratively to foster comparative analysis", "Create artifacts that foster analysis across visual and textual media"],
+	"pilot_classroom": "Entry-level English major seminar at a liberal arts university.",
 
-"common_core":null,
+	"learning_goals": [ "Analyze text that emphasizes the significance of perspective in narrative texts", "Critique implicit assumptions and limitations of reference tools such as genealogical charts", "Work collaboratively to foster comparative analysis", "Create artifacts that foster analysis across visual and textual media" ],
 
-"student_samples": null,
+	"common_core": null,
 
-"original_lesson_plan": [
-	{
-	  "title":"Piloted Assignment",
-	  "filename":"penner_piloted_assignment.pdf",
-	  "file_type":"pdf"
-	}
-  ],
+	"student_samples": null,
 
-"instructor": "Erin Penner",
+	"original_lesson_plan": [
+	  {
+		"title": "Piloted Assignment",
+		"filename": "penner_piloted_assignment.pdf",
+		"file_type": "pdf"
+	  }
+	],
 
-"contact": "erin.penner@asbury.edu",
+	"instructor": "Erin Penner",
 
-"created": "July 7th 2023",
+	"contact": "erin.penner@asbury.edu",
 
-"notes": "The student-presentation component makes this assignment work best in a seminar-sized class, where all have time to present. But it could be made to work in larger classes with a few adjustments to the presentation mode.",
+	"created": "July 7th 2023",
 
-"filename": "penner1.html"
+	"notes": "The student-presentation component makes this assignment work best in a seminar-sized class, where all have time to present. But it could be made to work in larger classes with a few adjustments to the presentation mode."
 
-},
+
+
+  },
+  {
+	"filename": "beach1.html",
+	"pilot_classroom": "This project was piloted in a synchronous online creative writing class for college freshmen and sophomores at St. Louis Community College.",
+
+	"learning_goals": [ "To identify major and minor characters, point of view, setting, scene building, and plot.", "To research social/historical context in imaginative writing through the use of digital resources.", "To practice stepping outside of self to write/invent characters and scenes from different perspectives in different time periods." ],
+
+	"common_core": null,
+
+	"student_samples": [
+	  {
+		"first_name": null,
+		"last_name": null,
+		"title": "Class Wakelet site",
+		"filename": "https://wakelet.com/wake/bSRYNx4QX5ycwrAFeHpzD",
+		"file_type": "url"
+	  }
+
+	],
+
+	"original_lesson_plan": [
+	  {
+		"title": "Piloted Assignment",
+		"filename": "beach_pilot_assignment.docx",
+		"file_type": "word"
+	  }
+	],
+
+	"instructor": "Maxine Beach",
+
+	"contact": "mbeach7@stlcc.edu",
+
+	"created": "July 7th 2023",
+
+	"notes": "Each activity can be used as scaffolded for the final product or can be used separately depending on the instructor’s desired outcomes. You will need to allot some time to in-class instruction on Digital Yoknapatawpha.  The DY tools and pages for this assignment are fairly simple to use."
+
+  },
+
 
   {
 	"filename": "hayes1.html",
@@ -35,7 +74,7 @@
 
 	"learning_goals": null,
 
-	"common_core": ["standard 1", "standard 2"],
+	"common_core": [ "standard 1", "standard 2" ],
 
 	"student_samples": [
 	  {
