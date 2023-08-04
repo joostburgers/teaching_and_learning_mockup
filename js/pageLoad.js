@@ -117,7 +117,7 @@ function setImageData(source, image) {
 
 	const creatorsString = extractCreators(image);
 
-
+	console.log("source: " + source, "image: " +image )
 
 	let citationTemplate
 
