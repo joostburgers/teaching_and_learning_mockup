@@ -410,28 +410,29 @@ function createList(array) {
 	return null
 }
 
+/**
+ * Creates a list of file samples for display.
+ *
+ * @param {Array} data - The data array containing the file information.
+ * @param {string} filename - The name of the file.
+ *
+ * @returns {string} - A string representing the list of file samples.
+ */
+
 function createSamples(data, filename) {
-
-	//sets relative path to files. The folder name is the first part of the filename, before the first number.
 	const folder = filename.split(/\d/)[0];
-	const filepath = `../supplementary_files/${folder}/`
+	const filepath = `../supplementary_files/${folder}/`;
 
-	//maps out the data into an array of HTML elements as long as there is a filename present in the json.
-	console.log(data, filename)
+	const samples = data
+		.filter(item => item.filename && item.file_type)
+		.map(item => {
+			const icon = item.file_type;
+			const attribution = item.first_name && item.last_name ? `${item.first_name} ${item.last_name}: ` : '';
+			const link = item.file_type === 'url' ? `<a href='${item.filename}' target="_blank" rel="noopener noreferrer">${item.title}</a>` : `<a href='${filepath}${item.filename}'>${item.title}</a>`;
+			return `<li><i class="bi bi-file-${icon}"></i>${attribution}${link}</li>`;
+		})
+		.join('');
 
-
-	const samples = data.map(item => {
-		if (item.filename !== null && item.filename !== undefined) {
-			let file = `<a href = '${filepath}${item.filename}'>${item.title}</a>`;
-			let icon = `${item.file_type}`
-			if (item.first_name && item.last_name) {
-				file = `${item.first_name} ${item.last_name}: <a href = '${item.filename}'>${item.title}</a>`
-			}
-			return `<li><i class="bi bi-file-${icon}"></i>${file}</li>`;
-		}
-		//if filename not present return null
-		return null
-	}).join('')
-	return samples
+	return samples;
 }
 
