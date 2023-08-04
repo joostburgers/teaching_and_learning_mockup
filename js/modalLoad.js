@@ -327,6 +327,7 @@ function loadLessonData() {
 		});
 }
 
+//Gets lesson data of page based on page name. Page name should be faculty member plus number.
 function getLessonData(jsonData) {
 	
 	const currentFilename = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1);
@@ -334,6 +335,11 @@ function getLessonData(jsonData) {
 		return jsonData.find(object => object.filename === currentFilename)
 }
 
+/** 
+This fills in the lesson data based on the 
+*@param {object} data - the lesson data object
+If the values are null, they are not added to the HTML
+**/
 function setLessonData(data) {
 
 	const teachers = $('#TeacherInfo');
@@ -401,6 +407,4 @@ function createSamples(data, filename) {
 	}).join('')
 	return samples
 } 
-
-	
 

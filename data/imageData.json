@@ -84,7 +84,42 @@
 	}
 
   },
+  {
+	"filename": "screen_capture_main_map_barn_burning.png",
+	"media_type": "screen_capture",
+	"creators": [
+	  {
+		"last_name": "Hagood",
+		"first_name": "Taylor"
+	  },
+	  {
+		"last_name": "Knepper",
+		"first_name": "Steven"
+	  },
+	  {
+		"last_name": "Penner",
+		"first_name": "Erin"
+	  },
+	  {
+		"last_name": "Rieger",
+		"first_name": "Christopher"
+	  }
 
+	],
+
+	"title": "Barn Burning (Map)",
+	"year": "2012",
+	"place": null,
+	"description": "Digital Yoknapatawpha map of Barn Burning",
+
+	"alt_text": "Digital Yoknapatawpha map of Go Barn Burning",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia",
+	  "url": "http://faulkner.iath.virginia.edu/?text=BB"
+	}
+
+  },
   {
 	"media_type": "screen_capture",
 	"creators": [
