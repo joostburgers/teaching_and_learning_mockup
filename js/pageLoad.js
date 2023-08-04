@@ -394,9 +394,9 @@ function setLessonData(data) {
 
 	const contactHTML = data.contact !== null ? `<p>Contact: <a href = "mailto: ${data.contact}">${data.contact}</a></p>` : '';
 
-	const createdHTML = data.created !== null ? `<p>Date created: ${data.created}</p>` : '';
+	const createdHTML = data.created !== null ? `<p>Date created: ${new Date(data.created).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</p>` : '';
 
-	const notesHTML = data.notes !== null ? `<p>Notes: <ul class="activity-list_unordered>" ${createList(data.notes)}</ul></p>` : '';
+	const notesHTML = data.notes !== null ? `<p>Notes: <ul class="activity-list-unordered"> ${createList(data.notes)}</ul></p>` : '';
 
 	about.html(`${instructorHTML}${contactHTML}${createdHTML}${notesHTML}`)
 
@@ -405,6 +405,8 @@ function setLessonData(data) {
 function createList(array) {
 	if (array && Array.isArray(array)) {
 		const list = array.map(items => `<li>${items}</li>`).join('');
+
+		console.log(list)
 		return list;
 	}
 	return null
