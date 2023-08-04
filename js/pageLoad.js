@@ -389,17 +389,16 @@ function setLessonData(data) {
 	teachers.html(`${pilotClassroomHTML}${learningGoalsHTML} ${studentSamplesHTML}${commonCoreHTML}${originalLessonsHTML}`)
 
 
-
 	const instructorHTML = data.instructor !== null ? `<p>Instructor: ${data.instructor}</p>` : '';
 
 	const contactHTML = data.contact !== null ? `<p>Contact: <a href = "mailto: ${data.contact}">${data.contact}</a></p>` : '';
 
+	console.log(data.created)
 	const createdHTML = data.created !== null ? `<p>Date created: ${new Date(data.created).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</p>` : '';
 
 	const notesHTML = data.notes !== null ? `<p>Notes: <ul class="activity-list-unordered"> ${createList(data.notes)}</ul></p>` : '';
 
 	about.html(`${instructorHTML}${contactHTML}${createdHTML}${notesHTML}`)
-
 }
 
 function createList(array) {
