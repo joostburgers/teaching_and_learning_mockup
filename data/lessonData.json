@@ -1,76 +1,10 @@
+// File: C:\Users\joost\source\repos\lesson_plans\data\lessonData.json
 [
-
-  {
-	"filename": "penner1.html",
-
-	"pilot_classroom": "Entry-level English major seminar at a liberal arts university.",
-
-	"learning_goals": [ "Analyze text that emphasizes the significance of perspective in narrative texts", "Critique implicit assumptions and limitations of reference tools such as genealogical charts", "Work collaboratively to foster comparative analysis", "Create artifacts that foster analysis across visual and textual media" ],
-
-	"common_core": null,
-
-	"student_samples": null,
-
-	"original_lesson_plan": [
-	  {
-		"title": "Piloted Assignment",
-		"filename": "penner_piloted_assignment.pdf",
-		"file_type": "pdf"
-	  }
-	],
-
-	"instructor": "Erin Penner",
-
-	"contact": "erin.penner@asbury.edu",
-
-	"created": "2023-07-23",
-
-	"notes": [ "The student-presentation component makes this assignment work best in a seminar-sized class, where all have time to present. But it could be made to work in larger classes with a few adjustments to the presentation mode." ]
-
-
-
-  },
-
-  {
-	"filename": "dimock1.html",
-
-	"pilot_classroom": "Class Description",
-
-	"learning_goals": [ "", "", "" ],
-
-	"common_core": null,
-
-	"student_samples": null,
-
-	"original_lesson_plan": [
-	  {
-		"title": "Piloted Assignment",
-		"filename": "barn_burning_and_the_man_who_was_almost_a_man.docx",
-		"file_type": "pdf"
-	  }
-	],
-
-	"instructor": "Chase Dimock",
-
-	"contact": "chase.dimock@canyons.edu",
-
-	"created": "2023-07-23",
-
-	"notes": [ "" ]
-
-
-
-  },
-
-
   {
 	"filename": "beach1.html",
 	"pilot_classroom": "This project was piloted in a synchronous online creative writing class for college freshmen and sophomores at St. Louis Community College.",
-
 	"learning_goals": [ "To identify major and minor characters, point of view, setting, scene building, and plot.", "To research social/historical context in imaginative writing through the use of digital resources.", "To practice stepping outside of self to write/invent characters and scenes from different perspectives in different time periods." ],
-
 	"common_core": null,
-
 	"student_samples": [
 	  {
 		"first_name": null,
@@ -79,9 +13,7 @@
 		"filename": "https://wakelet.com/wake/bSRYNx4QX5ycwrAFeHpzD",
 		"file_type": "url"
 	  }
-
 	],
-
 	"original_lesson_plan": [
 	  {
 		"title": "Piloted Assignment",
@@ -89,26 +21,34 @@
 		"file_type": "word"
 	  }
 	],
-
 	"instructor": "Maxine Beach",
-
 	"contact": "mbeach7@stlcc.edu",
-
 	"created": "2023-07-23",
-
 	"notes": [ "Each activity can be used as scaffolded for the final product or can be used separately depending on the instructor’s desired outcomes.", "You will need to allot some time to in-class instruction on Digital Yoknapatawpha.  The DY tools and pages for this assignment are fairly simple to use." ]
-
   },
-
-
+  {
+	"filename": "dimock1.html",
+	"pilot_classroom": "Class Description",
+	"learning_goals": [ "", "", "" ],
+	"common_core": null,
+	"student_samples": null,
+	"original_lesson_plan": [
+	  {
+		"title": "Piloted Assignment",
+		"filename": "barn_burning_and_the_man_who_was_almost_a_man.docx",
+		"file_type": "pdf"
+	  }
+	],
+	"instructor": "Chase Dimock",
+	"contact": "chase.dimock@canyons.edu",
+	"created": "2023-07-23",
+	"notes": [ "" ]
+  },
   {
 	"filename": "hayes1.html",
 	"pilot_classroom": "Entry-level English major seminar at a liberal arts university.",
-
 	"learning_goals": null,
-
 	"common_core": [ "standard 1", "standard 2" ],
-
 	"student_samples": [
 	  {
 		"first_name": "Bob",
@@ -117,7 +57,6 @@
 		"filename": "smith1.html",
 		"file_type": "pdf"
 	  },
-
 	  {
 		"first_name": "Jane",
 		"last_name": "Doe",
@@ -125,8 +64,6 @@
 		"filename": "doe1.html",
 		"file_type": "word"
 	  },
-
-
 	  {
 		"first_name": null,
 		"last_name": null,
@@ -134,36 +71,40 @@
 		"filename": "doe1.html",
 		"file_type": "image"
 	  }
-
-
 	],
-
 	"original_lesson_plan": [
 	  {
 		"title": "lesson plan 1",
 		"filename": "lessonplan1.html",
 		"file_type": "word"
 	  },
-
 	  {
 		"title": "lesson plan 2",
 		"filename": "lessonplan2.html",
 		"file_type": "pdf"
 	  }
-
-
 	],
-
 	"instructor": "Jon Hayes",
-
 	"contact": "erin.penner@asbury.edu",
-
 	"created": "2023-07-23",
-
 	"notes": [ "This is where the notes go" ]
-
-
-
+  },
+  {
+	"filename": "penner1.html",
+	"pilot_classroom": "Entry-level English major seminar at a liberal arts university.",
+	"learning_goals": [ "Analyze text that emphasizes the significance of perspective in narrative texts", "Critique implicit assumptions and limitations of reference tools such as genealogical charts", "Work collaboratively to foster comparative analysis", "Create artifacts that foster analysis across visual and textual media" ],
+	"common_core": null,
+	"student_samples": null,
+	"original_lesson_plan": [
+	  {
+		"title": "Piloted Assignment",
+		"filename": "penner_piloted_assignment.pdf",
+		"file_type": "pdf"
+	  }
+	],
+	"instructor": "Erin Penner",
+	"contact": "erin.penner@asbury.edu",
+	"created": "2023-07-23",
+	"notes": [ "The student-presentation component makes this assignment work best in a seminar-sized class, where all have time to present. But it could be made to work in larger classes with a few adjustments to the presentation mode." ]
   }
-
 ]
