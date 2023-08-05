@@ -12,13 +12,15 @@
 	"year": "1939",
 	"place": "Laurel, Mississippi",
 	"description": "description",
-	"filename": "tenant_child_inside_house.png",
+	"filename": "site_photograph_a_child_of_scarbroughs_in_front_of_dresser.jpg",
 
 	"alt_text": "Tenant child inside house",
 	"repository": {
 	  "name": "Library of Congress Prints and Photographs Division",
+	  "collection": "Prints and Photographs Online Catalog",
+	  "accession": "LC-USF34- 031903-D [P&P] LOT 1653",
 	  "place": "Washington, D.C. 20540 USA",
-	  "url": "http://hdl.loc.gov/loc.pnp/pp.print"
+	  "url": "https://www.loc.gov/pictures/collection/fsa/item/2017781912/"
 	}
 
   },
