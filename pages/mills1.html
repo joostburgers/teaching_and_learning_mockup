@@ -1,380 +1,581 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Learning Module Faulkner</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<title>Learning Module Faulkner</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="../js/pageLoad.js"></script>
+	<script src="../js/modalLoad.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/family.css">
-    <link rel="stylesheet" href="../css/learning_module.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="../css/family.css">
+	<link rel="stylesheet" href="../css/learning_module.css">
 
-    <style>
-        .container {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            height: 100%;
-        }
-
-        .sidebar {
-            width: 15%;
-            background-color: #f1f1f1;
-            padding: 20px;
-        }
-
-        .main {
-            width: 85%;
-            background-color: white;
-            padding: 20px;
-        }
-
-        h3.content_sub_title {
-            font-size: 1.5em;
-            margin: 10px;
-        }
-
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48
-        }
-
-
-        .activity {
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            margin-bottom: 10px;
-            line-height: 1.5em;
-        }
-
-            .activity.explore {
-                background-color: rgba(253, 245, 230, 0.37);
-            }
-
-        .menu {
-            color: #ffffff;
-            background: #999999;
-            font-family: Geneva, Helvetica, Arial, sans-serif;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 0.9em;
-            line-height: 2.4em;
-            letter-spacing: 0.075em;
-            padding: 0 0.6em;
-            text-decoration: none;
-        }
-
-            .menu.sub {
-                text-transform: capitalize uppercase;
-            }
-
-        .activity-title {
-            font-size: 120%;
-            padding: 15px;
-            font-weight: bold;
-        }
-
-        .activity-list {
-            list-style-type: decimal;
-            list-style-position: outside;
-            margin-left: 10px;
-            padding: 15px;
-            font-weight: 400;
-            line-height: 1.5em;
-        }
-
-        .activity-instructions {
-            padding: 15px;
-            font-weight: bold;
-        }
-
-        .activity-questions {
-            padding: 15px;
-            font-weight: 400;
-            line-height: 1.5em;
-            margin-left: 10px;
-            font-style: italic;
-        }
-
-        .activity-section {
-            border-top: 1px solid #ddd;
-            padding: 5px;
-        }
-
-        .bi::before {
-            padding-right: 0.5em;
-        }
-
-        div.video {
-            display: none;
-            position: fixed;
-            z-index: 10001;
-            padding-top: 100px;
-            left: 25%;
-            top: 0%;
-            width: 50%;
-            height: 50%;
-            overflow: visible;
-            background-color: none;
-        }
-
-        .thumbnail-container {
-            transition: box-shadow 0.3s;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-            .thumbnail-container:hover {
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            }
-    </style>
+	<style>
+	</style>
 </head>
 <body>
-    <!--Modal for looping instructional video-->
-    <div id="myModal" class="video">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <video autoplay loop muted>
-                <source src="../video/cummulative_characters_quickdemo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
+	<!--Modal for looping instructional video-->
+	<div class="modal bd-example-modal-lg" id="videoModal" tabindex="-1">
 
-    <div id="page_header">
-        <div id="header_logo"><a class="logo" href="http://faulkner.iath.virginia.edu/"><span class="digital">DIGITAL</span> Yoknapatawpha</a> · Teaching &amp; Learning</div>
-        <div id="main-menu">
-            <ul id="main-menu-links">
-                <li>
-                    <a href="http://faulkner.iath.virginia.edu/family/index-about.php">About</a>
-                    <ul>
-                        <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/credits.php">Credits</a></li>
-                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/dedication" target="_blank">Dedication</a></li>
-                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-bibliography" target="_blank">Bibliography</a></li>
-                        <li><a href="http://faulkner.iath.virginia.edu/family/dysocialmedia.php">DY on Social Media</a></li>
-                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-articles-presentations" target="_blank">Re-Presenting DY</a></li>
-                        <li><a href="http://faulkner.iath.virginia.edu/family/videos-2016demos.php">2016 Demos</a></li>
-                    </ul>
-                </li>
-                <li class="bullet-link">
-                    <a href="http://faulkner.iath.virginia.edu/family/index-search.php">Search</a>
-                    <ul>
-                        <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/events/">Events</a></li>
-                        <li>
-                            <span class="nav-blank">Characters</span>
-                            <ul>
-                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/characters/">By Text</a></li>
-                                <li><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters/">Cumulative</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span class="nav-blank">Locations</span>
-                            <ul>
-                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/locations/">By Text</a></li>
-                                <li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations/">Cumulative</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="bullet-link">
-                    <a href="http://faulkner.iath.virginia.edu/family/index-visualizations.php">Visualizations</a>
-                    <ul>
-                        <li class="first-item">
-                            <span class="nav-blank">Location-Character</span>
-                            <ul>
-                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/characters-force.html">Force Directed</a></li>
-                                <li><a href="http://faulkner.iath.virginia.edu/characters-bipart.html">Bipartite</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="http://faulkner.iath.virginia.edu/char-char-force.html">Character-Character</a></li>
-                        <li><a href="http://faulkner.iath.virginia.edu/characters-graph.html">Character-Event</a></li>
-                        <li>
-                            <span class="nav-blank">Heatmaps</span>
-                            <ul>
-                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/heatmaps/spatial_heatmaps.php">Spatial</a></li>
-                                <li><a href="http://faulkner.iath.virginia.edu/family/heatmaps/temporal_heatmaps.php">Temporal</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span class="nav-blank">Photographs</span>
-                            <ul>
-                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/photograph_locations.php">by Location</a></li>
-                                <li><a href="http://faulkner.iath.virginia.edu/family/photograph_repositories.php">by Repository</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="http://faulkner.iath.virginia.edu/narrativeanalysis.html" target="_blank">Narrative Analysis</a></li>
-                    </ul>
-                </li>
-                <li class="bullet-link">
-                    <a href="http://faulkner.iath.virginia.edu/family/index-commentaries.php">Commentaries</a>
-                    <ul>
-                        <li class="first-item"><a href="http://faulkner.iath.virginia.edu/media/resources/DISPLAYS/FaulknerMapsHP.html" target="_blank">Faulkner &amp; Maps</a></li>
-                        <li><a href="http://faulkner.iath.virginia.edu/YokCemeteries.html">Cemeteries</a></li>
-                        <li><a href="http://faulkner.iath.virginia.edu/family/">Genealogies</a></li>
-                        <li><a href="http://faulkner.iath.virginia.edu/racial_demography/">Race &amp; Place</a></li>
-                        <li><a href="http://faulkner.iath.virginia.edu/family/aa_sources.php">Analyzing <em>Absalom, Absalom!</em></a></li>
-                    </ul>
-                </li>
-                <li class="bullet-link">
-                    <a href="http://faulkner.iath.virginia.edu/family/index-teaching_and_learning.php">Teaching &amp; Learning</a>
-                    <ul>
-                        <li class="first-item">
-                            <span class="nav-blank">Resources by Text</span>
-                            <ul>
-                                <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/resources-re.php">"A Rose for Emily"</a></li>
-                                <li><a href="http://faulkner.iath.virginia.edu/family/resources-ld.php">As I Lay Dying</a></li>
-                                <li><a href="http://faulkner.iath.virginia.edu/family/resources-sf.php">The Sound and the Fury</a></li>
-                                <li><a href="http://faulkner.iath.virginia.edu/family/resources-aa.php">Absalom, Absalom!</a></li>
-                                <li><a href="http://faulkner.iath.virginia.edu/family/resources-ds.php">"Dry September"</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="http://faulkner.iath.virginia.edu/family/videos-teaching_and_learning.php">Videos</a></li>
-                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/pedagogyarticles" target="_blank">Articles</a></li>
-                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/tlworksheethomepage" target="_blank">Worksheets</a></li>
-                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/swhomepage" target="_blank">Student Work</a></li>
-                    </ul>
-                </li>
-                <li class="bullet-link">
-                    <a href="http://faulkner.iath.virginia.edu/family/index-indexes.php">Indexes</a>
-                    <ul>
-                        <li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters.php">Cumulative Characters</a></li>
-                        <li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations.php">Cumulative Locations</a></li>
-                        <li><a href="http://faulkner.iath.virginia.edu/family/recurring_events.php">Recurring Events</a></li>
-                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmssetc" target="_blank">Manuscripts</a></li>
-                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmagazineillustrations" target="_blank">Illustrations</a></li>
-                        <li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofaudioclips" target="_blank">Audio Clips</a></li>
-                        <li><a href="http://faulkner.iath.virginia.edu/family/contributors.php">Scholarly Collaborators</a></li>
-                        <li><a href="http://faulkner.iath.virginia.edu/family/videos-index.php">DY Videos</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
+		<div class="modal-content video-content">
+			<div class="modal-header">
+				<h5 id="videoTitle" class="modal-title"></h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-video">
+					<video autoplay loop muted controls>
+						<source id="videoSource" src="" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div id="videoCitation"></div>
+			</div>
+		</div>
 
-    <div class="container">
-        <div class="sidebar">
-            <h1 class="content_title">Table of Contents</h1>
-            <ul>
-                <li><a href="#Preface">Preface</a></li>
-                <li><a href="#Activities">Activities</a></li>
-                <li><a href="#Final Product">Final Product</a></li>
-                <li><a href="#Resources">Resources</a></li>
-                <li><a href="#For Teachers">For Teachers</a></li>
-                <li><a href="#About">About</a></li>
-            </ul>
-        </div>
-        <div class="main">
-            <h1 class="content_title" id="Preface">Lesson Plan</h1>
-            <h2 class="content_sub_title" id="Preface">Preface</h2>
-            <p>What does Faulkner think of his female characters? How does he write them? How does Faulkner’s world influence his writing of them? What does Faulkner think of Caddy?</p>
-            <p>This lesson is part one of a four-part lesson designed for a junior/senior elective English course at an all-boys independent high school. In order to fuel an in-class discussion, we will use Digital Yoknapatawpha to attempt to better understand Caddy’s world in <i>The Sound and the Fury</i>. This lesson can be in-person or synchronous online and is designed to take place after students have read all or most of the novel.</p>
+	</div>
 
 
-            <h2 class="content_sub_title" id="Activities">Activities</h2>
-            <div class="activity explore">
-                <h3 class="content_sub_title" id="Activity 1">Activity 1: Who Narrates Faulkner’s works?</h3>
+	<div class="modal bd-example-modal-lg" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 id="imageTitle" class="modal-title"></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-image">
+						<img id="imageSource" src="" alt="" class="img-fluid">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div id="imageCitation"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-                <div class="activity-section">
-                    <div class="activity-title">
-                        <i class="bi bi-display"></i>
-                        Explore: Digital Yoknapatawpha: Cumulative Characters
-                    </div>
-                </div>
+	<!--This is the header menus no need to touch this.-->
+	<div id="page_header">
+		<div id="header_logo"><a class="logo" href="http://faulkner.iath.virginia.edu/"><span class="digital">DIGITAL</span> Yoknapatawpha</a> · Teaching &amp; Learning</div>
+		<div id="main-menu">
+			<ul id="main-menu-links">
+				<li>
+					<a href="http://faulkner.iath.virginia.edu/family/index-about.php">About</a>
+					<ul>
+						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/credits.php">Credits</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/dedication" target="_blank">Dedication</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-bibliography" target="_blank">Bibliography</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/dysocialmedia.php">DY on Social Media</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-articles-presentations" target="_blank">Re-Presenting DY</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/videos-2016demos.php">2016 Demos</a></li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-search.php">Search</a>
+					<ul>
+						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/events/">Events</a></li>
+						<li>
+							<span class="nav-blank">Characters</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/characters/">By Text</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters/">Cumulative</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="nav-blank">Locations</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/locations/">By Text</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations/">Cumulative</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-visualizations.php">Visualizations</a>
+					<ul>
+						<li class="first-item">
+							<span class="nav-blank">Location-Character</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/characters-force.html">Force Directed</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/characters-bipart.html">Bipartite</a></li>
+							</ul>
+						</li>
+						<li><a href="http://faulkner.iath.virginia.edu/char-char-force.html">Character-Character</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/characters-graph.html">Character-Event</a></li>
+						<li>
+							<span class="nav-blank">Heatmaps</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/heatmaps/spatial_heatmaps.php">Spatial</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/heatmaps/temporal_heatmaps.php">Temporal</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="nav-blank">Photographs</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/photograph_locations.php">by Location</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/photograph_repositories.php">by Repository</a></li>
+							</ul>
+						</li>
+						<li><a href="http://faulkner.iath.virginia.edu/narrativeanalysis.html" target="_blank">Narrative Analysis</a></li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-commentaries.php">Commentaries</a>
+					<ul>
+						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/media/resources/DISPLAYS/FaulknerMapsHP.html" target="_blank">Faulkner &amp; Maps</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/YokCemeteries.html">Cemeteries</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/">Genealogies</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/racial_demography/">Race &amp; Place</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/aa_sources.php">Analyzing <em>Absalom, Absalom!</em></a></li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-teaching_and_learning.php">Teaching &amp; Learning</a>
+					<ul>
+						<li class="first-item">
+							<span class="nav-blank">Resources by Text</span>
+							<ul>
+								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/resources-re.php">"A Rose for Emily"</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/resources-ld.php">As I Lay Dying</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/resources-sf.php">The Sound and the Fury</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/resources-aa.php">Absalom, Absalom!</a></li>
+								<li><a href="http://faulkner.iath.virginia.edu/family/resources-ds.php">"Dry September"</a></li>
+							</ul>
+						</li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/videos-teaching_and_learning.php">Videos</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/pedagogyarticles" target="_blank">Articles</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/tlworksheethomepage" target="_blank">Worksheets</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/swhomepage" target="_blank">Student Work</a></li>
+					</ul>
+				</li>
+				<li class="bullet-link">
+					<a href="http://faulkner.iath.virginia.edu/family/index-indexes.php">Indexes</a>
+					<ul>
+						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters.php">Cumulative Characters</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations.php">Cumulative Locations</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/recurring_events.php">Recurring Events</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmssetc" target="_blank">Manuscripts</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmagazineillustrations" target="_blank">Illustrations</a></li>
+						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofaudioclips" target="_blank">Audio Clips</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/contributors.php">Scholarly Collaborators</a></li>
+						<li><a href="http://faulkner.iath.virginia.edu/family/videos-index.php">DY Videos</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
 
-                <div class="row">
+	<!--This is where the header ends-->
+	<!--This is the TOC menu. No need to touch this-->
+	<div class="container">
 
-                    <div class="col">
+		<div class="sidebar">
+			<div class="table-of-contents"></div>
+		</div>
+		<!--This is where the TOC ends-->
+		<!--This is where all the content for the lesson plan sits-->
+		<div class="main">
 
-                        <div class="activity-instructions">
-                            Walkthrough
-                            <ol class="activity-list" type="1">
-                                <li>Go to the <a href="http://faulkner.iath.virginia.edu/">Digital Yoknapatawpha</a> website</li>
-                                <li>Click <span class="menu">Search </span><i class="bi bi-arrow-right"></i><span class=" menu sub">Characters</span><i class="bi bi-arrow-right"></i><span class="menu sub">Cumulative</span></li>
-                                <li>
-                                    Select <span class="field_name">Gender: </span><select name="gender" id="gender">
-                                        <option value="">Female</option>
+			<div class="glance-info">
 
-                                    </select> and <span class="field_name">Narrator: </span><select name="gender" id="gender">
-                                        <option value="">First Person</option>
+				<img src="../images/little_girl_cropped.png" alt="As I Lay Dying" class="img-fluid-opacity-50">
 
-                                    </select>
-                                </li>
-                                <li>Click <input type="submit" name="form_submit_button" id="form_submit_button" value="Search"></li>
+				<h1 class="glance-title glance-centered">Exploring the Worlds of Faulkner's Female Characters</h1>
 
-                                <li>
-                                    Select <span class="field_name">Gender: </span><select name="gender" id="gender">
-                                        <option value="">Female</option>
+				<div class="glance-body">
+					Description:
+					<p class="glance-text">Students will use multiple features of DY to consider how Faulkner writes his female characters. This lesson is focused on The Sound and the Fury but can be adapted for other Faulkner stories featuring central female characters.</p>
+				</div>
+				<div class="glance-body">
+					Modality:
+					<p class="glance-text"> In-Person</p>
+				</div>
+			</div>
 
-                                    </select> and <span class="field_name">Narrator: </span><select name="gender" id="gender">
-                                        <option value="">Stream-of-Consciousness?</option>
+			<h1 class="content_title" id="Preface">Lesson Plan</h1>
 
-                                    </select>
-                                </li>
-                                <li>Click <input type="submit" name="form_submit_button" id="form_submit_button" value="Search"></li>
-                                <li>
-                                    Select <span class="field_name">Gender: </span><select name="gender" id="gender">
-                                        <option value="">Female</option>
+			<h2 class="content_sub_title" id="Preface">Preface</h2>
+			<!--Enter the paragraph for Preface here. Put each individual paragaraph between <p></p>-->
 
-                                    </select> and <span class="field_name">Rank: </span><select name="gender" id="gender">
-                                        <option value="">Major</option>
+			<p>In The Sound and the Fury, Caddy is both <em>the</em> central character and <em>the</em> chapter-less character. In this series of activities (pick and choose or do them all), we will use DY to help us deepen our understanding of Caddy’s world. </p>
+			<p>This is DY at its best: the tools here can help us question what we know about Caddy, how we learn it, and will raise the question: do we really know anything about her? DY can help us think about Caddy in ways we have not before.</p>
 
-                                    </select>
-                                </li>
-                                <li>Click <input type="submit" name="form_submit_button" id="form_submit_button" value="Search"></li>
-                            </ol>
-                        </div>
-                    </div>
+			<p class="tip">(Tip: You can do the following exercises with any character, and any central female character, such as Minnie from "Dry September" or Emily from "A Rose for Emily".</p>
+
+			<!--The activities section is probably the most complex because there are a lot of components and not all of them will be there simultaneously-->
+			<h2 class="content_sub_title" id="Activities">Activities</h2>
+
+			<div class="activity">
+
+				<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
+				Grab the line below to create a new activity heading.-->
+				<h3 class="content_sub_title activity-title" id="Activity 1">Activity 1: Who Does Caddy Spend Time With?</h3>
+
+				<!--This is a stub for the "Study Acivity section"-->
+
+				<div class="activity-section">
+
+					<!--This is the section title-->
+
+					<div class="activity-subtitle">
+						<i class="bi bi-file-earmark-text"></i>
+						Study: The Sound and the Fury
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col">
+
+						<!--This is where the list on the left hand side is populated-->
+						<div class="activity-instructions">
+							Instructions
+							<div class="activity-text">
+								<p>Using the graph extrapolated from DY data, we can see that Caddy is never alone in the novel. This raises the question: who is she with? Who are her friends? Does she have any friends? Also: who else in th novel is never alone? (Hint: Caroline, Mr. Compson, Frony..)</p>
+							</div>
+						</div>
+					</div>
+
+					<!--This is where the fancy quote on the right is created.-->
+					<div class="col-5">
+						<div class="activity-image">
+							<div class="thumbnail-container">
+								<img src="../images/tenant_child_inside_house.png" alt="Cummulative Character Video" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--This is where the activity section Study Ends-->
+			<!--This is where the activity section Explore begins-->
+
+			<div class="activity">
+
+				<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
+				Grab the line below to create a new activity heading.-->
+				<h3 class="content_sub_title activity-title" id="Activity 1">Activity 2: Who Does Caddy Spend Time With? (part II)</h3>
+
+				<div class="activity-section">
+					<div class="activity-subtitle">
+						<i class="bi bi-globe"></i>
+						Explore: Digital Yoknapatawpha: Character Networks
+					</div>
+				</div>
+				<div class="activity-section">
+					<div class="row">
+
+						<!--Walthrough instructions on the left-->
+						<div class="col">
+							<div class="activity-instructions">
+								Walkthrough
+								<ul class="activity-list" type="1">
+									<li>
+										From the DY Main Menu, choose
+										<ul class="activity-list-roman">
+											<li>Visualizations</li>
+											<li>character-character</li>
+											<li>Force Directed Graph</li>
+										</ul>
+									</li>
+									<li> Select <em>Sound and the Fury</em></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="activity-instructions">
+								Sound and the Fury Bipartite (actual video will pop up eventually!)
+								<div class="activity-image">
+									<div class="thumbnail-container">
+										<img src="../images/sf_bipartite.png" alt="Sound and the Fury Bipartite" class="img-fluid">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions">
+								Guided Questions
+
+								<ul class="activity-list-unordered">
+									<li>If we assume that Caddy is most likely to be friends with other white, upper-class, females, choose White for Race, Upper Class for Class, and Female for Gender.</li>
+									<li>
+										<p>What do you see?</p> <p>(Below is the graph that should result)?</p>
+										<div class="note">With some doing this could be the actual interactive result from the search.</div>
+										<button class="btn btn-default zoom-btn" id="zoom_in_bs">+</button><button class="btn btn-default zoom-btn" id="zoom_out_bs">-</button>
+										<div id="graph">
+											<svg width="930" height="650" style="cursor: move;" xlink="http://www.w3.org/1999/xlink">
+												<style type="text/css">
+													.present {
+														stroke: rgb(136, 136, 136);
+													}
+
+													.link {
+														fill: none;
+													}
+												</style>
+												<g transform="translate(-200,77)scale(1)"><path g="M642.5497591886316,448.2780875707677SNaN,NaN 642.5497591886316,448.2780875707677" class="link present" stroke-width="3.6666666666666665" opacity="0.5" style="stroke: rgb(240, 0, 0); opacity: 0.5;" d="M569.745627567985,96.20006715801216S550.1661529063902,257.1322084444183 473.39545893044584,399.92146039814116"></path><path g="M642.5497591886316,448.2780875707677SNaN,NaN 642.5497591886316,448.2780875707677" class="link present" stroke-width="2.4222222222222225" opacity="0.5" style="stroke: rgb(240, 0, 0); opacity: 0.5;" d="M569.745627567985,96.20006715801216S640.3690237972875,137.78465123862364 663.7359899612544,216.33989689676238"></path><path g="M642.5497591886316,448.2780875707677SNaN,NaN 642.5497591886316,448.2780875707677" class="link present" stroke-width="5" opacity="0.5" style="stroke: rgb(240, 0, 0); opacity: 0.5;" d="M663.7359899612544,216.33989689676238S589.3920786599921,329.72380186173206 473.39545893044584,399.92146039814116"></path><path g="M642.5497591886316,448.2780875707677SNaN,NaN 642.5497591886316,448.2780875707677" class="link present" stroke-width="1.8" opacity="0.5" style="stroke: rgb(240, 0, 0); opacity: 0.5;" d="M663.7359899612544,216.33989689676238S678.4332306676752,314.2077411630905 633.8865641735599,402.58035190863075"></path><path g="M642.5497591886316,448.2780875707677SNaN,NaN 642.5497591886316,448.2780875707677" class="link present" stroke-width="1.1777777777777778" opacity="0.5" style="stroke: rgb(240, 0, 0); opacity: 0.5;" d="M663.7359899612544,216.33989689676238S556.8552030705692,306.62353999292503 421.9852282088649,343.83548293992203"></path><path g="M642.5497591886316,448.2780875707677SNaN,NaN 642.5497591886316,448.2780875707677" class="link present" stroke-width="1.2666666666666666" opacity="0.5" style="stroke: rgb(240, 0, 0); opacity: 0.5;" d="M473.39545893044584,399.92146039814116S554.13795996884,371.255022397927 633.8865641735599,402.58035190863075"></path><g class="node" transform="translate(569.745627567985,96.20006715801216)" cx="569.745627567985" cy="96.20006715801216"><path d="M-7.0898154036220635,-7.0898154036220635L7.0898154036220635,-7.0898154036220635 7.0898154036220635,7.0898154036220635 -7.0898154036220635,7.0898154036220635Z" style="fill: rgb(51, 102, 204); stroke-width: 1.5; stroke: white; opacity: 1;"></path></g><g class="node" transform="translate(663.7359899612544,216.33989689676238)" cx="663.7359899612544" cy="216.33989689676238"><path d="M-7.0898154036220635,-7.0898154036220635L7.0898154036220635,-7.0898154036220635 7.0898154036220635,7.0898154036220635 -7.0898154036220635,7.0898154036220635Z" style="fill: rgb(51, 102, 204); stroke-width: 1.5; stroke: white; opacity: 1;"></path></g><g class="node" transform="translate(473.39545893044584,399.92146039814116)" cx="473.39545893044584" cy="399.92146039814116"><path d="M-7.0898154036220635,-7.0898154036220635L7.0898154036220635,-7.0898154036220635 7.0898154036220635,7.0898154036220635 -7.0898154036220635,7.0898154036220635Z" style="fill: rgb(51, 102, 204); stroke-width: 1.5; stroke: white; opacity: 1;"></path></g><g class="node" transform="translate(421.9852282088649,343.83548293992203)" cx="421.9852282088649" cy="343.83548293992203"><path d="M-7.0898154036220635,-7.0898154036220635L7.0898154036220635,-7.0898154036220635 7.0898154036220635,7.0898154036220635 -7.0898154036220635,7.0898154036220635Z" style="fill: rgb(51, 102, 204); stroke-width: 1.5; stroke: white; opacity: 1;"></path></g><g class="node" transform="translate(633.8865641735599,402.58035190863075)" cx="633.8865641735599" cy="402.58035190863075"><path d="M-7.0898154036220635,-7.0898154036220635L7.0898154036220635,-7.0898154036220635 7.0898154036220635,7.0898154036220635 -7.0898154036220635,7.0898154036220635Z" style="fill: rgb(51, 102, 204); stroke-width: 1.5; stroke: white; opacity: 1;"></path></g><text dy=".35em" dx="8" transform="translate(569.745627567985,96.20006715801216)" style="font-size: 10px; font-weight: normal; opacity: 1;"> (Miss) Quentin</text><text dy=".35em" dx="8" transform="translate(663.7359899612544,216.33989689676238)" style="font-size: 10px; font-weight: normal; opacity: 1;"> Caddy Compson</text><text dy=".35em" dx="8" transform="translate(473.39545893044584,399.92146039814116)" style="font-size: 10px; font-weight: normal; opacity: 1;"> Mrs. Caroline Compson</text><text dy=".35em" dx="8" transform="translate(421.9852282088649,343.83548293992203)" style="font-size: 10px; font-weight: normal; opacity: 1;"> Mrs. Bland</text><text dy=".35em" dx="8" transform="translate(633.8865641735599,402.58035190863075)" style="font-size: 10px; font-weight: normal; opacity: 1;"> Damuddy</text></g>
+											</svg>
+										</div>
+										<button class="btn btn-default" id="freeze" style="display: none;" onclick="freezeNodes(true);$('#freeze').hide();$('#unfreeze').show();">Freeze</button>
+										<button id="unfreeze" class="btn btn-default" style="" onclick="freezeNodes(false);$('#unfreeze').hide();$('#freeze').show();">UnFreeze</button>
+
+										(Hint: the boldest lines depict the strongest connections)
+									</li>
+									<li>
+										Let’s try that again, this time removing all search parameters except Female. What do you see?
+									</li>
+									<li>
+										<p>And again, removing all search parameters except for:</p>
+										<p>Text: The Sound and the Fury</p>
+										<p>What do you see?</p>
+										<p>(this one is a bit overwhelming, but try to find the Caddy Compson square in the melee and click on it for a more concentrated graph)</p>
+									</li>
+									<li>Play around with this function for a few minutes, using search parameters of your choice.</li>
+									<li>(Hint: what we see is that Caddy’s entire social network is either familial or peripheral. Her strongest connections are to her family, and she has no real friends. What does this tell us about her life?)</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!--Video on the right-->
+					<!--MAKE THIS INTO AN EXPLORE SECTION-->
+					<!--This is the title stub-->
 
 
-                    <div class="col-4">
-                        <div class="activity-instructions">
-                            Video Tutorial
-                            <div class="thumbnail-container">
-                                <img src="../images/search.png" alt="Cummulative Character Video" class="img-fluid">
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
+
+					<div class="activity">
+
+						<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
+						Grab the line below to create a new activity heading.-->
+						<h3 class="content_sub_title activity-title" id="Activity 1">
+							Activity 3: here Does Caddy Go? In Faulkner, Who Gets to Go Where?
+						</h3>
+
+						<!--This is a stub for the "Study Acivity section"-->
+						<!--This is where the activity section Study Ends-->
+						<!--This is where the activity section Explore begins-->
+						<div class="activity-section">
+							<div class="activity-subtitle">
+								<i class="bi bi-globe"></i>
+								Explore: Digital Yoknapatawpha: Cumulative Characters
+							</div>
+						</div>
+
+						<div class="row">
+
+							<!--Walthrough instructions on the left-->
+							<div class="col">
+								<div class="activity-instructions">
+									Walkthrough
+									<ol class="activity-list" type="1">
+										<li>From the DY banner, choose Search</li>
+										<li>Then Events</li>
+										<li>Then The Sound and the Fury</li>
+										<li>Then your chosen character</li>
+										<li>Then Present</li>
+										<li>Then Search</li>
+										<li>
+											Then the Map It button
+										</li>
+									</ol>
+									<ul class="activity-list-unordered">
+										<li>As a class, perform the above search and Map It function for Benjy. You will see, as you would expect, that Benjy’s movements in the story are confined and limited. This makes sense: we know that as a character Benjy is limited emotionally and confined physically.</li>
+										<li>Now, break the class into four or five groups, and have each group perform one other Search/ Map It task for the following characters: Caddy, Miss Quentin, Caroline, Dilsey, Jason. Have each group report out what their maps showed. (Hint: Jason gets to move all over the place, but the women are very confined in their movements).</li>
+									</ul>
+								</div>
+							</div>
+
+							<!--Video on the right-->
+							<div class="col-4">
+								<div class="activity-instructions">
+									Video Tutorial
+									<div class="thumbnail-container">
+										<img src="../images/search.png" alt="Cummulative Character Video" class="img-fluid">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--This is where the activity section Explore ends-->
+						<!--This is where the activity section Respond Begins -->
+						<!--This section stub contains the layout-->
+					</div>
+
+					<div class="activity">
+
+						<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
+						Grab the line below to create a new activity heading.-->
+						<h3 class="content_sub_title activity-title" id="Activity 1">
+							Activity 4: Where Does Caddy Go After The Sound and the Fury?
+						</h3>
+
+						<!--This is a stub for the "Study Acivity section"-->
+						<!--This is where the activity section Study Ends-->
+						<!--This is where the activity section Explore begins-->
+						<div class="activity-section">
+							<div class="activity-subtitle">
+								<i class="bi bi-globe"></i>
+								Explore: Digital Yoknapatawpha: Cumulative Characters
+							</div>
+						</div>
+
+						<div class="row">
+
+							<!--Walthrough instructions on the left-->
+							<div class="col">
+								<div class="activity-instructions">
+									Walkthrough
+									<ol class="activity-list" type="1">
+										<li>From the DY banner, choose Search</li>
+										<li>Then Characters</li>
+										<li>Then Cumulative</li>
+										<li>For Name, write Candace Compson</li>
+										<li>In the pop-up, choose Locations</li>
+									</ol>
+									<ul class="activity-list-unordered">
+										<li>
+											Compare Caddy’s locations in The Sound and the Fury and The Appendix
+										</li>
+										<li>How do we interpret this?</li>
+									</ul>
+								</div>
+							</div>
+
+							<!--Video on the right-->
+							<div class="col-4">
+								<div class="activity-instructions">
+									Video Tutorial
+									<div class="thumbnail-container">
+										<img src="../images/search.png" alt="Cummulative Character Video" class="img-fluid">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="activity">
+
+						<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
+						Grab the line below to create a new activity heading.-->
+						<h3 class="content_sub_title activity-title" id="Activity 1">Activity 5: How Do We Learn About Caddy?</h3>
+
+						<!--This is a stub for the "Study Acivity section"-->
+
+						<div class="activity-section">
+
+							<!--This is the section title-->
+
+							<div class="activity-subtitle">
+								<i class="bi bi-file-earmark-text"></i>
+								Study: The Sound and the Fury
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col">
+
+								<!--This is where the list on the left hand side is populated-->
+								<div class="activity-instructions">
+									Instructions
+									<div class="activity-text">
+										<p>We know that much of The Sound and the Fury swirls around the past, but what is interesting about this graph? What does it tell us?</p>
+									</div>
+								</div>
+							</div>
+
+							<!--This is where the fancy quote on the right is created.-->
+							<div class="col-4">
+								<div class="activity-image">
+									<div class="thumbnail-container">
+										<img src="../images/caddy_narrative_status.png" alt="Cummulative Character Video" class="img-fluid">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--This is where the activity section Explore ends-->
+					<!--This is where the activity section Respond Begins -->
+					<!--This section stub contains the layout-->
+
+					<h2 class="content_sub_title" id="Final Product">Final Product</h2>
+					<div class="activity-instructions">
+						Class Discussion:
+						<ul class="activity-list-unordered">
+							<li>What are some conclusions you can make about what it is like to live Caddy’s life?</li>
+							<li>Is Caddy’s world big or small?</li>
+							<li>How does she respond to that reality? Does her world affect the decisions that she makes? </li>
+							<li>What decisions does she make?</li>
+							<li>What are the “proper tools” that Faulkner uses to tell Caddy’s story? Do they work?</li>
+							<li>Does the relative insular world of the Compson family contribute to her brothers’ obsessions with her? How do other characters affect her decisions?</li>
+							<li>What is it like to be Caddy?</li>
+						</ul>
+					</div>
+
+					<h2 class="content_sub_title" id="Resources">Resources</h2>
+
+					<ul class="activity-list-unordered">
+						<li>Force-Directed Character Graph</li>
+						<li>Events Maps</li>
+						<li>Cumulative Character Search</li>
+					</ul>
+
+					<h1 class="content_title" id="For Teachers">For Teachers</h1>
+
+					<p>Pilot Classroom: </p>
+
+					<p>
+						Learning Goals:
+					<p>
+
+						<ul class="activity-list-unordered">
+							<li>Learning Goal 1</li>
+							<li>Learning Goal 2</li>
+							<li>Learning Goal 3</li>
+						</ul>
+
+					<p>Common Core: </p>
+
+					<ul class="activity-list-unordered">
+						<li>Common Core 1</li>
+						<li>Common Core 2</li>
+						<li>Common Core 3</li>
+					</ul>
+
+					<p> Student Samples: </p>
+
+					<p> Original Lesson Plan: </p>
+
+					<h1 class="content_title" id="About">About</h1>
+					<div class="note"><em>Note: </em> About section that includes all extra information </div>
+					<p>Instructor: </p>
+					<p>Contact: </p>
+					<p>Created: </p>
+					<p>Notes: </p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function () {
+			loadTOC();/**/
+			loadImageData();
+			loadVideoData();
 
 
-                <div class="activity-section">
-                    <div class="row">
-                        <div class="col">
+		});
+	</script>
 
-                            <div class="activity-title">
-                                <i class="bi bi-chat-left-text"></i>Respond: Discussion Questions
-                                <div class="activity-questions">
-                                    <ul>
-
-                                        <li>What do you find out? </li>
-                                        <li>Compare your results if you change Gender to Male, or Race to Black</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <h2 class="content_sub_title" id="Final Product">Final Product</h2>
-            <h2 class="content_sub_title" id="Resources">Resources</h2>
-            <h1 class="content_title" id="For Teachers">For Teachers</h1>
-            <h1 class="content_title" id="About">About</h1>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".thumbnail-container img").click(function () {
-                $("#myModal").show();
-            });
-
-            $(".close").click(function () {
-                $("#myModal").hide();
-            });
-        });
-    </script>
 </body>
-
 </html>
