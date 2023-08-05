@@ -2,26 +2,28 @@
 // This function creates a table of contents for the page by selecting all h2 and h3 tags, assigning them an ID based on their position, and generating an ordered list for each entry with a clickable link to their corresponding section in the page.
 
 
+// assuming you already have the JQuery library imported
 function loadTOC() {
-    const headings = document.querySelectorAll("h2, h3");
-    const tocHtml = [];
-    for (let i = 0; i < headings.length; i++) {
-        const current = headings[i];
-        const tagName = current.tagName.toLowerCase();
-        const title = current.textContent;
-        const anchorName = `tocheading${i}`;
+	const headings = $("h2, h3");
 
-        current.id = anchorName;
+	const tocHtml = [];
+	headings.each((i, current) => {
+		console.log(current.tagName)
+		const tagName = current.tagName.toLowerCase();
+		const title = current.textContent;
+		const anchorName = `tocheading${i}`;
 
-        if (tagName === "h2" || tagName === "h3") {
-            tocHtml.push(`<li class='toc-${tagName}'><a href='#${anchorName}'>${title}</a></li>`);
-        }
-    }
+		current.id = anchorName;
 
-    const tocList = document.createElement("ul");
-    tocList.innerHTML = tocHtml.join("");
-    document.querySelector(".table-of-contents").appendChild(tocList);
+		if (tagName === "h2" || tagName === "h3") {
+			tocHtml.push(`<li class='toc-${tagName}'><a href='#${anchorName}'>${title}</a></li>`);
+		}
+	});
+
+	// assuming you already have an element in your HTML with id "toc-container"
+	$("#TableOfContents").html(`<ul class="toc-list">${tocHtml.join("")}</ul>`);
 }
+
 
 
 // File: C:\Users\joost\source\repos\lesson_plans\js\modalLoad.js

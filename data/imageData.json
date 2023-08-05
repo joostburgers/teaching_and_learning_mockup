@@ -24,6 +24,32 @@
   },
 
   {
+	"media_type": "site_photograph",
+
+	"creators": [
+	  {
+		"last_name": "Lange",
+		"first_name": "Dorothea"
+	  }
+	],
+	"title": "Plantation cabin (Negro)",
+	"year": "1940",
+	"place": "Near Vicksburg, Mississippi",
+	"description": "Image showing a cabin belonging to a an African American on a plantation near Vicksburg, Mississippi.",
+	"filename": "site_photograph_plantation_cabin.png",
+
+	"alt_text": "Image showing a cabin belonging to a an African American on a plantation near Vicksburg, Mississippi.",
+	"repository": {
+	  "name": "Library of Congress Prints and Photographs Division",
+	  "collection": "Prints and Photographs Online Catalog",
+	  "accession": "LC-USF34- 009588-C [P&P]",
+	  "place": "Washington, D.C.",
+	  "url": "https://www.loc.gov/pictures/item/2017763065/"
+	}
+
+  },
+
+  {
 	"media_type": "archive",
 
 	"creators": [
