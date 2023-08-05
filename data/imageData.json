@@ -213,6 +213,31 @@
 
   },
   {
+	"media_type": "screen_capture",
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+
+	"title": "Screen Capture: Number of Times Characters Appear Alone in <em>The Sound and the Fury</em>",
+	"year": "2022",
+	"place": null,
+	"description": "Data visualization of the number of times characters appear alone in the <em>The Sound and the Fury</em>",
+	"filename": "screen_capture_DY_data_Number_of_times_Character_Appears_Alone.png",
+
+	"alt_text": "Data visualization of the number of times characters appear alone in the <em>The Sound and the Fury</em>",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia",
+	  "url": "https://joostburgers.github.io/dy_data_dog_breakfast/"
+	}
+
+  },
+
+
+  {
 	"media_type": "external_image",
 	"creators": [
 	  {
