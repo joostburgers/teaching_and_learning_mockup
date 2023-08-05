@@ -128,7 +128,10 @@ function setImageData(source, image) {
 		case 'site_photograph':
 			citationTemplate =
 				`${creatorsString}.
-           "${image.title}." ${image.year}, ${image.place}. ${image.repository.name}, ${image.repository.place}. URL: <a href="${image.repository.url}">${image.repository.url}</a>`;
+           "${image.title}." ${image.year}, ${image.place}. 
+		   ${image.repository.collection}.
+		   ${image.repository.accession}.
+		   ${image.repository.name}, ${image.repository.place}. URL: <a href="${image.repository.url}">${image.repository.url}</a>`;
 			break;
 		case 'external_image':
 			citationTemplate =
