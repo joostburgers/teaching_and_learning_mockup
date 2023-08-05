@@ -225,8 +225,7 @@
 	"year": "2022",
 	"place": null,
 	"description": "Data visualization of the number of times characters appear alone in the <em>The Sound and the Fury</em>",
-	"filename": "screen_capture_DY_data_Number_of_times_Character_Appears_Alone.png",
-
+	"filename": "screen_capture_DY_data_number_of_times_character_appears_alone.png",
 	"alt_text": "Data visualization of the number of times characters appear alone in the <em>The Sound and the Fury</em>",
 	"repository": {
 	  "name": "Digital Yoknapatawpha",
