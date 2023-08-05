@@ -30,6 +30,39 @@
 
 
   },
+
+  {
+	"filename": "dimock1.html",
+
+	"pilot_classroom": "Class Description",
+
+	"learning_goals": [ "", "", "" ],
+
+	"common_core": null,
+
+	"student_samples": null,
+
+	"original_lesson_plan": [
+	  {
+		"title": "Piloted Assignment",
+		"filename": "barn_burning_and_the_man_who_was_almost_a_man.docx",
+		"file_type": "pdf"
+	  }
+	],
+
+	"instructor": "Chase Dimock",
+
+	"contact": "chase.dimock@canyons.edu",
+
+	"created": "2023-07-23",
+
+	"notes": [ "" ]
+
+
+
+  },
+
+
   {
 	"filename": "beach1.html",
 	"pilot_classroom": "This project was piloted in a synchronous online creative writing class for college freshmen and sophomores at St. Louis Community College.",
