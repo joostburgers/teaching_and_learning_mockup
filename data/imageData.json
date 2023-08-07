@@ -198,6 +198,43 @@
 
 	],
 
+	"title": "Screen Capture: Character-Character Force Directed Graph: Caddy Compson and Upper-Class, White, Women",
+	"year": "2018",
+	"place": null,
+	"description": "Visualization of upper-class social relations among White women in <em>The Sound and the Fury</em>",
+	"filename": "screen_capture_character_character_force_directed_graph_caddy_compsons.png",
+
+	"alt_text": "Visualization of upper-class social relations among White women in <em>The Sound and the Fury</em>",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia",
+	  "url": "http://faulkner.iath.virginia.edu/char-char-force.html"
+	}
+
+  },
+
+  {
+	"media_type": "screen_capture",
+	"creators": [
+	  {
+		"last_name": "Alvarado",
+		"first_name": "R.C."
+	  },
+	  {
+		"last_name": "Bingler",
+		"first_name": "Robbie"
+	  },
+	  {
+		"last_name": "Worthy",
+		"first_name": "Martin"
+	  },
+	  {
+		"last_name": "Railton",
+		"first_name": "Steve"
+	  }
+
+	],
+
 	"title": "Screen Capture: Character-Character Force Directed Graph: 'A Rose for Emily'",
 	"year": "2018",
 	"place": null,
@@ -212,6 +249,7 @@
 	}
 
   },
+
   {
 	"media_type": "screen_capture",
 	"creators": [
