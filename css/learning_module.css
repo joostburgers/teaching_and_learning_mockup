@@ -91,6 +91,9 @@ ol.activity-list {
 	line-height: 1.5em;
 }
 
+.activity-list-unordered-blank li{
+	margin-bottom:10px;
+}
 
 .activity-list-unordered-arrow {
 	list-style-type: none;

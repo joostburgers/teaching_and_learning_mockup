@@ -272,7 +272,28 @@
 	}
 
   },
+  {
+	"media_type": "screen_capture",
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
 
+	"title": "Screen Capture: Percent Narrative Status per Character in <em>The Sound and the Fury</em>",
+	"year": "2022",
+	"place": null,
+	"description": "Data visualization of the number of times characters appear alone in the <em>The Sound and the Fury</em>",
+	"filename": "screen_capture_DY_data_percent_narrative_status_per_character.png",
+	"alt_text": "Chart showing the percentage of the narrative statuses of each event for a character.",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia",
+	  "url": "https://joostburgers.github.io/dy_data_dog_breakfast/"
+	}
+
+  },
 
   {
 	"media_type": "external_image",
