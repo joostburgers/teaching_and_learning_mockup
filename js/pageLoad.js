@@ -122,16 +122,34 @@ function setImageData(source, image) {
 
 	console.log("source: " + source, "image: " +image )
 
+	const creatorsStringHTML = creatorsString !== null ? `${creatorsString}` : '';
+
+	const imageTitleHTML = image.title !== null ? `"${image.title}."` : '';
+
+	const imageYearHTML = image.year !== null ? `${image.year},` : '';
+
+	const imagePlaceHTML = image.place !== null ? `${image.place}.` : '';
+
+	const imageRepositoryCollectionHTML = image.repository.collection !== null ? `${image.repository.collection},` : '';
+
+	const imageRepositoryAccessionHTML = image.repository.accession !== null ? `${image.repository.accession}.` : '';
+
+	const imageRepositoryNameHTML = image.repository.name !== null ? `${image.repository.name},` : '';
+
+	const imageRepositoryPlaceHTML = image.repository.place !== null ? `${image.repository.place}.` : '';
+
+	const imageRepositoryURLHTML = image.repository.url !== null ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>.` : '';
+
 	let citationTemplate
 
 	switch (image.media_type) {
 		case 'site_photograph':
 			citationTemplate =
-				`${creatorsString}.
-           "${image.title}." ${image.year}, ${image.place}. 
-		   ${image.repository.collection}.
-		   ${image.repository.accession}.
-		   ${image.repository.name}, ${image.repository.place}. URL: <a href="${image.repository.url}">${image.repository.url}</a>`;
+				`${creatorsStringHTML}
+           ${imageTitleHTML} ${imageYearHTML} ${imagePlaceHTML} 
+		   ${imageRepositoryCollectionHTML}
+		   ${imageRepositoryAccessionHTML}
+		   ${imageRepositoryNameHTML} ${imageRepositoryPlaceHTML} ${imageRepositoryURLHTML}`
 			break;
 		case 'external_image':
 			citationTemplate =
@@ -190,11 +208,15 @@ function setVideoData(video) {
 	const creatorsString = extractCreators(video);
 
 	let citationTemplate = '';
+	const videoTitleHTML = video.title !== null ? `"${video.title}."` : '';
+
+
+
 
 	switch (video.media_type) {
 		case 'quick_tutorial':
 			citationTemplate =
-				`"${video.title}." <em>${video.repository.name}</em>, ${video.repository.place}. 
+				`${videoTitleHTML}." <em>${video.repository.name}</em>, ${video.repository.place}. 
               <a href="${video.url}">${video.url}</a>.`;
 			break;
 		case 'external_video':
@@ -217,11 +239,14 @@ function setVideoData(video) {
 function extractCreators(object) {
 	const creators = object.creators.map((creator, index) => {
 		if (index === 0) {
-			return `${creator.last_name}, ${creator.first_name}`
+			return `${creator.last_name ? creator.last_name + ', ' : ''}${creator.first_name || ''}`;
 		}
-		return `${creator.first_name} ${creator.last_name}`
+		return `${creator.first_name || ''} ${creator.last_name || ''}`;
 	})
 	const creatorsString = creators.join(', ')
+	if (!creatorsString.trim()) {
+		return null;
+	}
 	return creatorsString
 }
 
@@ -233,10 +258,12 @@ function setImageCaptions(jsonData) {
 		const matchingImage = jsonData.find(x => x.filename === imageSourceName);
 
 		if (matchingImage) {
-			const creatorsString = extractCreators(matchingImage);
+			const creatorsString = extractCreators(matchingImage)
+			const creatorsStringHTML= creatorsString	!== null ? `by ${creatorsString}` : '';
 			const figure = img.closest('.activity-image');
 			const caption = figure.find('.activity-image-caption');
-			caption.html(`"${matchingImage.title}" by ${creatorsString}`);
+			
+			caption.html(`"${matchingImage.title}" ${creatorsStringHTML}`);
 
 
 			setElementMetaData(img, matchingImage);
