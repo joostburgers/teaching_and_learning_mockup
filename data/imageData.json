@@ -52,6 +52,32 @@
   },
 
   {
+	"media_type": "site_photograph",
+
+	"creators": [
+	  {
+		"last_name": null,
+		"first_name": null
+	  }
+	],
+	"title": "<em>Go Down, Moses</em> cover",
+	"year": null,
+	"place": null,
+	"description": "Cover image of Go Down, Moses, Random House Edition",
+	"filename": "site_photograph_gdm_cover.jpg",
+
+	"alt_text": "Image showing a cabin belonging to a an African American on a plantation near Vicksburg, Mississippi.",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "collection": null,
+	  "accession": null,
+	  "place": "University of Virginia",
+	  "url": "http://faulkner.iath.virginia.edu/?text=GDM"
+	}
+
+  },
+
+  {
 	"media_type": "archive",
 
 	"creators": [
