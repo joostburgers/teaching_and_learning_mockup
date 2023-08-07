@@ -46,49 +46,42 @@
   },
   {
 	"filename": "hayes1.html",
-	"pilot_classroom": "Entry-level English major seminar at a liberal arts university.",
+	"pilot_classroom": null,
 	"learning_goals": null,
-	"common_core": [ "standard 1", "standard 2" ],
+	"common_core": null,
+	"student_samples": null,
+	"instructor": "Jon Hayes",
+	"contact": "jhayes@semo.edu",
+	"created": "2023-07-23",
+	"notes": null
+  },
+  {
+	"filename": "lastname1.html",
+	"pilot_classroom": "Short description as string",
+	"learning_goals": ["learning goals as array"],
+	"common_core": [ "common core as array" ],
 	"student_samples": [
-	  {
-		"first_name": "Bob",
-		"last_name": "Smith",
-		"title": "Faulkner essay",
-		"filename": "smith1.html",
-		"file_type": "pdf"
-	  },
-	  {
-		"first_name": "Jane",
-		"last_name": "Doe",
-		"title": "Faulkner essay2",
-		"filename": "doe1.html",
-		"file_type": "word"
-	  },
 	  {
 		"first_name": null,
 		"last_name": null,
-		"title": "Image of the lesson",
-		"filename": "doe1.html",
-		"file_type": "image"
+		"title": null,
+		"filename": null,
+		"file_type": "Used to set icon. One of pdf, word, pptx, image"
 	  }
 	],
 	"original_lesson_plan": [
 	  {
-		"title": "lesson plan 1",
-		"filename": "lessonplan1.html",
-		"file_type": "word"
-	  },
-	  {
-		"title": "lesson plan 2",
-		"filename": "lessonplan2.html",
-		"file_type": "pdf"
-	  }
+		"title": null,
+		"filename": null,
+		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+	  }	  
 	],
-	"instructor": "Jon Hayes",
-	"contact": "erin.penner@asbury.edu",
+	"instructor": null,
+	"contact": null,
 	"created": "2023-07-23",
-	"notes": [ "This is where the notes go" ]
+	"notes": [ "This is where the notes go as array" ]
   },
+
   {
 	"filename": "mills1.html",
 	"pilot_classroom": "This lesson was designed for a high school junior/senior advanced English elective at an all boys independent school in Washington DC",
@@ -99,7 +92,7 @@
 	"instructor": "Nikki Magaziner Mills",
 	"contact": "nmagaziner@stalbansschool.org",
 	"created": "2023-07-23",
-	"notes": [ "One of the most remarkable aspects of using DY to delve further into Caddy was the effect that it had on the teenage boys in my class. The act of visualizing Caddy's movements through DY and thus thinking about her beyond what we had heard about her from her brothers made them consider and ask important questions not just about Caddy, but about women in the American south in Faulkner's time--and now. DY allowed them to 'see' what it was like to be Caddy, and our consequent discussions, about how male writers write female characters, about how brothers view sisters, about Caddy herself --were memorable."]
+	"notes": [ "One of the most remarkable aspects of using DY to delve further into Caddy was the effect that it had on the teenage boys in my class. The act of visualizing Caddy's movements through DY and thus thinking about her beyond what we had heard about her from her brothers made them consider and ask important questions not just about Caddy, but about women in the American south in Faulkner's time--and now. DY allowed them to 'see' what it was like to be Caddy, and our consequent discussions, about how male writers write female characters, about how brothers view sisters, about Caddy herself --were memorable." ]
   },
 
 
