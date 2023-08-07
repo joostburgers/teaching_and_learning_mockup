@@ -140,6 +140,12 @@ function setImageData(source, image) {
 
 	const imageRepositoryURLHTML = image.repository.url !== null ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>.` : '';
 
+	/*const imageWebsiteTitleHTML = image.website.title !== null && image.website.title !== undefined ? `<em>${image.website.title}</em>` : '';
+
+	const imageWebsiteURLHTML = image.website.url !== null ? `<a href="${image.website.url}">${image.website.url}</a>.` : '';
+
+	const imageAccessDateHTML = image.access_date !== null ? `Accessed ${new Date(image.access_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}.` : '';*/
+
 	let citationTemplate
 
 	switch (image.media_type) {
@@ -152,12 +158,20 @@ function setImageData(source, image) {
 		   ${imageRepositoryNameHTML} ${imageRepositoryPlaceHTML} ${imageRepositoryURLHTML}`
 			break;
 		case 'external_image':
+
+			const imageWebsiteTitleHTML = image.website.title !== null && image.website.title !== undefined ? `<em>${image.website.title}</em>` : '';
+
+			const imageWebsiteURLHTML = image.website.url !== null ? `<a href="${image.website.url}">${image.website.url}</a>.` : '';
+
+			const imageAccessDateHTML = image.access_date !== null ? `Accessed ${new Date(image.access_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}.` : '';
+
 			citationTemplate =
-				`${creatorsString}. "${image.title}." <em>${image.website.title}</em>, ${image.year}, <a href="${image.website.url}">${image.website.url}</a>. Accessed ${new Date(image.access_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}.`;
+				`${creatorsStringHTML}${imageTitleHTML} ${imageWebsiteTitleHTML} ${imageYearHTML} ${imageWebsiteURLHTML}
+				${imageAccessDateHTML}`;
 			break;
 		case 'screen_capture':
 			citationTemplate =
-				`${creatorsString}. "${image.title}."
+				`${creatorsStringHTML}${image.title}."
             ${image.year}.
           <em>${image.repository.name},</em> ${image.repository.place}, 
           <a href="${image.repository.url}">${image.repository.url}</a>`;
@@ -166,7 +180,7 @@ function setImageData(source, image) {
 		case 'archive':
 			citationTemplate = `${creatorsString}. "${image.title}."
             
-			<b>${image.repository.collection},</b>
+			${image.repository.collection},
 			${image.repository.accession},
 			${image.repository.name},
 			${image.repository.place},
