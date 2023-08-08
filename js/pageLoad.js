@@ -37,7 +37,7 @@ function loadImageData() {
 	// Get the JSON data via AJAX request
 	$.getJSON(imageDataURL, function (jsonData) {
 		// Set up click event listeners for all image elements within an element with class ".activity-image"
-		
+
 
 		setImageCaptions(jsonData);
 
@@ -79,11 +79,11 @@ function loadVideoData() {
 		setVideoCaptions(jsonData);
 
 	}).done(function () {
-			console.log("Video data loaded successfully");
-		})
+		console.log("Video data loaded successfully");
+	})
 		.fail(function () {
 			console.warn("Video data could not be loaded");
-		});		;
+		});;
 
 }
 
@@ -128,29 +128,48 @@ function setImageData(source, image) {
 	const imageSource = $('#imageSource')
 	const imageCitation = $('#imageCitation')
 
+
+	//define html strings. This could probably be more efficient.
 	const creatorsString = extractCreators(image);
 
-	console.log("source: " + source, "image: " +image )
+	console.log("source: " + source, "image: " + image)
 
-	const creatorsStringHTML = creatorsString !== null ? `${creatorsString}. ` : '';
+	const creatorsStringHTML = creatorsString !== null && creatorsString !== undefined ? `${creatorsString}. ` : '';
 
-	const imageTitleHTML = image.title !== null ? `" ${image.title}."` : '';
-	console.log(imageTitleHTML)
-	const imageYearHTML = image.year !== null ? `${image.year}, ` : '';
-
-	const imagePlaceHTML = image.place !== null ? `${image.place}.` : '';
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `" ${image.title}."` : '';
+	const imageYearHTML = image.year !== null && image.year !== undefined ? `${image.year}, ` : '';
+	const imagePlaceHTML = image.place !== null && image.place !== undefined ? `${image.place}.` : '';
 
 	const imageRepositoryCollectionHTML = image.repository.collection !== null && image.repository.collection !== undefined ? `${image.repository.collection}, ` : '';
 
-	const imageRepositoryAccessionHTML = image.repository.accession !== null ? `${image.repository.accession}. ` : '';
+	const imageRepositoryAccessionHTML = image.repository.accession !== null &&
+		image.repository.accession !== undefined
+		? `${image.repository.accession}. ` : '';
 
-	const imageRepositoryNameHTML = image.repository.name !== null ? `${image.repository.name}, ` : '';
+	const imageRepositoryNameHTML = image.repository.name !== null && image.repository.name !== undefined ? `${image.repository.name}, ` : '';
 
-	const imageRepositoryPlaceHTML = image.repository.place !== null ? `${image.repository.place}. ` : '';
+	const imageRepositoryPlaceHTML = image.repository.place !== null && image.repository.place !== undefined ? `${image.repository.place}. ` : '';
 
-	const imageRepositoryURLHTML = image.repository.url !== null ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>. ` : '';
+	const imageRepositoryURLHTML = image.repository.url !== null && image.repository.url !== undefined ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>. ` : '';
 
-	
+	const imageWebsiteTitleHTML = image.website.title !== null && image.website.title !== undefined ? `<em>${image.website.title}</em>` : '';
+
+	const imageWebsiteURLHTML = image.website.url !== null && image.website.url !== undefined ? `<a href="${image.website.url}">${image.website.url}</a>.` : '';
+
+	const imageAccessDateHTML = image.access_date !== null && image.access_date !== undefined ? `Accessed ${new Date(image.access_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}.` : '';
+
+	const imageCourseNameHTML = image.course.name !== null && image.course.name !== undefined ? `"${image.course.name}." ` : '';
+
+	const imageCourseNumberHTML = image.course.number !== null && image.course.number !== undefined ? `${image.course.number}: ` : '';
+
+	const imageCourseInstructorHTML = image.course.instructor !== null && image.course.instructor !== undefined ? `Instructor: ${image.course.instructor} ` : '';
+
+	const imageCourseInstitutionHTML = image.course.institution !== null && image.course.institution !== undefined ? `(${image.course.institution}). ` : '';
+
+	const imageCourseSemesterHTML = image.course.semester !== null && image.course.semester !== undefined ? `${image.course.semester}. ` : '';
+
+	const imageCourseURLHTML = image.course.url !== null && image.course.url !== undefined ? `URL: <a href="${image.course.url}">${image.course.url}</a>. ` : '';
+
 	let citationTemplate
 
 	switch (image.media_type) {
@@ -163,13 +182,6 @@ function setImageData(source, image) {
 		   ${imageRepositoryNameHTML} ${imageRepositoryPlaceHTML} ${imageRepositoryURLHTML}`
 			break;
 		case 'external_image':
-
-			const imageWebsiteTitleHTML = image.website.title !== null && image.website.title !== undefined ? `<em>${image.website.title}</em>` : '';
-
-			const imageWebsiteURLHTML = image.website.url !== null ? `<a href="${image.website.url}">${image.website.url}</a>.` : '';
-
-			const imageAccessDateHTML = image.access_date !== null ? `Accessed ${new Date(image.access_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}.` : '';
-
 			citationTemplate =
 				`${creatorsStringHTML}${imageTitleHTML} ${imageWebsiteTitleHTML} ${imageYearHTML} ${imageWebsiteURLHTML}
 				${imageAccessDateHTML}`;
@@ -181,13 +193,13 @@ function setImageData(source, image) {
 			break;
 
 		case 'archive':
-			citationTemplate = `${creatorsString}. "${image.title}."
-            
-			${image.repository.collection},
-			${image.repository.accession},
-			${image.repository.name},
-			${image.repository.place},
-			<a href="${image.repository.url}">${image.repository.url}</a>`;
+			citationTemplate = `
+			${creatorsStringHTML}${imageTitleHTML} ${imageRepositoryCollectionHTML} ${imageRepositoryAccessionHTML} ${imageRepositoryNameHTML} ${imageRepositoryPlaceHTML} ${imageRepositoryURLHTML}`
+
+			break;
+
+		case 'student_sample':
+			citationTemplate = `${creatorsStringHTML}${imageTitleHTML} ${imageCourseNumberHTML} ${imageCourseNameHTML} ${imageCourseSemesterHTML}${imageCourseInstitutionHTML}${imageCourseInstructorHTML}   ${imageCourseURLHTML} `
 			break;
 		default:
 			citationTemplate = "Image metadata not found."
@@ -276,10 +288,10 @@ function setImageCaptions(jsonData) {
 
 		if (matchingImage) {
 			const creatorsString = extractCreators(matchingImage)
-			const creatorsStringHTML= creatorsString	!== null ? `by ${creatorsString}` : '';
+			const creatorsStringHTML = creatorsString !== null ? `by ${creatorsString}` : '';
 			const figure = img.closest('.activity-image');
 			const caption = figure.find('.activity-image-caption');
-			
+
 			caption.html(`"${matchingImage.title}" ${creatorsStringHTML}`);
 
 

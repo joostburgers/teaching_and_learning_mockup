@@ -348,19 +348,47 @@
 	],
 
 	"title": "Student Sample: Work Title",
-	
-	
+
+
 	"description": "Visualization Character-Location Force Directed Graph <em>Go Down, Moses</em>",
 	"filename": "student_sample_work_title.png",
 
 	"alt_text": "student_sample",
-	
+
 	"course": {
 	  "name": "Title",
 	  "number": "Course Number",
 	  "institution": "University of Virginia",
 	  "semester": "2024 Fall",
 	  "instructor": "Instructor Name",
+	  "url": "http://faulkner.iath.virginia.edu/characters-bipart.html"
+	}
+
+  },
+
+  {
+	"media_type": "student_sample",
+	"creators": [
+	  {
+		"last_name": "McCaslin",
+		"first_name": "Buck"
+	  }
+	],
+
+	"title": "Student Sample: Map of 'The Bear'",
+
+
+	"description": "Student Sample of a map",
+	"filename": "joiner_student_sample_1.jpg",
+
+	"alt_text": "student_sample",
+
+	"course": {
+	  "name": "Mapping Faulkner",
+	  "number": "Eng 101",
+	  "institution": "Random University",
+	  "semester": "2024 Fall",
+	  "instructor": "Joseph Blotner",
 	  "url": "http://faulkner.iath.virginia.edu/characters-bipart.html"
 	}
 
