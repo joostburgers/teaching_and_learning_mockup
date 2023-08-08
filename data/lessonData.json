@@ -57,7 +57,7 @@
   {
 	"filename": "lastname1.html",
 	"pilot_classroom": "Short description as string",
-	"learning_goals": ["learning goals as array"],
+	"learning_goals": [ "learning goals as array" ],
 	"common_core": [ "common core as array" ],
 	"student_samples": [
 	  {
@@ -73,7 +73,34 @@
 		"title": null,
 		"filename": null,
 		"file_type": "Used to set icon. One of pdf, word, pptx, image"
-	  }	  
+	  }
+	],
+	"instructor": null,
+	"contact": null,
+	"created": "2023-07-23",
+	"notes": [ "This is where the notes go as array" ]
+  },
+
+  {
+	"filename": "joiner1.html",
+	"pilot_classroom": "Short description as string",
+	"learning_goals": [ "learning goals as array" ],
+	"common_core": [ "common core as array" ],
+	"student_samples": [
+	  {
+		"first_name": null,
+		"last_name": null,
+		"title": null,
+		"filename": null,
+		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+	  }
+	],
+	"original_lesson_plan": [
+	  {
+		"title": null,
+		"filename": null,
+		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+	  }
 	],
 	"instructor": null,
 	"contact": null,

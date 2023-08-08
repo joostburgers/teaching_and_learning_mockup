@@ -52,7 +52,12 @@ function loadImageData() {
 			setImageData(source, tempImageData);
 			$("#imageModal").show();
 		});
-	});
+	}).done(function () {
+		console.log("Image data loaded successfully");
+	})
+		.fail(function () {
+			console.warn("Image data could not be loaded");
+		});;
 
 	// Closes the image modal on click of elements with class ".close"
 	$(".close").click(function () {
@@ -73,7 +78,12 @@ function loadVideoData() {
 		// Set up click event listeners for all image elements within an element with class ".activity-video"
 		setVideoCaptions(jsonData);
 
-	});
+	}).done(function () {
+			console.log("Video data loaded successfully");
+		})
+		.fail(function () {
+			console.warn("Video data could not be loaded");
+		});		;
 
 }
 
@@ -386,10 +396,10 @@ function loadLessonData() {
 		setLessonData(lessonData)
 	})
 		.done(function () {
-			console.log("JSON data loaded successfully");
+			console.log("Lesson data loaded successfully");
 		})
 		.fail(function () {
-			console.warn("JSON data could not be loaded");
+			console.warn("Lesson data could not be loaded");
 		});
 }
 
