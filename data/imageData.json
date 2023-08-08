@@ -323,6 +323,43 @@
 
 	],
 
+	"title": "Screen Capture: Character-Location BiPartite Graph <em>Go Down, Moses</em>",
+	"year": "2018",
+	"place": null,
+	"description": "Visualization Character-Location Force Directed Graph <em>Go Down, Moses</em>",
+	"filename": "screen_capture_character_location_bipartite_graph_gdm.png",
+
+	"alt_text": "Visualization Character-Location BiPartite Graph <em>Go Down, Moses</em>",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia",
+	  "url": "http://faulkner.iath.virginia.edu/characters-bipart.html"
+	}
+
+  },
+
+  {
+	"media_type": "screen_capture",
+	"creators": [
+	  {
+		"last_name": "Alvarado",
+		"first_name": "R.C."
+	  },
+	  {
+		"last_name": "Bingler",
+		"first_name": "Robbie"
+	  },
+	  {
+		"last_name": "Worthy",
+		"first_name": "Martin"
+	  },
+	  {
+		"last_name": "Railton",
+		"first_name": "Steve"
+	  }
+
+	],
+
 	"title": "Screen Capture: Character-Character Force Directed Graph: 'A Rose for Emily'",
 	"year": "2018",
 	"place": null,
