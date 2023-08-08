@@ -118,23 +118,13 @@ function getImageData(source, jsonData) {
 	return imageData;
 }
 
-/**
- * Sets the image modal data based on the provided image data object, and updates the UI accordingly.
- * @param {string} source The image source URL
- * @param {Object} image The image data object to use
- */
-function setImageData(source, image) {
-	const imageTitle = $('#imageTitle')
-	const imageSource = $('#imageSource')
-	const imageCitation = $('#imageCitation')
 
 
+
+// Wrap each case into a function loading necessary constants on each call.
+function site_photograph(image) {
 	//define html strings. This could probably be more efficient.
-	const creatorsString = extractCreators(image);
-
-	console.log("source: " + source, "image: " + image)
-
-	const creatorsStringHTML = creatorsString !== null && creatorsString !== undefined ? `${creatorsString}. ` : '';
+	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 
 	const imageTitleHTML = image.title !== null && image.title !== undefined ? `" ${image.title}."` : '';
 	const imageYearHTML = image.year !== null && image.year !== undefined ? `${image.year}, ` : '';
@@ -142,9 +132,7 @@ function setImageData(source, image) {
 
 	const imageRepositoryCollectionHTML = image.repository.collection !== null && image.repository.collection !== undefined ? `${image.repository.collection}, ` : '';
 
-	const imageRepositoryAccessionHTML = image.repository.accession !== null &&
-		image.repository.accession !== undefined
-		? `${image.repository.accession}. ` : '';
+	const imageRepositoryAccessionHTML = image.repository.accession !== null && image.repository.accession !== undefined ? `${image.repository.accession}. ` : '';
 
 	const imageRepositoryNameHTML = image.repository.name !== null && image.repository.name !== undefined ? `${image.repository.name}, ` : '';
 
@@ -152,66 +140,124 @@ function setImageData(source, image) {
 
 	const imageRepositoryURLHTML = image.repository.url !== null && image.repository.url !== undefined ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>. ` : '';
 
+	let citationTemplate =
+		`${creatorsStringHTML}
+    ${imageTitleHTML} ${imageYearHTML} ${imagePlaceHTML} 
+    ${imageRepositoryCollectionHTML}
+    ${imageRepositoryAccessionHTML}
+    ${imageRepositoryNameHTML} ${imageRepositoryPlaceHTML} ${imageRepositoryURLHTML}`;
+
+	return citationTemplate;
+}
+
+function external_image(image) {
+	//define html strings. This could probably be more efficient.
+	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
+
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `" ${image.title}."` : '';
 	const imageWebsiteTitleHTML = image.website.title !== null && image.website.title !== undefined ? `<em>${image.website.title}</em>` : '';
+
+	const imageYearHTML = image.year !== null && image.year !== undefined ? `${image.year}, ` : '';
 
 	const imageWebsiteURLHTML = image.website.url !== null && image.website.url !== undefined ? `<a href="${image.website.url}">${image.website.url}</a>.` : '';
 
 	const imageAccessDateHTML = image.access_date !== null && image.access_date !== undefined ? `Accessed ${new Date(image.access_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}.` : '';
 
+	let citationTemplate =
+		`${creatorsStringHTML}${imageTitleHTML} ${imageWebsiteTitleHTML} ${imageYearHTML} ${imageWebsiteURLHTML}
+    ${imageAccessDateHTML}`;
+
+	return citationTemplate;
+}
+
+function screen_capture(image) {
+	//define html strings. This could probably be more efficient.
+	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
+
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `" ${image.title}."` : '';
+	const imageYearHTML = image.year !== null && image.year !== undefined ? `${image.year}, ` : '';
+	const imageRepositoryNameHTML = image.repository.name !== null && image.repository.name !== undefined ? `${image.repository.name}, ` : '';
+	const imageRepositoryPlaceHTML = image.repository.place !== null && image.repository.place !== undefined ? `${image.repository.place}. ` : '';
+	const imageRepositoryURLHTML = image.repository.url !== null && image.repository.url !== undefined ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>. ` : '';
+
+	let citationTemplate =
+		`${creatorsStringHTML}${imageTitleHTML}
+            ${imageYearHTML}${imageRepositoryNameHTML}${imageRepositoryPlaceHTML}${imageRepositoryURLHTML}`;
+
+	return citationTemplate;
+}
+
+function archive(image) {
+	//define html strings. This could probably be more efficient.
+	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
+
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `" ${image.title}."` : '';
+
+	const imageRepositoryCollectionHTML = image.repository.collection !== null && image.repository.collection !== undefined ? `${image.repository.collection}, ` : '';
+
+	const imageRepositoryAccessionHTML = image.repository.accession !== null && image.repository.accession !== undefined ? `${image.repository.accession}. ` : '';
+
+	const imageRepositoryNameHTML = image.repository.name !== null && image.repository.name !== undefined ? `${image.repository.name}, ` : '';
+
+	const imageRepositoryPlaceHTML = image.repository.place !== null && image.repository.place !== undefined ? `${image.repository.place}. ` : '';
+
+	const imageRepositoryURLHTML = image.repository.url !== null && image.repository.url !== undefined ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>. ` : '';
+
+	let citationTemplate = `${creatorsStringHTML}${imageTitleHTML} ${imageRepositoryCollectionHTML} ${imageRepositoryAccessionHTML} ${imageRepositoryNameHTML} ${imageRepositoryPlaceHTML} ${imageRepositoryURLHTML}`
+
+	return citationTemplate
+}
+
+function student_sample(image) {
+	//define html strings. This could probably be more efficient.
+	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `"${image.title}."` : '';
+
 	const imageCourseNameHTML = image.course.name !== null && image.course.name !== undefined ? `"${image.course.name}." ` : '';
-
 	const imageCourseNumberHTML = image.course.number !== null && image.course.number !== undefined ? `${image.course.number}: ` : '';
+	const imageCourseInstructorHTML = image.course.instructor !== null && image.course.instructor !== undefined ? `Instructor: ${image.course.instructor}. ` : '';
+	const imageCourseInstitutionHTML = image.course.institution !== null && image.course.institution !== undefined ? `${image.course.institution}, ` : '';
 
-	const imageCourseInstructorHTML = image.course.instructor !== null && image.course.instructor !== undefined ? `Instructor: ${image.course.instructor} ` : '';
-
-	const imageCourseInstitutionHTML = image.course.institution !== null && image.course.institution !== undefined ? `(${image.course.institution}). ` : '';
-
+	const imageCoursePlaceHTML = image.course.place !== null && image.course.place !== undefined ? `${image.course.place}. ` : '';
 	const imageCourseSemesterHTML = image.course.semester !== null && image.course.semester !== undefined ? `${image.course.semester}. ` : '';
-
 	const imageCourseURLHTML = image.course.url !== null && image.course.url !== undefined ? `URL: <a href="${image.course.url}">${image.course.url}</a>. ` : '';
 
-	let citationTemplate
+	let citationTemplate = `${creatorsStringHTML}${imageTitleHTML} ${imageCourseNumberHTML} ${imageCourseNameHTML} ${imageCourseSemesterHTML}${imageCourseInstitutionHTML}${imageCourseInstructorHTML}   ${imageCourseURLHTML} `;
 
-	switch (image.media_type) {
-		case 'site_photograph':
-			citationTemplate =
-				`${creatorsStringHTML}
-           ${imageTitleHTML} ${imageYearHTML} ${imagePlaceHTML} 
-		   ${imageRepositoryCollectionHTML}
-		   ${imageRepositoryAccessionHTML}
-		   ${imageRepositoryNameHTML} ${imageRepositoryPlaceHTML} ${imageRepositoryURLHTML}`
-			break;
-		case 'external_image':
-			citationTemplate =
-				`${creatorsStringHTML}${imageTitleHTML} ${imageWebsiteTitleHTML} ${imageYearHTML} ${imageWebsiteURLHTML}
-				${imageAccessDateHTML}`;
-			break;
-		case 'screen_capture':
-			citationTemplate =
-				`${creatorsStringHTML}${imageTitleHTML}
-            ${imageYearHTML}${imageRepositoryNameHTML}${imageRepositoryPlaceHTML}${imageRepositoryURLHTML}`;
-			break;
-
-		case 'archive':
-			citationTemplate = `
-			${creatorsStringHTML}${imageTitleHTML} ${imageRepositoryCollectionHTML} ${imageRepositoryAccessionHTML} ${imageRepositoryNameHTML} ${imageRepositoryPlaceHTML} ${imageRepositoryURLHTML}`
-
-			break;
-
-		case 'student_sample':
-			citationTemplate = `${creatorsStringHTML}${imageTitleHTML} ${imageCourseNumberHTML} ${imageCourseNameHTML} ${imageCourseSemesterHTML}${imageCourseInstitutionHTML}${imageCourseInstructorHTML}   ${imageCourseURLHTML} `
-			break;
-		default:
-			citationTemplate = "Image metadata not found."
-			break;
-	}
-
-	imageTitle.html(image.title)
-	imageSource.attr('src', source)
-	imageSource.attr('alt', image.alt_text)
-
-	imageCitation.html(citationTemplate)
+	return citationTemplate;
 }
+
+function setImageData(source, image) {
+	const imageTitle = $('#imageTitle');
+	const imageSource = $('#imageSource');
+	const imageCitation = $('#imageCitation')
+
+	const citationTemplate = (() => {
+		switch (image.media_type) {
+			case 'site_photograph':
+				return site_photograph(image);
+			case 'external_image':
+				return external_image(image);
+			case 'screen_capture':
+				return screen_capture(image);
+			case 'archive':
+				return archive(image);
+			case 'student_sample':
+				return student_sample(image);
+			default:
+				return "Image metadata not found.";
+		}
+	})();
+
+	imageTitle.html(image.title);
+	imageSource.attr('src', source);
+	imageSource.attr('alt', image.alt_text);
+
+	imageCitation.html(citationTemplate);
+}
+
+
+
 
 /**
  * Returns the video data object from the provided JSON data array, corresponding to the provided video source URL.

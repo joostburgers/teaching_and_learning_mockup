@@ -359,6 +359,7 @@
 	  "name": "Title",
 	  "number": "Course Number",
 	  "institution": "University of Virginia",
+	  "place": "some place",
 	  "semester": "2024 Fall",
 	  "instructor": "Instructor Name",
 	  "url": "http://faulkner.iath.virginia.edu/characters-bipart.html"
@@ -387,6 +388,7 @@
 	  "name": "Mapping Faulkner",
 	  "number": "Eng 101",
 	  "institution": "Random University",
+	  "place":"Oxford, MS",
 	  "semester": "2024 Fall",
 	  "instructor": "Joseph Blotner",
 	  "url": "http://faulkner.iath.virginia.edu/characters-bipart.html"
