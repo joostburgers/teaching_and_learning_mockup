@@ -140,7 +140,7 @@ function setImageData(source, image) {
 
 	const imagePlaceHTML = image.place !== null ? `${image.place}.` : '';
 
-	const imageRepositoryCollectionHTML = image.repository.collection !== null ? `${image.repository.collection}, ` : '';
+	const imageRepositoryCollectionHTML = image.repository.collection !== null && image.repository.collection !== undefined ? `${image.repository.collection}, ` : '';
 
 	const imageRepositoryAccessionHTML = image.repository.accession !== null ? `${image.repository.accession}. ` : '';
 
