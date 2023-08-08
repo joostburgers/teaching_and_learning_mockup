@@ -35,6 +35,36 @@
 		"first_name": "Johannes"
 	  }
 	],
+	"title": "Video Tutorial of Main Map Display: <em>Go Down, Moses</em>",
+	"description": "Instructional video showing the main functionality of the main map display",
+	"duration": "00:00:32",
+	"file_size": "1.96 MB",
+	"created": "2023-08-08T00:00:00Z",
+	"filename": "video_tutorial_main_map_display_gdm.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Tutorial",
+	"tool": "Main Map Display: <em>Go Down, Moses</em>",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Quick Tutorial Main Map Display",
+	"url": "http://faulkner.iath.virginia.edu/?text=GDM",
+	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/TextMapDemo.mp4",
+	"full_demo_length": "00:11:17"
+  },
+
+  
+
+
+  {
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
 	"title": "Video Tutorial of Force Directed Graph",
 	"description": "Instructional video for searching for characters on the main map display",
 	"duration": "00:00:20",

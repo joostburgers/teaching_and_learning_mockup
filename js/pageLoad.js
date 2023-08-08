@@ -222,7 +222,7 @@ function student_sample(image) {
 	const imageCourseSemesterHTML = image.course.semester !== null && image.course.semester !== undefined ? `${image.course.semester}. ` : '';
 	const imageCourseURLHTML = image.course.url !== null && image.course.url !== undefined ? `URL: <a href="${image.course.url}">${image.course.url}</a>. ` : '';
 
-	let citationTemplate = `${creatorsStringHTML}${imageTitleHTML} ${imageCourseNumberHTML} ${imageCourseNameHTML} ${imageCourseSemesterHTML}${imageCourseInstitutionHTML}${imageCourseInstructorHTML}   ${imageCourseURLHTML} `;
+	let citationTemplate = `${creatorsStringHTML}${imageTitleHTML} ${imageCourseNumberHTML} ${imageCourseNameHTML} ${imageCourseSemesterHTML}${imageCourseInstitutionHTML}${imageCoursePlaceHTML}${imageCourseInstructorHTML}   ${imageCourseURLHTML} `;
 
 	return citationTemplate;
 }
