@@ -103,6 +103,31 @@
   },
 
   {
+	"media_type": "archive",
+
+	"creators": [
+	  {
+		"last_name": "Faulkner",
+		"first_name": "William"
+	  }
+	],
+	"title": "'The Bear'' As published in The Saturday Evening Post, 9 May 1942; Illustrated by Edward Shenton. Page 30.",
+
+	"description": "Magazine illustration for 'The Bear' in the Saturday Evening Post",
+	"filename": "archive_magazine_illustration_the_bear_SEP.jpg",
+
+	"alt_text": "Magazine illustration for 'The Bear' in the Saturday Evening Post",
+	"repository": {
+	  "collection": "William Faulkner Foundation Collection, 1918-1959",
+	  "accession": "#6074 to 6074-d",
+	  "name": "Albert and Shirley Small Special Collections, University of Virginia Library",
+	  "place": "Charlottesville, VA",
+	  "url": "http://faulkner.iath.virginia.edu/media/resources/MANUSCRIPTS/BARMS1.html"
+	}
+
+  },
+
+  {
 	"media_type": "screen_capture",
 	"creators": [
 	  {

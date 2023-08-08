@@ -122,30 +122,25 @@ function setImageData(source, image) {
 
 	console.log("source: " + source, "image: " +image )
 
-	const creatorsStringHTML = creatorsString !== null ? `${creatorsString}` : '';
+	const creatorsStringHTML = creatorsString !== null ? `${creatorsString}. ` : '';
 
-	const imageTitleHTML = image.title !== null ? `"${image.title}."` : '';
-
-	const imageYearHTML = image.year !== null ? `${image.year},` : '';
+	const imageTitleHTML = image.title !== null ? `" ${image.title}."` : '';
+	console.log(imageTitleHTML)
+	const imageYearHTML = image.year !== null ? `${image.year}, ` : '';
 
 	const imagePlaceHTML = image.place !== null ? `${image.place}.` : '';
 
-	const imageRepositoryCollectionHTML = image.repository.collection !== null ? `${image.repository.collection},` : '';
+	const imageRepositoryCollectionHTML = image.repository.collection !== null ? `${image.repository.collection}, ` : '';
 
-	const imageRepositoryAccessionHTML = image.repository.accession !== null ? `${image.repository.accession}.` : '';
+	const imageRepositoryAccessionHTML = image.repository.accession !== null ? `${image.repository.accession}. ` : '';
 
-	const imageRepositoryNameHTML = image.repository.name !== null ? `${image.repository.name},` : '';
+	const imageRepositoryNameHTML = image.repository.name !== null ? `${image.repository.name}, ` : '';
 
-	const imageRepositoryPlaceHTML = image.repository.place !== null ? `${image.repository.place}.` : '';
+	const imageRepositoryPlaceHTML = image.repository.place !== null ? `${image.repository.place}. ` : '';
 
-	const imageRepositoryURLHTML = image.repository.url !== null ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>.` : '';
+	const imageRepositoryURLHTML = image.repository.url !== null ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>. ` : '';
 
-	/*const imageWebsiteTitleHTML = image.website.title !== null && image.website.title !== undefined ? `<em>${image.website.title}</em>` : '';
-
-	const imageWebsiteURLHTML = image.website.url !== null ? `<a href="${image.website.url}">${image.website.url}</a>.` : '';
-
-	const imageAccessDateHTML = image.access_date !== null ? `Accessed ${new Date(image.access_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}.` : '';*/
-
+	
 	let citationTemplate
 
 	switch (image.media_type) {
@@ -171,10 +166,8 @@ function setImageData(source, image) {
 			break;
 		case 'screen_capture':
 			citationTemplate =
-				`${creatorsStringHTML}${image.title}."
-            ${image.year}.
-          <em>${image.repository.name},</em> ${image.repository.place}, 
-          <a href="${image.repository.url}">${image.repository.url}</a>`;
+				`${creatorsStringHTML}${imageTitleHTML}
+            ${imageYearHTML}${imageRepositoryNameHTML}${imageRepositoryPlaceHTML}${imageRepositoryURLHTML}`;
 			break;
 
 		case 'archive':
