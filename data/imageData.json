@@ -339,6 +339,34 @@
   },
 
   {
+	"media_type": "student_sample",
+	"creators": [
+	  {
+		"last_name": "Last Name",
+		"first_name": "First Name"
+	  }
+	],
+
+	"title": "Student Sample: Work Title",
+	
+	
+	"description": "Visualization Character-Location Force Directed Graph <em>Go Down, Moses</em>",
+	"filename": "student_sample_work_title.png",
+
+	"alt_text": "student_sample",
+	
+	"course": {
+	  "name": "Title",
+	  "number": "Course Number",
+	  "institution": "University of Virginia",
+	  "semester": "2024 Fall",
+	  "instructor": "Instructor Name",
+	  "url": "http://faulkner.iath.virginia.edu/characters-bipart.html"
+	}
+
+  },
+
+  {
 	"media_type": "screen_capture",
 	"creators": [
 	  {
