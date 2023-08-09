@@ -1,5 +1,6 @@
 [
-  {
+
+{
 	"filename": "beach1.html",
 	"pilot_classroom": "This project was piloted in a synchronous online creative writing class for college freshmen and sophomores at St. Louis Community College.",
 	"learning_goals": [ "To identify major and minor characters, point of view, setting, scene building, and plot.", "To research social/historical context in imaginative writing through the use of digital resources.", "To practice stepping outside of self to write/invent characters and scenes from different perspectives in different time periods." ],
@@ -25,6 +26,34 @@
 	"created": "2023-07-23",
 	"notes": [ "Each activity can be used as scaffolded for the final product or can be used separately depending on the instructor’s desired outcomes.", "You will need to allot some time to in-class instruction on Digital Yoknapatawpha.  The DY tools and pages for this assignment are fairly simple to use." ]
   },
+
+  {
+	"filename": "bryant1.html",
+	"pilot_classroom": "Short description as string",
+	"learning_goals": [ "learning goals as array" ],
+	"common_core": [ "common core as array" ],
+	"student_samples": [
+	  {
+		"first_name": null,
+		"last_name": null,
+		"title": null,
+		"filename": null,
+		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+	  }
+	],
+	"original_lesson_plan": [
+	  {
+		"title": null,
+		"filename": null,
+		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+	  }
+	],
+	"instructor": "Taylor Bryant",
+	"contact": null,
+	"created": "2023-07-23",
+	"notes": [ "This is where the notes go as array" ]
+  },
+
   {
 	"filename": "dimock1.html",
 	"pilot_classroom": "Class Description",
@@ -102,7 +131,7 @@
 		"file_type": "Used to set icon. One of pdf, word, pptx, image"
 	  }
 	],
-	"instructor": null,
+	"instructor": "Jennie Joiner",
 	"contact": null,
 	"created": "2023-07-23",
 	"notes": [ "This is where the notes go as array" ]
@@ -145,5 +174,59 @@
 	"contact": "erin.penner@asbury.edu",
 	"created": "2023-07-23",
 	"notes": [ "The student-presentation component makes this assignment work best in a seminar-sized class, where all have time to present. But it could be made to work in larger classes with a few adjustments to the presentation mode." ]
+  },
+
+  {
+	"filename": "tate1.html",
+	"pilot_classroom": "Short description as string",
+	"learning_goals": [ "learning goals as array" ],
+	"common_core": [ "common core as array" ],
+	"student_samples": [
+	  {
+		"first_name": null,
+		"last_name": null,
+		"title": null,
+		"filename": null,
+		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+	  }
+	],
+	"original_lesson_plan": [
+	  {
+		"title": null,
+		"filename": null,
+		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+	  }
+	],
+	"instructor": "Haley Tate",
+	"contact": null,
+	"created": "2023-07-23",
+	"notes": [ "This is where the notes go as array" ]
+  },
+
+  {
+	"filename": "watson1.html",
+	"pilot_classroom": "Short description as string",
+	"learning_goals": [ "learning goals as array" ],
+	"common_core": [ "common core as array" ],
+	"student_samples": [
+	  {
+		"first_name": null,
+		"last_name": null,
+		"title": null,
+		"filename": null,
+		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+	  }
+	],
+	"original_lesson_plan": [
+	  {
+		"title": null,
+		"filename": null,
+		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+	  }
+	],
+	"instructor": "Rachel Watson",
+	"contact": null,
+	"created": "2023-07-23",
+	"notes": [ "This is where the notes go as array" ]
   }
 ]
