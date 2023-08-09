@@ -35,6 +35,34 @@
 		"first_name": "Johannes"
 	  }
 	],
+	"title": "Video Tutorial of Character-Location Force Directed Graph",
+	"description": "Instructional video for understanding character location force directed graph",
+	"duration": "00:00:48",
+	"file_size": "18.93 MB",
+	"created": "2023-08-09T00:00:00Z",
+	"filename": "video_tutorial_character_location_force_directed_graph.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Tutorial",
+	"tool": "Character-Character Force Directed Graph",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Video tutorial of Force Directed Graph",
+	"url": "http://faulkner.iath.virginia.edu/characters-force.html",
+	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/Loc_Char_FDDemo.mp4",
+	"full_demo_duration": "05:57",
+	"full_demo_title": "Force-Directed Location-Character Graphs"
+  },
+
+  {
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
 	"title": "Video Tutorial of Main Map Display: <em>Go Down, Moses</em>",
 	"description": "Instructional video showing the main functionality of the main map display",
 	"duration": "00:00:32",
@@ -55,7 +83,7 @@
 	"full_demo_title": "Using the text-map pages"
   },
 
-  
+
 
 
   {
@@ -82,6 +110,8 @@
 	"alt_text": "Video tutorial demonstrating how to search for a specific character using the main map display",
 	"url": "http://faulkner.iath.virginia.edu/?text=BB"
   },
+
+
 
   {
 
