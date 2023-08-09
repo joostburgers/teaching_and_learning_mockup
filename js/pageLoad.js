@@ -429,7 +429,7 @@ function setVideoCaptions(jsonData) {
 
 			const fullVideoDuration = matchingVideo.full_demo_duration !== null && matchingVideo.full_demo_duration !== undefined ? ` [${matchingVideo.full_demo_duration}]` : ''
 
-			const fullVideoHTML = matchingVideo.full_demo_url !== null && matchingVideo.full_demo_url !== undefined ? `|Extended Demo <a href=${matchingVideo.full_demo_url} target="_blank" rel="noopener noreferrer">${matchingVideo.full_demo_title}</a> ${fullVideoDuration}` : ''
+			const fullVideoHTML = matchingVideo.full_demo_url !== null && matchingVideo.full_demo_url !== undefined ? ` | Full Tutorial: <a href=${matchingVideo.full_demo_url} target="_blank" rel="noopener noreferrer">${matchingVideo.full_demo_title}</a> ${fullVideoDuration}` : ''
 
 
 			// Set the video caption with matchingVideo metadata
