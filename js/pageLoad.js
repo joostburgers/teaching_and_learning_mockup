@@ -426,8 +426,14 @@ function setVideoCaptions(jsonData) {
 			//Find the .activity-video-caption element for the caption
 			const caption = frame.children('.activity-video-caption').get(0);
 
+
+			const fullVideoDuration = matchingVideo.full_demo_duration !== null && matchingVideo.full_demo_duration !== undefined ? ` [${matchingVideo.full_demo_duration}]` : ''
+
+			const fullVideoHTML = matchingVideo.full_demo_url !== null && matchingVideo.full_demo_url !== undefined ? `|Extended Demo <a href=${matchingVideo.full_demo_url} target="_blank" rel="noopener noreferrer">${matchingVideo.full_demo_title}</a> ${fullVideoDuration}` : ''
+
+
 			// Set the video caption with matchingVideo metadata
-			caption.innerHTML = `${matchingVideo.media_label}: <a href=${matchingVideo.url} target="_blank" rel="noopener noreferrer">${matchingVideo.tool}</a>`;
+			caption.innerHTML = `${matchingVideo.media_label}: <a href=${matchingVideo.url} target="_blank" rel="noopener noreferrer">${matchingVideo.tool}</a>${fullVideoHTML}`;
 
 			// Set each matchingVideo metadata to data-* attributes
 			setElementMetaData(video, matchingVideo);
