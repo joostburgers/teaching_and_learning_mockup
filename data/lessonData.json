@@ -178,9 +178,9 @@
 
   {
 	"filename": "tate1.html",
-	"pilot_classroom": "Short description as string",
-	"learning_goals": [ "learning goals as array" ],
-	"common_core": [ "common core as array" ],
+	"pilot_classroom": "In-person class",
+	"learning_goals": [ "Students will use Digital Yoknapatawpha in conjunction with the text to analyze how authors use motifs to reinforce themes in a fictional text" ],
+	"common_core": [ "RL.11-12.1", "RL.11-12.2", "RL.11-12.3", "RL.11-12.9", "RL.11-12.0", "W.11-12.1", "W.11-12.4", "W.11-12.5", "W.11-12.6", "WL.11-12.9A", "SL.11-12.1" ],
 	"student_samples": [
 	  {
 		"first_name": null,
@@ -197,8 +197,8 @@
 		"file_type": "Used to set icon. One of pdf, word, pptx, image"
 	  }
 	],
-	"instructor": "Haley Tate",
-	"contact": null,
+	"instructor": "Haley Albert-Tate",
+	"contact": "haley.tate@cavecity.ncsc.k12.ar.ust",
 	"created": "2023-07-23",
 	"notes": [ "This is where the notes go as array" ]
   },

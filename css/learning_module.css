@@ -82,6 +82,7 @@ ol.activity-list {
 	line-height: 1.5em;
 }
 
+
 .activity-list-unordered-blank {
 	list-style-type: none;
 	list-style-position: outside;
@@ -105,6 +106,8 @@ ol.activity-list {
 	
 }
 
+
+
 .activity-list-unordered-arrow li:before {
 	
 	content: "\F138";
@@ -112,6 +115,10 @@ ol.activity-list {
 	margin-right: 5px;
 	vertical-align:middle;
 }
+
+	.activity-list-unordered-arrow ul > li:before {
+		display: none;
+	}
 
 .activity-instructions {
 	padding: 10px;
@@ -292,6 +299,13 @@ div.note {
 margin-bottom:10px;
 margin-top:10px;
 font-weight:400;
+}
+
+.activity-paragraph-indent {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-weight: 400;
+	margin-left: 30px;
 }
 
 ul.note-list {
