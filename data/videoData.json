@@ -63,6 +63,34 @@
 		"first_name": "Johannes"
 	  }
 	],
+	"title": "Video Tutorial of Character-Character Force Directed Graph",
+	"description": "Instructional video for understanding character character force directed graph",
+	"duration": "00:00:34",
+	"file_size": "7.68 MB",
+	"created": "2023-08-10T00:00:00Z",
+	"filename": "video_tutorial_character_character_force_directed_emily.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Tutorial",
+	"tool": "Character-Character Force Directed Graph",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Video tutorial of Force Directed Graph",
+	"url": "http://faulkner.iath.virginia.edu/char-char-force.html",
+	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/Loc_Char_FDDemo.mp4",
+	"full_demo_duration": "04:25",
+	"full_demo_title": "Force-Directed Character-Character Graphs"
+  },
+
+  {
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
 	"title": "Video Tutorial of Main Map Display: <em>Go Down, Moses</em>",
 	"description": "Instructional video showing the main functionality of the main map display",
 	"duration": "00:00:32",
