@@ -440,6 +440,13 @@ height:90%;
 }
 
 .red-line {
+	border-bottom: 2px solid red;
+	width: 1em;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.red-line-dashed {
 	border-bottom: 2px dashed red;
 	width: 1em;
 	display: inline-block;

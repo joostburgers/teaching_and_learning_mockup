@@ -1,6 +1,6 @@
 [
 
-{
+  {
 	"filename": "beach1.html",
 	"pilot_classroom": "This project was piloted in a synchronous online creative writing class for college freshmen and sophomores at St. Louis Community College.",
 	"learning_goals": [ "To identify major and minor characters, point of view, setting, scene building, and plot.", "To research social/historical context in imaginative writing through the use of digital resources.", "To practice stepping outside of self to write/invent characters and scenes from different perspectives in different time periods." ],
@@ -74,15 +74,31 @@
   },
   {
 	"filename": "hayes1.html",
-	"pilot_classroom": "Classroom description",
-	"learning_goals": null,
-	"common_core": null,
-	"student_samples": null,
+	"pilot_classroom": "Short description as string",
+	"learning_goals": [ "learning goals as array" ],
+	"common_core": [ "common core as array" ],
+	"student_samples": [
+	  {
+		"first_name": null,
+		"last_name": null,
+		"title": null,
+		"filename": null,
+		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+	  }
+	],
+	"original_lesson_plan": [
+	  {
+		"title": null,
+		"filename": null,
+		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+	  }
+	],
 	"instructor": "Jon Hayes",
 	"contact": "jhayes@semo.edu",
 	"created": "2023-07-23",
-	"notes": null
+	"notes": [ "This is where the notes go as array" ]
   },
+  
   {
 	"filename": "lastname1.html",
 	"pilot_classroom": "Short description as string",
