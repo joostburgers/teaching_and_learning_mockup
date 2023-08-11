@@ -71,7 +71,7 @@
 	"filename": "video_tutorial_character_character_force_directed_emily.mp4",
 	"media_type": "quick_tutorial",
 	"media_label": "Tutorial",
-	"tool": "Character-Character Force Directed Graph",
+	"tool": "Characters in Force Directed Graph",
 	"repository": {
 	  "name": "Digital Yoknapatawpha",
 	  "place": "University of Virginia"
@@ -81,6 +81,34 @@
 	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/Loc_Char_FDDemo.mp4",
 	"full_demo_duration": "04:25",
 	"full_demo_title": "Force-Directed Character-Character Graphs"
+  },
+
+  {
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Video Tutorial of Main Map Display Chronological Timeline",
+	"description": "Instructional video for understanding character the chronological timeline on the main map display.",
+	"duration": "00:00:21",
+	"file_size": "1.14 MB",
+	"created": "2023-08-11T00:00:00Z",
+	"filename": "video_tutorial_main_map_display_timeline.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Tutorial",
+	"tool": "Main Map Display Chronological Timeline",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Instructional video for understanding character the chronological timeline on the main map display.",
+	"url": "http://faulkner.iath.virginia.edu/?text=RE",
+	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/Loc_Char_FDDemo.mp4",
+	"full_demo_duration": "11:17",
+	"full_demo_title": "Using the text-map pages"
   },
 
   {
