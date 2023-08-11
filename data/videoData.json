@@ -139,6 +139,34 @@
 	"full_demo_title": "Using the text-map pages"
   },
 
+  {
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Video Tutorial for the Narrative Analysis visualization tool",
+	"description": "Instructional video showing the basic functionality of the narrative analysis tool",
+	"duration": "00:00:20",
+	"file_size": "1.1 MB",
+	"created": "2023-08-11T00:00:00Z",
+	"filename": "video_tutorial_narrative_analysis_basic_functions.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Tutorial",
+	"tool": "Narrative Analysis",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Quick Tutorial Narrative Analysis",
+	"url": "http://faulkner.iath.virginia.edu/narrativeanalysis.html",
+	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/Video_Tutorial-Narrative_Analysis.mp4",
+	"full_demo_duration": "08:30",
+	"full_demo_title": "Narrative Analysis Program"
+  },
+
 
 
 
