@@ -17,8 +17,8 @@ function getCards() {
 			/*populateStoryFilters(data);*/
 			
 			populateFilter(data, "paired_author", "Authors")
-			/*populateFilter(data, "story", "Stories");
-			populateFilter(data, "modality", "Modalities");*/
+			populateFilter(data, "story", "Stories");
+			populateFilter(data, "modality", "Modalities");
 
 			$("#story-filters input").change(function () { filterCards(data); });
 
