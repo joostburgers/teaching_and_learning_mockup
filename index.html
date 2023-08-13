@@ -137,26 +137,11 @@
                 </div>
                 <div class="facet-outline">
                     <div class="facet-title">Modality</div>
-                    <div id="modality-filters">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="in-person" value="In-Person" checked>
-                            <label class="form-check-label" for="in-person">
-                                In-Person
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="online-sync" value="Online Synchronous" checked>
-                            <label class="form-check-label" for="online-sync">
-                                Online Synchronous
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="online-async" value="Online Asynchronous" checked>
-                            <label class="form-check-label" for="online-async">
-                                Online Asynchronous
-                            </label>
-                        </div>
-                    </div>
+                    <div id="modality-filters"></div>
+                        
+                        
+                        
+                   
                 </div>
                 <div class="facet-outline">
                     <div class="facet-title">Paired Author </div>
@@ -315,9 +300,7 @@
 
     $(document).ready(function () {
 
-        $("#story-filters input").change(filterCards(myData));
-        $("#modality-filters input").change(filterCards(myData));
-        $("#author-filters input").change(filterCards(myData));
+        getCards();
 
     });
           

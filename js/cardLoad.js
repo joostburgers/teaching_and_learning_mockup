@@ -16,6 +16,11 @@ function getCards() {
 
 			populateStoryFilters(data);
 			populateAuthorFilters(data);
+			populateModalityFilters(data);
+
+			$("#story-filters input").change(filterCards(data));
+			$("#modality-filters input").change(filterCards(data));
+			$("#author-filters input").change(filterCards(data));
 
 		}
 	}).done(function () {
@@ -71,8 +76,7 @@ function populateAuthorFilters(data) {
 		if (authors.indexOf(card.paired_author) === -1 && card.paired_author !== null) {
 			authors.push(card.paired_author);
 		}
-		//if there are multiple stories in the object then loop over them and add them to the stories array
-
+		//if there are modalities in the object then loop over them and add them to the stories array
 	});
 
 	// turn stories into one array of stories
@@ -93,7 +97,33 @@ function populateAuthorFilters(data) {
 	});
 }
 
+function populateModalityFilters(data) {
+	cards = data;
+	var modalities = [];
 
+	$.each(cards, function (index, card) {
+		if (modalities.indexOf(card.modality) === -1 && card.modality !== null) {
+			modalities.push(card.modality);
+		}
+		
+	});
+
+	modalities = modalities.flat();
+	modalities = Array.from(new Set(modalities))
+	modalities = modalities.sort()
+
+	var modalityFilters = $("#modality-filters");
+	modalityFilters.empty();
+
+	var allModalities = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='all' checked><label class='form-check-label'>All Modalities</label></div>");
+	modalityFilters.append(allModalities);
+
+	$.each(modalities, function (index, modality) {
+		var checkbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='" + modality + "><label class='form-check-label'>" + modality + "</label></div>");
+		modalityFilters.append(checkbox);
+	});
+
+}
 
 // Function to filter and display the information cards based on selected filters
 function filterCards(data) {
