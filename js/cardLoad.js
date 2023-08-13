@@ -5,7 +5,6 @@
 
 //function to load the cards from the json file
 
-var myData = [];
 
 function getCards() {
 
@@ -13,18 +12,21 @@ function getCards() {
 		url: 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/cardData.json',
 		dataType: 'json',
 		async: false,
-		data: myData,
 		success: function (data) {
-			myData = data;
+
 			populateStoryFilters(data);
 			populateAuthorFilters(data);
-			return myData;
+
 		}
+	}).done(function () {
+		console.log("Card data loaded successfully");
+	}).fail(function () {
+		console.warn("Card data could not be loaded");
 	});
 
 }
 
-console.log("This is where it should initialize: " + myData)
+
 
 
 
@@ -44,13 +46,18 @@ function populateStoryFilters(data) {
 	console.log(stories);
 	// turn stories into one array of stories
 	stories = stories.flat();
+	stories = Array.from(new Set(stories))
+	stories = stories.sort()
+
 	console.log(stories)
 	var storyFilters = $("#story-filters");
 	storyFilters.empty();
 
+	var allCheckbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='all' checked><label class='form-check-label'>All Stories</label></div>");
+	storyFilters.append(allCheckbox);
 
 	$.each(stories, function (index, story) {
-		var checkbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='" + story + "'checked><label class='form-check-label'>" + story + "</label></div>");
+		var checkbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='" + story + "><label class='form-check-label'>" + story + "</label></div>");
 		storyFilters.append(checkbox);
 	});
 }
@@ -70,13 +77,18 @@ function populateAuthorFilters(data) {
 
 	// turn stories into one array of stories
 	authors = authors.flat();
+	authors = Array.from(new Set(authors))
+	authors = authors.sort()
 	console.log(authors)
 	var authorFilters = $("#author-filters");
 	authorFilters.empty();
 
+	var allAuthors = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='all' checked><label class='form-check-label'>All Authors</label></div>");
+	authorFilters.append(allAuthors);
+
 
 	$.each(authors, function (index, author) {
-		var checkbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='" + author + "'checked><label class='form-check-label'>" + author + "</label></div>");
+		var checkbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='" + author + "><label class='form-check-label'>" + author + "</label></div>");
 		authorFilters.append(checkbox);
 	});
 }

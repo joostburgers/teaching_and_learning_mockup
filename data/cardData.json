@@ -22,7 +22,7 @@
   },
   {
 	"title": "Love and Family in <em>As I Lay Dying</em> and <em>Getting Mother’s Body</em>",
-	"story": [ "Elly", "Passing" ],
+	"story": [ "'Elly'", "<em>Passing</em>" ],
 	"image": "background1.png",
 	"description": "Students will read both novels and consider how Parks’ work speaks both back to and alongside Faulkner, particularly in terms of questions regarding family, obligation, and the possibilities of love in the midst of material and social marginalization. In studying AILD, students will use DY tools as well as archival material.",
 	"modality": [ "In-Person", "Online Synchronous" ],
@@ -32,7 +32,7 @@
   {
 	"title": "Exploring the Worlds of Faulkner's Female Characters",
 	"image": "little_girl.png",
-	"story": [ "The Sound and the Fury", "A Rose for Emily", "Dry September" ],
+	"story": [ "<em>The Sound and the Fury</em>"],
 	"description": "Students will use multiple features of DY to consider how Faulkner writes his female characters. This lesson is focused on The Sound and the Fury but can be adapted for other Faulkner stories featuring central female characters.",
 	"modality": [ "In-Person" ],
 	"paired_author": null,
@@ -40,7 +40,7 @@
   },
   {
 	"title": "'Barn Burning' and 'The Man Who Was Almost a Man': Sharecropping and Coming of Age in Mississippi",
-	"story": [ "Barn Burning", "The Man Who Was Almost A Man" ],
+	"story": [ "'Barn Burning'", "'The Man Who Was Almost A Man'" ],
 	"image": "background4.png",
 	"description": "This lesson explores how Faulkner and Richard Wright portray coming of age",
 	"modality": [ "Online Synchronous" ],
@@ -60,7 +60,7 @@
   },
   {
 	"title": "Faulkner Fan Fic: Practicing Character Development and Scene Building in Faulkner’s Universe",
-	"story": [ "Barn Burning" ],
+	"story": [ "'Barn Burning'" ],
 	"image": "background4.png",
 	"description": "This is a creative writing exercise which gives voice to minor characters in William Faulkner’s universe. Students will use Digital Yoknapatawpha to flesh out minor characters and rewrite scenes in Faulkner’s fiction.",
 	"modality": [ "In-person", "Online Asynchronous" ],
@@ -80,14 +80,12 @@
   },
   {
 	"title": "Tracking Themes in As I Lay Dying",
-	"story": [ "As I Lay Dying" ],
+	"story": [ "<em>As I Lay Dying</em>" ],
 	"image": "aild_keywords.png",
 	"description": "This assignment asks students to re-imagine the fictions of Faulkner and other authors by mapping their texts.",
 	"modality": [ "In-person" ],
 	"paired_author": null,
 	"url": "tate1.html"
-
-  }
-
+ }
 
 ]
