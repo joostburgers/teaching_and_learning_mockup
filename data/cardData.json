@@ -9,15 +9,7 @@
 	"url": "hayes1.html"
   },
 
-  {
-	"title": "Visualizing Race, Class, and Gender in “A Rose for Emily",
-	"image": "background2.png",
-	"story": [ "A Rose for Emily" ],
-	"description": "Students will use a visual tool to generate critical thinking about social relations in 'A Rose for Emily,' focusing on race, class, and gender.",
-	"modality": [ "In-Person", "Online Asynchronous", "Online Synchronous" ],
-	"paired_author": null,
-	"url": "hayes2.html"
-  },
+
 
   {
 	"title": "<em>As I Lay Dying</em> Digital Escape Room",
@@ -53,7 +45,7 @@
 	"description": "This lesson explores how Faulkner and Richard Wright portray coming of age",
 	"modality": [ "Online Synchronous" ],
 	"paired_author": "Richard Wright",
-	"url": "dimmock1.html"
+	"url": "dimock1.html"
 
   },
   {
@@ -71,10 +63,31 @@
 	"story": [ "Barn Burning" ],
 	"image": "background4.png",
 	"description": "This is a creative writing exercise which gives voice to minor characters in William Faulkner’s universe. Students will use Digital Yoknapatawpha to flesh out minor characters and rewrite scenes in Faulkner’s fiction.",
-	"modality": ["In-person", "Online Asynchronous"],
-	  "paired_author": null,
-	  "url": "beach1.html"
+	"modality": [ "In-person", "Online Asynchronous" ],
+	"paired_author": null,
+	"url": "beach1.html"
+
+  },
+  {
+	"title": "Interpretive Mapping of Faulkner and Beyond",
+	"story": [ "Any" ],
+	"image": "background4.png",
+	"description": "This assignment asks students to re-imagine the fictions of Faulkner and other authors by mapping their texts.",
+	"modality": [ "In-person" ],
+	"paired_author": null,
+	"url": "joiner1.html"
+
+  },
+  {
+	"title": "Tracking Themes in As I Lay Dying",
+	"story": [ "As I Lay Dying" ],
+	"image": "aild_keywords.png",
+	"description": "This assignment asks students to re-imagine the fictions of Faulkner and other authors by mapping their texts.",
+	"modality": [ "In-person" ],
+	"paired_author": null,
+	"url": "tate1.html"
 
   }
+
 
 ]
