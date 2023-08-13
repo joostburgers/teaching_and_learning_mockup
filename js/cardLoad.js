@@ -18,9 +18,11 @@ function getCards() {
 			populateAuthorFilters(data);
 			populateModalityFilters(data);
 
-			$("#story-filters input").change(filterCards(data));
-			$("#modality-filters input").change(filterCards(data));
-			$("#author-filters input").change(filterCards(data));
+			$("#story-filters input").change(function () { filterCards(data); });
+
+			$("#modality-filters input").change(function () { filterCards(data); });
+			$("#author-filters input").change(function () { filterCards(data); });
+
 
 		}
 	}).done(function () {
@@ -48,13 +50,13 @@ function populateStoryFilters(data) {
 		//if there are multiple stories in the object then loop over them and add them to the stories array
 
 	});
-	console.log(stories);
+	
 	// turn stories into one array of stories
 	stories = stories.flat();
 	stories = Array.from(new Set(stories))
 	stories = stories.sort()
 
-	console.log(stories)
+	
 	var storyFilters = $("#story-filters");
 	storyFilters.empty();
 
@@ -83,7 +85,7 @@ function populateAuthorFilters(data) {
 	authors = authors.flat();
 	authors = Array.from(new Set(authors))
 	authors = authors.sort()
-	console.log(authors)
+	
 	var authorFilters = $("#author-filters");
 	authorFilters.empty();
 
@@ -127,16 +129,17 @@ function populateModalityFilters(data) {
 
 // Function to filter and display the information cards based on selected filters
 function filterCards(data) {
-	console.log(data)
+	
 	cards = data
 	var selectedStories = [];
 	var selectedModalities = [];
 	var selectedAuthors = [];
 	// Get selected story filters
 	$("#story-filters input:checked").each(function () {
-		selectedStories.push($(this).val());
+		selectedStories.push($(this).val())
+		console.log("selected stories array: " + selectedStories.push($(this).val()))			;
 	});
-
+	console.log("selected stories " + selectedStories)
 	// Get selected modality filters
 	$("#modality-filters input:checked").each(function () {
 		selectedModalities.push($(this).val());
@@ -152,7 +155,7 @@ function filterCards(data) {
 	console.log("cards: " + cards)
 
 	$.each(cards, function (index, card) {
-		console.log(card.story);
+		
 		var selected = false;
 		$.each(card.story, function (index, story) {
 			selectedStories.forEach(function (selectedStory) {
@@ -165,7 +168,7 @@ function filterCards(data) {
 		var Modalityselected = false;
 
 		$.each(card.modality, function (index, modality) {
-			console.log("modalities: " + card.modality)
+			
 			selectedModalities.forEach(function (selectedModality) {
 				if (modality.includes(selectedModality)) {
 					Modalityselected = true;
