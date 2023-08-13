@@ -14,9 +14,11 @@ function getCards() {
 		async: false,
 		success: function (data) {
 
-			populateStoryFilters(data);
-			populateAuthorFilters(data);
-			populateModalityFilters(data);
+			/*populateStoryFilters(data);*/
+			
+			populateFilter(data, "paired_author", "Authors")
+			/*populateFilter(data, "story", "Stories");
+			populateFilter(data, "modality", "Modalities");*/
 
 			$("#story-filters input").change(function () { filterCards(data); });
 
@@ -39,93 +41,44 @@ function getCards() {
 
 // Function to populate the story filters based on available stories in the cards
 // loop over each card, to get multiple stories for each card and add them to the storyFilters.
-function populateStoryFilters(data) {
-	cards = data
-	var stories = [];
-
-	$.each(cards, function (index, card) {
-		if (stories.indexOf(card.story) === -1) {
-			stories.push(card.story);
-		}
-		//if there are multiple stories in the object then loop over them and add them to the stories array
-
-	});
-	
-	// turn stories into one array of stories
-	stories = stories.flat();
-	stories = Array.from(new Set(stories))
-	stories = stories.sort()
-
-	
-	var storyFilters = $("#story-filters");
-	storyFilters.empty();
-
-	var allCheckbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='all' checked><label class='form-check-label'>All Stories</label></div>");
-	storyFilters.append(allCheckbox);
-
-	$.each(stories, function (index, story) {
-		var checkbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='" + story + "><label class='form-check-label'>" + story + "</label></div>");
-		storyFilters.append(checkbox);
-	});
-}
 
 
-function populateAuthorFilters(data) {
-	cards = data
-	var authors = [];
 
-	$.each(cards, function (index, card) {
-		if (authors.indexOf(card.paired_author) === -1 && card.paired_author !== null) {
-			authors.push(card.paired_author);
+function populateFilter(data, key, label) {
+	console.log(key)
+
+	var values = [];
+	$.each(data, function (index, object) {
+		if (values.indexOf(object[key]) === -1 && object[key] !== null) {
+			values.push(object[key]);
+			
 		}
 		//if there are modalities in the object then loop over them and add them to the stories array
 	});
 
-	// turn stories into one array of stories
-	authors = authors.flat();
-	authors = Array.from(new Set(authors))
-	authors = authors.sort()
 	
-	var authorFilters = $("#author-filters");
-	authorFilters.empty();
+	values = values.flat()
+	values = Array.from(new Set(values))
+	values = values.sort()
 
-	var allAuthors = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='all' checked><label class='form-check-label'>All Authors</label></div>");
-	authorFilters.append(allAuthors);
+	
 
+	var filters = $(`#${key}-filters`);
+	filters.empty();
 
-	$.each(authors, function (index, author) {
-		var checkbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='" + author + "><label class='form-check-label'>" + author + "</label></div>");
-		authorFilters.append(checkbox);
-	});
+	var allCheckbox = $(`<div class='form-check'><input class='form-check-input' type='checkbox' value='all' checked><label class='form-check-label'>All ${label}</label></div>`);
+	filters.append(allCheckbox);
+
+	$.each(values, function (index, value) {
+		var checkbox = $(`<div class='form-check'><input class='form-check-input' type='checkbox' value=${value}><label class='form-check-label'>${value}</label></div>`)
+	filters.append(checkbox);
+	})
+
+	console.log(filters)
+	return filters
 }
 
-function populateModalityFilters(data) {
-	cards = data;
-	var modalities = [];
 
-	$.each(cards, function (index, card) {
-		if (modalities.indexOf(card.modality) === -1 && card.modality !== null) {
-			modalities.push(card.modality);
-		}
-		
-	});
-
-	modalities = modalities.flat();
-	modalities = Array.from(new Set(modalities))
-	modalities = modalities.sort()
-
-	var modalityFilters = $("#modality-filters");
-	modalityFilters.empty();
-
-	var allModalities = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='all' checked><label class='form-check-label'>All Modalities</label></div>");
-	modalityFilters.append(allModalities);
-
-	$.each(modalities, function (index, modality) {
-		var checkbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='" + modality + "><label class='form-check-label'>" + modality + "</label></div>");
-		modalityFilters.append(checkbox);
-	});
-
-}
 
 // Function to filter and display the information cards based on selected filters
 function filterCards(data) {
@@ -198,4 +151,95 @@ function filterCards(data) {
 		cardContainer.append(cardHtml);
 	});
 }
+
+/*function populateStoryFilters(data) {
+	cards = data
+	var stories = [];
+
+	$.each(cards, function (index, card) {
+		if (stories.indexOf(card.story) === -1) {
+			stories.push(card.story);
+
+		}
+		//if there are multiple stories in the object then loop over them and add them to the stories array
+
+	});
+
+	// turn stories into one array of stories
+	stories = stories.flat();
+	stories = Array.from(new Set(stories))
+	stories = stories.sort()
+
+
+	var storyFilters = $("#story-filters");
+	storyFilters.empty();
+
+	var allCheckbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='all' checked><label class='form-check-label'>All Stories</label></div>");
+	storyFilters.append(allCheckbox);
+
+	$.each(stories, function (index, story) {
+		var checkbox = $(`<div class='form-check'><input class='form-check-input' type='checkbox' value=${story}><label class='form-check-label'>${story}</label></div>`
+		);
+		storyFilters.append(checkbox);
+	});
+}*/
+
+/*function populateAuthorFilters(data) {
+	cards = data
+	var authors = [];
+
+	$.each(cards, function (index, card) {
+		if (authors.indexOf(card.paired_author) === -1 && card.paired_author !== null) {
+			authors.push(card.paired_author);
+		}
+		//if there are modalities in the object then loop over them and add them to the stories array
+	});
+
+	// turn stories into one array of stories
+	authors = authors.flat();
+	authors = Array.from(new Set(authors))
+	authors = authors.sort()
+	
+	var authorFilters = $("#author-filters");
+	authorFilters.empty();
+
+	var allAuthors = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='all' checked><label class='form-check-label'>All Authors</label></div>");
+	authorFilters.append(allAuthors);
+
+
+	$.each(authors, function (index, author) {
+		var checkbox = $(`<div class='form-check'><input class='form-check-input' type='checkbox' value=${author}><label class='form-check-label'>${author}</label></div>`
+		);
+		authorFilters.append(checkbox);
+	});
+}
+
+function populateModalityFilters(data) {
+	cards = data;
+	var modalities = [];
+
+	$.each(cards, function (index, card) {
+		if (modalities.indexOf(card.modality) === -1 && card.modality !== null) {
+			modalities.push(card.modality);
+		}
+		
+	});
+
+	modalities = modalities.flat();
+	modalities = Array.from(new Set(modalities))
+	modalities = modalities.sort()
+
+	var modalityFilters = $("#modality-filters");
+	modalityFilters.empty();
+
+	var allModalities = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='all' checked><label class='form-check-label'>All Modalities</label></div>");
+	modalityFilters.append(allModalities);
+
+	$.each(modalities, function (index, modality) {
+		var checkbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='" + modality + "><label class='form-check-label'>" + modality + "</label></div>");
+		modalityFilters.append(checkbox);
+	});
+
+}*/
+
 

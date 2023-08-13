@@ -14,7 +14,7 @@
   {
 	"title": "<em>As I Lay Dying</em> Digital Escape Room",
 	"image": "background3.png",
-	"story": [ "<em>As I Lay Dying</em>" ],
+	"story": [ "As I Lay Dying" ],
 	"description": "Students will use various DY tools to complete an escape room and acquire information regarding historical, geographical, and cultural context of the novel.",
 	"modality": [ "In-Person" ],
 	"paired_author": null,
@@ -22,7 +22,7 @@
   },
   {
 	"title": "Love and Family in <em>As I Lay Dying</em> and <em>Getting Mother’s Body</em>",
-	"story": [ "Elly", "<em>Passing</em>" ],
+	"story": [ "Elly", "Passing" ],
 	"image": "background1.png",
 	"description": "Students will read both novels and consider how Parks’ work speaks both back to and alongside Faulkner, particularly in terms of questions regarding family, obligation, and the possibilities of love in the midst of material and social marginalization. In studying AILD, students will use DY tools as well as archival material.",
 	"modality": [ "In-Person", "Online Synchronous" ],
@@ -32,7 +32,7 @@
   {
 	"title": "Exploring the Worlds of Faulkner's Female Characters",
 	"image": "little_girl.png",
-	"story": [ "<em>The Sound and the Fury</em>"],
+	"story": [ "The Sound and the Fury"],
 	"description": "Students will use multiple features of DY to consider how Faulkner writes his female characters. This lesson is focused on The Sound and the Fury but can be adapted for other Faulkner stories featuring central female characters.",
 	"modality": [ "In-Person" ],
 	"paired_author": null,
@@ -50,7 +50,7 @@
   },
   {
 	"title": "Collaborating on a Genealogy for  <em>As I Lay Dying</em>",
-	"story": [ "<em>As I Lay Dying</em>" ],
+	"story": [ "As I Lay Dying" ],
 	"image": "background4.png",
 	"description": "Since each member of the Bundren family in As I Lay Dying has a different view of what it means to be a “family,” in this project we replace a one-size-fits-all genealogical chart with an evolving genealogy that reflects characters’ changing perspectives as the story unfolds.  This is a multi-media project that connects writing and visual art, and pairs at-home student work with in-class collaboration and presentation.",
 	"modality": [ "In-Person" ],
@@ -80,7 +80,7 @@
   },
   {
 	"title": "Tracking Themes in As I Lay Dying",
-	"story": [ "<em>As I Lay Dying</em>" ],
+	"story": [ "As I Lay Dying" ],
 	"image": "aild_keywords.png",
 	"description": "This assignment asks students to re-imagine the fictions of Faulkner and other authors by mapping their texts.",
 	"modality": [ "In-Person" ],
