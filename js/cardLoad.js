@@ -50,8 +50,10 @@ function populateFilter(data, key, label) {
 	var values = [];
 	$.each(data, function (index, object) {
 		if (values.indexOf(object[key]) === -1 && object[key] !== null) {
-			values.push(object[key]);
-			
+
+			if (object[key] !== "All") {
+				values.push(object[key]);
+			}
 		}
 		//if there are modalities in the object then loop over them and add them to the stories array
 	});
