@@ -240,7 +240,7 @@ function filterCards(data) {
 
 		const titleHTML = `<h5 class="card-title">${card.title}</h5>`
 
-		const storyHTML = `<p class="card-text"><span class="font-weight-bold">${((card.story.length > 1) ? 'Stories: ' : 'Story: ')}</span> ${card.story}</p>`
+		const storyHTML = `<p class="card-text"><span class="font-weight-bold">${((card.story.length > 1) ? 'Stories: ' : 'Story: ')}</span> ${card.story} </p>`
 
 		const descriptionHTML = `<p class="card-text"><span class="font-weight-bold">Description: </span>${card.description}</p>`
 
