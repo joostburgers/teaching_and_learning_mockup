@@ -20,6 +20,7 @@
 	display: flex;
 	flex-direction: column;
 	max-width: 18vw;
+	min-width: 260px;
 	height: 40vh;
 }
 
@@ -42,19 +43,20 @@
 		left: 10%;
 		transform: translate(-5%, -5%);
 		background-color: rgba(94%, 97%, 100%, 0.60);
-		font-size: 1.2em
+		font-size: 1.2rem
 	}
 
 
-	.card-body{
-	
-	font-weight: 600;
-	
-	}
+.card-body {
+	overflow: hidden;
+}
 
 .card-text {
-	
-	font-weight: 400;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 8;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 	.card p {
 		margin-bottom: 10px;

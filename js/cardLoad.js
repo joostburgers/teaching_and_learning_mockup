@@ -240,13 +240,13 @@ function filterCards(data) {
 
 		const titleHTML = `<h5 class="card-title">${card.title}</h5>`
 
-		const storyHTML = `<p class="card-text">${((card.story.length > 1) ? 'Stories: ' : 'Story: ') + card.story}</p>`
+		const storyHTML = `<p class="card-text"><span class="font-weight-bold">${((card.story.length > 1) ? 'Stories: ' : 'Story: ')}</span> ${card.story}</p>`
 
-		const descriptionHTML = `<p class="card-text">Description: ${card.description}</p>`
+		const descriptionHTML = `<p class="card-text"><span class="font-weight-bold">Description: </span>${card.description}</p>`
 
-		const modalityHTML = `<p class="card-text">Modality: ${card.modality}</p>`
+		const modalityHTML = `<p class="card-text"><span class="font-weight-bold">Modality: </span>${card.modality}</p>`
 
-		const paired_authorHTML = card.paired_author !== null ? `<p class= "card-text">Paired author: ${card.paired_author} </p>` : ''
+		const paired_authorHTML = card.paired_author !== null ? `<p class= "card-text"><span class="font-weight-bold">Paired author:</span> ${card.paired_author} </p>` : ''
 
 		var cardHtml = $(`<a href="pages/${card.url}"> <div class="card"> <div class="info"> ${imageHTML}${titleHTML}
 		 </div>
