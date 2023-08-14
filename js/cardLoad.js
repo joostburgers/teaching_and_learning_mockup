@@ -250,7 +250,7 @@ function filterCards(data) {
 
 		var cardHtml = $(`<a href="pages/${card.url}"> <div class="card"> <div class="info"> ${imageHTML}${titleHTML}
 		 </div>
-		 <div class="card-body"> ${storyHTML} ${modalityHTML} ${paired_authorHTML}${descriptionHTML}  </div > </div > </a > `)
+		 <div class="card-body"> ${storyHTML} ${modalityHTML} ${paired_authorHTML}${descriptionHTML}  </div > </div > </a > </div >`)
 
 
 

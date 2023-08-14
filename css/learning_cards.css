@@ -19,8 +19,8 @@
 	margin: 20px;
 	display: flex;
 	flex-direction: column;
-	width: 325px;
-	min-height: 425px;
+	max-width: 18vw;
+	height: 40vh;
 }
 
 	.card:hover {
@@ -28,7 +28,7 @@
 	}
 
 	.card img {
-		max-width: 75%;
+		max-width: 95%;
 		height: auto;
 		object-fit: cover;
 		border-radius: 5px;
@@ -41,8 +41,8 @@
 		top: 10%;
 		left: 10%;
 		transform: translate(-5%, -5%);
-		background-color: rgba(94%, 97%, 100%, 0.40);
-		font-size: 125%;
+		background-color: rgba(94%, 97%, 100%, 0.60);
+		font-size: 1.2em
 	}
 
 
