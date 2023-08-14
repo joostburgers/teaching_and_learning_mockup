@@ -77,6 +77,58 @@
 
   },
 
+
+  {
+	"media_type": "archive",
+
+	"creators": [
+	  {
+		"last_name": "Faulkner",
+		"first_name": "William"
+	  }
+	],
+	"title": "<em>As I Lay Dying</em>, Manuscript, page 35.(detail).",
+
+	"description": "<em>As I Lay Dying</em>, Manuscript, page 35.(detail).",
+	"filename": "archive_manuscript_aild_35.jpg",
+
+	"alt_text": "<em>As I Lay Dying</em>, Manuscript, page 35.(detail)",
+	"repository": {
+	  "collection": "William Faulkner Foundation Collection, 1918-1959",
+	  "accession": "#6074 to 6074-d",
+	  "name": "Albert and Shirley Small Special Collections, University of Virginia Library",
+	  "place": "Charlottesville, VA",
+	  "url": "http://faulkner.iath.virginia.edu/media/resources/MANUSCRIPTS/AILDMS11.html"
+	}
+
+  },
+
+  {
+	"media_type": "archive",
+
+	"creators": [
+	  {
+		"last_name": "Faulkner",
+		"first_name": "William"
+	  }
+	],
+	"title": "<em>Go Down, Moses</em> Genealogical chart",
+
+	"description": "<em>Go Down, Moses</em> Genealogical chart",
+	"filename": "archive_manuscript_gdm_genealogical_chart_cropped.jpg",
+
+	"alt_text": "<em>Go Down, Moses</em> Genealogical chart",
+	"repository": {
+	  "collection": "William Faulkner Foundation Collection, 1918-1959",
+	  "accession": "#6074 to 6074-d",
+	  "name": "Albert and Shirley Small Special Collections, University of Virginia Library",
+	  "place": "Charlottesville, VA",
+	  "url": "http://faulkner.iath.virginia.edu/media/resources/MANUSCRIPTS/GDMNovMS1.html"
+	}
+
+  },
+
+
   {
 	"media_type": "archive",
 
@@ -388,7 +440,7 @@
 	  "name": "Mapping Faulkner",
 	  "number": "Eng 101",
 	  "institution": "Random University",
-	  "place":"Oxford, MS",
+	  "place": "Oxford, MS",
 	  "semester": "2024 Fall",
 	  "instructor": "Joseph Blotner",
 	  "url": "http://faulkner.iath.virginia.edu/characters-bipart.html"

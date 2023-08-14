@@ -1,20 +1,19 @@
 [
   {
 	"title": "Multimodal Composition, Research Writing, and Digital Yoknapatawpha",
-	"image": "background2.png",
-	"story": ["All"],
+	"image": "screen_capture_plot_structure_a_rose_for_emily_date_order_banner.png",
+	"story": [ "All" ],
 	"description": "This activity prompts students at any level to compose literary analysis essays on any Faulkner text(s), incorporating Digital Yoknapatawpha tools as secondary research sources.",
-	"modality": ["In-Person","Online Asynchronous","Online Synchronous" ],
+	"modality": [ "In-Person", "Online Asynchronous", "Online Synchronous" ],
 	"paired_author": null,
 	"url": "hayes1.html"
   },
 
 
-
   {
 	"title": "<em>As I Lay Dying</em> Digital Escape Room",
-	"image": "background3.png",
-	"story": ["As I Lay Dying"],
+	"image": "archive_manuscript_aild_35.jpg",
+	"story": [ "As I Lay Dying" ],
 	"description": "Students will use various DY tools to complete an escape room and acquire information regarding historical, geographical, and cultural context of the novel.",
 	"modality": [ "In-Person" ],
 	"paired_author": null,
@@ -31,18 +30,18 @@
   },
   {
 	"title": "Exploring the Worlds of Faulkner's Female Characters",
-	"image": "little_girl.png",
-	"story": ["The Sound and the Fury"],
+	"image": "site_photograph_a_child_of_scarbroughs_in_front_of_dresser_cropped.jpg",
+	"story": [ "The Sound and the Fury" ],
 	"description": "Students will use multiple features of DY to consider how Faulkner writes his female characters. This lesson is focused on The Sound and the Fury but can be adapted for other Faulkner stories featuring central female characters.",
-	"modality": ["In-Person"],
+	"modality": [ "In-Person", "Online Synchronous" ],
 	"paired_author": null,
 	"url": "mills1.html"
   },
   {
 	"title": "'Barn Burning' and 'The Man Who Was Almost a Man': Sharecropping and Coming of Age in Mississippi",
-	"story": ["Barn Burning","The Man Who Was Almost A Man"],
-	"image": "background4.png",
-	"description": "This lesson explores how Faulkner and Richard Wright portray coming of age",
+	"story": [ "Barn Burning", "The Man Who Was Almost A Man" ],
+	"image": "site_photograph_plantation_cabin_cropped.jpg",
+	"description": "This lesson explores how Faulkner and Richard Wright portray coming of age.",
 	"modality": [ "Online Synchronous" ],
 	"paired_author": [ "Richard Wright" ],
 	"url": "dimock1.html"
@@ -50,36 +49,36 @@
   },
   {
 	"title": "Collaborating on a Genealogy for  <em>As I Lay Dying</em>",
-	"story": ["As I Lay Dying"],
-	"image": "background4.png",
+	"story": [ "As I Lay Dying" ],
+	"image": "archive_manuscript_gdm_genealogical_chart_cropped.jpg",
 	"description": "Since each member of the Bundren family in As I Lay Dying has a different view of what it means to be a “family,” in this project we replace a one-size-fits-all genealogical chart with an evolving genealogy that reflects characters’ changing perspectives as the story unfolds.  This is a multi-media project that connects writing and visual art, and pairs at-home student work with in-class collaboration and presentation.",
-	"modality": ["In-Person"],
+	"modality": [ "In-Person" ],
 	"paired_author": null,
 	"url": "penner1.html"
 
   },
   {
 	"title": "Faulkner Fan Fic: Practicing Character Development and Scene Building in Faulkner’s Universe",
-	"story": ["Barn Burning", "Everyday Use"],
-	"image": "background4.png",
+	"story": [ "Barn Burning", "Everyday Use" ],
+	"image": "archive_manuscript_barn_burning_1.jpg",
 	"description": "This is a creative writing exercise which gives voice to minor characters in William Faulkner’s universe. Students will use Digital Yoknapatawpha to flesh out minor characters and rewrite scenes in Faulkner’s fiction.",
-	"modality": ["In-Person","Online Asynchronous"],
-	"paired_author": ["Alice Walker"],
+	"modality": [ "In-Person", "Online Asynchronous" ],
+	"paired_author": [ "Alice Walker" ],
 	"url": "beach1.html"
 
   },
   {
 	"title": "Interpretive Mapping of Faulkner and Beyond",
-	"story": ["All"],
-	"image": "background4.png",
+	"story": [ "All" ],
+	"image": "archive_print_1936_map_of_yoknapatawpha_cropped.jpg",
 	"description": "This assignment asks students to re-imagine the fictions of Faulkner and other authors by mapping their texts.",
-	"modality": ["In-Person"],
+	"modality": [ "In-Person" ],
 	"paired_author": null,
 	"url": "joiner1.html"
 
   },
   {
-	"title": "Tracking Themes in As I Lay Dying",
+	"title": "Tracking Themes in <em>As I Lay Dying</em>",
 	"story": ["As I Lay Dying"],
 	"image": "aild_keywords.png",
 	"description": "This assignment asks students to re-imagine the fictions of Faulkner and other authors by mapping their texts.",
