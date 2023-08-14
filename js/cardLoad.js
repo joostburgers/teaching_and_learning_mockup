@@ -14,7 +14,7 @@ function getCards() {
 		async: false,
 		success: function (data) {
 
-			/*populateStoryFilters(data);*/
+			
 			
 			populateFilter(data, "paired_author", "Authors")
 			populateFilter(data, "story", "Stories");
@@ -50,8 +50,8 @@ function populateFilter(data, key, label) {
 	var values = [];
 	$.each(data, function (index, object) {
 		if (values.indexOf(object[key]) === -1 && object[key] !== null) {
-
-			if (object[key] !== "All") {
+			console.log(object[key])
+			if (object[key] != "All") {
 				values.push(object[key]);
 			}
 		}
@@ -76,7 +76,7 @@ function populateFilter(data, key, label) {
 	filters.append(checkbox);
 	})
 
-	console.log(filters)
+
 	return filters
 }
 
@@ -84,7 +84,9 @@ function populateFilter(data, key, label) {
 
 // Function to filter and display the information cards based on selected filters
 function filterCards(data) {
+
 	
+
 	cards = data
 	var selectedStories = [];
 	var selectedModalities = [];
@@ -92,7 +94,7 @@ function filterCards(data) {
 	// Get selected story filters
 	$("#story-filters input:checked").each(function () {
 		selectedStories.push($(this).val())
-		console.log("selected stories array: " + selectedStories.push($(this).val()))			;
+		
 	});
 	console.log("selected stories " + selectedStories)
 	// Get selected modality filters
