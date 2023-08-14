@@ -26,7 +26,7 @@
 	"image": "background1.png",
 	"description": "Students will read both novels and consider how Parks’ work speaks both back to and alongside Faulkner, particularly in terms of questions regarding family, obligation, and the possibilities of love in the midst of material and social marginalization. In studying AILD, students will use DY tools as well as archival material.",
 	"modality": [ "In-Person", "Online Synchronous" ],
-	"paired_author": "Suzan Lori-Parks",
+	"paired_author": [ "Suzan Lori-Parks" ],
 	"url": "watson1.html"
   },
   {
@@ -44,7 +44,7 @@
 	"image": "background4.png",
 	"description": "This lesson explores how Faulkner and Richard Wright portray coming of age",
 	"modality": [ "Online Synchronous" ],
-	"paired_author": "Richard Wright",
+	"paired_author": [ "Richard Wright" ],
 	"url": "dimock1.html"
 
   },
