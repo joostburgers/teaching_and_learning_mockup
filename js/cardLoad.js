@@ -22,113 +22,19 @@ function getCards() {
 			defineCheckboxes("story")
 			defineCheckboxes("modality")
 			defineCheckboxes("paired_author")
+
+			filterCards(data);
 			$("#story-filters input[type='checkbox']").on('change', function () {
 				filterCards(data);
 			})
-
-			/*$("#story-filters input[type='checkbox']").on('change', function () {
-				console.log($(this))
-				if ($(this).val() !== "all") {
-					if ($(this).is(':checked')) {
-						$("#story-filters input[value='all']").prop('indeterminate', true);
-					}
-					else {
-						var count = $("#story-filters input[type='checkbox']:checked").length;
-						if (count === 0) {
-							$(this).prop('checked', true);
-						}
-						else {
-							$("#story-filters input[value='all']").prop('indeterminate', true);
-						}
-					}
-				}
-				else {
-					if ($(this).is(':checked')) {
-						$("#story-filters input[type='checkbox']").prop('checked', false);
-						$("#story-filters input[value='all']").prop('checked', true);
-						$("#story-filters input[type='checkbox']").prop('indeterminate', false);
-					}
-					else {
-						$("#story-filters input[value='all']").prop('checked', false);
-						$("#story-filters input[type='checkbox']").prop('indeterminate', true);
-					}
-				}
-
-				filterCards(data);
-			});
-
-
-
-			*//*$('#story-filters input[value="all"]').prop('checked', true).change();*//*
 			$("#modality-filters input[type='checkbox']").on('change', function () {
-
-				if ($(this).val() !== "all") {
-					if ($(this).is(':checked')) {
-						$("#modality-filters input[value='all']").prop('indeterminate', true);
-					}
-					else {
-						var count = $("#modality-filters input[type='checkbox']:checked").length;
-						if (count === 0) {
-							$(this).prop('checked', true);
-						}
-						else {
-							$("#modality-filters input[value='all']").prop('indeterminate', true);
-						}
-					}
-				}
-				else {
-					if ($(this).is(':checked')) {
-						$("#modality-filters input[type='checkbox']").prop('checked', false);
-						$("#modality-filters input[value='all']").prop('checked', true);
-						$("#modality-filters input[type='checkbox']").prop('indeterminate', false);
-					}
-					else {
-						$("#modality-filters input[value='all']").prop('checked', false);
-						$("#modality-filters input[type='checkbox']").prop('indeterminate', true);
-					}
-				}
-
-
-
-
 				filterCards(data);
-			});
+			})
+			$("#paired_author-filters input[type='checkbox']").on('change', function () {
+				filterCards(data);
+			})
 
-
-			$("#paired_author-filters input").on('change', function () {
-
-			if ($(this).val() !== "all") {
-				if ($(this).is(':checked')) {
-					$("#paired_author-filters input[value='all']").prop('indeterminate', true);
-				}
-				else {
-					var count = $("#paired_author-filters input[type='checkbox']:checked").length;
-					if (count === 0) {
-						$(this).prop('checked', true);
-					}
-					else {
-						$("#paired_author-filters input[value='all']").prop('indeterminate', true);
-					}
-				}
-			}
-			else {
-				if ($(this).is(':checked')) {
-					$("#paired_author-filters input[type='checkbox']").prop('checked', false);
-					$("#paired_author-filters input[value='all']").prop('checked', true);
-					$("#paired_author-filters input[type='checkbox']").prop('indeterminate', false);
-				}
-				else {
-					$("#paired_author-filters input[value='all']").prop('checked', false);
-					$("#paired_author-filters input[type='checkbox']").prop('indeterminate', true);
-				}
-			}
-
-
-
-
-			 filterCards(data); });*/
-
-
+			
 		}
 	}).done(function () {
 		console.log("Card data loaded successfully");
@@ -158,29 +64,24 @@ function populateFilter(data, key, label) {
 				values.push(object[key]);
 			}
 		}
-		//if there are modalities in the object then loop over them and add them to the stories array
+		
 	});
-
-	
+		
 	values = values.flat()
 	values = Array.from(new Set(values))
 	values = values.sort()
-
-
 	
-
 	var filters = $(`#${key}-filters`);
 	filters.empty();
 
-	var allCheckbox = $(`<div class='form-check'><input class='form-check-input all-${key}' type='checkbox' value='all' checked><label class='form-check-label'>All ${label}</label></div>`);
+	var allCheckbox = $(`<div class='form-check'><input class='form-check-input all-${key}' type='checkbox' value='all' checked><label class='form-check-label align-middle'>All ${label}</label></div>`);
 	filters.append(allCheckbox);
 
 	$.each(values, function (index, value) {
 		
-		var checkbox = $(`<div class='form-check'><input class='form-check-input single-${key}' type='checkbox' value='${value}' ><label class='form-check-label'>${value}</label></div>`)
+		var checkbox = $(`<div class='form-check'><input class='form-check-input single-${key}' type='checkbox' value='${value}' ><label class='form-check-label align-middle'>${value}</label></div>`)
 	filters.append(checkbox);
 	})
-
 
 	return filters
 }
@@ -290,12 +191,20 @@ function filterCards(data) {
 		});
 
 		var Authorselected = false;
-		selectedAuthors.forEach(function (selectedAuthor) {
-			if (card.paired_author.includes(selectedAuthor) || selectedAuthor === "all") {
-				Authorselected = true;
-			}
-		})
+		
 
+		if (selectedAuthors == "all") {
+			Authorselected=true
+		}
+
+
+		if (card.paired_author !== null && selectedAuthors !== "all") {
+			selectedAuthors.forEach(function (selectedAuthor) {
+				if (card.paired_author.includes(selectedAuthor) || selectedAuthor === "all") {
+					Authorselected = true;
+				}
+			})
+		} 
 		
 
 		if (
@@ -305,104 +214,47 @@ function filterCards(data) {
 		}
 	});
 
+
+	filteredCards.sort(function (a, b) {
+		var titleA = a.title.toLowerCase();
+		var titleB = b.title.toLowerCase();
+		if (titleA < titleB) {
+			return -1;
+		}
+		if (titleA > titleB) {
+			return 1;
+		}
+		return 0;
+	});
+
 	// Display filtered cards
 	var cardContainer = $("#card-container");
 	cardContainer.empty();
 
+
+
+
 	$.each(filteredCards, function (index, card) {
-		var cardHtml = $("<div class='col'><a href='pages/" + card.url + "'><div class='card'><div class = 'info'><img src=images/" + ((card.image == "") ? 'background2.png' : card.image) + " class='card-img-top'><h5 class='card-title'>" + card.title + "</h5></div><div class='card-body'><p class='card-text'>" + ((card.story.length > 1) ? 'Stories: ' : 'Story: ') + card.story + "</p><p class='card-text'>Description: " + card.description + "</p><p class='card-text'>Modality: " + card.modality + "</p><p class='card-text'>" + ((card.paired_author !== null) ? 'Paired author: ' + card.paired_author : '') + "</p></div ></div ></a ></div > ");
+
+		const imageHTML = `<img src="images/${((card.image == "") ? 'background2.png' : card.image)}" class="card-img-top">`
+
+		const titleHTML = `<h5 class="card-title">${card.title}</h5>`
+
+		const storyHTML = `<p class="card-text">${((card.story.length > 1) ? 'Stories: ' : 'Story: ') + card.story}</p>`
+
+		const descriptionHTML = `<p class="card-text">Description: ${card.description}</p>`
+
+		const modalityHTML = `<p class="card-text">Modality: ${card.modality}</p>`
+
+		const paired_authorHTML = card.paired_author !== null ? `<p class= "card-text">Paired author: ${card.paired_author} </p>` : ''
+
+		var cardHtml = $(`<a href="pages/${card.url}"> <div class="card"> <div class="info"> ${imageHTML}${titleHTML}
+		 </div>
+		 <div class="card-body"> ${storyHTML} ${modalityHTML} ${paired_authorHTML}${descriptionHTML}  </div > </div > </a > `)
+
+
+
+		/*var cardHtml = $("<div class='col'><a href='pages/" + card.url + "'><div class='card'><div class = 'info'><img src=images/" + ((card.image == "") ? 'background2.png' : card.image) + " class='card-img-top'><h5 class='card-title'>" + card.title + "</h5></div><div class='card-body'><p class='card-text'>" + ((card.story.length > 1) ? 'Stories: ' : 'Story: ') + card.story + "</p><p class='card-text'>Description: " + card.description + "</p><p class='card-text'>Modality: " + card.modality + "</p><p class='card-text'>" + ((card.paired_author !== null) ? 'Paired author: ' + card.paired_author : '') + "</p></div ></div ></a ></div > ");*/
 		cardContainer.append(cardHtml);
 	});
 }
-
-/*function populateStoryFilters(data) {
-	cards = data
-	var stories = [];
-
-	$.each(cards, function (index, card) {
-		if (stories.indexOf(card.story) === -1) {
-			stories.push(card.story);
-
-		}
-		//if there are multiple stories in the object then loop over them and add them to the stories array
-
-	});
-
-	// turn stories into one array of stories
-	stories = stories.flat();
-	stories = Array.from(new Set(stories))
-	stories = stories.sort()
-
-
-	var storyFilters = $("#story-filters");
-	storyFilters.empty();
-
-	var allCheckbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='all' checked><label class='form-check-label'>All Stories</label></div>");
-	storyFilters.append(allCheckbox);
-
-	$.each(stories, function (index, story) {
-		var checkbox = $(`<div class='form-check'><input class='form-check-input' type='checkbox' value=${story}><label class='form-check-label'>${story}</label></div>`
-		);
-		storyFilters.append(checkbox);
-	});
-}*/
-
-/*function populateAuthorFilters(data) {
-	cards = data
-	var authors = [];
-
-	$.each(cards, function (index, card) {
-		if (authors.indexOf(card.paired_author) === -1 && card.paired_author !== null) {
-			authors.push(card.paired_author);
-		}
-		//if there are modalities in the object then loop over them and add them to the stories array
-	});
-
-	// turn stories into one array of stories
-	authors = authors.flat();
-	authors = Array.from(new Set(authors))
-	authors = authors.sort()
-	
-	var authorFilters = $("#author-filters");
-	authorFilters.empty();
-
-	var allAuthors = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='all' checked><label class='form-check-label'>All Authors</label></div>");
-	authorFilters.append(allAuthors);
-
-
-	$.each(authors, function (index, author) {
-		var checkbox = $(`<div class='form-check'><input class='form-check-input' type='checkbox' value=${author}><label class='form-check-label'>${author}</label></div>`
-		);
-		authorFilters.append(checkbox);
-	});
-}
-
-function populateModalityFilters(data) {
-	cards = data;
-	var modalities = [];
-
-	$.each(cards, function (index, card) {
-		if (modalities.indexOf(card.modality) === -1 && card.modality !== null) {
-			modalities.push(card.modality);
-		}
-		
-	});
-
-	modalities = modalities.flat();
-	modalities = Array.from(new Set(modalities))
-	modalities = modalities.sort()
-
-	var modalityFilters = $("#modality-filters");
-	modalityFilters.empty();
-
-	var allModalities = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='all' checked><label class='form-check-label'>All Modalities</label></div>");
-	modalityFilters.append(allModalities);
-
-	$.each(modalities, function (index, modality) {
-		var checkbox = $("<div class='form-check'><input class='form-check-input' type='checkbox' value='" + modality + "><label class='form-check-label'>" + modality + "</label></div>");
-		modalityFilters.append(checkbox);
-	});
-
-}*/
-
-
