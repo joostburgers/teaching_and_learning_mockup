@@ -87,3 +87,18 @@
 	font-weight: normal;
 }
 
+.novel {
+	font-style: italic;
+}
+
+.short_story {
+	quotes: "\201c" "\201d";
+}
+
+.short_story::before{
+content: open-quote;
+}
+
+.short_story::after{
+content: close-quote;
+}
