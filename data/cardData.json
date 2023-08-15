@@ -13,7 +13,13 @@
   {
 	"title": "<em>As I Lay Dying</em> Digital Escape Room",
 	"image": "archive_manuscript_aild_35_card.jpg",
-	"story": [ "As I Lay Dying" ],
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
+	],
 	"description": "Students will use various DY tools to complete an escape room and acquire information regarding historical, geographical, and cultural context of the novel.",
 	"modality": [ "In-Person" ],
 	"paired_author": null,
@@ -21,7 +27,18 @@
   },
   {
 	"title": "Love and Family in <em>As I Lay Dying</em> and <em>Getting Mother’s Body</em>",
-	"story": [ "As I Lay Dying", "Getting Mother's Body'" ],
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  },
+	  {
+		"title": "Getting Mother's Body",
+		"type": "novel",
+		"year": "2003"
+	 }
+	],
 	"image": "archive_manuscript_gdm_genealogical_chart_card.jpg",
 	"description": "Students will read both novels and consider how Parks’ work speaks both back to and alongside Faulkner, particularly in terms of questions regarding family, obligation, and the possibilities of love in the midst of material and social marginalization. In studying AILD, students will use DY tools as well as archival material.",
 	"modality": [ "In-Person", "Online Synchronous" ],
@@ -31,7 +48,13 @@
   {
 	"title": "Exploring the Worlds of Faulkner's Female Characters",
 	"image": "site_photograph_a_child_of_scarbroughs_in_front_of_dresser_card.jpg",
-	"story": [ "The Sound and the Fury" ],
+	"story": [
+	  {
+		"title": "The Sound and the Fury",
+		"type": "novel",
+		"year": "1929"
+	  }
+	],
 	"description": "Students will use multiple features of DY to consider how Faulkner writes his female characters. This lesson is focused on The Sound and the Fury but can be adapted for other Faulkner stories featuring central female characters.",
 	"modality": [ "In-Person", "Online Synchronous" ],
 	"paired_author": null,
@@ -39,7 +62,18 @@
   },
   {
 	"title": "'Barn Burning' and 'The Man Who Was Almost a Man': Sharecropping and Coming of Age in Mississippi",
-	"story": [ "Barn Burning", "The Man Who Was Almost A Man" ],
+	"story": [
+	  {
+		"title": "Barn Burning",
+		"type": "short_story",
+		"year": "1939"
+	  },
+	  {
+		"title": "The Man Who Was Almost A Man",
+		"type": "short_story",
+	  		"year": "1940"
+	  }
+	],
 	"image": "site_photograph_plantation_cabin_card.jpg",
 	"description": "This lesson explores how Faulkner and Richard Wright portray coming of age.",
 	"modality": [ "Online Synchronous" ],
@@ -49,7 +83,13 @@
   },
   {
 	"title": "Collaborating on a Genealogy for  <em>As I Lay Dying</em>",
-	"story": [ "As I Lay Dying" ],
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
+	],
 	"image": "archive_manuscript_gdm_genealogical_chart_card.jpg",
 	"description": "Since each member of the Bundren family in  <em>As I Lay Dying</em>  has a different view of what it means to be a “family,” in this project we replace a one-size-fits-all genealogical chart with an evolving genealogy that reflects characters’ changing perspectives as the story unfolds.  This is a multi-media project that connects writing and visual art, and pairs at-home student work with in-class collaboration and presentation.",
 	"modality": [ "In-Person" ],
@@ -59,7 +99,18 @@
   },
   {
 	"title": "Faulkner Fan Fic: Practicing Character Development and Scene Building in Faulkner’s Universe",
-	"story": [ "Barn Burning", "Everyday Use" ],
+	"story": [
+	  {
+		"title": "Barn Burning",
+		"type": "short_story",
+		"year": "1939"
+	  },
+	  {
+		"title": "Everyday Use",
+		"type": "short_story",
+		"year": "1973"
+	  }
+	],
 	"image": "archive_manuscript_barn_burning_1_card.jpg",
 	"description": "This is a creative writing exercise which gives voice to minor characters in William Faulkner’s universe. Students will use Digital Yoknapatawpha to flesh out minor characters and rewrite scenes in Faulkner’s fiction.",
 	"modality": [ "In-Person", "Online Asynchronous" ],
@@ -79,7 +130,13 @@
   },
   {
 	"title": "Tracking Themes in <em>As I Lay Dying</em>",
-	"story": ["As I Lay Dying"],
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
+	],
 	"image": "aild_keywords_card.jpg",
 	"description": "This assignment asks students to re-imagine the fictions of Faulkner and other authors by mapping their texts.",
 	"modality": ["In-Person"],
