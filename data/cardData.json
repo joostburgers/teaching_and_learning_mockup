@@ -1,7 +1,7 @@
 [
   {
 	"title": "Multimodal Composition, Research Writing, and Digital Yoknapatawpha",
-	"image": "screen_capture_plot_structure_a_rose_for_emily_date_order_banner.png",
+	"image": "screen_capture_plot_structure_a_rose_for_emily_date_order_card.png",
 	"story": [ "All" ],
 	"description": "This activity prompts students at any level to compose literary analysis essays on any Faulkner text(s), incorporating Digital Yoknapatawpha tools as secondary research sources.",
 	"modality": [ "In-Person", "Online Asynchronous", "Online Synchronous" ],
@@ -12,7 +12,7 @@
 
   {
 	"title": "<em>As I Lay Dying</em> Digital Escape Room",
-	"image": "archive_manuscript_aild_35.jpg",
+	"image": "archive_manuscript_aild_35_card.jpg",
 	"story": [ "As I Lay Dying" ],
 	"description": "Students will use various DY tools to complete an escape room and acquire information regarding historical, geographical, and cultural context of the novel.",
 	"modality": [ "In-Person" ],
@@ -22,7 +22,7 @@
   {
 	"title": "Love and Family in <em>As I Lay Dying</em> and <em>Getting Mother’s Body</em>",
 	"story": [ "As I Lay Dying", "Getting Mother's Body'" ],
-	"image": "archive_manuscript_gdm_genealogical_chart_cropped.jpg",
+	"image": "archive_manuscript_gdm_genealogical_chart_card.jpg",
 	"description": "Students will read both novels and consider how Parks’ work speaks both back to and alongside Faulkner, particularly in terms of questions regarding family, obligation, and the possibilities of love in the midst of material and social marginalization. In studying AILD, students will use DY tools as well as archival material.",
 	"modality": [ "In-Person", "Online Synchronous" ],
 	"paired_author": [ "Suzan Lori-Parks" ],
@@ -60,7 +60,7 @@
   {
 	"title": "Faulkner Fan Fic: Practicing Character Development and Scene Building in Faulkner’s Universe",
 	"story": [ "Barn Burning", "Everyday Use" ],
-	"image": "archive_manuscript_barn_burning_1.jpg",
+	"image": "archive_manuscript_barn_burning_1_card.jpg",
 	"description": "This is a creative writing exercise which gives voice to minor characters in William Faulkner’s universe. Students will use Digital Yoknapatawpha to flesh out minor characters and rewrite scenes in Faulkner’s fiction.",
 	"modality": [ "In-Person", "Online Asynchronous" ],
 	"paired_author": [ "Alice Walker" ],
@@ -70,7 +70,7 @@
   {
 	"title": "Interpretive Mapping of Faulkner and Beyond",
 	"story": [ "All" ],
-	"image": "archive_print_1936_map_of_yoknapatawpha_cropped.jpg",
+	"image": "archive_print_1936_map_of_yoknapatawpha_card.jpg",
 	"description": "This assignment asks students to re-imagine the fictions of Faulkner and other authors by mapping their texts.",
 	"modality": [ "In-Person" ],
 	"paired_author": null,
@@ -80,7 +80,7 @@
   {
 	"title": "Tracking Themes in <em>As I Lay Dying</em>",
 	"story": ["As I Lay Dying"],
-	"image": "aild_keywords.png",
+	"image": "aild_keywords_card.png",
 	"description": "This assignment asks students to re-imagine the fictions of Faulkner and other authors by mapping their texts.",
 	"modality": ["In-Person"],
 	"paired_author": null,

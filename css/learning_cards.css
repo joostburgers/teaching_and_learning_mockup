@@ -19,9 +19,9 @@
 	margin: 20px;
 	display: flex;
 	flex-direction: column;
-	max-width: 18vw;
+	max-width: 20vw;
 	min-width: 260px;
-	height: 40vh;
+	height: 50vh;
 }
 
 	.card:hover {
@@ -43,7 +43,11 @@
 		left: 10%;
 		transform: translate(-5%, -5%);
 		background-color: rgba(94%, 97%, 100%, 0.60);
-		font-size: 1.2rem
+		font-size: 1.5rem;
+
+		@media screen and (max-width: 1280px) {
+			font-size: 125%;
+		}
 	}
 
 
