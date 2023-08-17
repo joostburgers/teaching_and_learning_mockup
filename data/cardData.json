@@ -2,13 +2,15 @@
   {
 	"title": "Multimodal Composition and 'A Rose for Emily'",
 	"image": "screen_capture_plot_structure_a_rose_for_emily_date_order_card.jpg",
-	"story": {
-	  "title": "A Rose for Emily",
-	  "type": "short_story",
-	  "year": "1929"
-	},
+	"story": [
+	  {
+		"title": "A Rose for Emily",
+		"type": "short_story",
+		"year": "1929"
+	  }
+	],
 	"description": "Students will complete DY activities to respond critically to 'A Rose for Emily,' incorporating results as part of a multimodal essay assignment.",
-	"modality": [ "In-Person", "Online Asynchronous", "Online Synchronous" ],
+	"modality": [ "In Person", "Online Asynchronous", "Online Synchronous" ],
 	"paired_author": null,
 	"url": "hayes1.html"
   },
