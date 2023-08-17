@@ -1,9 +1,13 @@
 [
   {
-	"title": "Multimodal Composition, Research Writing, and Digital Yoknapatawpha",
+	"title": "Multimodal Composition and 'A Rose for Emily'",
 	"image": "screen_capture_plot_structure_a_rose_for_emily_date_order_card.jpg",
-	"story": [ "All" ],
-	"description": "This activity prompts students at any level to compose literary analysis essays on any Faulkner text(s), incorporating Digital Yoknapatawpha tools as secondary research sources.",
+	"story": {
+	  "title": "A Rose for Emily",
+	  "type": "short_story",
+	  "year": "1929"
+	},
+	"description": "Students will complete DY activities to respond critically to 'A Rose for Emily,' incorporating results as part of a multimodal essay assignment.",
 	"modality": [ "In-Person", "Online Asynchronous", "Online Synchronous" ],
 	"paired_author": null,
 	"url": "hayes1.html"
@@ -71,12 +75,12 @@
 	  {
 		"title": "The Man Who Was Almost A Man",
 		"type": "short_story",
-	  		"year": "1940"
+		"year": "1940"
 	  }
 	],
 	"image": "site_photograph_plantation_cabin_card.jpg",
-	"description": "This lesson explores how Faulkner and Richard Wright portray coming of age.",
-	"modality": [ "Online Synchronous" ],
+	"description": "Students will use DY maps and photos to study how Faulkner and Wright use the coming of age theme to examine sharecropping in the Jim Crow era.",
+	"modality": [ "In Person","Online Asynchronous", "Online Synchronous" ],
 	"paired_author": [ "Richard Wright" ],
 	"url": "dimock1.html"
 
@@ -113,7 +117,7 @@
 	],
 	"image": "archive_manuscript_barn_burning_1_card.jpg",
 	"description": "This is a creative writing exercise which gives voice to minor characters in William Faulkner’s universe. Students will use Digital Yoknapatawpha to flesh out minor characters and rewrite scenes in Faulkner’s fiction.",
-	"modality": [ "In-Person", "Online Asynchronous" ],
+	"modality": [ "In-Person", "Online Synchronous" ],
 	"paired_author": [ "Alice Walker" ],
 	"url": "beach1.html"
 
