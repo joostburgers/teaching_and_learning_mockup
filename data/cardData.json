@@ -120,9 +120,15 @@
   },
   {
 	"title": "Interpretive Mapping of Faulkner and Beyond",
-	"story": [ "All" ],
+	"story": [
+	  {
+		"title": "Go Down, Moses",
+		"type": "novel",
+		"year": "1942"
+	  }
+	],
 	"image": "archive_print_1936_map_of_yoknapatawpha_card.jpg",
-	"description": "This assignment asks students to re-imagine the fictions of Faulkner and other authors by mapping their texts.",
+	"description": "Students will interpret the fictions of Faulkner and other authors by mapping their texts.",
 	"modality": [ "In-Person" ],
 	"paired_author": null,
 	"url": "joiner1.html"
