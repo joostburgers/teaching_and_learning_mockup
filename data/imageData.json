@@ -24,6 +24,110 @@
 	}
 
   },
+  {
+	"media_type": "site_photograph",
+
+	"creators": [
+	  {
+		"last_name": "Rothstein",
+		"first_name": "Arthur"
+	  }
+	],
+	"title": "Untitled photograph, Woman and children picking cotton",
+	"year": "1935",
+	"place": "Mississippi",
+	"description": "Woman and children picking cotton. Photograph possibly related to other photographs in Lauderdale County, Mississippi",
+	"filename": "site_photograph_woman_children_picking_cotton.jpg",
+
+	"alt_text": "Woman and children picking cotton. Photograph possibly related to other photographs in Lauderdale County, Mississippi",
+	"repository": {
+	  "name": "Library of Congress Prints and Photographs Division",
+	  "collection": "Prints and Photographs Online Catalog",
+	  "accession": "LC-USF33- 002040-M3 [P&P]",
+	  "place": "Washington, D.C.",
+	  "url": "https://www.loc.gov/pictures/collection/fsa/item/2017720852/"
+	}
+
+  },
+
+  {
+	"media_type": "site_photograph",
+
+	"creators": [
+	  {
+		"last_name": "Lange",
+		"first_name": "Dorothea"
+	  }
+	],
+	"title": "These cotton hoers work from 6 a.m. to 7 p.m. for one dollar near Clarksdale, Mississippi",
+	"year": "1937",
+	"place": "Clarksdale, Mississippi",
+	"description": "These cotton hoers work from 6 a.m. to 7 p.m. for one dollar near Clarksdale, Mississippi",
+	"filename": "site_photograph_cotton_hoers_clarksdale_mississippi.jpg",
+
+	"alt_text": "These cotton hoers work from 6 a.m. to 7 p.m. for one dollar near Clarksdale, Mississippi",
+	"repository": {
+	  "name": "Library of Congress Prints and Photographs Division",
+	  "collection": "Prints and Photographs Online Catalog",
+	  "accession": "LC-USF34- 017464-E [P&P] LOT 1643",
+	  "place": "Washington, D.C.",
+	  "url": "https://www.loc.gov/pictures/collection/fsa/item/2017770258/"
+	}
+
+  },
+
+  {
+	"media_type": "site_photograph",
+
+	"creators": [
+	  {
+		"last_name": "Lee",
+		"first_name": "Russell"
+	  }
+	],
+	"title": "House of sharecroppers near Pace, Mississippi. Background photo for Sunflower Plantation",
+	"year": "1939",
+	"place": "near Pace, Mississippi",
+	"description": "House of sharecroppers near Pace, Mississippi. Background photo for Sunflower Plantation",
+	"filename": "site_photograph_house_of_share_croppers.jpg",
+
+	"alt_text": "House of sharecroppers near Pace, Mississippi. Background photo for Sunflower Plantation",
+	"repository": {
+	  "name": "Library of Congress Prints and Photographs Division",
+	  "collection": "Prints and Photographs Online Catalog",
+	  "accession": " LC-USF33- 011946-M4 [P&P] LOT 1652",
+	  "place": "Washington, D.C.",
+	  "url": "https://www.loc.gov/pictures/collection/fsa/item/2017738792/"
+	}
+
+  },
+
+  {
+	"media_type": "site_photograph",
+
+	"creators": [
+	  {
+		"last_name": "Wolcott",
+		"first_name": "Marion Post"
+	  }
+	],
+	"title": "Daughter of Cube Walker, Negro tenant purchase client, Belzoni, Mississippi Delta, bringing home cow from the fields in the evening.",
+	"year": "1939",
+	"place": "Mississippi Delta, Mississippi",
+	"description": "Daughter of Cube Walker, Negro tenant purchase client, Belzoni, Mississippi Delta, bringing home cow from the fields in the evening. Mississippi Delta, Mississippi",
+	"filename": "site_photograph_tenants_daughter_with_cow.jpg",
+
+	"alt_text": "Daughter of Cube Walker, Negro tenant purchase client, Belzoni, Mississippi Delta, bringing home cow from the fields in the evening. Mississippi Delta, Mississippi",
+	"repository": {
+	  "name": "Library of Congress Prints and Photographs Division",
+	  "collection": "Prints and Photographs Online Catalog",
+	  "accession": " LC-USF34- 052272-D [P&P] LOT 1651",
+	  "place": "Washington, D.C.",
+	  "url": "https://www.loc.gov/pictures/item/2017801518/"
+	}
+
+  },
+
 
   {
 	"media_type": "site_photograph",
