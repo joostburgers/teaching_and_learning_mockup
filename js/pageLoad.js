@@ -498,20 +498,23 @@ function setLessonData(data) {
 
 	const originalLessonsHTML = data.original_lesson_plan !== null ? `<p>Original lesson plan: <ul class="activity-list-unordered-blank">${createSamples(data.original_lesson_plan, data.filename)}</ul></p>` : '';
 
-
-	teachers.html(`${pilotClassroomHTML}${learningGoalsHTML} ${studentSamplesHTML}${commonCoreHTML}${originalLessonsHTML}`)
-
-
-	const instructorHTML = data.instructor !== null ? `<p>Instructor: ${data.instructor}</p>` : '';
-
-	const contactHTML = data.contact !== null ? `<p>Contact: <a href = "mailto: ${data.contact}">${data.contact}</a></p>` : '';
-
-	console.log(data.created)
-	const createdHTML = data.created !== null ? `<p>Date created: ${new Date(data.created).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</p>` : '';
-
 	const notesHTML = data.notes !== null ? `<p>Notes: <ul class="activity-list-unordered"> ${createList(data.notes)}</ul></p>` : '';
 
-	about.html(`${instructorHTML}${contactHTML}${createdHTML}${notesHTML}`)
+	teachers.html(`${pilotClassroomHTML}${learningGoalsHTML} ${studentSamplesHTML}${commonCoreHTML}${originalLessonsHTML}${notesHTML}`)
+
+
+	const instructorHTML = data.instructor !== null ? `<p>${data.instructor}</p>` : '';
+
+	const institutionHTML = (data.institution !== null || data.institution !== undefined) ? `<p>${data.institution}</p>` : '';
+
+	const contactHTML = data.contact !== null ? `<p><a href = "mailto: ${data.contact}">${data.contact}</a></p>` : '';
+
+	console.log(data.created)
+	const createdHTML = data.created !== null ? `<p>Created: ${new Date(data.created).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</p>` : '';
+
+	
+
+	about.html(`${instructorHTML}${institutionHTML}${contactHTML}${createdHTML}`)
 }
 
 function createList(array) {
