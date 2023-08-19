@@ -126,32 +126,32 @@
 	"notes": [ "This is where the notes go as array" ]
   },
 
-  {
-	"filename": "joiner1.html",
-	"pilot_classroom": "Short description as string",
-	"learning_goals": [ "learning goals as array" ],
-	"common_core": [ "common core as array" ],
-	"student_samples": [
-	  {
-		"first_name": null,
-		"last_name": null,
-		"title": null,
-		"filename": null,
-		"file_type": "Used to set icon. One of pdf, word, pptx, image"
-	  }
-	],
-	"original_lesson_plan": [
-	  {
-		"title": null,
-		"filename": null,
-		"file_type": "Used to set icon. One of pdf, word, pptx, image"
-	  }
-	],
-	"instructor": "Jennie Joiner",
-	"contact": null,
-	"created": "2023-07-23",
-	"notes": [ "This is where the notes go as array" ]
-  },
+	{
+		"filename": "joiner1.html",
+		"pilot_classroom": "Advanced Studies in Literature:  William Faulkner and James Fenimore Cooper",
+		"learning_goals": [ "Understand how language shapes and influences understandings of place and space and, more specifically, how authors have created literary spaces that represent and respond to physical, cultural, historical and social contexts of Mississippi and New York", "Develop the skills to shape complex questions and evaluate competing points of view about a text and explore understandings orally, visually, digitally, and in writing", "Synthesize close readings and create multimodal texts that demonstrate understandings of audience, purpose, and context", "Apply digital humanities research and conceptual skills for problem solving" ],
+		"common_core": [ "Common Core 1" , "Common Core 2" , "Common Core 3" ],
+		"student_samples": [
+			{
+				"first_name": null,
+				"last_name": null,
+				"title": null,
+				"filename": null,
+				"file_type": "Used to set icon. One of pdf, word, pptx, image"
+			}
+		],
+		"original_lesson_plan": [
+			{
+				"title": null,
+				"filename": null,
+				"file_type": "Used to set icon. One of pdf, word, pptx, image"
+			}
+		],
+		"instructor": "Jennie Joiner",
+		"contact": null,
+		"created": "2023-07-23",
+		"notes": [ "In an era of discussions of artificial intelligence complicating the literature classroom, these series of assignments helped students develop critical thinking and interpretive skills without writing a traditional literary essay.  The maps students created of Cooper’s Templeton were thoughtful and creative and very, very different.   Some were craftier, one challenged my understanding of a map, and all demonstrated high level critical thinking skills, problem solving skills, and deep understandings of the text.  While this series of lessons was used in an advanced literature course, I also use many of these activities in introductory literature courses as well.  These activities require students to do very close readings of a text and offer them opportunities to find location-specific contextual clues within particular passages." ]
+	},
 
   {
 	"filename": "mills1.html",
