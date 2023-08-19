@@ -178,21 +178,24 @@
 		"first_name": "Johannes"
 	  }
 	],
-	"title": "Video Tutorial of Force Directed Graph",
+	"title": "Video Tutorial Characters in Main Map Display 'Barn Burning'",
 	"description": "Instructional video for searching for characters on the main map display",
 	"duration": "00:00:20",
 	"file_size": "1.17 MB",
 	"created": "2023-08-04T00:00:00Z",
 	"filename": "video_tutorial_characters_in_map_barn_burning.mp4",
 	"media_type": "quick_tutorial",
-	"media_label": "Tutorial",
+	"media_label": "Quick Tutorial",
 	"tool": "Character search main map display",
 	"repository": {
 	  "name": "Digital Yoknapatawpha",
 	  "place": "University of Virginia"
 	},
 	"alt_text": "Video tutorial demonstrating how to search for a specific character using the main map display",
-	"url": "http://faulkner.iath.virginia.edu/?text=BB"
+	"url": "http://faulkner.iath.virginia.edu/?text=BB",
+	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/Loc_Char_FDDemo.mp4",
+	"full_demo_duration": "11:17",
+	"full_demo_title": "Using the text-map pages"
   },
 
 
