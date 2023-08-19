@@ -486,7 +486,7 @@ function setLessonData(data) {
 	const about = $('#AboutInfo');
 
 	//Each HTML stub is created if the value in the at the key is actually a value and not null. This prevents everyone having to fill out all the exact same metadata
-	console.log(data)
+	
 	const pilotClassroomHTML = data.pilot_classroom !== null ? `<p> Pilot classroom: ${data.pilot_classroom}</p>` : '';
 
 	const learningGoalsHTML = data.learning_goals !== null ? `<p>Learning Goals: <ul class="activity-list">${createList(data.learning_goals)}</ul></p>` : '';
@@ -503,18 +503,25 @@ function setLessonData(data) {
 	teachers.html(`${pilotClassroomHTML}${learningGoalsHTML} ${studentSamplesHTML}${commonCoreHTML}${originalLessonsHTML}${notesHTML}`)
 
 
-	const instructorHTML = data.instructor !== null ? `<p>${data.instructor}</p>` : '';
+	const institutionHTML = (data.institution !== null && data.institution !== undefined) ? `<span>, ${data.institution}</span>` : '';
 
-	const institutionHTML = (data.institution !== null || data.institution !== undefined) ? `<p>${data.institution}</p>` : '';
-
-	const contactHTML = data.contact !== null ? `<p><a href = "mailto: ${data.contact}">${data.contact}</a></p>` : '';
-
-	console.log(data.created)
-	const createdHTML = data.created !== null ? `<p>Created: ${new Date(data.created).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</p>` : '';
+	const instructorHTML = data.instructor !== null ? `<h4>${data.instructor}${institutionHTML}</h4>` : '';
 
 	
 
-	about.html(`${instructorHTML}${institutionHTML}${contactHTML}${createdHTML}`)
+	const contactHTML = data.contact !== null ? `<p><a href = "mailto: ${data.contact}">${data.contact}</a></p>` : '';
+
+	
+	const lastUpdatedDate = new Date(document.lastModified);
+
+	const pageLastUpdate = ` | Updated: ${lastUpdatedDate.toLocaleString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric'})}`;
+	
+
+	const createdHTML = data.created !== null ? `<p class="glance-updated">Created: ${new Date(data.created).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric' })}<span>${pageLastUpdate}</span></p>` : '';
+
+	
+
+	about.html(`${instructorHTML}${contactHTML}${createdHTML}`)
 }
 
 function createList(array) {

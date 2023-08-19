@@ -325,15 +325,28 @@ div.activity-text {
 	font-size: 2.5em;
 	color: #9d4040;
 	width: 100%;
+	padding:10px;
 	@media screen and (max-width: 800px) {
 		font-size: 125%;
 	}
 }
 
+.glance-subtitle {
+	font-size: .85em;
+	color: #333333;
+	width: 100%;
+	padding-top: 10px;
+
+	@media screen and (max-width: 800px) {
+		font-size: 100%;
+	}
+}
+
+
 .glance-info {
 	position: relative;
 	text-align: left;
-	color: white;
+	
 	max-width: 100%;
 	font-size: 80%;
 }
@@ -346,15 +359,28 @@ div.activity-text {
 	transform: translate(-25%, -50%);
 	background: rgba(255, 255, 255, 0.5);
 	padding: 20px;
+	backdrop-filter:blur(2px)
 }
 
 .glance-bottom {
 	position: absolute;
 	bottom: 0px;
-	left: 0px;
+	right: 0px;
 	padding-left: 20px;
 	padding-right: 20px;
 	background-color: rgba(255, 255, 255, 0.5);
+	color: #333333;
+}
+
+	.glance-bottom h4 {
+		font-size: 1.5em;
+		color: #333333;
+	}
+
+.glance-bottom p{
+
+	font-size: 100%;
+	font-weight: 400;
 }
 
 	/*.glance-bottom p {
@@ -371,6 +397,27 @@ div.activity-text {
 	color:black;
 
 }
+
+.glance-bottom {
+	position: absolute;
+	bottom: 8px;
+	left: 0px;
+	right: 0px;
+
+	padding: 20px;
+	background-color: transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+	.glance-bottom a {
+		float: left;
+	}
+
+	.glance-bottom span.right {
+		float: right;
+	}
 
 .glance-text {
 	font-family: Georgia, "Times New Roman", Times, serif;
