@@ -1,5 +1,4 @@
 [
-
   {
 	"filename": "beach1.html",
 	"title": "Faulkner Fan Fic: Practicing Character Development and Scene Building in Faulkner’s Universe",
@@ -15,16 +14,14 @@
 		"year": "1973"
 	  }
 	],
-
+	
 	"image": {
 	  "card": "archive_manuscript_barn_burning_1_card.jpg",
 	  "banner": "archive_manuscript_barn_burning_1_banner.jpg"
 	},
-
 	"description": "This is a creative writing exercise which gives voice to minor characters in William Faulkner’s  universe. Students will use Digital Yoknapatawpha to flesh out minor characters and rewrite scenes in Faulkner’s fiction.",
 	"modality": [ "In-Person", "Online Synchronous" ],
 	"paired_author": [ "Alice Walker" ],
-
 	"pilot_classroom": "This project was piloted in a synchronous online creative writing class for college freshmen and sophomores at St. Louis Community College.",
 	"learning_goals": [ "To identify major and minor characters, point of view, setting, scene building, and plot.", "To research social/historical context in imaginative writing through the use of digital resources.", "To practice stepping outside of self to write/invent characters and scenes from different perspectives in different time periods." ],
 	"common_core": null,
@@ -49,17 +46,17 @@
 	"contact": "mbeach7@stlcc.edu",
 	"created": "2023-07-23",
 	"notes": [ "Each activity can be used as scaffolded for the final product or can be used separately depending on the instructor’s desired outcomes.", "You will need to allot some time to in-class instruction on Digital Yoknapatawpha.  The DY tools and pages for this assignment are fairly simple to use.", "Community college students come in a wide range of ages and backgrounds. This class had high school dual-enrolled students as well as older adults who already had college degrees and were taking the course for enrichment. The project was successful considering the wide range of maturity and knowledge about Faulkner. Some students were aware of Faulkner’s work, some students had read Faulkner novels, and some students were introduced to Faulkner with this project." ]
-  },
+ },
 
-  {
-	"filename": "bryant1.html",
-	"title": "<em>As I Lay Dying</em> Digital Escape Room",
-	"story": [
-	  {
-		"title": "As I Lay Dying",
-		"type": "novel",
-		"year": "1930"
-	  }
+ {
+  "filename": "bryant1.html",
+  "title": "<em>As I Lay Dying</em> Digital Escape Room",
+  "story": [
+	{
+	"title": "As I Lay Dying",
+	"type": "novel",
+	"year": "1930"
+	}
 	],
 
 	"image": {
@@ -68,7 +65,7 @@
 	},
 
 	"description": "Students will use various DY tools to complete an escape room and acquire information regarding historical, geographical, and cultural context of the novel.",
-	"modality": [ "In-Person"],
+	"modality": [ "In-Person" ],
 	"paired_author": null,
 	"pilot_classroom": "Short description as string",
 	"learning_goals": [ "learning goals as array" ],
@@ -79,14 +76,14 @@
 		"last_name": null,
 		"title": null,
 		"filename": null,
-		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+		"file_type": null
 	  }
 	],
 	"original_lesson_plan": [
 	  {
 		"title": null,
 		"filename": null,
-		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+		"file_type": null
 	  }
 	],
 	"instructor": "Taylor Bryant",
@@ -130,14 +127,14 @@
 	  {
 		"title": "Piloted Assignment",
 		"filename": "barn_burning_and_the_man_who_was_almost_a_man.docx",
-		"file_type": "pdf"
+		"file_type": "word"
 	  }
 	],
 	"instructor": "Chase Dimock",
 	"institution": "College of the Canyons",
 	"contact": "chase.dimock@canyons.edu",
 	"created": "2023-07-23",
-	"notes": [ "" ]
+	"notes": null
   },
   {
 	"filename": "hayes1.html",
@@ -181,7 +178,7 @@
 	"created": "2023-07-23",
 	"notes": null
   },
-  
+
   {
 	"filename": "lastname1.html",
 	"pilot_classroom": "Short description as string",
@@ -209,37 +206,66 @@
 	"notes": [ "This is where the notes go as array" ]
   },
 
-	{
-	  "filename": "joiner1.html",
-
-
-		"pilot_classroom": "Advanced Studies in Literature:  William Faulkner and James Fenimore Cooper",
-		"learning_goals": [ "Understand how language shapes and influences understandings of place and space and, more specifically, how authors have created literary spaces that represent and respond to physical, cultural, historical and social contexts of Mississippi and New York", "Develop the skills to shape complex questions and evaluate competing points of view about a text and explore understandings orally, visually, digitally, and in writing", "Synthesize close readings and create multimodal texts that demonstrate understandings of audience, purpose, and context", "Apply digital humanities research and conceptual skills for problem solving" ],
-		"common_core": [ "Common Core 1" , "Common Core 2" , "Common Core 3" ],
-		"student_samples": [
-			{
-				"first_name": null,
-				"last_name": null,
-				"title": null,
-				"filename": null,
-				"file_type": "Used to set icon. One of pdf, word, pptx, image"
-			}
-		],
-		"original_lesson_plan": [
-			{
-				"title": null,
-				"filename": null,
-				"file_type": "Used to set icon. One of pdf, word, pptx, image"
-			}
-		],
-		"instructor": "Jennie Joiner",
-		"contact": null,
-		"created": "2023-07-23",
-		"notes": [ "In an era of discussions of artificial intelligence complicating the literature classroom, these series of assignments helped students develop critical thinking and interpretive skills without writing a traditional literary essay.  The maps students created of Cooper’s Templeton were thoughtful and creative and very, very different.   Some were craftier, one challenged my understanding of a map, and all demonstrated high level critical thinking skills, problem solving skills, and deep understandings of the text.  While this series of lessons was used in an advanced literature course, I also use many of these activities in introductory literature courses as well.  These activities require students to do very close readings of a text and offer them opportunities to find location-specific contextual clues within particular passages." ]
+  {
+	"filename": "joiner1.html",
+	"title": "Interpretive Mapping of Faulkner and Beyond",
+	"story": [
+	  {
+		"title": "Go Down, Moses",
+		"type": "novel",
+		"year": "1942"
+	  }
+	],
+	"image": {
+	  "banner": "archive_print_1936_map_of_yoknapatawpha_banner.jpg",
+	  "card": "archive_print_1936_map_of_yoknapatawpha_card.jpg"
 	},
+	"description": "Students will interpret the fictions of Faulkner and other authors by mapping their texts.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": "Advanced Studies in Literature:  William Faulkner and James Fenimore Cooper",
+	"learning_goals": [ "Understand how language shapes and influences understandings of place and space and, more specifically, how authors have created literary spaces that represent and respond to physical, cultural, historical and social contexts of Mississippi and New York", "Develop the skills to shape complex questions and evaluate competing points of view about a text and explore understandings orally, visually, digitally, and in writing", "Synthesize close readings and create multimodal texts that demonstrate understandings of audience, purpose, and context", "Apply digital humanities research and conceptual skills for problem solving" ],
+	"common_core": null,
+	"student_samples": [
+	  {
+		"first_name": null,
+		"last_name": null,
+		"title": null,
+		"filename": null,
+		"file_type": null
+	  }
+	],
+	"original_lesson_plan": [
+	  {
+		"title": null,
+		"filename": null,
+		"file_type": null
+	  }
+	],
+	"instructor": "Jennie Joiner",
+	"institution": "Keuka College",
+	"contact": null,
+	"created": "2023-07-23",
+	"notes": [ "In an era of discussions of artificial intelligence complicating the literature classroom, these series of assignments helped students develop critical thinking and interpretive skills without writing a traditional literary essay.  The maps students created of Cooper’s Templeton were thoughtful and creative and very, very different.   Some were craftier, one challenged my understanding of a map, and all demonstrated high level critical thinking skills, problem solving skills, and deep understandings of the text.  While this series of lessons was used in an advanced literature course, I also use many of these activities in introductory literature courses as well.  These activities require students to do very close readings of a text and offer them opportunities to find location-specific contextual clues within particular passages." ]
+  },
 
   {
 	"filename": "mills1.html",
+	"title": "Exploring the Worlds of Faulkner's Female Characters",
+	"image": {
+	  "card": "site_photograph_a_child_of_scarbroughs_in_front_of_dresser_card.jpg",
+	  "banner": "site_photograph_a_child_of_scarbroughs_in_front_of_dresser_banner.jpg"
+	},
+	"story": [
+	  {
+		"title": "The Sound and the Fury",
+		"type": "novel",
+		"year": "1929"
+	  }
+	],
+	"description": "Students will use multiple features of DY to consider how Faulkner writes his female characters. This lesson is focused on The Sound and the Fury but can be adapted for other Faulkner stories featuring central female characters.",
+	"modality": [ "In-Person", "Online Synchronous" ],
+	"paired_author": null,
 	"pilot_classroom": "This lesson was designed for a high school junior/senior advanced English elective at an all boys independent school in Washington DC",
 	"learning_goals": null,
 	"common_core": null,
@@ -252,6 +278,7 @@
 	  }
 	],
 	"instructor": "Nikki Magaziner Mills",
+	"institution": "St. Albans School",
 	"contact": "nmagaziner@stalbansschool.org",
 	"created": "2023-07-23",
 	"notes": [ "One of the most remarkable aspects of using DY to delve further into Caddy was the effect that it had on the teenage boys in my class. The act of visualizing Caddy's movements through DY and thus thinking about her beyond what we had heard about her from her brothers made them consider and ask important questions not just about Caddy, but about women in the American south in Faulkner's time (and now). DY allowed them to 'see' what it was like to be Caddy, and our consequent discussions--about how male writers write female characters, about how brothers view sisters, about Caddy herself--were memorable." ]
@@ -260,6 +287,22 @@
 
   {
 	"filename": "penner1.html",
+	"title": "Collaborating on a Genealogy for  <em>As I Lay Dying</em>",
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
+	],
+	"image": {
+	  "card": "archive_manuscript_gdm_genealogical_chart_card.jpg",
+	  "banner": "archive_manuscript_gdm_genealogical_chart_banner.jpg"
+	},
+	"description": "This is a multi-media project that connects writing and visual art, and pairs at-home student work with in-class collaboration and presentation. ",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+
 	"pilot_classroom": "Entry-level English major seminar at a liberal arts university.",
 	"learning_goals": [ "Analyze text that emphasizes the significance of perspective in narrative texts", "Critique implicit assumptions and limitations of reference tools such as genealogical charts", "Work collaboratively to foster comparative analysis", "Create artifacts that foster analysis across visual and textual media" ],
 	"common_core": null,
@@ -280,6 +323,22 @@
 
   {
 	"filename": "tate1.html",
+	"title": "Tracking Themes in <em>As I Lay Dying</em>",
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
+	],
+
+	"image": {
+	  "card": "aild_keywords_card.jpg",
+	  "banner": "aild_keywords_banner.jpg"
+	},
+	"description": "This assignment asks students to re-imagine the fictions of Faulkner and other authors by mapping their texts.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
 	"pilot_classroom": "In-person class",
 	"learning_goals": [ "Students will use Digital Yoknapatawpha in conjunction with the text to analyze how authors use motifs to reinforce themes in a fictional text" ],
 	"common_core": [ "RL.11-12.1", "RL.11-12.2", "RL.11-12.3", "RL.11-12.9", "RL.11-12.0", "W.11-12.1", "W.11-12.4", "W.11-12.5", "W.11-12.6", "WL.11-12.9A", "SL.11-12.1" ],
@@ -300,9 +359,10 @@
 	  }
 	],
 	"instructor": "Haley Albert-Tate",
+	"institution": "Cave City High School",
 	"contact": "haley.tate@cavecity.ncsc.k12.ar.ust",
 	"created": "2023-07-23",
-	"notes": [ "This is where the notes go as array" ]
+	"notes": null
   },
 
   {
