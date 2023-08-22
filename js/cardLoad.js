@@ -58,6 +58,7 @@ function populateFilter(data, key, label) {
 	var filters = $(`#${key}-filters`);
 	filters.empty();
 
+	console.log("what filter is this? " + label)
 
 	var values = [];
 	$.each(data, function (index, object) {
