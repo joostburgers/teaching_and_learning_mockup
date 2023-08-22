@@ -9,7 +9,7 @@
 function getCards() {
 
 	$.ajax({
-		url: 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/cardData.json',
+		url: 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/lessonData.json',
 		dataType: 'json',
 		async: false,
 		success: function (data) {
