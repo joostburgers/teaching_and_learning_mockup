@@ -2,6 +2,29 @@
 
   {
 	"filename": "beach1.html",
+	"title": "Faulkner Fan Fic: Practicing Character Development and Scene Building in Faulkner’s Universe",
+	"story": [
+	  {
+		"title": "Barn Burning",
+		"type": "short_story",
+		"year": "1939"
+	  },
+	  {
+		"title": "Everyday Use",
+		"type": "short_story",
+		"year": "1973"
+	  }
+	],
+
+	"image": {
+	  "card": "archive_manuscript_barn_burning_1_card.jpg",
+	  "banner": "archive_manuscript_barn_burning_1_banner.jpg"
+	},
+
+	"description": "This is a creative writing exercise which gives voice to minor characters in William Faulkner’s  universe. Students will use Digital Yoknapatawpha to flesh out minor characters and rewrite scenes in Faulkner’s fiction.",
+	"modality": [ "In-Person", "Online Synchronous" ],
+	"paired_author": [ "Alice Walker" ],
+
 	"pilot_classroom": "This project was piloted in a synchronous online creative writing class for college freshmen and sophomores at St. Louis Community College.",
 	"learning_goals": [ "To identify major and minor characters, point of view, setting, scene building, and plot.", "To research social/historical context in imaginative writing through the use of digital resources.", "To practice stepping outside of self to write/invent characters and scenes from different perspectives in different time periods." ],
 	"common_core": null,
@@ -22,6 +45,7 @@
 	  }
 	],
 	"instructor": "Maxine Beach",
+	"institution": "St. Louis Community College",
 	"contact": "mbeach7@stlcc.edu",
 	"created": "2023-07-23",
 	"notes": [ "Each activity can be used as scaffolded for the final product or can be used separately depending on the instructor’s desired outcomes.", "You will need to allot some time to in-class instruction on Digital Yoknapatawpha.  The DY tools and pages for this assignment are fairly simple to use.", "Community college students come in a wide range of ages and backgrounds. This class had high school dual-enrolled students as well as older adults who already had college degrees and were taking the course for enrichment. The project was successful considering the wide range of maturity and knowledge about Faulkner. Some students were aware of Faulkner’s work, some students had read Faulkner novels, and some students were introduced to Faulkner with this project." ]
@@ -29,6 +53,23 @@
 
   {
 	"filename": "bryant1.html",
+	"title": "<em>As I Lay Dying</em> Digital Escape Room",
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
+	],
+
+	"image": {
+	  "card": "archive_manuscript_aild_35_card.jpg",
+	  "banner": "archive_manuscript_aild_35_banner.jpg"
+	},
+
+	"description": "Students will use various DY tools to complete an escape room and acquire information regarding historical, geographical, and cultural context of the novel.",
+	"modality": [ "In-Person"],
+	"paired_author": null,
 	"pilot_classroom": "Short description as string",
 	"learning_goals": [ "learning goals as array" ],
 	"common_core": [ "RL.11-12.3", "RL.11-12.5", "RL.11-12.6" ],
@@ -49,6 +90,7 @@
 	  }
 	],
 	"instructor": "Taylor Bryant",
+	"institution": "Cape Central High School",
 	"contact": null,
 	"created": "2023-07-23",
 	"notes": [ "As the instructor, you will likely want to change the “intro” information to suit your students and your classroom. I don’t, however, recommend changing the passwords/passcodes, as this may affect the process of how the students move from one “room” to the next. However, if you feel comfortable doing so, you are certainly welcome to. Since you now have ownership of the form, you will also be provided with the answer key to each “room.”" ]
@@ -56,6 +98,30 @@
 
   {
 	"filename": "dimock1.html",
+	"title": "'Barn Burning' and 'The Man Who Was Almost a Man': Sharecropping and Coming of Age in Mississippi",
+	"story": [
+	  {
+		"title": "Barn Burning",
+		"type": "short_story",
+		"year": "1939"
+	  },
+	  {
+		"title": "The Man Who Was Almost a Man",
+		"type": "short_story",
+		"year": "1940"
+	  }
+	],
+
+	"image": {
+	  "card": "site_photograph_plantation_cabin_card.jpg",
+	  "banner": "site_photograph_plantation_cabin_banner.jpg"
+	},
+
+	"description": "Students will use DY maps and photos to study how Faulkner and Wright use the coming of age theme to examine sharecropping in the Jim Crow era.",
+	"modality": [ "In Person", "Online Asynchronous", "Online Synchronous" ],
+	"paired_author": [ "Richard Wright" ],
+
+
 	"pilot_classroom": "Class Description",
 	"learning_goals": [ "", "", "" ],
 	"common_core": null,
@@ -68,35 +134,52 @@
 	  }
 	],
 	"instructor": "Chase Dimock",
+	"institution": "College of the Canyons",
 	"contact": "chase.dimock@canyons.edu",
 	"created": "2023-07-23",
 	"notes": [ "" ]
   },
   {
 	"filename": "hayes1.html",
-	"pilot_classroom": "Short description as string",
-	"learning_goals": [ "learning goals as array" ],
-	"common_core": [ "common core as array" ],
+	"title": "Multimodal Composition and 'A Rose for Emily'",
+	"story": [
+	  {
+		"title": "A Rose for Emily",
+		"type": "short_story",
+		"year": "1929"
+	  }
+	],
+	"image": {
+	  "card": "screen_capture_plot_structure_a_rose_for_emily_date_order_card.jpg",
+	  "banner": "screen_capture_plot_structure_a_rose_for_emily_date_order_banner.jpg"
+	},
+	"description": "Students will complete DY activities to respond critically to 'A Rose for Emily,' incorporating results as part of a multimodal essay assignment.",
+	"modality": [ "In-Person", "Online Asynchronous", "Online Synchronous" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": null,
 	"student_samples": [
 	  {
 		"first_name": null,
 		"last_name": null,
 		"title": null,
 		"filename": null,
-		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+		"file_type": null
 	  }
 	],
 	"original_lesson_plan": [
 	  {
 		"title": null,
 		"filename": null,
-		"file_type": "Used to set icon. One of pdf, word, pptx, image"
+		"file_type": null
 	  }
 	],
 	"instructor": "Jon Hayes",
+	"institution": "Southeast Missouri State University",
 	"contact": "jhayes@semo.edu",
 	"created": "2023-07-23",
-	"notes": [ "This is where the notes go as array" ]
+	"notes": null
   },
   
   {
@@ -127,7 +210,9 @@
   },
 
 	{
-		"filename": "joiner1.html",
+	  "filename": "joiner1.html",
+
+
 		"pilot_classroom": "Advanced Studies in Literature:  William Faulkner and James Fenimore Cooper",
 		"learning_goals": [ "Understand how language shapes and influences understandings of place and space and, more specifically, how authors have created literary spaces that represent and respond to physical, cultural, historical and social contexts of Mississippi and New York", "Develop the skills to shape complex questions and evaluate competing points of view about a text and explore understandings orally, visually, digitally, and in writing", "Synthesize close readings and create multimodal texts that demonstrate understandings of audience, purpose, and context", "Apply digital humanities research and conceptual skills for problem solving" ],
 		"common_core": [ "Common Core 1" , "Common Core 2" , "Common Core 3" ],
