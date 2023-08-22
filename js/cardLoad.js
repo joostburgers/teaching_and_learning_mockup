@@ -105,7 +105,7 @@ function populateFilter(data, key, label) {
 	if (typeof values === 'object' && Array.isArray(values) && values.length > 0) {
 		if (typeof values[0] === 'object') {
 
-
+			console.log(values)
 			values = values.filter((value, index, self) =>
 				index === self.findIndex((t) => (
 					t.title === value.title
