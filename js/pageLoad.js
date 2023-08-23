@@ -458,6 +458,7 @@ function loadLessonData() {
 		const lessonData = getLessonData(jsonData);
 		console.log(lessonData)
 		setLessonData(lessonData)
+		setGlanceData(lessonData)
 	})
 		.done(function () {
 			console.log("Lesson data loaded successfully");
@@ -500,29 +501,95 @@ function setLessonData(data) {
 
 	const notesHTML = data.notes !== null ? `<p>Notes: <ul class="activity-list-unordered"> ${createList(data.notes)}</ul></p>` : '';
 
-	teachers.html(`${pilotClassroomHTML}${learningGoalsHTML} ${studentSamplesHTML}${commonCoreHTML}${originalLessonsHTML}${notesHTML}`)
+	const contactHTML = data.contact !== null ? `<p>Contact: <a href = "mailto: ${data.contact}">${data.contact}</a></p>` : '';
+
+	teachers.html(`${pilotClassroomHTML}${learningGoalsHTML} ${studentSamplesHTML}${commonCoreHTML}${originalLessonsHTML}${notesHTML}${contactHTML}`)
+
+
+	
+}
+
+
+function setGlanceData(data) {
+
+	
+	const lessonGlance = $('#lessonGlance');
+
+	var storyTitle = "";
+
+	if (data.story[0] === "All") {
+		storyTitle = "All"
+
+	} else {
+
+		data.story.forEach(function (storyObj) {
+
+			storyTitle += `<span class = ${storyObj.type}>${storyObj.title}</span>, `
+
+		});
+		storyTitle = storyTitle.slice(0, -2);
+	}
+
+	const storyHTML = `<div class="glance-body">${((data.story.length > 1) ? 'Stories: ' : 'Story: ')}<p class="glance-text"> ${storyTitle} </p></div>`
+
+
+	var modalityText = "";
+
+	if (data.modality.length > 1) {
+		
+		data.modality.forEach(function (modality) {
+			modalityText += modality + ", "
+		})
+		modalityText = modalityText.slice(0, -2);
+	} else {
+		modalityText = data.modality
+	}
+
+
+	const modalityHTML = `<div class="glance-body">Modality: <p class="glance-text"> ${modalityText}</p></div>`
+	//Each HTML stub is created if the value in the at the key is actually a value and not null. This prevents everyone having to fill out all the exact same metadata
+	const paired_authorHTML = data.paired_author !== null ? `<div class= "glance-body">Paired author: <p class="glance-text">${data.paired_author} </p></div>` : ''
+
 
 
 	const institutionHTML = (data.institution !== null && data.institution !== undefined) ? `<span>, ${data.institution}</span>` : '';
 
 	const instructorHTML = data.instructor !== null ? `<h4>${data.instructor}${institutionHTML}</h4>` : '';
 
-	
 
-	const contactHTML = data.contact !== null ? `<p><a href = "mailto: ${data.contact}">${data.contact}</a></p>` : '';
-
-	
 	const lastUpdatedDate = new Date(document.lastModified);
 
-	const pageLastUpdate = ` | Updated: ${lastUpdatedDate.toLocaleString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric'})}`;
+	const pageLastUpdate = ` | Updated: ${lastUpdatedDate.toLocaleString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric' })}`;
+
+
+	const createdHTML = data.created !== null ? `Created: ${new Date(data.created).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric' })}${pageLastUpdate}` : '';
+
+	
+	const bannerImageHTML = data.image.banner !== null ? `<img src="../images/${data.image.banner}" class="img-fluid w-100" alt="Banner image for ${data.title}">` : '';
+
+	const bannerHTML = `<div class="glance-info">
+				${bannerImageHTML}		
+	<h1 class="glance-title glance-centered">${data.title}<div class="glance-subtitle">${instructorHTML}</div></h1>
+			<div class="glance-bottom">
+				
+				<div class="right">${createdHTML} </div></div>
+			</div>`
+
+	const descriptionHTML = `<div class="glance-body" >Description: <p class="glance-text">${data.description}</p></div>`
+
+	// const textsHTML = Load in texts through cardload functions
+
 	
 
-	const createdHTML = data.created !== null ? `<p class="glance-updated">Created: ${new Date(data.created).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric' })}<span>${pageLastUpdate}</span></p>` : '';
-
+	lessonGlance.html(`
 	
-
-	about.html(`${instructorHTML}${contactHTML}${createdHTML}`)
+	${bannerHTML}
+	<div class = "row"><div class = "col">${descriptionHTML}${storyHTML}</div>
+	<div class = "col">${modalityHTML}${paired_authorHTML}</div >
+	</div>`)
 }
+
+
 
 function createList(array) {
 	if (array && Array.isArray(array)) {

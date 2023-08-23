@@ -399,24 +399,21 @@ div.activity-text {
 }
 
 .glance-bottom {
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	padding: 2px;
-	background-color: rgba(255, 255, 255, 0.5);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	padding: 5px 5px 1px 5px;
+	/* background-color: rgba(245, 245, 245, 0.8); */
+	border-radius: 10px;
+	background: radial-gradient(rgba(255, 255, 255, .7),rgba(245, 245, 245, .10));
+	color: rgba(51, 51, 51, 0.77);
 }
 
 	.glance-bottom a {
 		float: left;
 	}
 
-	.glance-bottom span.right {
+	.glance-bottom div.right {
+		
 		float: right;
-		color: rgba(51, 51, 51, 0.37);
+		
 	}
 
 .glance-text {
@@ -525,3 +522,19 @@ height:90%;
 	background-color:red;
 }
 
+
+.novel {
+	font-style: italic;
+}
+
+.short_story {
+	quotes: "\201c" "\201d";
+}
+
+	.short_story::before {
+		content: open-quote;
+	}
+
+	.short_story::after {
+		content: close-quote;
+	}

@@ -43,7 +43,9 @@
 		left: 10%;
 		transform: translate(-5%, -5%);
 		background-color: rgba(94%, 97%, 100%, 0.60);
-		font-size: 1.5rem;
+		backdrop-filter: blur(2px); 
+		font-size: 1.25rem;
+		padding:10px;
 
 		@media screen and (max-width: 1280px) {
 			font-size: 125%;
