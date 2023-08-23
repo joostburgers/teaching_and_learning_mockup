@@ -530,7 +530,7 @@ function setGlanceData(data) {
 		storyTitle = storyTitle.slice(0, -2);
 	}
 
-	const storyHTML = `<div class="glance-body">${((data.story.length > 1) ? 'Stories: ' : 'Story: ')}<p class="glance-text"> ${storyTitle} </p></div>`
+	const storyHTML = `<span class="font-weight-bold">${((data.story.length > 1) ? 'Stories: ' : 'Story: ')}</span> ${storyTitle}`
 
 
 	var modalityText = "";
@@ -546,9 +546,9 @@ function setGlanceData(data) {
 	}
 
 
-	const modalityHTML = `<div class="glance-body">Modality: <p class="glance-text"> ${modalityText}</p></div>`
+	const modalityHTML = `<span class="font-weight-bold">Modality: </span> ${modalityText}`
 	//Each HTML stub is created if the value in the at the key is actually a value and not null. This prevents everyone having to fill out all the exact same metadata
-	const paired_authorHTML = data.paired_author !== null ? `<div class= "glance-body">Paired author: <p class="glance-text">${data.paired_author} </p></div>` : ''
+	const paired_authorHTML = data.paired_author !== null ? `<span class= "font-weight-bold">Paired author: </span>${data.paired_author}` : ''
 
 
 
@@ -575,18 +575,20 @@ function setGlanceData(data) {
 				<div class="right">${createdHTML} </div></div>
 			</div>`
 
-	const descriptionHTML = `<div class="glance-body" >Description: <p class="glance-text">${data.description}</p></div>`
+	const descriptionHTML = `<span class="font-weight-bold">Description: </span>${data.description}`
 
 	// const textsHTML = Load in texts through cardload functions
-
+	const glanceTextHTML = `<div class=glance-text><div class="row"><div class="col"><p>${descriptionHTML}</p><p>${storyHTML}</p>
+	</div>
+	<div class = "col">
+	<p>${modalityHTML}</p><p>${paired_authorHTML}</p></div >
+	</div></div>`
 	
 
 	lessonGlance.html(`
-	
-	${bannerHTML}
-	<div class = "row"><div class = "col">${descriptionHTML}${storyHTML}</div>
-	<div class = "col">${modalityHTML}${paired_authorHTML}</div >
-	</div>`)
+
+	${bannerHTML}${glanceTextHTML}
+	`)
 }
 
 

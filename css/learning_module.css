@@ -31,6 +31,7 @@ h3.content_sub_title {
 
 .activity {
 	border: 1px solid #ddd;
+	margin-left:10px;
 	border-radius: 4px;
 	margin-bottom: 10px;
 	line-height: 1.5em;
@@ -383,13 +384,6 @@ div.activity-text {
 	font-weight: 400;
 }
 
-	/*.glance-bottom p {
-		
-		display: block;
-		
-		
-	}*/
-
 
 .glance-body {
 	font-weight: 600;
@@ -401,8 +395,9 @@ div.activity-text {
 .glance-bottom {
 	padding: 5px 5px 1px 5px;
 	/* background-color: rgba(245, 245, 245, 0.8); */
-	border-radius: 10px;
+	border-radius: 2px;
 	background: radial-gradient(rgba(255, 255, 255, .7),rgba(245, 245, 245, .10));
+	backdrop-filter:blur(1px);
 	color: rgba(51, 51, 51, 0.77);
 }
 
@@ -422,7 +417,18 @@ div.activity-text {
 	line-height: 1.5rem;
 	color: #333333;
 	font-weight: 400;
+	padding: 10px 10px 20px 10px;
+	border-bottom: 1px solid rgba(24%, 24%, 24%, 0.15);
 }
+
+.lesson-section {
+	border-bottom: 1px solid rgba(24%, 24%, 24%, 0.15);
+	padding-bottom:20px;
+}
+.lesson-section p{
+	margin-left: 10px;
+}
+
 
 .glance-text:first-child {
 		display: inline;
