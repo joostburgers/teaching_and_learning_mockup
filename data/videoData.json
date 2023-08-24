@@ -306,6 +306,35 @@
 	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/BiPartiteDemo.mp4",
 	"full_demo_duration": "04:21",
 	"full_demo_title": "Bi-Partite Location-Character Graphs"
+  },
+
+  {
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Video Tutorial of Event Keyword Search",
+	"description": "Instructional video for understanding event keyword search using As I Lay Dying as an example",
+	"duration": "00:00:23",
+	"file_size": "2.81 MB",
+	"created": "2023-08-24T00:00:00Z",
+	"filename": "video_tutorial_event_keyword_search.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Quick Tutorial",
+	"tool": "Event Keyword Search",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Instructional video for understanding event keyword search using As I Lay Dying as an example",
+	"url": "http://faulkner.iath.virginia.edu/family/events/",
+	"full_demo_url": null,
+	"full_demo_duration": null,
+	"full_demo_title": null
   }
+
 
 ]
