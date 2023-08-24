@@ -278,6 +278,34 @@
 	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/TextMapDemo.mp4",
 	"full_demo_duration": "11:17",
 	"full_demo_title": "Using the text-map pages"
+  },
+
+  {
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Video Tutorial of Character in Location BiPartite Graph",
+	"description": "Instructional video for understanding character location bipartite graphs",
+	"duration": "00:00:37",
+	"file_size": "6.48 MB",
+	"created": "2023-08-24T00:00:00Z",
+	"filename": "video_tutorial_character_location_bipartite_graph.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Quick Tutorial",
+	"tool": "Characters in Locations BiPartite Graph",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Video tutorial of Character Location BiPartite Graph",
+	"url": "http://faulkner.iath.virginia.edu/characters-bipart.html",
+	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/BiPartiteDemo.mp4",
+	"full_demo_duration": "04:21",
+	"full_demo_title": "Bi-Partite Location-Character Graphs"
   }
 
 ]
