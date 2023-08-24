@@ -334,6 +334,34 @@
 	"full_demo_url": null,
 	"full_demo_duration": null,
 	"full_demo_title": null
+  },
+
+  {
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Video Tutorial of Genealogies Commentary",
+	"description": "Instructional video for demonstrating the basic functionality of the genealogies commentaries",
+	"duration": "00:00:30",
+	"file_size": "5.72 MB",
+	"created": "2023-08-24T00:00:00Z",
+	"filename": "video_tutorial_genealogies_commentary.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Quick Tutorial",
+	"tool": "Genealogies Commentary",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "nstructional video for demonstrating the basic functionality of the genealogies commentaries",
+	"url": "http://faulkner.iath.virginia.edu/family/",
+	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/GenealogiesDemo.mp4",
+	"full_demo_duration": "07:28",
+	"full_demo_title": "Genealogies"
   }
 
 
