@@ -355,6 +355,43 @@
 	}
 
   },
+
+  {
+	"media_type": "screen_capture",
+	"creators": [
+	  {
+		"last_name": "Massari",
+		"first_name": "Lauren"
+	  },
+	  {
+		"last_name": "Railton",
+		"first_name": "Stephen"
+	  },
+	  {
+		"last_name": "Ross",
+		"first_name": "Doug"
+	  },
+	  {
+		"last_name": "Martin",
+		"first_name": "Worthy"
+	  }
+
+	],
+
+	"title": "Genealogies Commentary: Legend",
+	"year": "2019",
+	"place": null,
+	"description": "Legend for the genealogies commentary",
+	"filename": "screen_capture_genealogies_legend.png",
+
+	"alt_text": "Legend for the genealogies commentary",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia",
+	  "url": "http://faulkner.iath.virginia.edu/family/"
+	}
+
+  },
   {
 	"media_type": "screen_capture",
 	"creators": [
