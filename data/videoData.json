@@ -226,18 +226,58 @@
   },
 
   {
+
 	"creators": [
 	  {
-		"last_name": "Williams",
-		"first_name": "Yohuru"
-	  },
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Video Tutorial Characters in Events MapIt Tool",
+	"description": "Instructional video for searching for characters and displaying them on the main map of a story",
+	"duration": "00:00:30",
+	"file_size": "1.56 MB",
+	"created": "2023-08-23T00:00:00Z",
+	"filename": "video_tutorial_character_event_mapit.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Quick Tutorial",
+	"tool": "Event search MapIt tool",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Video tutorial demonstrating how to search for a specific character in events and display the results using MapIt",
+	"url": "http://faulkner.iath.virginia.edu/family/events/",
+	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/QuentinMapIt.mp4",
+	"full_demo_duration": "3:02",
+	"full_demo_title": "MapIt"
+  },
+  {
 
-	  {}
-
-	]
-
-
-
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Video Tutorial Cumulative Character Search",
+	"description": "Instructional video for using the cumulative character search.",
+	"duration": "00:00:31",
+	"file_size": "3.62 MB",
+	"created": "2023-08-24T00:00:00Z",
+	"filename": "video_tutorial_cumulative_character_search.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Quick Tutorial",
+	"tool": "Cumulative Character Search",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Instructional video for using the cumulative character search.",
+	"url": "http://faulkner.iath.virginia.edu/family/cumulative_characters/",
+	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/TextMapDemo.mp4",
+	"full_demo_duration": "11:17",
+	"full_demo_title": "Using the text-map pages"
   }
 
 ]
