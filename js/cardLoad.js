@@ -132,65 +132,47 @@ function populateFilter(data, key, label) {
 	} else {
 		console.log("values is not an array");
 	}
-
-
-
-
-
-
-
-	/*$.each(values, function (index, value) {
-		
-		var checkbox = $(`<div class='form-check'><input class='form-check-input single-${key}' type='checkbox' value='${value}' ><label class='form-check-label align-middle'>${value}</label></div>`)
-	filters.append(checkbox);
-	})*/
-
 	return filters
 }
 
 
+/**
+ * Attaches change event listeners to checkboxes to change their state based on user interaction.
+ * 
+ * @param {string} key - The identifier used to select the checkboxes to attach listeners to.
+ * The user can 
+ */
 function defineCheckboxes(key) {
+	// Cache the jQuery selectors for the all and single checkboxes and the container.
+	var allCheckboxes = $(`.all-${key}`);
+	var singleCheckboxes = $(`.single-${key}`);
+	var checkboxesContainer = $(`#${key}-filters`);
 
-
-	$(`.all-${key}`).change(function () {
-		if (this.checked) {
-			$(`.single-${key}`).each(function () {
-				this.checked = false;
-
-			})
-
-		} else {
-			$(`.single-${key}`).each(function () {
-				this.checked = false;
-
-			})
+	// Attach event listeners to the container using event delegation.
+	checkboxesContainer.on('click', '.all-' + key, function () {
+		// When the all checkboxes are clicked, uncheck all the single checkboxes and update the indeterminate state of the all checkbox.
+		var isChecked = $(this).prop('checked');
+		singleCheckboxes.prop('checked', false);
+		if (!isChecked) {
+			allCheckboxes.prop('indeterminate', false);
 		}
 	});
 
-	$(`.single-${key}`).click(function () {
-		if ($(this).is(":checked")) {
+	checkboxesContainer.on('click', '.single-' + key, function () {
+		// When a single checkbox is clicked, update the indeterminate state and checked state of the all checkbox based on the state of the individual checkboxes.
+		var totalBoxes = singleCheckboxes.length;
+		var isAllChecked = singleCheckboxes.filter(':checked').length;
 
+		allCheckboxes.prop('indeterminate', isAllChecked > 0 && isAllChecked < totalBoxes);
 
-			var isAllChecked = 1;
-
-			$(`.single-${key}`).each(function () {
-				if (!this.checked)
-					isAllChecked = 0;
-			})
-
-			if (isAllChecked == 1) {
-				$(`.all-${key}`).prop("checked", true);
-			} else {
-				$(`.all-${key}`).prop("indeterminate", true);
-			}
-		} else {
-			$(`.all-${key}`).prop("checked", false);
+		if (isAllChecked === totalBoxes) {
+			allCheckboxes.prop('indeterminate', false);
+			allCheckboxes.prop('checked', true);
+			
 		}
+		
 	});
 }
-
-
-
 
 // Function to filter and display the information cards based on selected filters
 function filterCards(data) {
@@ -204,15 +186,12 @@ function filterCards(data) {
 
 		selectedStories.push($(this).val());
 
-
 	});
 
 	$("#modality-filters input[type='checkbox']:checked").each(function () {
-		console.log("clicked value:" + $(this).val())
-
-		/*if ($(this).val() !== "all") {*/
+	
 		selectedModalities.push($(this).val());
-		/*}*/
+	
 	});
 
 	$("#paired_author-filters input[type='checkbox']:checked").each(function () {
@@ -222,20 +201,12 @@ function filterCards(data) {
 	});
 
 
-
-	/*if (selectedStories.length > 1 && selectedStories.includes("all")) {
-	$("#story-filters input[value='all']").prop('checked', false);  
-	}*/
-
-
 	// Filter cards based on selected filters
 	var filteredCards = [];
 
 	$.each(cards, function (index, card) {
 		var selected = false;
-
-		console.log(card.story)
-
+				
 		if (card.story === "All") {
 			selected = true;
 		} else { card.story.forEach(function (storyObj) { Object.values(storyObj).forEach(function (title) { selectedStories.forEach(function (selectedStory) { if (title.includes(selectedStory) || selectedStory === "all" || title === "All") { selected = true; } }); }); }); }
