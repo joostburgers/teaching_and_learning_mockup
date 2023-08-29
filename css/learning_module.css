@@ -284,6 +284,7 @@ div.modal-image {
 
 .img-fluid {
 	vertical-align: bottom;
+	max-height: calc(100vh - 400px);
 }
 
 .img-fluid-opacity-50{
