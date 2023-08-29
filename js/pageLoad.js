@@ -490,12 +490,14 @@ function setLessonData(data) {
 	
 	const pilotClassroomHTML = data.pilot_classroom !== null ? `<p> Pilot classroom: ${data.pilot_classroom}</p>` : '';
 
-	const learningGoalsHTML = data.learning_goals !== null ? `<p>Learning Goals: <ul class="activity-list">${createList(data.learning_goals)}</ul></p>` : '';
+	const learningGoalsHTML = data.learning_goals !== null ? `<p>Learning Goals: <ol class="activity-list">${createList(data.learning_goals)}</ol></p>` : '';
 
 	console.log(data.common_core)
 	const commonCoreHTML = data.common_core !== null ? `<p>Common Core: <ul class="activity-list-unordered-blank">${createList(data.common_core)}</ul></p>` : '';
 
 	const studentSamplesHTML = data.student_samples !== null ? `<p>Student samples: <ul class="activity-list-unordered-blank">${createSamples(data.student_samples, data.filename)}</ul></p>` : '';
+
+	console.log(data.student_samples)
 
 	const originalLessonsHTML = data.original_lesson_plan !== null ? `<p>Original lesson plan: <ul class="activity-list-unordered-blank">${createSamples(data.original_lesson_plan, data.filename)}</ul></p>` : '';
 

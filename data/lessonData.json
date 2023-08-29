@@ -70,22 +70,8 @@
 	"pilot_classroom": "Short description as string",
 	"learning_goals": [ "learning goals as array" ],
 	"common_core": [ "RL.11-12.3", "RL.11-12.5", "RL.11-12.6" ],
-	"student_samples": [
-	  {
-		"first_name": null,
-		"last_name": null,
-		"title": null,
-		"filename": null,
-		"file_type": null
-	  }
-	],
-	"original_lesson_plan": [
-	  {
-		"title": null,
-		"filename": null,
-		"file_type": null
-	  }
-	],
+	"student_samples": null,
+	"original_lesson_plan": null,
 	"instructor": "Taylor Bryant",
 	"institution": "Cape Central High School",
 	"contact": null,
@@ -156,22 +142,8 @@
 	"pilot_classroom": null,
 	"learning_goals": null,
 	"common_core": null,
-	"student_samples": [
-	  {
-		"first_name": null,
-		"last_name": null,
-		"title": null,
-		"filename": null,
-		"file_type": null
-	  }
-	],
-	"original_lesson_plan": [
-	  {
-		"title": null,
-		"filename": null,
-		"file_type": null
-	  }
-	],
+	"student_samples": null,
+	"original_lesson_plan": null,
 	"instructor": "Jon Hayes",
 	"institution": "Southeast Missouri State University",
 	"contact": "jhayes@semo.edu",
@@ -201,22 +173,8 @@
 	"pilot_classroom": "Advanced Studies in Literature:  William Faulkner and James Fenimore Cooper",
 	"learning_goals": [ "Understand how language shapes and influences understandings of place and space and, more specifically, how authors have created literary spaces that represent and respond to physical, cultural, historical and social contexts of Mississippi and New York", "Develop the skills to shape complex questions and evaluate competing points of view about a text and explore understandings orally, visually, digitally, and in writing", "Synthesize close readings and create multimodal texts that demonstrate understandings of audience, purpose, and context", "Apply digital humanities research and conceptual skills for problem solving" ],
 	"common_core": null,
-	"student_samples": [
-	  {
-		"first_name": null,
-		"last_name": null,
-		"title": null,
-		"filename": null,
-		"file_type": null
-	  }
-	],
-	"original_lesson_plan": [
-	  {
-		"title": null,
-		"filename": null,
-		"file_type": null
-	  }
-	],
+	"student_samples": null,
+	"original_lesson_plan": null,
 	"instructor": "Jennie Joiner",
 	"institution": "Keuka College",
 	"contact": null,
@@ -317,22 +275,8 @@
 	"pilot_classroom": "In-person class",
 	"learning_goals": [ "Students will use Digital Yoknapatawpha in conjunction with the text to analyze how authors use motifs to reinforce themes in a fictional text" ],
 	"common_core": [ "RL.11-12.1", "RL.11-12.2", "RL.11-12.3", "RL.11-12.9", "RL.11-12.0", "W.11-12.1", "W.11-12.4", "W.11-12.5", "W.11-12.6", "WL.11-12.9A", "SL.11-12.1" ],
-	"student_samples": [
-	  {
-		"first_name": null,
-		"last_name": null,
-		"title": null,
-		"filename": null,
-		"file_type": "Used to set icon. One of pdf, word, pptx, image"
-	  }
-	],
-	"original_lesson_plan": [
-	  {
-		"title": null,
-		"filename": null,
-		"file_type": "Used to set icon. One of pdf, word, pptx, image"
-	  }
-	],
+	"student_samples": null,
+	"original_lesson_plan": null,
 	"instructor": "Haley Albert-Tate",
 	"institution": "Cave City High School",
 	"contact": "haley.tate@cavecity.ncsc.k12.ar.ust",
@@ -365,22 +309,8 @@
 	  "pilot_classroom": "Short description as string",
 	  "learning_goals": [ "learning goals as array" ],
 	  "common_core": [ "common core as array" ],
-	  "student_samples": [
-		{
-		  "first_name": null,
-		  "last_name": null,
-		  "title": null,
-		  "filename": null,
-		  "file_type": "Used to set icon. One of pdf, word, pptx, image"
-		}
-	  ],
-	  "original_lesson_plan": [
-		{
-		  "title": null,
-		  "filename": null,
-		  "file_type": "Used to set icon. One of pdf, word, pptx, image"
-		}
-	  ],
+	  "student_samples": null,
+	  "original_lesson_plan": null,
 	"instructor": "Rachel Watson",
 	  "institution": "Howard University",
 	  "contact": null,
