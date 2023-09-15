@@ -11,7 +11,9 @@
 	  {
 		"title": "Everyday Use",
 		"type": "short_story",
-		"year": "1973"
+		"year": "1973",
+		"author_last_name": "Walker",
+		"author_first_name": "Alice"
 	  }
 	],
 	
@@ -91,7 +93,9 @@
 	  {
 		"title": "The Man Who Was Almost a Man",
 		"type": "short_story",
-		"year": "1940"
+		"year": "1940",
+		"author_last_name": "Wright",
+		"author_first_name": "Richard"
 	  }
 	],
 
@@ -296,7 +300,9 @@
 	  {
 		"title": "Getting Mother's Body",
 		"type": "novel",
-		"year": "2003"
+		"year": "2003",
+		"author_last_name": "Parks",
+		"author_first_name": "Suzan Lori"
 	  }
 	],
 	"image": {

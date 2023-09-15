@@ -18,7 +18,7 @@ function getCards() {
 
 			populateFilter(data, "paired_author", "Authors")
 			populateFilter(data, "story", "Stories");
-			populateFilter(data, "modality", "Modalities");
+			populateFilter(data, "modality", "Formats");
 			defineCheckboxes("story")
 			defineCheckboxes("modality")
 			defineCheckboxes("paired_author")
@@ -53,86 +53,89 @@ function getCards() {
 
 
 
+/**
+ * Populate filter element with options based on provided data.
+ * 
+ * @param {object[]} data - The data to generate options from.
+ * @param {string} key - The object property to generate filter options for.
+ * @param {string} label - The label to display on the filter.
+ * @returns {jQuery} - The filter element with options added.
+ */
 function populateFilter(data, key, label) {
+  var filters = $(`#${key}-filters`);
+  filters.empty();
+ 
+  
+  var values = [];
+  $.each(data, function(index, object) {
+    if (object[key] !== null) {
+      if (values.indexOf(object[key]) === -1) {
+        if (object[key] != "All") {
+          if (Array.isArray(object[key])) {
+            object[key].forEach(function (value) {
+              if (values.indexOf(value) === -1 && value !== null && value !== "All") {
+                values.push(value);
+              }
+            });
+          } else if (typeof object[key] === 'object') {
+            Object.values(object[key]).forEach(function (value) {
+              if (Array.isArray(value)) {
+                value.forEach(function (innerValue) {
+                  if (values.indexOf(innerValue) === -1 && innerValue !== null && innerValue !== "All") {
+                    values.push(innerValue);
+                  }
+                });
+              } else {
+                if (values.indexOf(value) === -1 && value !== null && value !== "All") {
+                  values.push(value);
+                }
+              }
+            });
+          } else {
+            values.push(object[key]);
+          }
+        }
+      }
+    }
+  });
+  
+  // Create an "all" checkbox element and append it to the filter.
+  var allCheckbox = $(`<div class='form-check'><input class='form-check-input all-${key}' type='checkbox' value='all' checked><label class='form-check-label align-middle'>All ${label}</label></div>`);
+  filters.append(allCheckbox);
+  
+  // If values exist, create a checkbox element for each unique value and append it to the filter.
+  if (typeof values === 'object' && Array.isArray(values) && values.length > 0) {
+    if (typeof values[0] === 'object') {
+      values = values.filter((value, index, self) =>
+        index === self.findIndex((t) => (
+          t.title === value.title
+        ))
+      );
+      
+      values.sort((a, b) => a.title.localeCompare(b.title));
+      
+		$.each(values, function (index, value) {
+			
+		  var checkbox = $(`<div class='form-check'><input class=' form-check-input single-${key} ' type='checkbox' value='${value.title}' ><label class='form-check-label align-middle'><span class="${value.type}">${value.title}</span> (${value.year})</label></div>`);
 
-	var filters = $(`#${key}-filters`);
-	filters.empty();
 
-	console.log("what filter is this? " + label)
-
-	var values = [];
-	$.each(data, function (index, object) {
-
-		if (object[key] !== null) {
-			if (values.indexOf(object[key]) === -1) {
-				if (object[key] != "All") {
-					if (Array.isArray(object[key])) {
-						object[key].forEach(function (value) {
-							if (values.indexOf(value) === -1 && value !== null && value !== "All") {
-								values.push(value);
-							}
-						});
-					} else if (typeof object[key] === 'object') {
-						Object.values(object[key]).forEach(function (value) {
-							if (Array.isArray(value)) {
-								value.forEach(function (innerValue) {
-									if (values.indexOf(innerValue) === -1 && innerValue !== null && innerValue !== "All") {
-										values.push(innerValue);
-									}
-								});
-							} else {
-								if (values.indexOf(value) === -1 && value !== null && value !== "All") {
-									values.push(value);
-								}
-							}
-						});
-					} else {
-						values.push(object[key]);
-					}
-				}
-			}
-		}
-	});
-
-
-
-	var allCheckbox = $(`<div class='form-check'><input class='form-check-input all-${key}' type='checkbox' value='all' checked><label class='form-check-label align-middle'>All ${label}</label></div>`);
-
-	filters.append(allCheckbox);
-
-
-
-	if (typeof values === 'object' && Array.isArray(values) && values.length > 0) {
-		if (typeof values[0] === 'object') {
-
-			console.log(values)
-			values = values.filter((value, index, self) =>
-				index === self.findIndex((t) => (
-					t.title === value.title
-				))
-			);
-
-			values.sort((a, b) => a.title.localeCompare(b.title));
-			$.each(values, function (index, value) {
-
-				var checkbox = $(`<div class='form-check'><input class=' form-check-input single-${key} ' type='checkbox' value='${value.title}' ><label class='form-check-label align-middle'><span class="${value.type}">${value.title}</span> (${value.year})</label></div>`)
-				filters.append(checkbox);
-			});;
-		} else {
-
-			values = values.flat()
-			values = Array.from(new Set(values))
-			values = values.sort()
-			$.each(values, function (index, value) {
-
-				var checkbox = $(`<div class='form-check'><input class='form-check-input single-${key}' type='checkbox' value='${value}' ><label class='form-check-label align-middle'>${value}</label></div>`)
-				filters.append(checkbox);
-			});
-		}
-	} else {
-		console.log("values is not an array");
-	}
-	return filters
+		  filters.append(checkbox);
+      });
+    } else {
+      values = values.flat();
+      values = Array.from(new Set(values));
+      values = values.sort();
+      
+      $.each(values, function(index, value) {
+        var checkbox = $(`<div class='form-check'><input class='form-check-input single-${key}' type='checkbox' value='${value}' ><label class='form-check-label align-middle'>${value}</label></div>`);
+        filters.append(checkbox);
+      });
+    }
+  } else {
+    console.log("values is not an array");
+  }
+  
+  return filters;
 }
 
 
