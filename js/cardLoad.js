@@ -115,8 +115,15 @@ function populateFilter(data, key, label) {
       values.sort((a, b) => a.title.localeCompare(b.title));
       
 		$.each(values, function (index, value) {
-			
-		  var checkbox = $(`<div class='form-check'><input class=' form-check-input single-${key} ' type='checkbox' value='${value.title}' ><label class='form-check-label align-middle'><span class="${value.type}">${value.title}</span> (${value.year})</label></div>`);
+
+			console.log("value", value)
+			if ('author_last_name' in value) {
+				pairLabel = ` by ${value.author_first_name} ${value.author_last_name}`
+			} else {
+				pairLabel = ""
+			}
+
+		  var checkbox = $(`<div class='form-check'><input class=' form-check-input single-${key} ' type='checkbox' value='${value.title}' ><label class='form-check-label align-middle'><span class="${value.type}">${value.title}</span> (${value.year})${pairLabel}</label></div>`);
 
 
 		  filters.append(checkbox);
@@ -283,13 +290,17 @@ function filterCards(data) {
 
 			card.story.forEach(function (storyObj) {
 
-				storyTitle += `<span class = ${storyObj.type}>${storyObj.title}</span>, `
+				if ('author_last_name' in storyObj) {
 
+					storyTitle += `<span class = ${storyObj.type}>${storyObj.title}</span><span> by ${storyObj.author_first_name} ${storyObj.author_last_name}</span >, `
+				} else{
+					storyTitle += `<span class = ${storyObj.type}>${storyObj.title}</span >, `
+				}
 			});
 			storyTitle = storyTitle.slice(0, -2);
 		}
 
-		var modalityText = "";
+	/*	var modalityText = "";
 
 		if (card.modality.length > 1) {
 			console.log ("card.modality: " + card.modality)
@@ -299,27 +310,27 @@ function filterCards(data) {
 			modalityText = modalityText.slice(0, -2);
 		} else {
 			modalityText = card.modality
-		}
+		}*/
 
 		const imageHTML = `<img src="images/${((card.image.card == "") ? 'background2.png' : card.image.card)}" class="card-img-top">`
 
 		const titleHTML = `<h5 class="card-title">${card.title}</h5>`
 
-		const storyHTML = `<p class="card-text"><span class="font-weight-bold">${((card.story.length > 1) ? 'Stories: ' : 'Story: ')}</span> ${storyTitle} </p>`
+		const storyHTML = `<p class="card-text"><span class="font-weight-bold">${((card.story.length > 1) ? 'Texts: ' : 'Text: ')}</span> ${storyTitle} </p>`
 
 		const descriptionHTML = `<p class="card-text"><span class="font-weight-bold">Description: </span>${card.description}</p>`
 
-		const modalityHTML = `<p class="card-text"><span class="font-weight-bold">Modality: </span>${modalityText}</p>`
-
-		const paired_authorHTML = card.paired_author !== null ? `<p class= "card-text"><span class="font-weight-bold">Paired author:</span> ${card.paired_author} </p>` : ''
+/*		const modalityHTML = `<p class="card-text"><span class="font-weight-bold">Modality: </span>${modalityText}</p>`
+*//*
+		const paired_authorHTML = card.paired_author !== null ? `<p class= "card-text"><span class="font-weight-bold">Paired author:</span> ${card.paired_author} </p>` : ''*/
 
 		var cardHtml = $(`<a href="pages/${card.filename}"> <div class="card"> <div class="info"> ${imageHTML}${titleHTML}
 		 </div>
-		 <div class="card-body"> ${storyHTML} ${modalityHTML} ${paired_authorHTML}${descriptionHTML}  </div > </div > </a > </div >`)
+		 <div class="card-body"> ${storyHTML} ${descriptionHTML}  </div > </div > </a > </div >`)
 
 
 
-		/*var cardHtml = $("<div class='col'><a href='pages/" + card.url + "'><div class='card'><div class = 'info'><img src=images/" + ((card.image == "") ? 'background2.png' : card.image) + " class='card-img-top'><h5 class='card-title'>" + card.title + "</h5></div><div class='card-body'><p class='card-text'>" + ((card.story.length > 1) ? 'Stories: ' : 'Story: ') + card.story + "</p><p class='card-text'>Description: " + card.description + "</p><p class='card-text'>Modality: " + card.modality + "</p><p class='card-text'>" + ((card.paired_author !== null) ? 'Paired author: ' + card.paired_author : '') + "</p></div ></div ></a ></div > ");*/
+		
 		cardContainer.append(cardHtml);
 	});
 }
