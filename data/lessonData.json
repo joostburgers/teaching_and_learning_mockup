@@ -307,20 +307,20 @@
 	],
 	"image": {
 	  "card": "archive_manuscript_gdm_genealogical_chart_card.jpg",
-	  "banner" :"archive_manuscript_gdm_genealogical_chart_banner.jpg"
+	  "banner": "archive_manuscript_gdm_genealogical_chart_banner.jpg"
 	},
-	  "description": "Students will read both novels and consider how Parks’ work speaks both back to and alongside Faulkner, particularly in terms of questions regarding family, obligation, and the possibilities of love in the midst of material and social marginalization.",
-	  "modality": [ "In-Person", "Online Synchronous" ],
-	  "paired_author": [ "Suzan Lori-Parks" ],
-	  "pilot_classroom": "Short description as string",
-	  "learning_goals": [ "learning goals as array" ],
-	  "common_core": [ "common core as array" ],
-	  "student_samples": null,
-	  "original_lesson_plan": null,
+	"description": "Students will read both novels and consider how Parks’ work speaks both back to and alongside Faulkner, particularly in terms of questions regarding family, obligation, and the possibilities of love in the midst of material and social marginalization.",
+	"modality": [ "In-Person"],
+	"paired_author": [ "Suzan Lori-Parks" ],
+	"pilot_classroom": null,
+	"learning_goals": [ "Formal literary analysis", "Compare two formally and thematically related novels" ],
+	"common_core": [ "common core as array" ],
+	"student_samples": null,
+	"original_lesson_plan": null,
 	"instructor": "Rachel Watson",
-	  "institution": "Howard University",
-	  "contact": null,
-	  "created": "2023-07-23",
-	  "notes": [ "This is where the notes go as array" ]
-	}
+	"institution": "Howard University",
+	"contact": "rachel.watson@howard.edu",
+	"created": "2023-09-25",
+	"notes": null
+  }
 ]
