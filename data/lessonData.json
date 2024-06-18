@@ -145,7 +145,8 @@
 	"paired_author": null,
 	"pilot_classroom": null,
 	"learning_goals": null,
-	"common_core": null,
+	"common_core": ["CCSS.RL.9-10.1", "CCSS.RL.9-10.2", "CCSS.RL.9-10.3", "CCSS.RL.9-10.1", "CCSS.RL.9-10.5", "CCSS.W.9-10.1", "CCSS.W.9-10.2", "CCSS.RL.11-12.1", "CCSS.RL.11-12.2", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RL.11-12.6", "CCSS.RL.11-12.9", "CCSS.W.11-12.1", "CCSS.W.11-12.2",]
+],
 	"student_samples": null,
 	"original_lesson_plan": null,
 	"instructor": "Jon Hayes",
