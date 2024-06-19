@@ -242,7 +242,7 @@
 
 	"pilot_classroom": "Entry-level English major seminar at a liberal arts university.",
 	"learning_goals": [ "Analyze text that emphasizes the significance of perspective in narrative texts", "Critique implicit assumptions and limitations of reference tools such as genealogical charts", "Work collaboratively to foster comparative analysis", "Create artifacts that foster analysis across visual and textual media" ],
-	"common_core": null,
+	"common_core": ["CCSS.RL.9-10.1", "CCSS.RL.9-10.5", "CCSS.RI.9-10.7", "CCSS.W.9-10.1", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RI.11-12.7", "CCSS.W.11-12.1"],
 	"student_samples": null,
 	"original_lesson_plan": [
 	  {
