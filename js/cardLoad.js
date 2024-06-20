@@ -300,17 +300,8 @@ function filterCards(data) {
 			storyTitle = storyTitle.slice(0, -2);
 		}
 
-	/*	var modalityText = "";
+		const urlHTML = card.url ? card.url : `pages/${card.filename}`;
 
-		if (card.modality.length > 1) {
-			console.log ("card.modality: " + card.modality)
-			card.modality.forEach(function (modality) {
-				modalityText += modality + ", "
-				})
-			modalityText = modalityText.slice(0, -2);
-		} else {
-			modalityText = card.modality
-		}*/
 
 		const imageHTML = `<img src="images/${((card.image.card == "") ? 'background2.png' : card.image.card)}" class="card-img-top">`
 
@@ -324,7 +315,7 @@ function filterCards(data) {
 *//*
 		const paired_authorHTML = card.paired_author !== null ? `<p class= "card-text"><span class="font-weight-bold">Paired author:</span> ${card.paired_author} </p>` : ''*/
 
-		var cardHtml = $(`<a href="pages/${card.filename}"> <div class="card"> <div class="info"> ${imageHTML}${titleHTML}
+		var cardHtml = $(`<a href="${card.urlHTML}"> <div class="card"> <div class="info"> ${imageHTML}${titleHTML}
 		 </div>
 		 <div class="card-body"> ${storyHTML} ${descriptionHTML}  </div > </div > </a > </div >`)
 

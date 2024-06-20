@@ -1,6 +1,7 @@
 [
   {
 	"filename": "beach1.html",
+	"url": null,
 	"title": "Faulkner Fan Fic: Practicing Character Development and Scene Building in Faulkner’s Universe",
 	"story": [
 	  {
@@ -50,15 +51,16 @@
 	"notes": [ "Each activity can be used as scaffolded for the final product or can be used separately depending on the instructor’s desired outcomes.", "You will need to allot some time to in-class instruction on Digital Yoknapatawpha.  The DY tools and pages for this assignment are fairly simple to use.", "Community college students come in a wide range of ages and backgrounds. This class had high school dual-enrolled students as well as older adults who already had college degrees and were taking the course for enrichment. The project was successful considering the wide range of maturity and knowledge about Faulkner. Some students were aware of Faulkner’s work, some students had read Faulkner novels, and some students were introduced to Faulkner with this project." ]
   },
 
- {
-  "filename": "bryant1.html",
-  "title": "<em>As I Lay Dying</em> Digital Escape Room",
-  "story": [
-	{
-	"title": "As I Lay Dying",
-	"type": "novel",
-	"year": "1930"
-	}
+  {
+	"filename": "bryant1.html",
+	"url": null,
+	"title": "<em>As I Lay Dying</em> Digital Escape Room",
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
 	],
 
 	"image": {
@@ -71,7 +73,7 @@
 	"paired_author": null,
 	"pilot_classroom": "Short description as string",
 	"learning_goals": [ "learning goals as array" ],
-	"common_core": [ "RL.11-12.3", "RL.11-12.5", "RL.11-12.6"],
+	"common_core": [ "RL.11-12.3", "RL.11-12.5", "RL.11-12.6" ],
 	"student_samples": null,
 	"original_lesson_plan": null,
 	"instructor": "Taylor Bryant",
@@ -83,6 +85,7 @@
 
   {
 	"filename": "dimock1.html",
+	"url": null,
 	"title": "'Barn Burning' and 'The Man Who Was Almost a Man': Sharecropping and Coming of Age in Mississippi",
 	"story": [
 	  {
@@ -111,7 +114,7 @@
 
 	"pilot_classroom": "Class Description",
 	"learning_goals": [ "", "", "" ],
-	"common_core": ["CCSS.RL.9-10.1", "CCSS.RL.9-10.2", "CCSS.RL.9-10.3", "CCSS.RL.9-10.5", "CCSS.W.9-10.1", "CCSS.RL.11-12.1", "CCSS.RL.11-12.2", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RL.11-12.6", "CCSS.RL.11-12.9", "CCSS.W.11-12.1"],
+	"common_core": [ "CCSS.RL.9-10.1", "CCSS.RL.9-10.2", "CCSS.RL.9-10.3", "CCSS.RL.9-10.5", "CCSS.W.9-10.1", "CCSS.RL.11-12.1", "CCSS.RL.11-12.2", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RL.11-12.6", "CCSS.RL.11-12.9", "CCSS.W.11-12.1" ],
 	"student_samples": null,
 	"original_lesson_plan": [
 	  {
@@ -128,6 +131,7 @@
   },
   {
 	"filename": "hayes1.html",
+	"url": null,
 	"title": "Multimodal Composition and 'A Rose for Emily'",
 	"story": [
 	  {
@@ -145,7 +149,7 @@
 	"paired_author": null,
 	"pilot_classroom": null,
 	"learning_goals": null,
-	"common_core": ["CCSS.RL.9-10.1", "CCSS.RL.9-10.2", "CCSS.RL.9-10.3", "CCSS.RL.9-10.1", "CCSS.RL.9-10.5", "CCSS.W.9-10.1", "CCSS.W.9-10.2", "CCSS.RL.11-12.1", "CCSS.RL.11-12.2", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RL.11-12.6", "CCSS.RL.11-12.9", "CCSS.W.11-12.1", "CCSS.W.11-12.2"],
+	"common_core": [ "CCSS.RL.9-10.1", "CCSS.RL.9-10.2", "CCSS.RL.9-10.3", "CCSS.RL.9-10.1", "CCSS.RL.9-10.5", "CCSS.W.9-10.1", "CCSS.W.9-10.2", "CCSS.RL.11-12.1", "CCSS.RL.11-12.2", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RL.11-12.6", "CCSS.RL.11-12.9", "CCSS.W.11-12.1", "CCSS.W.11-12.2" ],
 	"student_samples": null,
 	"original_lesson_plan": null,
 	"instructor": "Jon Hayes",
@@ -155,10 +159,11 @@
 	"notes": null
   },
 
- 
+
 
   {
 	"filename": "joiner1.html",
+	"url": null,
 	"title": "Interpretive Mapping of Faulkner and Beyond",
 	"story": [
 	  {
@@ -176,7 +181,7 @@
 	"paired_author": null,
 	"pilot_classroom": "Advanced Studies in Literature:  William Faulkner and James Fenimore Cooper",
 	"learning_goals": [ "Understand how language shapes and influences understandings of place and space and, more specifically, how authors have created literary spaces that represent and respond to physical, cultural, historical and social contexts of Mississippi and New York", "Develop the skills to shape complex questions and evaluate competing points of view about a text and explore understandings orally, visually, digitally, and in writing", "Synthesize close readings and create multimodal texts that demonstrate understandings of audience, purpose, and context", "Apply digital humanities research and conceptual skills for problem solving" ],
-	"common_core": ["CCSS.RL.9-10.1", "CCSS.RL.9-10.3", "CCSS.RL.9-10.5", "CCSS.RL.9-10.7", "CCSS.RI.9-10.7", "CCSS.W.9-10.1", "CCSS.W.9-10.2", "CCSS.RL.11-12.1", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RI.11-12.7", "CCSS.W.11-12.1", "CCSS.W.11-12.2"],
+	"common_core": [ "CCSS.RL.9-10.1", "CCSS.RL.9-10.3", "CCSS.RL.9-10.5", "CCSS.RL.9-10.7", "CCSS.RI.9-10.7", "CCSS.W.9-10.1", "CCSS.W.9-10.2", "CCSS.RL.11-12.1", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RI.11-12.7", "CCSS.W.11-12.1", "CCSS.W.11-12.2" ],
 	"student_samples": null,
 	"original_lesson_plan": null,
 	"instructor": "Jennie Joiner",
@@ -188,6 +193,7 @@
 
   {
 	"filename": "mills1.html",
+	"url": null,
 	"title": "Exploring the Worlds of Faulkner's Female Characters",
 	"image": {
 	  "card": "site_photograph_a_child_of_scarbroughs_in_front_of_dresser_card.jpg",
@@ -224,6 +230,7 @@
 
   {
 	"filename": "penner1.html",
+	"url": null,
 	"title": "Collaborating on a Genealogy for  <em>As I Lay Dying</em>",
 	"story": [
 	  {
@@ -242,7 +249,7 @@
 
 	"pilot_classroom": "Entry-level English major seminar at a liberal arts university.",
 	"learning_goals": [ "Analyze text that emphasizes the significance of perspective in narrative texts", "Critique implicit assumptions and limitations of reference tools such as genealogical charts", "Work collaboratively to foster comparative analysis", "Create artifacts that foster analysis across visual and textual media" ],
-	"common_core": ["CCSS.RL.9-10.1", "CCSS.RL.9-10.5", "CCSS.RI.9-10.7", "CCSS.W.9-10.1", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RI.11-12.7", "CCSS.W.11-12.1"],
+	"common_core": [ "CCSS.RL.9-10.1", "CCSS.RL.9-10.5", "CCSS.RI.9-10.7", "CCSS.W.9-10.1", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RI.11-12.7", "CCSS.W.11-12.1" ],
 	"student_samples": null,
 	"original_lesson_plan": [
 	  {
@@ -260,6 +267,7 @@
 
   {
 	"filename": "tate1.html",
+	"url": null,
 	"title": "Tracking Themes in <em>As I Lay Dying</em>",
 	"story": [
 	  {
@@ -290,6 +298,7 @@
 
   {
 	"filename": "watson1.html",
+	"url": null,
 	"title": "Love and Family in <em>As I Lay Dying</em> and <em>Getting Mother’s Body</em>",
 	"story": [
 	  {
@@ -310,7 +319,7 @@
 	  "banner": "archive_manuscript_gdm_genealogical_chart_banner.jpg"
 	},
 	"description": "Students will read both novels and consider how Parks’ work speaks both back to and alongside Faulkner, particularly in terms of questions regarding family, obligation, and the possibilities of love in the midst of material and social marginalization.",
-	"modality": [ "In-Person"],
+	"modality": [ "In-Person" ],
 	"paired_author": [ "Suzan Lori-Parks" ],
 	"pilot_classroom": null,
 	"learning_goals": [ "Formal literary analysis", "Compare two formally and thematically related novels" ],
