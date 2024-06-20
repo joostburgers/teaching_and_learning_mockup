@@ -302,6 +302,7 @@ function filterCards(data) {
 
 		const urlHTML = card.url ? card.url : `pages/${card.filename}`;
 
+		console.log(urlHTML)
 
 		const imageHTML = `<img src="images/${((card.image.card == "") ? 'background2.png' : card.image.card)}" class="card-img-top">`
 
@@ -311,11 +312,9 @@ function filterCards(data) {
 
 		const descriptionHTML = `<p class="card-text"><span class="font-weight-bold">Description: </span>${card.description}</p>`
 
-/*		const modalityHTML = `<p class="card-text"><span class="font-weight-bold">Modality: </span>${modalityText}</p>`
-*//*
-		const paired_authorHTML = card.paired_author !== null ? `<p class= "card-text"><span class="font-weight-bold">Paired author:</span> ${card.paired_author} </p>` : ''*/
 
-		var cardHtml = $(`<a href="${card.urlHTML}"> <div class="card"> <div class="info"> ${imageHTML}${titleHTML}
+
+		var cardHtml = $(`<a href="${urlHTML}"> <div class="card"> <div class="info"> ${imageHTML}${titleHTML}
 		 </div>
 		 <div class="card-body"> ${storyHTML} ${descriptionHTML}  </div > </div > </a > </div >`)
 

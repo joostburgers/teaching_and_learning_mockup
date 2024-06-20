@@ -331,5 +331,37 @@
 	"contact": "rachel.watson@howard.edu",
 	"created": "2023-09-25",
 	"notes": null
+  },
+
+  {
+	"filename": "padgett",
+	"url": "http://faulkner.iath.virginia.edu/family/videos-padgettaa.php",
+	"title": "Using Digital Yoknapatawpha to Analyze Faulkner's <em>Absalom, Absalom!</em> as a Gothic Text",
+	"story": [
+	  {
+		"title": "Absalom, Absalom!",
+		"type": "novel",
+		"year": "1936"
+	  }
+	],
+	"image": {
+	  "card": "archive_manuscript_gdm_genealogical_chart_card.jpg",
+	  "banner": null
+	},
+	"description": "Description goes here",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": null,
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "John Padgett",
+	"institution": "Brevard College",
+	"contact": null,
+	"created": "2023-09-25",
+	"notes": null
   }
+
+
 ]
