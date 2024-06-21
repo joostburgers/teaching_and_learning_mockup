@@ -455,4 +455,35 @@
 	"created": "2024-06-21",
 	"notes": null
   },
+
+
+  {
+	"filename": "denton",
+	"url": "https://faulkner.drupal.shanti.virginia.edu/sites/default/files/documents/DY_Rose_for_Emily.pdf",
+	"title": "Faulkner, Narration, and the New South Digital Yoknapatawpha A Rose for Emily",
+	"story": [
+	  {
+		"title": "A Rose for Emily",
+		"type": "short_story",
+		"year": "1930"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_large_antebellum_style_home_card.jpg",
+	  "banner": null
+	},
+	"description": "This lesson leads students to new discoveries of textual meaning and introduces them to twenty-first century job market skills.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": null,
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Ren Denton",
+	"institution": "East Georgia State College",
+	"contact": null,
+	"created": "2024-06-21",
+	"notes": null
+  },
 ]
