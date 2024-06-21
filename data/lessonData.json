@@ -387,10 +387,72 @@
 	"common_core": null,
 	"student_samples": null,
 	"original_lesson_plan": null,
-	"instructor": "John B. Padgett",
-	"institution": "Brevard College",
+	"instructor": "Jenna Sciuto",
+	"institution": "Massachusetts College of Liberal Arts",
 	"contact": null,
 	"created": "2024-06-20",
 	"notes": null
-  }
+  },
+
+
+  {
+	"filename": "railton",
+	"url": "https://faulkner.iath.virginia.edu/family/videos-sfdemos.php",
+	"title": "Space and Time in <em>The Sound and the Fury</em>",
+	"story": [
+	  {
+		"title": "The Sound and the Fury",
+		"type": "novel",
+		"year": "1929"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_aerial_photograph_of_oxford_looking_north_card.jpg",
+	  "banner": null
+	},
+	"description": "These videos demonstrate some of the ways to use DY in your classroom or research as well as develop a reading of some of <em>The Sound and the Fury</em>'s major themes.",
+	"modality": [ "Virtual" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": null,
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Stephen Railton",
+	"institution": "University of Virginia",
+	"contact": null,
+	"created": "2024-06-21",
+	"notes": null
+  },
+
+
+  {
+	"filename": "robbins",
+	"url": "https://faulkner.iath.virginia.edu/family/videos-robbinsemily.php",
+	"title": "Using Digital Yoknapatawpha to Analyze 'A Rose for Emily' as a Gothic Literary",
+	"story": [
+	  {
+		"title": "A Rose for Emily",
+		"type": "short_story",
+		"year": "1930"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_large_antebellum_style_home_card.jpg",
+	  "banner": null
+	},
+	"description": "This video demonstration illustrates how to use DY to perform a Gothic reading of Faulkner's A Rose for Emily.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": null,
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Ben Robbins",
+	"institution": "University of Innsbruck",
+	"contact": null,
+	"created": "2024-06-21",
+	"notes": null
+  },
 ]
