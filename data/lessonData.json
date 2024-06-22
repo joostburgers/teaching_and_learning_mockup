@@ -486,4 +486,35 @@
 	"created": "2024-06-21",
 	"notes": null
   }
+
+
+  {
+	"filename": "peeker",
+	"url": "https://faulkner.drupal.shanti.virginia.edu/content/tlcfspeeker",
+	"title": "Seeing Memory: Using Digital Yoknapatawpha to Teach Cognitive Literary Studies",
+	"story": [
+	  {
+		"title": "The Sound and the Fury",
+		"type": "novel",
+		"year": "1929"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_fig3_mound_near_oliver_bridge_card.jpg",
+	  "banner": null
+	},
+	"description": "This essay outlines how the instructor used DY to visualize Faulkner characters' struggles with the past and its persistence, entering a philosophical and scientific discussion.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": null,
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Aili Pettersson Peeker",
+	"institution": "University of California, Santa Barbara",
+	"contact": null,
+	"created": "2024-06-22",
+	"notes": null
+  }
 ]
