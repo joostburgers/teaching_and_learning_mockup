@@ -150,7 +150,30 @@
 	"pilot_classroom": null,
 	"learning_goals": null,
 	"common_core": [ "CCSS.RL.9-10.1", "CCSS.RL.9-10.2", "CCSS.RL.9-10.3", "CCSS.RL.9-10.1", "CCSS.RL.9-10.5", "CCSS.W.9-10.1", "CCSS.W.9-10.2", "CCSS.RL.11-12.1", "CCSS.RL.11-12.2", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RL.11-12.6", "CCSS.RL.11-12.9", "CCSS.W.11-12.1", "CCSS.W.11-12.2" ],
-	"student_samples": null,
+	"student_samples": [
+	  {
+		"first_name": null,
+		"last_name": null,
+		"title": "Jefferson: A Grave for Emily",
+		"filename": "student_essay_jefferson_a_grave_for_emily.pdf",
+		"file_type": "pdf"
+	  },
+	  {
+		"first_name": null,
+		"last_name": null,
+		"title": "'Let's Do the Time Warp Again':'A Rose for Emily' Analysis",
+		"filename": "student_essay_lets_do_the_time_warp_again.pdf",
+		"file_type": "pdf"
+	  },
+	  {
+		"first_name": null,
+		"last_name": null,
+		"title": "Slipping Through Fingers",
+		"filename": "student_essay_slipping_through_fingers.pdf",
+		"file_type": "pdf"
+	  }
+
+	],
 	"original_lesson_plan": null,
 	"instructor": "Jon Hayes",
 	"institution": "Southeast Missouri State University",

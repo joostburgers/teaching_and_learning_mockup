@@ -121,6 +121,20 @@ ol.activity-list {
 		display: none;
 	}
 
+.activity-list-unordered-3col {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none; /* Removes default list styling */
+	padding: 15px; /* Removes default padding */
+}
+
+	.activity-list-unordered-3col li {
+		flex: 1 1 25%; /* Each item will take up roughly a third of the container's width */
+		box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+		padding: 5px; /* Adds some padding around each item */
+	}
+
+
 .activity-instructions {
 	padding: 10px;
 	font-weight: bold;
