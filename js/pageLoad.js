@@ -494,7 +494,7 @@ function setLessonData(data) {
 
 	
 
-	const commonCoreHTML = data.common_core !== null ? `<p>Common Core: <ul class="activity-list-unordered-blank">${createList(data.common_core)}</ul></p>` : '';
+	const commonCoreHTML = data.common_core !== null ? `<p>Common Core: <ul class="activity-list-unordered-3col">${createList(data.common_core)}</ul></p>` : '';
 
 	const studentSamplesHTML = data.student_samples !== null ? `<p>Student samples: <ul class="activity-list-unordered-blank">${createSamples(data.student_samples, data.filename)}</ul></p>` : '';
 
@@ -597,14 +597,21 @@ function setGlanceData(data) {
 
 
 function createList(array) {
+	
 	if (array && Array.isArray(array)) {
+		array = array.sort();
 		const list = array.map(items => `<li>${items}</li>`).join('');
 
-		console.log(list)
+	
 		return list;
 	}
 	return null
 }
+
+
+
+
+
 
 /**
  * Creates a list of file samples for display.
