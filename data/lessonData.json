@@ -92,6 +92,13 @@
 		"title": "Barn Burning",
 		"type": "short_story",
 		"year": "1939"
+	  },
+	  {
+		"title": "The Man Who Was Almost a Man",
+		"type": "short_story",
+		"year": "1940",
+		"author_last_name": "Wright",
+		"author_first_name": "Richard"
 	  }
 	],
 
@@ -102,17 +109,7 @@
 
 	"description": "Students will use DY maps and photos to study how Faulkner and Wright use the coming of age theme to examine sharecropping in the Jim Crow era.",
 	"modality": [ "In-Person", "Online Asynchronous", "Online Synchronous" ],
-	"paired_author": [
-	  {
-		"title": "The Man Who Was Almost a Man",
-		"type": "short_story",
-		"year": "1940",
-		"author_last_name": "Wright",
-		"author_first_name": "Richard"
-	  }
-	],
-
-
+	"paired_author": ["Richard Wright"],
 	"pilot_classroom": "Class Description",
 	"learning_goals": [ "", "", "" ],
 	"common_core": [ "CCSS.RL.9-10.1", "CCSS.RL.9-10.2", "CCSS.RL.9-10.3", "CCSS.RL.9-10.5", "CCSS.W.9-10.1", "CCSS.RL.11-12.1", "CCSS.RL.11-12.2", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RL.11-12.6", "CCSS.RL.11-12.9", "CCSS.W.11-12.1" ],
@@ -329,15 +326,7 @@
 		"title": "As I Lay Dying",
 		"type": "novel",
 		"year": "1930"
-	  }
-	],
-	"image": {
-	  "card": "archive_manuscript_gdm_genealogical_chart_card.jpg",
-	  "banner": "archive_manuscript_gdm_genealogical_chart_banner.jpg"
-	},
-	"description": "Students will read both novels and consider how Parks’ work speaks both back to and alongside Faulkner, particularly in terms of questions regarding family, obligation, and the possibilities of love in the midst of material and social marginalization.",
-	"modality": [ "In-Person" ],
-	"paired_author": [
+	  },
 	  {
 		"title": "Getting Mother's Body",
 		"type": "novel",
@@ -346,6 +335,13 @@
 		"author_first_name": "Suzan Lori"
 	  }
 	],
+	"image": {
+	  "card": "archive_manuscript_gdm_genealogical_chart_card.jpg",
+	  "banner": "archive_manuscript_gdm_genealogical_chart_banner.jpg"
+	},
+	"description": "Students will read both novels and consider how Parks’ work speaks both back to and alongside Faulkner, particularly in terms of questions regarding family, obligation, and the possibilities of love in the midst of material and social marginalization.",
+	"modality": [ "In-Person" ],
+	"paired_author": [ "Suzan Lori Parks" ],
 	"pilot_classroom": null,
 	"learning_goals": [ "Formal literary analysis", "Compare two formally and thematically related novels" ],
 	"common_core": [ "common core as array" ],
