@@ -537,5 +537,36 @@
 	"contact": null,
 	"created": "2024-06-22",
 	"notes": null
+  },
+
+
+  {
+	"filename": "penner2",
+	"url": "https://faulkner.iath.virginia.edu/family/videos-penneraild.php",
+	"title": "Using Digital Yoknapatawpha to Compare Interpretive Lenses for <em>As I Lay Dying</em>",
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_house_of_sharecroppers_card.jpg",
+	  "banner": null
+	},
+	"description": "These videos compare the interpretive lenses that can be applied to As I Lay Dying using DY.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": null,
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Erin Penner",
+	"institution": "Asbury University",
+	"contact": null,
+	"created": "2024-06-22",
+	"notes": null
   }
 ]
