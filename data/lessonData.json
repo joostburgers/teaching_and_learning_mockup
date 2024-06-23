@@ -8,13 +8,6 @@
 		"title": "Barn Burning",
 		"type": "short_story",
 		"year": "1939"
-	  },
-	  {
-		"title": "Everyday Use",
-		"type": "short_story",
-		"year": "1973",
-		"author_last_name": "Walker",
-		"author_first_name": "Alice"
 	  }
 	],
 
@@ -24,7 +17,15 @@
 	},
 	"description": "This is a creative writing exercise which gives voice to minor characters in William Faulkner’s  universe. Students will use Digital Yoknapatawpha to flesh out minor characters and rewrite scenes in Faulkner’s fiction.",
 	"modality": [ "In-Person", "Online Synchronous" ],
-	"paired_author": [ "Alice Walker" ],
+	"paired_author": [
+	  {
+		"title": "Everyday Use",
+		"type": "short_story",
+		"year": "1973",
+		"author_last_name": "Walker",
+		"author_first_name": "Alice"
+	  }
+	],
 	"pilot_classroom": "This project was piloted in a synchronous online creative writing class for college freshmen and sophomores at St. Louis Community College.",
 	"learning_goals": [ "To identify major and minor characters, point of view, setting, scene building, and plot.", "To research social/historical context in imaginative writing through the use of digital resources.", "To practice stepping outside of self to write/invent characters and scenes from different perspectives in different time periods." ],
 	"common_core": [ "CCSS.RL.9-10.5", "CCSS.RL.9-10.7", "CCSS.RL.9-10.9", "CCSS.W.9-10.3", "CCSS.RL.11-12.5", "CCSS.RL.11-12.6", "CCSS.RL.11-12.9", "CCSS.W.11-12.3"],

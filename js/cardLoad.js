@@ -116,7 +116,7 @@ function populateFilter(data, key, label) {
       
 		$.each(values, function (index, value) {
 
-			console.log("value", value)
+			
 			if ('author_last_name' in value) {
 				pairLabel = ` by ${value.author_first_name} ${value.author_last_name}`
 			} else {
@@ -139,7 +139,7 @@ function populateFilter(data, key, label) {
       });
     }
   } else {
-    console.log("values is not an array");
+    console.log("value is not an array");
   }
   
   return filters;
@@ -302,7 +302,7 @@ function filterCards(data) {
 
 		const urlHTML = card.url ? card.url : `pages/${card.filename}`;
 
-		console.log(urlHTML)
+		
 
 		const imageHTML = `<img src="images/${((card.image.card == "") ? 'background2.png' : card.image.card)}" class="card-img-top">`
 
