@@ -555,7 +555,7 @@
 	  "card": "site_photograph_house_of_sharecroppers_card.jpg",
 	  "banner": null
 	},
-	"description": "These videos compare the interpretive lenses that can be applied to As I Lay Dying using DY.",
+	"description": "These videos compare the interpretive lenses that can be applied to <em>As I Lay Dying</em> using DY.",
 	"modality": [ "In-Person" ],
 	"paired_author": null,
 	"pilot_classroom": null,
@@ -567,6 +567,37 @@
 	"institution": "Asbury University",
 	"contact": null,
 	"created": "2024-06-22",
+	"notes": null
+  },
+
+
+  {
+	"filename": "penner3",
+	"url": "https://faulkner.iath.virginia.edu/family/videos-pennerds.php",
+	"title": "DY When You Only Know 1 Faulkner Story",
+	"story": [
+	  {
+		"title": "Dry September",
+		"type": "short_story",
+		"year": "1931"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_gathering_for_a_political_rally_card.jpg",
+	  "banner": null
+	},
+	"description": "This video demonstrates how to use DY's <em>search</em> and <em>keyword</em> functions to take students deeper into Dry September.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": null,
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Erin Penner",
+	"institution": "Asbury University",
+	"contact": null,
+	"created": "2024-06-23",
 	"notes": null
   }
 ]
