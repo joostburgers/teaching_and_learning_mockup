@@ -93,13 +93,6 @@
 		"title": "Barn Burning",
 		"type": "short_story",
 		"year": "1939"
-	  },
-	  {
-		"title": "The Man Who Was Almost a Man",
-		"type": "short_story",
-		"year": "1940",
-		"author_last_name": "Wright",
-		"author_first_name": "Richard"
 	  }
 	],
 
@@ -110,7 +103,15 @@
 
 	"description": "Students will use DY maps and photos to study how Faulkner and Wright use the coming of age theme to examine sharecropping in the Jim Crow era.",
 	"modality": [ "In-Person", "Online Asynchronous", "Online Synchronous" ],
-	"paired_author": [ "Richard Wright" ],
+	"paired_author": [
+	  {
+		"title": "The Man Who Was Almost a Man",
+		"type": "short_story",
+		"year": "1940",
+		"author_last_name": "Wright",
+		"author_first_name": "Richard"
+	  }
+	],
 
 
 	"pilot_classroom": "Class Description",
@@ -329,13 +330,6 @@
 		"title": "As I Lay Dying",
 		"type": "novel",
 		"year": "1930"
-	  },
-	  {
-		"title": "Getting Mother's Body",
-		"type": "novel",
-		"year": "2003",
-		"author_last_name": "Parks",
-		"author_first_name": "Suzan Lori"
 	  }
 	],
 	"image": {
@@ -344,7 +338,15 @@
 	},
 	"description": "Students will read both novels and consider how Parks’ work speaks both back to and alongside Faulkner, particularly in terms of questions regarding family, obligation, and the possibilities of love in the midst of material and social marginalization.",
 	"modality": [ "In-Person" ],
-	"paired_author": [ "Suzan Lori-Parks" ],
+	"paired_author": [
+	  {
+		"title": "Getting Mother's Body",
+		"type": "novel",
+		"year": "2003",
+		"author_last_name": "Parks",
+		"author_first_name": "Suzan Lori"
+	  }
+	],
 	"pilot_classroom": null,
 	"learning_goals": [ "Formal literary analysis", "Compare two formally and thematically related novels" ],
 	"common_core": [ "common core as array" ],
