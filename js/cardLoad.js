@@ -16,8 +16,8 @@ function getCards() {
 
 
 
-			populateFilter(data, "paired_author", "Authors")
-			populateFilter(data, "story", "Stories");
+			populateFilter(data, "paired_author", "paired texts")
+			populateFilter(data, "story", "stories");
 			//populateFilter(data, "modality", "Formats");
 			defineCheckboxes("story")
 			/*defineCheckboxes("modality")*/
@@ -207,8 +207,10 @@ function filterCards(data) {
 	$("#paired_author-filters input[type='checkbox']:checked").each(function () {
 
 		selectedAuthors.push($(this).val());
-
+		console.log(selectedAuthors)
 	});
+
+	console.log("selected authors", selectedAuthors)
 
 
 	// Filter cards based on selected filters
@@ -216,10 +218,22 @@ function filterCards(data) {
 
 	$.each(cards, function (index, card) {
 		var selected = false;
-				
+
 		if (card.story === "All") {
 			selected = true;
-		} else { card.story.forEach(function (storyObj) { Object.values(storyObj).forEach(function (title) { selectedStories.forEach(function (selectedStory) { if (title.includes(selectedStory) || selectedStory === "all" || title === "All") { selected = true; } }); }); }); }
+		} else {
+			card.story.forEach(function (storyObj) {
+				Object.values(storyObj).forEach(function (title) {
+					selectedStories.forEach(function (selectedStory)
+					{
+						console.log("selected Story",selectedStory)
+						if (title.includes(selectedStory) || selectedStory === "all" || title === "All") { selected = true; }
+					});
+				});
+			});
+			
+			console.log(selected)
+		}
 
 
 
@@ -239,15 +253,20 @@ function filterCards(data) {
 
 		if (selectedAuthors == "all") {
 			Authorselected = true
-		}
-
-
-		if (card.paired_author !== null && selectedAuthors !== "all") {
-			selectedAuthors.forEach(function (selectedAuthor) {
-				if (card.paired_author.includes(selectedAuthor) || selectedAuthor === "all") {
-					Authorselected = true;
-				}
-			})
+		} else { 
+			card.paired_author.forEach(function (authorObj) {
+				Object.values(authorObj).forEach(function (title) {
+					selectedAuthors.forEach(function (selectedAuthors) {
+						console.log("Selected Authros", selectedAuthors)
+						if (title.includes(selectedAuthors) || selectedAuthors === "all" || title === "All") {
+							Authorselected = true;
+							console.log("selected Authors", selectedAuthors)
+							console.log("title", title)
+						}
+					});
+				});
+			});
+		
 		}
 
 
@@ -290,25 +309,30 @@ function filterCards(data) {
 
 			card.story.forEach(function (storyObj) {
 
-				if ('author_last_name' in storyObj) {
+				/*	if ('author_last_name' in storyObj) {
+	
+						storyTitle += `<span class = ${storyObj.type}>${storyObj.title}</span><span> by ${storyObj.author_first_name} ${storyObj.author_last_name}</span >, `
+					} else{*/
+				storyTitle += `<span class = ${storyObj.type}>${storyObj.title}</span >`
+				//}
 
-					storyTitle += `<span class = ${storyObj.type}>${storyObj.title}</span><span> by ${storyObj.author_first_name} ${storyObj.author_last_name}</span >, `
-				} else{
-					storyTitle += `<span class = ${storyObj.type}>${storyObj.title}</span >, `
-				}
+
 			});
-			storyTitle = storyTitle.slice(0, -2);
+			if (card.paired_author !== null) {
+				card.paired_author.forEach(function (authorObj) {
+					storyTitle += `<span> and </span><span class = ${authorObj.type} id = ${authorObj.title}>${authorObj.title}</span><span> by ${authorObj.author_first_name} ${authorObj.author_last_name}</span >`
+				})
+			}
+				//storyTitle = storyTitle.slice(0, -2);
+			
 		}
-
 		const urlHTML = card.url ? card.url : `pages/${card.filename}`;
-
-		console.log(urlHTML)
 
 		const imageHTML = `<img src="images/${((card.image.card == "") ? 'background2.png' : card.image.card)}" class="card-img-top">`
 
 		const titleHTML = `<h5 class="card-title">${card.title}</h5>`
 
-		const storyHTML = `<p class="card-text"><span class="font-weight-bold">${((card.story.length > 1) ? 'Texts: ' : 'Text: ')}</span> ${storyTitle} </p>`
+		const storyHTML = `<p class="card-text"><span class="font-weight-bold">${((card.paired_author !== null) ? 'Texts: ' : 'Text: ')}</span> ${storyTitle} </p>`
 
 		const descriptionHTML = `<p class="card-text"><span class="font-weight-bold">Description: </span>${card.description}</p>`
 
