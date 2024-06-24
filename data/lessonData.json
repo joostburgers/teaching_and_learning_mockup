@@ -537,5 +537,35 @@
 	"contact": null,
 	"created": "2024-06-22",
 	"notes": null
+  },
+
+  {
+	"filename": "penner2",
+	"url": "http://faulkner.iath.virginia.edu/family/videos-pennerds.php",
+	"title": "DY When You Only Know 1 Faulkner Story",
+	"story": [
+	  {
+		"title": "Dry September",
+		"type": "short_story",
+		"year": "1931"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_fig3_mound_near_oliver_bridge_card.jpg",
+	  "banner": null
+	},
+	"description": "This essay outlines how the instructor used DY to visualize Faulkner characters' struggles with the past and its persistence, entering a philosophical and scientific discussion.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": null,
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Aili Pettersson Peeker",
+	"institution": "University of California, Santa Barbara",
+	"contact": null,
+	"created": "2024-06-22",
+	"notes": null
   }
 ]
