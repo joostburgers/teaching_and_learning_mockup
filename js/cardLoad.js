@@ -207,7 +207,7 @@ function filterCards(data) {
 	$("#paired_author-filters input[type='checkbox']:checked").each(function () {
 
 		selectedAuthors.push($(this).val());
-		console.log(selectedAuthors)
+		
 	});
 
 	console.log("selected authors", selectedAuthors)
@@ -282,8 +282,8 @@ function filterCards(data) {
 
 
 	filteredCards.sort(function (a, b) {
-		var titleA = a.title.toLowerCase();
-		var titleB = b.title.toLowerCase();
+		var titleA = a.title.toLowerCase().replace(/['"]+/g, '');
+		var titleB = b.title.toLowerCase().replace(/['"]+/g, '');
 		if (titleA < titleB) {
 			return -1;
 		}
@@ -305,39 +305,28 @@ function filterCards(data) {
 
 		var storyTitle = "";
 
-		if (card.story[0] === "All") {
-			storyTitle = "All"
+		 card.story.forEach(function (storyObj) {
+			 storyTitle += `<span class = ${storyObj.type}>${storyObj.title}</span >`
+		 });
 
-		} else {
-
-			card.story.forEach(function (storyObj) {
-
-				/*	if ('author_last_name' in storyObj) {
-	
-						storyTitle += `<span class = ${storyObj.type}>${storyObj.title}</span><span> by ${storyObj.author_first_name} ${storyObj.author_last_name}</span >, `
-					} else{*/
-				storyTitle += `<span class = ${storyObj.type}>${storyObj.title}</span >`
-				//}
-
-
-			});
 			if (card.paired_author !== null) {
 				card.paired_author.forEach(function (authorObj) {
 					storyTitle += `<span> and </span><span class = ${authorObj.type} id = ${authorObj.title}>${authorObj.title}</span><span> by ${authorObj.author_first_name} ${authorObj.author_last_name}</span >`
 				})
-			}
-				//storyTitle = storyTitle.slice(0, -2);
-			
 		}
+
 		const urlHTML = card.url ? card.url : `pages/${card.filename}`;
 
 		const imageHTML = `<img src="images/${((card.image.card == "") ? 'background2.png' : card.image.card)}" class="card-img-top">`
 
-		const titleHTML = `<h5 class="card-title">${card.title}</h5>`
+		const titleFancy = fancyQuotes(card.title);
+
+		const titleHTML = `<h5 class="card-title">${titleFancy}</h5>`
 
 		const storyHTML = `<p class="card-text"><span class="font-weight-bold">${((card.paired_author !== null) ? 'Texts: ' : 'Text: ')}</span> ${storyTitle} </p>`
 
-		const descriptionHTML = `<p class="card-text"><span class="font-weight-bold">Description: </span>${card.description}</p>`
+		const descriptionFancy = fancyQuotes(card.description);
+		const descriptionHTML = `<p class="card-text"><span class="font-weight-bold">Description: </span>${descriptionFancy}</p>`
 
 
 
@@ -350,4 +339,21 @@ function filterCards(data) {
 		
 		cardContainer.append(cardHtml);
 	});
+}
+
+//Helper functions
+
+function fancyQuotes(text) {
+	// Replace single straight quote at the beginning of a word with left curly single quote
+	text = text.replace(/(\s|^)'(\w)/g, '$1\u201C$2');
+
+	// Replace single straight quote in the middle of a word with right curly single quote
+	text = text.replace(/(\w)'(\w)/g, '$1\u2019$2');
+
+	// Replace single straight quote at the end of a word with right curly double quote
+	text = text.replace(/(\w)'(\s|$|,|\.|\?|!)/g, '$1\u201D$2');
+
+	return text;
+	return text;
+	
 }
