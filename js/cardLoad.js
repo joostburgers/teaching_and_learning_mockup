@@ -253,19 +253,22 @@ function filterCards(data) {
 
 		if (selectedAuthors == "all") {
 			Authorselected = true
-		} else { 
-			card.paired_author.forEach(function (authorObj) {
-				Object.values(authorObj).forEach(function (title) {
-					selectedAuthors.forEach(function (selectedAuthors) {
-						console.log("Selected Authros", selectedAuthors)
-						if (title.includes(selectedAuthors) || selectedAuthors === "all" || title === "All") {
-							Authorselected = true;
-							console.log("selected Authors", selectedAuthors)
-							console.log("title", title)
-						}
+		} else {
+			if (card.paired_author !== null) {
+				card.paired_author.forEach(function (authorObj) {
+
+					Object.values(authorObj).forEach(function (title) {
+						selectedAuthors.forEach(function (selectedAuthors) {
+							console.log("Selected Authros", selectedAuthors)
+							if (title.includes(selectedAuthors) || selectedAuthors === "all" ) {
+								Authorselected = true;
+								
+							}
+						});
 					});
-				});
-			});
+
+				})
+			}		;
 		
 		}
 
