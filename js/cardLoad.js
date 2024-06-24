@@ -343,17 +343,26 @@ function filterCards(data) {
 
 //Helper functions
 
-function fancyQuotes(text) {
-	// Replace single straight quote at the beginning of a word with left curly single quote
-	text = text.replace(/(\s|^)'(\w)/g, '$1\u201C$2');
 
-	// Replace single straight quote in the middle of a word with right curly single quote
-	text = text.replace(/(\w)'(\w)/g, '$1\u2019$2');
+    
+	function fancyQuotes(text) {
+		// Replace straight double quotes at the beginning of a word with left curly double quote
+		text = text.replace(/"(\w)/g, '\u201C$1');
 
-	// Replace single straight quote at the end of a word with right curly double quote
-	text = text.replace(/(\w)'(\s|$|,|\.|\?|!)/g, '$1\u201D$2');
+		// Replace straight double quotes at the end of a word with right curly double quote
+		text = text.replace(/(\w)"/g, '$1\u201D');
 
-	return text;
-	return text;
-	
-}
+		// Replace straight single quotes at the beginning of a word with left curly single quote
+		text = text.replace(/(\s)'(\w)/g, '$1\u2018$2');
+
+		// Replace straight single quotes in the middle of a word with right curly single quote
+		text = text.replace(/(\S)'(\S)/g, '$1\u2019$2');
+
+
+		// Replace straight single quotes at the end of a word with right curly single quote
+		text = text.replace(/(.)'(\s)/g, '$1\u2019$2');;
+
+		return text;
+	}
+
+
