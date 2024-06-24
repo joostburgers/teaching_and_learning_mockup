@@ -450,7 +450,7 @@
   {
 	"filename": "robbins",
 	"url": "https://faulkner.iath.virginia.edu/family/videos-robbinsemily.php",
-	"title": "Using Digital Yoknapatawpha to Analyze 'A Rose for Emily' as a Gothic Literary",
+	"title": "Using Digital Yoknapatawpha to Analyze 'A Rose for Emily' as a Gothic Literary Work",
 	"story": [
 	  {
 		"title": "A Rose for Emily",
@@ -539,9 +539,41 @@
 	"notes": null
   },
 
+
   {
 	"filename": "penner2",
-	"url": "http://faulkner.iath.virginia.edu/family/videos-pennerds.php",
+	"url": "https://faulkner.iath.virginia.edu/family/videos-penneraild.php",
+	"title": "Using Digital Yoknapatawpha to Compare Interpretive Lenses for <em>As I Lay Dying</em>",
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_house_of_sharecroppers_card.jpg",
+	  "banner": null
+	},
+	"description": "These videos compare the interpretive lenses that can be applied to <em>As I Lay Dying</em> using DY.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": null,
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Erin Penner",
+	"institution": "Asbury University",
+	"contact": null,
+	"created": "2024-06-22",
+	"notes": null
+  },
+
+
+  {
+	"filename": "penner3",
+	"url": "https://faulkner.iath.virginia.edu/family/videos-pennerds.php",
 	"title": "DY When You Only Know 1 Faulkner Story",
 	"story": [
 	  {
@@ -551,10 +583,10 @@
 	  }
 	],
 	"image": {
-	  "card": "site_photograph_fig3_mound_near_oliver_bridge_card.jpg",
+	  "card": "site_photograph_gathering_for_a_political_rally_card.jpg",
 	  "banner": null
 	},
-	"description": "This essay outlines how the instructor used DY to visualize Faulkner characters' struggles with the past and its persistence, entering a philosophical and scientific discussion.",
+	"description": "This video demonstrates how to use DY's <em>search</em> and <em>keyword</em> functions to take students deeper into Dry September.",
 	"modality": [ "In-Person" ],
 	"paired_author": null,
 	"pilot_classroom": null,
@@ -562,10 +594,10 @@
 	"common_core": null,
 	"student_samples": null,
 	"original_lesson_plan": null,
-	"instructor": "Aili Pettersson Peeker",
-	"institution": "University of California, Santa Barbara",
+	"instructor": "Erin Penner",
+	"institution": "Asbury University",
 	"contact": null,
-	"created": "2024-06-22",
+	"created": "2024-06-23",
 	"notes": null
   }
 ]
