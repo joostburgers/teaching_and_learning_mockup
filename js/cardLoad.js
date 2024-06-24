@@ -18,18 +18,18 @@ function getCards() {
 
 			populateFilter(data, "paired_author", "Authors")
 			populateFilter(data, "story", "Stories");
-			populateFilter(data, "modality", "Formats");
+			//populateFilter(data, "modality", "Formats");
 			defineCheckboxes("story")
-			defineCheckboxes("modality")
+			/*defineCheckboxes("modality")*/
 			defineCheckboxes("paired_author")
 
 			filterCards(data);
 			$("#story-filters input[type='checkbox']").on('change', function () {
 				filterCards(data);
 			})
-			$("#modality-filters input[type='checkbox']").on('change', function () {
+		/*	$("#modality-filters input[type='checkbox']").on('change', function () {
 				filterCards(data);
-			})
+			})*/
 			$("#paired_author-filters input[type='checkbox']").on('change', function () {
 				filterCards(data);
 			})
@@ -116,7 +116,7 @@ function populateFilter(data, key, label) {
       
 		$.each(values, function (index, value) {
 
-			console.log("value", value)
+		
 			if ('author_last_name' in value) {
 				pairLabel = ` by ${value.author_first_name} ${value.author_last_name}`
 			} else {
@@ -188,7 +188,7 @@ function defineCheckboxes(key) {
 function filterCards(data) {
 	var cards = data;
 	var selectedStories = [];
-	var selectedModalities = [];
+	//var selectedModalities = [];
 	var selectedAuthors = [];
 
 	// Get selected story filters
@@ -198,11 +198,11 @@ function filterCards(data) {
 
 	});
 
-	$("#modality-filters input[type='checkbox']:checked").each(function () {
+	/*$("#modality-filters input[type='checkbox']:checked").each(function () {
 	
 		selectedModalities.push($(this).val());
 	
-	});
+	});*/
 
 	$("#paired_author-filters input[type='checkbox']:checked").each(function () {
 
@@ -224,7 +224,7 @@ function filterCards(data) {
 
 
 
-		var Modalityselected = false;
+		/*var Modalityselected = false;
 		selectedModalities.forEach(function (selectedModality) {
 
 
@@ -232,7 +232,7 @@ function filterCards(data) {
 
 				Modalityselected = true;
 			}
-		});
+		});*/
 
 		var Authorselected = false;
 
@@ -252,7 +252,7 @@ function filterCards(data) {
 
 
 		if (
-			(selected) && (Modalityselected) && (Authorselected)
+			(selected) && (Authorselected)
 		) {
 			filteredCards.push(card);
 		}

@@ -8,13 +8,6 @@
 		"title": "Barn Burning",
 		"type": "short_story",
 		"year": "1939"
-	  },
-	  {
-		"title": "Everyday Use",
-		"type": "short_story",
-		"year": "1973",
-		"author_last_name": "Walker",
-		"author_first_name": "Alice"
 	  }
 	],
 
@@ -24,7 +17,15 @@
 	},
 	"description": "This is a creative writing exercise which gives voice to minor characters in William Faulkner’s  universe. Students will use Digital Yoknapatawpha to flesh out minor characters and rewrite scenes in Faulkner’s fiction.",
 	"modality": [ "In-Person", "Online Synchronous" ],
-	"paired_author": [ "Alice Walker" ],
+	"paired_author": [
+	  {
+		"title": "Everyday Use",
+		"type": "short_story",
+		"year": "1973",
+		"author_last_name": "Walker",
+		"author_first_name": "Alice"
+	  }
+	],
 	"pilot_classroom": "This project was piloted in a synchronous online creative writing class for college freshmen and sophomores at St. Louis Community College.",
 	"learning_goals": [ "To identify major and minor characters, point of view, setting, scene building, and plot.", "To research social/historical context in imaginative writing through the use of digital resources.", "To practice stepping outside of self to write/invent characters and scenes from different perspectives in different time periods." ],
 	"common_core": [ "CCSS.RL.9-10.5", "CCSS.RL.9-10.7", "CCSS.RL.9-10.9", "CCSS.W.9-10.3", "CCSS.RL.11-12.5", "CCSS.RL.11-12.6", "CCSS.RL.11-12.9", "CCSS.W.11-12.3"],
@@ -92,15 +93,8 @@
 		"title": "Barn Burning",
 		"type": "short_story",
 		"year": "1939"
-	  },
-	  {
-		"title": "The Man Who Was Almost a Man",
-		"type": "short_story",
-		"year": "1940",
-		"author_last_name": "Wright",
-		"author_first_name": "Richard"
 	  }
-	],
+	  ],
 
 	"image": {
 	  "card": "site_photograph_plantation_cabin_card.jpg",
@@ -109,9 +103,17 @@
 
 	"description": "Students will use DY maps and photos to study how Faulkner and Wright use the coming of age theme to examine sharecropping in the Jim Crow era.",
 	"modality": [ "In-Person", "Online Asynchronous", "Online Synchronous" ],
-	"paired_author": ["Richard Wright"],
-	"pilot_classroom": "Class Description",
-	"learning_goals": [ "", "", "" ],
+	"paired_author": [
+	  {
+		"title": "The Man Who Was Almost a Man",
+		"type": "short_story",
+		"year": "1940",
+		"author_last_name": "Wright",
+		"author_first_name": "Richard"
+	  }
+	],
+	"pilot_classroom": null,
+	"learning_goals": null,
 	"common_core": [ "CCSS.RL.9-10.1", "CCSS.RL.9-10.2", "CCSS.RL.9-10.3", "CCSS.RL.9-10.5", "CCSS.W.9-10.1", "CCSS.RL.11-12.1", "CCSS.RL.11-12.2", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RL.11-12.6", "CCSS.RL.11-12.9", "CCSS.W.11-12.1" ],
 	"student_samples": null,
 	"original_lesson_plan": [
@@ -326,13 +328,6 @@
 		"title": "As I Lay Dying",
 		"type": "novel",
 		"year": "1930"
-	  },
-	  {
-		"title": "Getting Mother's Body",
-		"type": "novel",
-		"year": "2003",
-		"author_last_name": "Parks",
-		"author_first_name": "Suzan Lori"
 	  }
 	],
 	"image": {
@@ -341,7 +336,15 @@
 	},
 	"description": "Students will read both novels and consider how Parks’ work speaks both back to and alongside Faulkner, particularly in terms of questions regarding family, obligation, and the possibilities of love in the midst of material and social marginalization.",
 	"modality": [ "In-Person" ],
-	"paired_author": [ "Suzan Lori Parks" ],
+	"paired_author": [
+	  {
+		"title": "Getting Mother's Body",
+		"type": "novel",
+		"year": "2003",
+		"author_last_name": "Parks",
+		"author_first_name": "Suzan Lori"
+	  }
+	],
 	"pilot_classroom": null,
 	"learning_goals": [ "Formal literary analysis", "Compare two formally and thematically related novels" ],
 	"common_core": [ "common core as array" ],

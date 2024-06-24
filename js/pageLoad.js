@@ -494,7 +494,7 @@ function setLessonData(data) {
 
 	
 
-	const commonCoreHTML = data.common_core !== null ? `<p>Common Core: <ul class="activity-list-unordered-3col">${createList(data.common_core)}</ul></p>` : '';
+	const commonCoreHTML = data.common_core !== null ? `<p>Common Core: <ul class="activity-list-unordered-4col">${createList(data.common_core)}</ul></p>` : '';
 
 	const studentSamplesHTML = data.student_samples !== null ? `<p>Student samples: <ul class="activity-list-unordered-blank">${createSamples(data.student_samples, data.filename)}</ul></p>` : '';
 
