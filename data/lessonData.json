@@ -28,7 +28,7 @@
 	],
 	"pilot_classroom": "This project was piloted in a synchronous online creative writing class for college freshmen and sophomores at St. Louis Community College.",
 	"learning_goals": [ "To identify major and minor characters, point of view, setting, scene building, and plot.", "To research social/historical context in imaginative writing through the use of digital resources.", "To practice stepping outside of self to write/invent characters and scenes from different perspectives in different time periods." ],
-	"common_core": [ "CCSS.RL.9-10.5", "CCSS.RL.9-10.7", "CCSS.RL.9-10.9", "CCSS.W.9-10.3", "CCSS.RL.11-12.5", "CCSS.RL.11-12.6", "CCSS.RL.11-12.9", "CCSS.W.11-12.3"],
+	"common_core": [ "RL.9-10.5", "RL.9-10.7", "RL.9-10.9", "W.9-10.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "W.11-12.3"],
 	"student_samples": [
 	  {
 		"first_name": null,
@@ -114,7 +114,7 @@
 	],
 	"pilot_classroom": null,
 	"learning_goals": null,
-	"common_core": [ "CCSS.RL.9-10.1", "CCSS.RL.9-10.2", "CCSS.RL.9-10.3", "CCSS.RL.9-10.5", "CCSS.W.9-10.1", "CCSS.RL.11-12.1", "CCSS.RL.11-12.2", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RL.11-12.6", "CCSS.RL.11-12.9", "CCSS.W.11-12.1" ],
+	"common_core": [ "RL.9-10.1", "RL.9-10.2", "RL.9-10.3", "RL.9-10.5", "W.9-10.1", "RL.11-12.1", "RL.11-12.2", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "W.11-12.1" ],
 	"student_samples": null,
 	"original_lesson_plan": [
 	  {
@@ -149,7 +149,7 @@
 	"paired_author": null,
 	"pilot_classroom": null,
 	"learning_goals": null,
-	"common_core": [ "CCSS.RL.9-10.1", "CCSS.RL.9-10.2", "CCSS.RL.9-10.3", "CCSS.RL.9-10.1", "CCSS.RL.9-10.5", "CCSS.W.9-10.1", "CCSS.W.9-10.2", "CCSS.RL.11-12.1", "CCSS.RL.11-12.2", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RL.11-12.6", "CCSS.RL.11-12.9", "CCSS.W.11-12.1", "CCSS.W.11-12.2" ],
+	"common_core": [ "RL.9-10.1", "RL.9-10.2", "RL.9-10.3", "RL.9-10.1", "RL.9-10.5", "W.9-10.1", "W.9-10.2", "RL.11-12.1", "RL.11-12.2", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "W.11-12.1", "W.11-12.2" ],
 	"student_samples": [
 	  {
 		"first_name": null,
@@ -204,7 +204,7 @@
 	"paired_author": null,
 	"pilot_classroom": "Advanced Studies in Literature:  William Faulkner and James Fenimore Cooper",
 	"learning_goals": [ "Understand how language shapes and influences understandings of place and space and, more specifically, how authors have created literary spaces that represent and respond to physical, cultural, historical and social contexts of Mississippi and New York", "Develop the skills to shape complex questions and evaluate competing points of view about a text and explore understandings orally, visually, digitally, and in writing", "Synthesize close readings and create multimodal texts that demonstrate understandings of audience, purpose, and context", "Apply digital humanities research and conceptual skills for problem solving" ],
-	"common_core": [ "CCSS.RL.9-10.1", "CCSS.RL.9-10.3", "CCSS.RL.9-10.5", "CCSS.RL.9-10.7", "CCSS.RI.9-10.7", "CCSS.W.9-10.1", "CCSS.W.9-10.2", "CCSS.RL.11-12.1", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RI.11-12.7", "CCSS.W.11-12.1", "CCSS.W.11-12.2" ],
+	"common_core": [ "RL.9-10.1", "RL.9-10.3", "RL.9-10.5", "RL.9-10.7", "RI.9-10.7", "W.9-10.1", "W.9-10.2", "RL.11-12.1", "RL.11-12.3", "RL.11-12.5", "RI.11-12.7", "W.11-12.1", "W.11-12.2" ],
 	"student_samples": null,
 	"original_lesson_plan": null,
 	"instructor": "Jennie Joiner",
@@ -272,7 +272,7 @@
 
 	"pilot_classroom": "Entry-level English major seminar at a liberal arts university.",
 	"learning_goals": [ "Analyze text that emphasizes the significance of perspective in narrative texts", "Critique implicit assumptions and limitations of reference tools such as genealogical charts", "Work collaboratively to foster comparative analysis", "Create artifacts that foster analysis across visual and textual media" ],
-	"common_core": [ "CCSS.RL.9-10.1", "CCSS.RL.9-10.5", "CCSS.RI.9-10.7", "CCSS.W.9-10.1", "CCSS.RL.11-12.3", "CCSS.RL.11-12.5", "CCSS.RI.11-12.7", "CCSS.W.11-12.1" ],
+	"common_core": [ "RL.9-10.1", "RL.9-10.5", "RI.9-10.7", "W.9-10.1", "RL.11-12.3", "RL.11-12.5", "RI.11-12.7", "W.11-12.1" ],
 	"student_samples": null,
 	"original_lesson_plan": [
 	  {
