@@ -347,7 +347,7 @@
 	],
 	"pilot_classroom": null,
 	"learning_goals": [ "Formal literary analysis", "Compare two formally and thematically related novels" ],
-	"common_core": [ "common core as array" ],
+	"common_core": null,
 	"student_samples": null,
 	"original_lesson_plan": null,
 	"instructor": "Rachel Watson",
