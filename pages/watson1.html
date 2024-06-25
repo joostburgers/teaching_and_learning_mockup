@@ -16,18 +16,18 @@
 </head>
 <body>
 	<!--Modal for looping instructional video-->
-	<div class="modal bd-example-modal-lg" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal bd-example-modal-lg" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 id="imageTitle" class="modal-title"></h5>
+					<h5 id="imageTitle" class="modal-title">No Title Found</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
 					<div class="modal-image">
-						<img id="imageSource" src="" alt="" class="img-fluid">
+						<img src="../images/site_photograph_gdm_cover.jpg" alt="modal-image" id="imageSource" class="img-fluid">
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -36,300 +36,200 @@
 			</div>
 		</div>
 	</div>
+
+
+
+
 	<!--This is the header menus no need to touch this.-->
 	<div id="page_header">
 		<div id="header_logo"><a class="logo" href="http://faulkner.iath.virginia.edu/"><span class="digital">DIGITAL</span> Yoknapatawpha</a> · Teaching &amp; Learning</div>
-		<div id="main-menu">
-			<ul id="main-menu-links">
-				<li>
-					<a href="http://faulkner.iath.virginia.edu/family/index-about.php">About</a>
-					<ul>
-						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/credits.php">Credits</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/dedication" target="_blank">Dedication</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-bibliography" target="_blank">Bibliography</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/dysocialmedia.php">DY on Social Media</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-articles-presentations" target="_blank">Re-Presenting DY</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/videos-2016demos.php">2016 Demos</a></li>
-					</ul>
-				</li>
-				<li class="bullet-link">
-					<a href="http://faulkner.iath.virginia.edu/family/index-search.php">Search</a>
-					<ul>
-						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/events/">Events</a></li>
-						<li>
-							<span class="nav-blank">Characters</span>
-							<ul>
-								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/characters/">By Text</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters/">Cumulative</a></li>
-							</ul>
-						</li>
-						<li>
-							<span class="nav-blank">Locations</span>
-							<ul>
-								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/locations/">By Text</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations/">Cumulative</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="bullet-link">
-					<a href="http://faulkner.iath.virginia.edu/family/index-visualizations.php">Visualizations</a>
-					<ul>
-						<li class="first-item">
-							<span class="nav-blank">Location-Character</span>
-							<ul>
-								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/characters-force.html">Force Directed</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/characters-bipart.html">Bipartite</a></li>
-							</ul>
-						</li>
-						<li><a href="http://faulkner.iath.virginia.edu/char-char-force.html">Character-Character</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/characters-graph.html">Character-Event</a></li>
-						<li>
-							<span class="nav-blank">Heatmaps</span>
-							<ul>
-								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/heatmaps/spatial_heatmaps.php">Spatial</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/heatmaps/temporal_heatmaps.php">Temporal</a></li>
-							</ul>
-						</li>
-						<li>
-							<span class="nav-blank">Photographs</span>
-							<ul>
-								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/photograph_locations.php">by Location</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/photograph_repositories.php">by Repository</a></li>
-							</ul>
-						</li>
-						<li><a href="http://faulkner.iath.virginia.edu/narrativeanalysis.html" target="_blank">Narrative Analysis</a></li>
-					</ul>
-				</li>
-				<li class="bullet-link">
-					<a href="http://faulkner.iath.virginia.edu/family/index-commentaries.php">Commentaries</a>
-					<ul>
-						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/media/resources/DISPLAYS/FaulknerMapsHP.html" target="_blank">Faulkner &amp; Maps</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/YokCemeteries.html">Cemeteries</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/">Genealogies</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/racial_demography/">Race &amp; Place</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/aa_sources.php">Analyzing <em>Absalom, Absalom!</em></a></li>
-					</ul>
-				</li>
-				<li class="bullet-link">
-					<a href="http://faulkner.iath.virginia.edu/family/index-teaching_and_learning.php">Teaching &amp; Learning</a>
-					<ul>
-						<li class="first-item">
-							<span class="nav-blank">Resources by Text</span>
-							<ul>
-								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/resources-re.php">"A Rose for Emily"</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/resources-ld.php">As I Lay Dying</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/resources-sf.php">The Sound and the Fury</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/resources-aa.php">Absalom, Absalom!</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/resources-ds.php">"Dry September"</a></li>
-							</ul>
-						</li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/videos-teaching_and_learning.php">Videos</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/pedagogyarticles" target="_blank">Articles</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/tlworksheethomepage" target="_blank">Worksheets</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/swhomepage" target="_blank">Student Work</a></li>
-					</ul>
-				</li>
-				<li class="bullet-link">
-					<a href="http://faulkner.iath.virginia.edu/family/index-indexes.php">Indexes</a>
-					<ul>
-						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters.php">Cumulative Characters</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations.php">Cumulative Locations</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/recurring_events.php">Recurring Events</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmssetc" target="_blank">Manuscripts</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmagazineillustrations" target="_blank">Illustrations</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofaudioclips" target="_blank">Audio Clips</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/contributors.php">Scholarly Collaborators</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/videos-index.php">DY Videos</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
+		<!--#include virtual="../../family/include_menu-main.php" -->
 	</div>
 
 	<!--This is where the header ends-->
 	<!--This is the TOC menu. No need to touch this-->
 	<div class="container">
 
-		
-			<div class="sidebar">
-				<div id="TableOfContents"></div>
-				
-			</div>
-		
+
+		<div class="sidebar">
+			<div id="TableOfContents"></div>
+
+		</div>
+
 		<!--This is where the TOC ends-->
 		<!--This is where all the content for the lesson plan sits-->
-			<div class="main">
+		<div class="main">
 
-				<div id="lessonGlance"></div>
+			<div id="lessonGlance"></div>
 
-				<div class="lesson-section">
-					<h2 class="content_sub_title" id="Preface">Preface</h2>
-					<p>
-						After reading As I Lay Dying and Getting Mother’s Body, consider how each novel dramatizes how one’s sense of self and identity depends upon our connections with others, and upon how we make sense of our lives, especially when they feel most out of our control. Listen to audio clips of Faulkner’s discussion with UVA students regarding As I Lay Dying as a tour de force, and consider how his stated aim for his novel both resonates and gets transformed through Parks’s re-imagining of this family saga.
-					</p>
+			<div class="lesson-section">
+				<h2 class="content_sub_title" id="Preface">Preface</h2>
+				<p>
+					After reading As I Lay Dying and Getting Mother’s Body, consider how each novel dramatizes how one’s sense of self and identity depends upon our connections with others, and upon how we make sense of our lives, especially when they feel most out of our control. Listen to audio clips of Faulkner’s discussion with UVA students regarding As I Lay Dying as a tour de force, and consider how his stated aim for his novel both resonates and gets transformed through Parks’s re-imagining of this family saga.
+				</p>
+			</div>
+			<h2 class="content_sub_title" id="Activities">Activities</h2>
+
+			<div class="activity">
+
+				<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
+				Grab the line below to create a new activity heading.-->
+				<h3 class="content_sub_title activity-title" id="Activity 1">1. Faulkner in his Own Words</h3>
+
+				<!--This is a stub for the "Study Acivity section"-->
+
+				<div class="activity-section">
+
+					<!--This is the section title-->
+
+
+
+					<div class="activity-title">
+						<i class="bi bi-file-earmark-text"></i>
+						Study
+					</div>
 				</div>
-				<h2 class="content_sub_title" id="Activities">Activities</h2>
 
-				<div class="activity">
+				<div class="row">
+					<div class="col">
 
-					<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
-		Grab the line below to create a new activity heading.-->
-					<h3 class="content_sub_title activity-title" id="Activity 1">1. Faulkner in his Own Words</h3>
+						<!--This is where the list on the left hand side is populated-->
+						<div class="activity-instructions">
+							Instructions
 
-					<!--This is a stub for the "Study Acivity section"-->
+							<ol class="activity-list">
+								<li>
+									As you read <em>As I Lay Dying</em>, consider it not only as a story unto itself, but also as an experiment in the implied rules (and rule-breaking!) of how one “should” write fiction. Pay attention to the kinds of formal elements Faulkner employs that draw our attention to it as a novel: e.g., first-person point-of-view techniques; unreliable narrators; non-verbal signifiers (e.g., drawings, numbered lists); use of visual space on the page; etc
+								</li>
+								<li>
+									Afterwards, listen to the Digital Yoknapatawpha audio clips indicated below, and consider what his higher aim seemed to be, as far as telling a story about what it means to be a human being in a world of fellow human beings.
+								</li>
+								<li>
+									Next, as you read Getting Mother’s Body, consider how Parks speaks both against, but also alongside, the chief thematic and artistic aims of <em>As I Lay Dying</em> considered above. Consider how and where the story changes, and how and where it stays the same, as we see similar themes through different eyes and under different circumstances.
 
-					<div class="activity-section">
+								</li>
+							</ol>
 
-						<!--This is the section title-->
-
-
-
-						<div class="activity-title">
-							<i class="bi bi-file-earmark-text"></i>
-							Study
 						</div>
 					</div>
 
+					<!--This is where the fancy quote on the right is created.-->
+
+				</div>
+				<div class="activity-section">
+					<div class="activity-title">
+						<i class="bi bi-globe"></i>
+						Explore: Digital Yoknapatawpha: Audio Archive
+					</div>
+				</div>
+
+				<div class="row">
+
+					<!--Walthrough instructions on the left-->
+					<div class="col">
+						<div class="activity-instructions">
+							Walkthrough: Audio Archive
+							<ul class="activity-list-unordered-blank">
+
+								<li>
+									The Digital Yoknapatawpha Audio archive contains a curated set of audio clips taken from the larger collection available at the <a href="https://faulkner.lib.virginia.edu/">Faulkner at Virginia </a>website.
+									<ul class="activity-list-unordered-arrow">
+										<li>Click on Indexes from the DY homepage</li>
+										<li>Select Audio clips</li>
+										<li>Click <em>As I Lay Dying</em></li>
+										<li>Listen to: "Fire and flood, folly and courage" and "As <em>tour de force""</em></li>
+
+									</ul>
+							</ul>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="activity-video">
+							<div class="thumbnail-container">
+								<video muted
+									   controls
+									   src="../video/video_tutorial_place_holder.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</div>
+							<div class="activity-video-caption">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="activity-section">
+					<div class="activity-title">
+						<i class="bi bi-chat-left-text"></i>Respond: Class Presentation and/or Learning Narrative
+					</div>
+
+					<!--Each section is placed into a row below the title. This allows us to split it into columns-->
 					<div class="row">
-						<div class="col">
 
-							<!--This is where the list on the left hand side is populated-->
-							<div class="activity-instructions">
-								Instructions
-
-								<ol class="activity-list">
-									<li>
-										As you read <em>As I Lay Dying</em>, consider it not only as a story unto itself, but also as an experiment in the implied rules (and rule-breaking!) of how one “should” write fiction. Pay attention to the kinds of formal elements Faulkner employs that draw our attention to it as a novel: e.g., first-person point-of-view techniques; unreliable narrators; non-verbal signifiers (e.g., drawings, numbered lists); use of visual space on the page; etc
-									</li>
-									<li>
-										Afterwards, listen to the Digital Yoknapatawpha audio clips indicated below, and consider what his higher aim seemed to be, as far as telling a story about what it means to be a human being in a world of fellow human beings.
-									</li>
-									<li>
-										Next, as you read Getting Mother’s Body, consider how Parks speaks both against, but also alongside, the chief thematic and artistic aims of <em>As I Lay Dying</em> considered above. Consider how and where the story changes, and how and where it stays the same, as we see similar themes through different eyes and under different circumstances.
-
-									</li>
-								</ol>
-
-							</div>
-						</div>
-
-						<!--This is where the fancy quote on the right is created.-->
-
-					</div>
-					<div class="activity-section">
-						<div class="activity-title">
-							<i class="bi bi-globe"></i>
-							Explore: Digital Yoknapatawpha: Audio Archive
-						</div>
-					</div>
-
-					<div class="row">
-
-						<!--Walthrough instructions on the left-->
 						<div class="col">
 							<div class="activity-instructions">
-								Walkthrough: Audio Archive
-								<ul class="activity-list-unordered-blank">
+								Questions
+								<div>
+									<ol class="activity-list">
 
-									<li>
-										The Digital Yoknapatawpha Audio archive contains a curated set of audio clips taken from the larger collection available at the <a href="https://faulkner.lib.virginia.edu/">Faulkner at Virginia </a>website.
-										<ul class="activity-list-unordered-arrow">
-											<li>Click on Indexes from the DY homepage</li>
-											<li>Select Audio clips</li>
-											<li>Click <em>As I Lay Dying</em></li>
-											<li>Listen to: "Fire and flood, folly and courage" and "As <em>tour de force""</em></li>
+										<li>From <em>As I Lay Dying</em>, choose a few scenes from Dewey Dell’s experiences of life—told either from her perspective or from that of other characters—that resonate with you as examples of someone caught in life circumstances that feel outside of their control or choosing.</li>
 
-										</ul>
-								</ul>
-							</div>
-						</div>
-						<div class="col-6">
-							<div class="activity-video">
-								<div class="thumbnail-container">
-									<video muted
-										   controls
-										   src="../video/video_tutorial_place_holder.mp4" type="video/mp4">
-										Your browser does not support the video tag.
-									</video>
-								</div>
-								<div class="activity-video-caption">
+										<li>Choose a few scenes from <em>Getting Mother’s Body</em> that seem to be “speaking back” to these same aspects of Faulkner’s novel. You might, for example, consider scenes regarding unwanted pregnancy as dramatized through what Billy Beede goes through, and what we learn about Willa Mae’s life and death.</li>
+
+										<li>From this comparison, develop an analysis that shows how each author used techniques of novel-writing to dramatize ways that human beings can try to make sense, or <em>meaning</em>, out of circumstances outside of their control. <em>Note:</em> if there is another pairing of characters that you would prefer, you are free to choose another set.</li>
+									</ol>
 								</div>
 							</div>
 						</div>
+
 					</div>
-					<div class="activity-section">
-						<div class="activity-title">
-							<i class="bi bi-chat-left-text"></i>Respond: Class Presentation and/or Learning Narrative
-						</div>
-
-						<!--Each section is placed into a row below the title. This allows us to split it into columns-->
-						<div class="row">
-
-							<div class="col">
-								<div class="activity-instructions">
-									Questions
-									<div>
-										<ol class="activity-list">
-
-											<li>From <em>As I Lay Dying</em>, choose a few scenes from Dewey Dell’s experiences of life—told either from her perspective or from that of other characters—that resonate with you as examples of someone caught in life circumstances that feel outside of their control or choosing.</li>
-
-											<li>Choose a few scenes from <em>Getting Mother’s Body</em> that seem to be “speaking back” to these same aspects of Faulkner’s novel. You might, for example, consider scenes regarding unwanted pregnancy as dramatized through what Billy Beede goes through, and what we learn about Willa Mae’s life and death.</li>
-
-											<li>From this comparison, develop an analysis that shows how each author used techniques of novel-writing to dramatize ways that human beings can try to make sense, or <em>meaning</em>, out of circumstances outside of their control. <em>Note:</em> if there is another pairing of characters that you would prefer, you are free to choose another set.</li>
-										</ol>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-
-
-
 				</div>
 
 
 
 
-				<div class="lesson-section">
-					<h2 class="content_sub_title" id="Final Product">Final Product</h2>
-					<div class="activity-instructions">
-						Instructions
-						<ul class="activity-list-unordered-blank">
-							<li>
-								The final product will be a literary analysis paper that compares the narrative arcs and formal techniques of two novels, one that speak back to the other in terms of both theme and form.
-							</li>
-						</ul>
-					</div>
-</div>
-					<div class="lesson-section">
-						<h2 class="content_sub_title" id="Resources">Assignment Resources</h2>
-						<ul class="activity-list-unordered">
-							<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofaudioclips" target="_blank" rel="noopener noreferrer">Digital Yoknapatawpha Audio Clips</a></li>
-						</ul>
-					</div>
-					<div class="lesson-section">
-						<h2 class="content_sub_title" id="For Teachers">Teaching Resources</h2>
-						<div id="TeacherInfo"></div>
-					</div>
-
-
-
-				</div>
 			</div>
 
-	
+
+
+
+			<div class="lesson-section">
+				<h2 class="content_sub_title" id="Final Product">Final Product</h2>
+				<div class="activity-instructions">
+					Instructions
+					<ul class="activity-list-unordered-blank">
+						<li>
+							The final product will be a literary analysis paper that compares the narrative arcs and formal techniques of two novels, one that speak back to the other in terms of both theme and form.
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="lesson-section">
+				<h2 class="content_sub_title" id="Resources">Assignment Resources</h2>
+				<ul class="activity-list-unordered">
+					<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofaudioclips" target="_blank" rel="noopener noreferrer">Digital Yoknapatawpha Audio Clips</a></li>
+				</ul>
+			</div>
+			<div class="lesson-section">
+				<h2 class="content_sub_title" id="For Teachers">Teaching Resources</h2>
+				<div id="TeacherInfo"></div>
+			</div>
+
+
+
+		</div>
+	</div>
+
+
+
 	<script>
 		$(document).ready(function () {
-
 			loadTOC();
+			loadModal();
 			loadImageData();
 			loadVideoData();
 			loadLessonData();
-
 		});
 	</script>
+	<!--#include virtual="../../family/include_footer.php" -->
 </body>
 </html>

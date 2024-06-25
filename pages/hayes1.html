@@ -13,18 +13,18 @@
 <body>
 
 
-	<div class="modal bd-example-modal-lg" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal bd-example-modal-lg" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 id="imageTitle" class="modal-title"></h5>
+					<h5 id="imageTitle" class="modal-title">No Title Found</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
 					<div class="modal-image">
-						<img id="imageSource" src="" alt="" class="img-fluid">
+						<img src="../images/site_photograph_gdm_cover.jpg" alt="modal-image" id="imageSource" class="img-fluid">
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -146,7 +146,7 @@
 				<!--Image end-->
 
 			</div><div class="activity">
-				<h3 class="content_sub_title activity-title" >2. Visualizing Identity and Social Relations in “A Rose for Emily” </h3>
+				<h3 class="content_sub_title activity-title">2. Visualizing Identity and Social Relations in “A Rose for Emily” </h3>
 
 				<div class="activity-section">
 					<div class="activity-section-introduction">Digital Yoknapatawpha’s tools allow users to generate visual representations of social relations in each text, which students will utilize to think critically about the representations of race, class, and gender in Faulkner’s fiction. This activity produces visualizations illustrating the story’s centering of white upper-class characters and relative marginalization of working class and Black characters. The activity encourages students to better understand the limits of Faulkner’s fiction as historical representation.</div>
@@ -289,7 +289,7 @@
 			</div>
 
 
-			
+
 
 			<div class="activity">
 				<h3 class="content_sub_title activity-title" id="Activity 1">3. Visualizing Narrative </h3>
@@ -524,14 +524,14 @@
 
 
 
+
 	<script>
 		$(document).ready(function () {
-
 			loadTOC();
+			loadModal();
 			loadImageData();
 			loadVideoData();
 			loadLessonData();
-
 		});
 	</script>
 	<!--#include virtual="../../family/include_footer.php" -->
