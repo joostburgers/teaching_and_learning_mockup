@@ -16,18 +16,18 @@
 </head>
 <body>
 	<!--Modal for looping instructional video-->
-	<div class="modal bd-example-modal-lg" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal bd-example-modal-lg" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 id="imageTitle" class="modal-title"></h5>
+					<h5 id="imageTitle" class="modal-title">No Title Found</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
 					<div class="modal-image">
-						<img id="imageSource" src="" alt="" class="img-fluid">
+						<img src="../images/site_photograph_gdm_cover.jpg" alt="modal-image" id="imageSource" class="img-fluid">
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -36,245 +36,145 @@
 			</div>
 		</div>
 	</div>
+
+
+
+
 	<!--This is the header menus no need to touch this.-->
 	<div id="page_header">
 		<div id="header_logo"><a class="logo" href="http://faulkner.iath.virginia.edu/"><span class="digital">DIGITAL</span> Yoknapatawpha</a> · Teaching &amp; Learning</div>
-		<div id="main-menu">
-			<ul id="main-menu-links">
-				<li>
-					<a href="http://faulkner.iath.virginia.edu/family/index-about.php">About</a>
-					<ul>
-						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/credits.php">Credits</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/dedication" target="_blank">Dedication</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-bibliography" target="_blank">Bibliography</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/dysocialmedia.php">DY on Social Media</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/digital-yoknapatawpha-articles-presentations" target="_blank">Re-Presenting DY</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/videos-2016demos.php">2016 Demos</a></li>
-					</ul>
-				</li>
-				<li class="bullet-link">
-					<a href="http://faulkner.iath.virginia.edu/family/index-search.php">Search</a>
-					<ul>
-						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/events/">Events</a></li>
-						<li>
-							<span class="nav-blank">Characters</span>
-							<ul>
-								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/characters/">By Text</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters/">Cumulative</a></li>
-							</ul>
-						</li>
-						<li>
-							<span class="nav-blank">Locations</span>
-							<ul>
-								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/locations/">By Text</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations/">Cumulative</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="bullet-link">
-					<a href="http://faulkner.iath.virginia.edu/family/index-visualizations.php">Visualizations</a>
-					<ul>
-						<li class="first-item">
-							<span class="nav-blank">Location-Character</span>
-							<ul>
-								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/characters-force.html">Force Directed</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/characters-bipart.html">Bipartite</a></li>
-							</ul>
-						</li>
-						<li><a href="http://faulkner.iath.virginia.edu/char-char-force.html">Character-Character</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/characters-graph.html">Character-Event</a></li>
-						<li>
-							<span class="nav-blank">Heatmaps</span>
-							<ul>
-								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/heatmaps/spatial_heatmaps.php">Spatial</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/heatmaps/temporal_heatmaps.php">Temporal</a></li>
-							</ul>
-						</li>
-						<li>
-							<span class="nav-blank">Photographs</span>
-							<ul>
-								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/photograph_locations.php">by Location</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/photograph_repositories.php">by Repository</a></li>
-							</ul>
-						</li>
-						<li><a href="http://faulkner.iath.virginia.edu/narrativeanalysis.html" target="_blank">Narrative Analysis</a></li>
-					</ul>
-				</li>
-				<li class="bullet-link">
-					<a href="http://faulkner.iath.virginia.edu/family/index-commentaries.php">Commentaries</a>
-					<ul>
-						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/media/resources/DISPLAYS/FaulknerMapsHP.html" target="_blank">Faulkner &amp; Maps</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/YokCemeteries.html">Cemeteries</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/">Genealogies</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/racial_demography/">Race &amp; Place</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/aa_sources.php">Analyzing <em>Absalom, Absalom!</em></a></li>
-					</ul>
-				</li>
-				<li class="bullet-link">
-					<a href="http://faulkner.iath.virginia.edu/family/index-teaching_and_learning.php">Teaching &amp; Learning</a>
-					<ul>
-						<li class="first-item">
-							<span class="nav-blank">Resources by Text</span>
-							<ul>
-								<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/resources-re.php">"A Rose for Emily"</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/resources-ld.php">As I Lay Dying</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/resources-sf.php">The Sound and the Fury</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/resources-aa.php">Absalom, Absalom!</a></li>
-								<li><a href="http://faulkner.iath.virginia.edu/family/resources-ds.php">"Dry September"</a></li>
-							</ul>
-						</li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/videos-teaching_and_learning.php">Videos</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/pedagogyarticles" target="_blank">Articles</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/tlworksheethomepage" target="_blank">Worksheets</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/swhomepage" target="_blank">Student Work</a></li>
-					</ul>
-				</li>
-				<li class="bullet-link">
-					<a href="http://faulkner.iath.virginia.edu/family/index-indexes.php">Indexes</a>
-					<ul>
-						<li class="first-item"><a href="http://faulkner.iath.virginia.edu/family/cumulative_characters.php">Cumulative Characters</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/cumulative_locations.php">Cumulative Locations</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/recurring_events.php">Recurring Events</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmssetc" target="_blank">Manuscripts</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofmagazineillustrations" target="_blank">Illustrations</a></li>
-						<li><a href="https://faulkner.drupal.shanti.virginia.edu/content/indexofaudioclips" target="_blank">Audio Clips</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/contributors.php">Scholarly Collaborators</a></li>
-						<li><a href="http://faulkner.iath.virginia.edu/family/videos-index.php">DY Videos</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
+		<!--#include virtual="../../family/include_menu-main.php" -->
 	</div>
 
 	<!--This is where the header ends-->
 	<!--This is the TOC menu. No need to touch this-->
 	<div class="container">
 
-		
-			<div class="sidebar">
-				<div id="TableOfContents"></div>
-				
-			</div>
-		
+
+		<div class="sidebar">
+			<div id="TableOfContents"></div>
+
+		</div>
+
 		<!--This is where the TOC ends-->
 		<!--This is where all the content for the lesson plan sits-->
-			<div class="main">
+		<div class="main">
 
-				<div id="lessonGlance"></div>
-			
+			<div id="lessonGlance"></div>
 
-				<div class="lesson-section">
-					<h2 class="content_sub_title" id="Preface">Preface</h2>
-					<p>This activity is meant to help orient your students to “where in the world” they are as they read. This lesson is to be used before reading the novel and is useful in highlighting aesthetic impact (through the cultural perspective/setting) and the author’s structural choices (through the narrative structure). The digital escape room became popular in the age of COVID, but this lesson is adaptable for a physical escape room, as well. If you are unfamiliar with digital escape rooms, please check out the "Resources" section for more information!</p>
+
+			<div class="lesson-section">
+				<h2 class="content_sub_title" id="Preface">Preface</h2>
+				<p>This activity is meant to help orient your students to “where in the world” they are as they read. This lesson is to be used before reading the novel and is useful in highlighting aesthetic impact (through the cultural perspective/setting) and the author’s structural choices (through the narrative structure). The digital escape room became popular in the age of COVID, but this lesson is adaptable for a physical escape room, as well. If you are unfamiliar with digital escape rooms, please check out the "Resources" section for more information!</p>
+			</div>
+			<h2 class="content_sub_title" id="Activities">Activities</h2>
+
+			<div class="activity">
+
+				<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
+				Grab the line below to create a new activity heading.-->
+				<h3 class="content_sub_title activity-title" id="Activity 1">1. Escape Room </h3>
+
+				<!--This is a stub for the "Study Acivity section"-->
+
+				<div class="activity-section">
+
+					<div class="activity-title">
+						<i class="bi bi-globe"></i>				Explore
+					</div>
 				</div>
-				<h2 class="content_sub_title" id="Activities">Activities</h2>
 
-				<div class="activity">
+				<div class="row">
+					<div class="col">
 
-					<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
-		Grab the line below to create a new activity heading.-->
-					<h3 class="content_sub_title activity-title" id="Activity 1">1. Escape Room </h3>
-
-					<!--This is a stub for the "Study Acivity section"-->
-
-					<div class="activity-section">
-				
-						<div class="activity-title">
-							<i class="bi bi-globe"></i>				Explore
+						<!--This is where the list on the left hand side is populated-->
+						<div class="activity-instructions">
+							Instructions
+							<p class="font-italic font-weight-normal">Create Groups</p>
+							<p class="font-weight-normal">Break students into groups of three and have each student take on a role: researcher, technician, recorder.</p>
+							<ul class="activity-list-unordered">
+								<li>The researcher is in charge of maneuvering the group through the DY website. </li>
+								<li>The technician keeps the Escape Room form up and inputs the codes/responses. </li>
+								<li>
+									The recorder keeps track of all the answers and locations of answers in one document so they can be referenced later.
+								</li>
+							</ul>
+							<p class="font-italic font-weight-normal">Customize Google Form</p>
+							<p class="font-weight-normal">Students work through the escape room <a href="https://docs.google.com/forms/d/1YUm88ouawQBtSN5ytYl3zpEJy1QAV4Sf2ds4BDAm3HE/copy">Google Form</a>. This link generates a copy that can be customized to suit the particular class context.</p>
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col">
-
-							<!--This is where the list on the left hand side is populated-->
-							<div class="activity-instructions">
-								Instructions
-								<p class="font-italic font-weight-normal">Create Groups</p>
-								<p class="font-weight-normal">Break students into groups of three and have each student take on a role: researcher, technician, recorder.</p>
-								<ul class="activity-list-unordered">
-									<li>The researcher is in charge of maneuvering the group through the DY website. </li>
-									<li>The technician keeps the Escape Room form up and inputs the codes/responses. </li>
-									<li>
-										The recorder keeps track of all the answers and locations of answers in one document so they can be referenced later.
-									</li>
-								</ul>
-								<p class="font-italic font-weight-normal">Customize Google Form</p>
-								<p class="font-weight-normal">Students work through the escape room <a href="https://docs.google.com/forms/d/1YUm88ouawQBtSN5ytYl3zpEJy1QAV4Sf2ds4BDAm3HE/copy">Google Form</a>. This link generates a copy that can be customized to suit the particular class context.</p>
-							</div>
+					<!--This is where the fancy quote on the right is created.-->
+					<div class="col-4">
+						<div class="tip">
+							Tip: Students will need a personal device (cellphones are not recommended for the purpose of navigating the DY website, but can be used for the Google Form or record keeping)
 						</div>
+					</div>
+				</div>
 
-						<!--This is where the fancy quote on the right is created.-->
-						<div class="col-4">
-							<div class="tip">
-								Tip: Students will need a personal device (cellphones are not recommended for the purpose of navigating the DY website, but can be used for the Google Form or record keeping)
-							</div>
+				<!--This is where the activity section Study Ends-->
+				<!--This is where the activity section Explore begins-->
+				<div class="activity-section">
+					<div class="activity-title">
+
+						Study: Escape Room Explained
+					</div>
+				</div>
+
+				<div class="row">
+
+					<!--Walthrough instructions on the left-->
+					<div class="col">
+						<div class="activity-instructions">
+							View the slideshow for more information about the escape room.
+						</div>
+						<div class="google-slides-container">
+							<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSIUCi-8cpAw-wFuSEfH_ucLvS8UZy7cNk_Oz2tQFSwDmM6tBP4wYxgFSDeQDlYbvSe5-Ne67lVoJ-h/embed?start=false&loop=false&delayms=3000" frameborder="0" width="800" height="479" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 						</div>
 					</div>
 
-					<!--This is where the activity section Study Ends-->
-					<!--This is where the activity section Explore begins-->
-					<div class="activity-section">
-						<div class="activity-title">
-
-							Study: Escape Room Explained
-						</div>
-					</div>
-
-					<div class="row">
-
-						<!--Walthrough instructions on the left-->
-						<div class="col">
-							<div class="activity-instructions">
-								View the slideshow for more information about the escape room.
-							</div>
-							<div class="google-slides-container">
-								<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSIUCi-8cpAw-wFuSEfH_ucLvS8UZy7cNk_Oz2tQFSwDmM6tBP4wYxgFSDeQDlYbvSe5-Ne67lVoJ-h/embed?start=false&loop=false&delayms=3000" frameborder="0" width="800" height="479" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-							</div>
-						</div>
-
-						<!--Video on the right-->
-
-					</div>
-
-					<!--This is where the activity section Explore ends-->
-					<!--This is where the activity section Respond Begins -->
-					<!--This section stub contains the layout-->
+					<!--Video on the right-->
 
 				</div>
 
-				<div class="lesson-section">
-					<h2 class="content_sub_title" id="Final Product">Final Product</h2>
-					<div class="activity-instructions">Give students the following prompt for reflection:</div>
-					<p class="font-weight-normal">Hypothesize how Faulkner's narrative structure is going to influence our understanding of the events in the story. Consider the characters, their ages, their genders, etc. What is the difference between narrative perspective and narrative point of view? Students can either submit this as an informal assessment or jot down notes to share in a class discussion.</p>
-				</div>
-				
-				<div class="lesson-section">
-					<h2 class="content_sub_title" id="Resources">Assignment Resources</h2>
-				</div>
-				
-				<div class="lesson-section">
-					<h2 class="content_sub_title" id="For Teachers">Teaching Resources</h2>
-					<div id="TeacherInfo"></div>
-				</div>
-
-				
-
+				<!--This is where the activity section Explore ends-->
+				<!--This is where the activity section Respond Begins -->
+				<!--This section stub contains the layout-->
 
 			</div>
+
+			<div class="lesson-section">
+				<h2 class="content_sub_title" id="Final Product">Final Product</h2>
+				<div class="activity-instructions">Give students the following prompt for reflection:</div>
+				<p class="font-weight-normal">Hypothesize how Faulkner's narrative structure is going to influence our understanding of the events in the story. Consider the characters, their ages, their genders, etc. What is the difference between narrative perspective and narrative point of view? Students can either submit this as an informal assessment or jot down notes to share in a class discussion.</p>
+			</div>
+
+			<div class="lesson-section">
+				<h2 class="content_sub_title" id="Resources">Assignment Resources</h2>
+			</div>
+
+			<div class="lesson-section">
+				<h2 class="content_sub_title" id="For Teachers">Teaching Resources</h2>
+				<div id="TeacherInfo"></div>
+			</div>
+
+
+
+
+		</div>
 	</div>
 
-	
+
+
 	<script>
 		$(document).ready(function () {
-
 			loadTOC();
+			loadModal();
 			loadImageData();
 			loadVideoData();
 			loadLessonData();
-
 		});
 	</script>
+	<!--#include virtual="../../family/include_footer.php" -->
 </body>
 </html>

@@ -239,19 +239,16 @@ line-height:1.5em;
 	padding-right: 0.5em;
 }
 
-/*Modal Styling*/
-/*div.video {
-	display: none;
-	position: fixed;
-	z-index: 10001;
-	padding-top: 100px;
-	left: 25%;
-	top: 0%;
-	width: 50%;
-	height: 50%;
-	overflow: visible;
-	background-color: none;
-}*/
+.modal-header{
+font-size:1.1em;
+font-weight:600;
+}
+
+.modal-footer {
+	font-size: 0.9em;
+	font-weight: 300;
+}
+
 
 .video-content{
 	display: block;
@@ -281,10 +278,26 @@ div.modal-image {
 	display: flex;
 	justify-content: center;
 	align-items:center;
-	/*margin-left: auto;
-	margin-right: auto;
-	width: 50%;*/
+
 }
+div.modal-image:hover {
+	cursor: zoom-in;
+}
+
+/*class that helps toggle zoom form modal images*/
+.zoomed-in {
+	
+	position: fixed; 
+	max-width: 100%; 
+	max-height: 100%; 
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: zoom-out;
+	z-index: 1050;
+}
+
+
 
 .thumbnail-container {
 	cursor: pointer;
@@ -306,7 +319,7 @@ div.modal-image {
 	opacity: 0.25;
 }
 /*For any notes on the sample page*/
-div.note {
+	div .note {
 	border: 1px solid red;
 	margin: 10px;
 	padding: 10px;

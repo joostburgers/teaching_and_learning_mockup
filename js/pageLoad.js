@@ -25,6 +25,47 @@ function loadTOC() {
 }
 
 
+function loadModal() {
+
+	$('#imageSource').on('click', function () {
+
+		var isZoomed = $(this).hasClass('zoomed-in');
+		if (!isZoomed) {
+			// Calculate the max size based on the viewport
+			var viewportWidth = $(window).width();
+			console.log("viewport Width",viewportWidth)
+			var viewportHeight = $(window).height();
+			console.log("viewport Height", viewportHeight)
+			var maxWidth = viewportWidth * 0.90; // 80% of viewport width
+			var maxHeight = viewportHeight * 0.90; // 80% of viewport height
+
+			$(this).css({
+				'max-width': maxWidth + 'px',
+				'max-height': maxHeight + 'px'
+			});
+		} else {
+			// Reset the max-width and max-height when zooming out
+			$(this).css({
+				'max-width': '',
+				'max-height': ''
+			});
+		}
+		$(this).toggleClass('img-fluid')
+		$(this).toggleClass('zoomed-in');
+	});
+	$('#imageSource').on('hidden.bs.modal', function () {
+
+		$('#imageSource').removeClass('zoomed-in').css({
+			'max-width': '',
+			'max-height': ''
+		});
+		console.log("modal hidden")
+	});
+
+}
+	
+
+
 
 // File: C:\Users\joost\source\repos\lesson_plans\js\modalLoad.js
 
