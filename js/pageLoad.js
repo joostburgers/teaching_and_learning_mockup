@@ -495,9 +495,9 @@ function loadLessonData() {
 
 	const lessonDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/lessonData.json';
 	$.getJSON(lessonDataURL, function (jsonData) {
-		console.log("getting lesson data")
+		
 		const lessonData = getLessonData(jsonData);
-		console.log(lessonData)
+		
 		setLessonData(lessonData)
 		setGlanceData(lessonData)
 	})
@@ -533,9 +533,13 @@ function setLessonData(data) {
 
 	const learningGoalsHTML = data.learning_goals !== null ? `<p>Learning Goals: <ol class="activity-list">${createList(data.learning_goals)}</ol></p>` : '';
 
+
+
+	/*const groupedCodes = createCommonCoreCodes(data.common_core);*/
+
 	
 
-	const commonCoreHTML = data.common_core !== null ? `<p>Common Core: <ul class="activity-list-unordered-4col">${createList(data.common_core)}</ul></p>` : '';
+	const commonCoreHTML = data.common_core !== null ? `<p>Common Core State Standards: <ul class="activity-list-unordered-blank">${createCommonCoreCodes(data.common_core)}</ul></p>` : '';
 
 	const studentSamplesHTML = data.student_samples !== null ? `<p>Student samples: <ul class="activity-list-unordered-blank">${createSamples(data.student_samples, data.filename)}</ul></p>` : '';
 
@@ -551,6 +555,39 @@ function setLessonData(data) {
 
 
 	
+}
+
+//function to group and sort the Common Core Codes in an easily readable order.
+function createCommonCoreCodes(codes) {
+	// Sort codes numerically and alphabetically
+	const sortedCodes = codes.sort((a, b) => {
+		let [prefixA, gradeA, numA] = a.split('.');
+		let [prefixB, gradeB, numB] = b.split('.');
+		gradeA = parseInt(gradeA.split('-')[0], 10);
+		gradeB = parseInt(gradeB.split('-')[0], 10);
+		numA = parseInt(numA, 10);
+		numB = parseInt(numB, 10);
+
+		if (prefixA !== prefixB) return prefixA.localeCompare(prefixB);
+		if (gradeA !== gradeB) return gradeA - gradeB;
+		return numA - numB;
+	});
+
+	// Group, format codes, and build the final formatted string
+	const formattedString = sortedCodes.reduce((acc, code) => {
+		const [prefix, gradeRange, number] = code.split('.');
+		const key = `${prefix}.${gradeRange}`;
+		if (!acc[key]) {
+			acc[key] = `<li>${key}.${number}`;
+		} else {
+			acc[key] += `, ${number}`;
+		}
+		console.log(acc)
+		return acc;
+	}, {});
+
+	// Join all formatted groups with a newline for the final output
+	return Object.values(formattedString).map(item=> `${item}</li>`).join('\n');
 }
 
 

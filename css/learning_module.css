@@ -125,8 +125,8 @@ ol.activity-list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content:flex-start;
-	list-style-type: none; /* Removes default list styling */
-	padding: 15px; /* Removes default padding */
+	list-style-type: none;   
+	padding: 15px;  
 }
 
 	.activity-list-unordered-4col li {
