@@ -18,6 +18,8 @@ function getCards() {
 
 			populateFilter(data, "paired_author", "paired texts")
 			populateFilter(data, "story", "stories");
+			populateFiltersFromCommonCore(data, "common_core", "common core")
+			
 			//populateFilter(data, "modality", "Formats");
 			defineCheckboxes("story")
 			/*defineCheckboxes("modality")*/
@@ -118,12 +120,12 @@ function populateFilter(data, key, label) {
 
 		
 			if ('author_last_name' in value) {
-				pairLabel = ` by ${value.author_first_name} ${value.author_last_name}`
+				pairLabel = `${value.author_first_name} ${value.author_last_name} - `
 			} else {
 				pairLabel = ""
 			}
 
-		  var checkbox = $(`<div class='form-check'><input class=' form-check-input single-${key} ' type='checkbox' value='${value.title}' ><label class='form-check-label align-middle'><span class="${value.type}">${value.title}</span> (${value.year})${pairLabel}</label></div>`);
+		  var checkbox = $(`<div class='form-check'><input class=' form-check-input single-${key} ' type='checkbox' value='${value.title}' ><label class='form-check-label align-middle'><span>${pairLabel}</span><span class="${value.type}">${value.title}</span><span> (${value.year})</label></div>`);
 
 
 		  filters.append(checkbox);
@@ -141,10 +143,135 @@ function populateFilter(data, key, label) {
   } else {
     console.log("values is not an array");
   }
-  
+  console.log("filters ", filters)
   return filters;
 }
 
+/*function populateFiltersFromCommonCore(data, key, label) {
+
+	var filters = $(`#${key}-filters`);
+	filters.empty();
+
+
+	var values = [];
+	$.each(data, function (index, object) {
+		if (object[key] !== null) {
+			if (values.indexOf(object[key]) === -1) {
+				if (object[key] != "All") {
+					if (Array.isArray(object[key])) {
+						object[key].forEach(function (value) {
+							if (values.indexOf(value) === -1 && value !== null && value !== "All") {
+								values.push(value);
+							}
+						});
+					} else if (typeof object[key] === 'object') {
+						Object.values(object[key]).forEach(function (value) {
+							if (Array.isArray(value)) {
+								value.forEach(function (innerValue) {
+									if (values.indexOf(innerValue) === -1 && innerValue !== null && innerValue !== "All") {
+										values.push(innerValue);
+									}
+								});
+							} else {
+								if (values.indexOf(value) === -1 && value !== null && value !== "All") {
+									values.push(value);
+								}
+							}
+						});
+					} else {
+						values.push(object[key]);
+					}
+				}
+			}
+		}
+	});
+
+	console.log("common core", values)
+	const categories = new Set();
+	const gradeLevels = new Set();
+
+	values.forEach(code => {
+		const [category, gradeLevelPart] = code.split('.');
+		const gradeRangeMatch = gradeLevelPart.match(/\d+-\d+/);
+
+		if (gradeRangeMatch) {
+			const gradeRange = gradeRangeMatch[0];
+			categories.add(category);
+			gradeLevels.add(gradeRange);
+		}
+	});
+	console.log("Categories", categories)
+	// Convert Sets to Arrays for easier consumption
+
+		const categoriesArray= Array.from(categories)
+		const gradeLevelsArray = Array.from(gradeLevels)
+	
+
+	console.log("Categories", categoriesArray)
+
+	$.each(categoriesArray, function (index, value) {
+		var checkbox = $(`<div class='form-check'><input class='form-check-input single-${key}' type='checkbox' value='${value}' ><label class='form-check-label align-middle'>${value}</label></div>`);
+		filters.append(checkbox);
+		console.log("filters", filters)
+	})
+	$.each(gradeLevelsArray, function (index, value) {
+		var checkbox = $(`<div class='form-check'><input class='form-check-input single-${key}' type='checkbox' value='${value}' ><label class='form-check-label align-middle'>${value}</label></div>`);
+		filters.append(checkbox);
+		console.log("filters", filters)
+	})
+}*/
+
+function populateFiltersFromCommonCore(data, key, label) {
+  const categories = new Set();
+  const gradeLevels = new Set();
+
+  data.forEach((card) => {
+    const commonCoreCodes = card.common_core;
+    if (commonCoreCodes) {
+      commonCoreCodes.forEach((code) => {
+        const [category, gradeLevelPart] = code.split('.');
+        const gradeRangeMatch = gradeLevelPart.match(/\d+-\d+/);
+        if (gradeRangeMatch) {
+          const gradeRange = gradeRangeMatch[0];
+          categories.add(category);
+          gradeLevels.add(gradeRange);
+        }
+      });
+    }
+  });
+
+  console.log("categories", categories)
+  // Function to create checkboxes and labels
+  console.log("gradeLevels", gradeLevels)
+
+  // Convert Sets to Arrays for easier consumption
+  const categoriesArray = Array.from(categories);
+  const gradeLevelsArray = Array.from(gradeLevels);
+
+  // Assuming you have two divs with these IDs in your HTML
+  createCheckboxesFromArray(categoriesArray, 'categoryColumn', 'Category');
+  createCheckboxesFromArray(gradeLevelsArray, 'gradeLevelColumn', 'Grade Level');
+}
+
+function createCheckboxesFromArray(array, containerId, title) {
+
+	const container = document.getElementById(containerId);
+	// Clear previous content
+	container.innerHTML = `<h2>${title}</h2>`;
+	array.forEach((item) => {
+		const checkboxContainer = document.createElement('div');
+		const checkbox = document.createElement('input');
+		checkbox.type = 'checkbox';
+		checkbox.id = item;
+		checkbox.value = item;
+		const label = document.createElement('label');
+		label.htmlFor = item;
+		label.textContent = item;
+		checkboxContainer.appendChild(checkbox);
+		checkboxContainer.appendChild(label);
+		container.appendChild(checkboxContainer);
+	});
+}
 
 /**
  * Attaches change event listeners to checkboxes to change their state based on user interaction.
@@ -259,7 +386,7 @@ function filterCards(data) {
 
 					Object.values(authorObj).forEach(function (title) {
 						selectedAuthors.forEach(function (selectedAuthors) {
-							console.log("Selected Authros", selectedAuthors)
+							
 							if (title.includes(selectedAuthors) || selectedAuthors === "all" ) {
 								Authorselected = true;
 								

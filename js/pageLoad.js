@@ -539,7 +539,7 @@ function setLessonData(data) {
 
 	
 
-	const commonCoreHTML = data.common_core !== null ? `<p>Common Core State Standards: <ul class="activity-list-unordered-blank">${createCommonCoreCodes(data.common_core)}</ul></p>` : '';
+	const commonCoreHTML = data.common_core !== null ? `<p>Common Core State Standards: <ul class="activity-list-unordered-2col">${createCommonCoreCodes(data.common_core)}</ul></p>` : '';
 
 	const studentSamplesHTML = data.student_samples !== null ? `<p>Student samples: <ul class="activity-list-unordered-blank">${createSamples(data.student_samples, data.filename)}</ul></p>` : '';
 
@@ -629,7 +629,14 @@ function setGlanceData(data) {
 
 	const modalityHTML = `<span class="font-weight-bold">Modality: </span> ${modalityText}`
 	//Each HTML stub is created if the value in the at the key is actually a value and not null. This prevents everyone having to fill out all the exact same metadata
-	const paired_authorHTML = data.paired_author !== null ? `<span class= "font-weight-bold">Paired author: </span>${data.paired_author}` : ''
+
+	if (data.paired_author !== null) {
+		data.paired_author.forEach(function (authorObj) {
+			pairedAuthorText = `<span>${authorObj.author_first_name} ${authorObj.author_last_name} - </span ><span class = ${authorObj.type} id = ${authorObj.title}>${authorObj.title}</span><span> (${authorObj.year}) </span>`
+		})
+	}
+
+	const paired_authorHTML = data.paired_author !== null ? `<span class= "font-weight-bold">Paired text: </span>${pairedAuthorText}` : ''
 
 
 
