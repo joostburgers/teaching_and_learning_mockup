@@ -94,6 +94,36 @@ top:50px;
 	font-weight: bold;
 }
 
+.facet-sub_title {
+	font-size: 100%;
+	font-style: italic;
+	display:block;
+	width:100%;
+	margin:15px 15px 2px 15px;
+}
+
+.facet-subfilter {
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	width:75%;
+	margin-left:15px;
+}
+
+.facet-subfilter-all{
+display:block;
+width:100%;
+
+}
+
+.facet-subfilter-item {
+	flex: 0 0 25%; 
+	box-sizing: border-box;
+	padding: 0px; /* Adjust padding as needed */
+	margin-left:20px;
+}
+
 .note-footer {
 	position:sticky;
 	top: 85%;
@@ -121,4 +151,8 @@ content: open-quote;
 
 .short_story::after{
 content: close-quote;
+}
+
+.common_core_search{
+display:none
 }
