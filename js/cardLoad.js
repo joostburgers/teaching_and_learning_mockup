@@ -54,11 +54,11 @@ function getCards() {
 
 
 					// Ensure the sections are visible.
-					$('.common_core_search').slideDown(400);
+					$('.common_core_search').slideDown(200);
 
 				} else {
 					// Toggle is off, hide the sections.
-					$('.common_core_search').slideUp(400);
+					$('.common_core_search').slideUp(200);
 				}
 				filterCards(data)
 			});
@@ -319,7 +319,7 @@ function defineCommonCoreCheckboxes() {
 			
 			// Determine the state of the "All" checkbox based on the single checkboxes
 			if (checkedBoxes === 0) {
-				allCheckbox.prop('checked', false).prop('indeterminate', false);
+				allCheckbox.prop('checked', true).prop('indeterminate', false);
 			} else if (checkedBoxes < totalBoxes) {
 				allCheckbox.prop('checked', false).prop('indeterminate', true);
 			} else {
