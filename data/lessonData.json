@@ -621,13 +621,15 @@
 	},
 	"description": "This module pairs <em>As I Lay Dying</em> with \"Woman Hollering Creek\" by Sandra Cisneros, and investigates how their female protagonists struggle for bodily autonomy",
 	"modality": [ "In-Person", "Online Asynchronous" ],
-	"paired_author": {
-	  "title": "Woman Hollering Creek",
-	  "type": "short_story",
-	  "year": "1991",
-	  "author_last_name": "Cisneros",
-	  "author_first_name": "Sandra"
-	},
+	"paired_author": [
+	  {
+		"title": "Woman Hollering Creek",
+		"type": "short_story",
+		"year": "1991",
+		"author_last_name": "Cisneros",
+		"author_first_name": "Sandra"
+	  }
+	],
 	"pilot_classroom": "This module was first taught in an online asynchronous course.",
 	"learning_goals": null,
 	"common_core": null,
