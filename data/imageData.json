@@ -693,7 +693,7 @@
 	}
   },
   {
-	"media_type": "site_image",
+	"media_type": "archive",
 	"creators": [
 	  {
 		"last_name": "Arnold",
@@ -704,7 +704,7 @@
 	"year": "1939",
 	"place": null,
 	"description": "Portrait shows \"Hemingway posing for a dust jacket photo by Lloyd Arnold for the first edition of \"For Whom the Bell Tolls\", at the Sun Valley Lodge, Idaho, late 1939.\" (Source: Wikimedia, 2021)",
-	"filename": "external_image_ernest_hemingway.jpg",
+	"filename": "archive_ernest_hemingway.jpg",
 	"alt_text": "Portrait shows \"Hemingway posing for a dust jacket photo by Lloyd Arnold for the first edition of \"For Whom the Bell Tolls\", at the Sun Valley Lodge, Idaho, late 1939.\" (Source: Wikimedia, 2021)",
 	"access_date": "2024-07-02",
 	"repository": {
