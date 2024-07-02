@@ -28,7 +28,7 @@
 	],
 	"pilot_classroom": "This project was piloted in a synchronous online creative writing class for college freshmen and sophomores at St. Louis Community College.",
 	"learning_goals": [ "To identify major and minor characters, point of view, setting, scene building, and plot.", "To research social/historical context in imaginative writing through the use of digital resources.", "To practice stepping outside of self to write/invent characters and scenes from different perspectives in different time periods." ],
-	"common_core": [ "RL.9-10.5", "RL.9-10.7", "RL.9-10.9", "W.9-10.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "W.11-12.3"],
+	"common_core": [ "RL.9-10.5", "RL.9-10.7", "RL.9-10.9", "W.9-10.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "W.11-12.3" ],
 	"student_samples": [
 	  {
 		"first_name": null,
@@ -94,7 +94,7 @@
 		"type": "short_story",
 		"year": "1939"
 	  }
-	  ],
+	],
 
 	"image": {
 	  "card": "site_photograph_plantation_cabin_card.jpg",
@@ -429,7 +429,7 @@
 		"type": "novel",
 		"year": "1929"
 	  }
-	  
+
 	],
 	"image": {
 	  "card": "screen_capture_main_map_sound_and_fury_card.jpg",
@@ -602,6 +602,41 @@
 	"institution": "Asbury University",
 	"contact": null,
 	"created": "2024-06-23",
+	"notes": null
+  },
+  {
+	"filename": "chase_template.html",
+	"url": null,
+	"title": "Comparing Dewey Dell's Journey for Bodily and Reproductive Autonomy in <em>As I Lay Dying</em> to \"Woman Hollering Creek\" By Sandra Cisneros",
+	"story": [
+	  {
+		"title": "Dry September",
+		"type": "short_story",
+		"year": "1931"
+	  }
+	],
+	"image": {
+	  "card": "archive_manuscript_aild_35_card.jpg",
+	  "banner": "archive_manuscript_aild_35_banner.jpg"
+	},
+	"description": "This module pairs <em>As I Lay Dying</em> with \"Woman Hollering Creek\" by Sandra Cisneros, and investigates how their female protagonists struggle for bodily autonomy",
+	"modality": [ "In-Person", "Online Asynchronous" ],
+	"paired_author": {
+	  "title": "Woman Hollering Creek",
+	  "type": "short_story",
+	  "year": "1991",
+	  "author_last_name": "Cisneros",
+	  "author_first_name": "Sandra"
+	},
+	"pilot_classroom": "This module was first taught in an online asynchronous course.",
+	"learning_goals": null,
+	"common_core": null,
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Chase Dimock",
+	"institution": "College of the Canyons",
+	"contact": "chase.dimock@canyons.edu",
+	"created": "2024-07-02",
 	"notes": null
   }
 ]
