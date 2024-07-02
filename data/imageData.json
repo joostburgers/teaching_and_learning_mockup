@@ -691,5 +691,28 @@
 	  "title": "William Faulkner on the Web",
 	  "url": "http://cypress.mcsr.olemiss.edu/~egjbp/faulkner/images/bundren.jpg"
 	}
+  },
+  {
+	"media_type": "external_image",
+	"creators": [
+	  {
+		"last_name": "Arnold",
+		"first_name": "Lloyd R."
+	  }
+	],
+	"title": "Ernest Hemingway seated at typewriter",
+	"year": "1939",
+	"place": null,
+	"description": "Portrait shows \"Hemingway posing for a dust jacket photo by Lloyd Arnold for the first edition of \"For Whom the Bell Tolls\", at the Sun Valley Lodge, Idaho, late 1939.\" (Source: Wikimedia, 2021)",
+	"filename": "external_image_ernest_hemingway.jpg",
+	"alt_text": "Portrait shows \"Hemingway posing for a dust jacket photo by Lloyd Arnold for the first edition of \"For Whom the Bell Tolls\", at the Sun Valley Lodge, Idaho, late 1939.\" (Source: Wikimedia, 2021)",
+	"access_date": "2024-07-02",
+	"repository": {
+	  "collection": "Prints and Photographs Division",
+	  "accession": "LC-USZ61-1100 (b&w film copy neg.)",
+	  "name": "Library of Congress",
+	  "place": "Washington, DC",
+	  "url": "https://lccn.loc.gov/2002736785"
+	}
   }
 ]
