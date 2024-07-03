@@ -714,5 +714,29 @@
 	  "place": "Washington, DC",
 	  "url": "https://lccn.loc.gov/2002736785"
 	}
+  },
+
+  {
+	"media_type": "archive",
+	"creators": [
+	  {
+		"last_name": "Johnston",
+		"first_name": "Frances Benjamin"
+	  }
+	],
+	"title": "Charlotte Perkins Gilman, 1860-1935",
+	"year": "ca. 1900",
+	"place": null,
+	"description": "Half-length portrait, seated, facing right.",
+	"filename": "archive_charlotte_perkins_gillman.jpg",
+	"alt_text": "Half-length portrait, seated, facing right.",
+	"access_date": "2024-07-03",
+	"repository": {
+	  "collection": "Prints and Photographs Division",
+	  "accession": "LC-USZ62-49035 (b&w film copy neg.)",
+	  "name": "Library of Congress",
+	  "place": "Washington, DC",
+	  "url": "https://lccn.loc.gov/2001704015"
+	}
   }
 ]
