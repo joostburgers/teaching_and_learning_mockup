@@ -23,7 +23,8 @@
 
 h3.content_sub_title {
 	font-size: 1.5em;
-	margin: 10px;
+	margin: 0px 0px 0px 0px;
+	border-bottom: 2px solid rgba(52, 88, 77, 0.60);
 }
 
 
@@ -136,12 +137,23 @@ ol.activity-list {
 		padding: 5px; /* Adds some padding around each item */
 	}
 
+.activity-list-unordered-note {
+	
+	list-style-type: circle;
+	list-style-position: outside;
+	margin-left: 30px;
+	
+	font-weight: 400;
+	line-height: 1.5em;
+}
+
+
 
 .activity-instructions {
 	padding: 10px;
 	font-weight: bold;
-	margin-left:30px;
-	margin-right:15px;
+	margin-left: 30px;
+	margin-right: 15px;
 }
 
 .activity-instructions-plain {
@@ -160,6 +172,15 @@ padding: 15px;
 	font-weight: 400;
 	line-height: 1.5em;
 }
+
+.activity-section-introduction p{
+	margin-bottom:1em;
+}
+
+	.activity-section-introduction p:last-of-type {
+		margin-bottom: 0em;
+	}
+
 
 .menu {
 	color: #ffffff;
