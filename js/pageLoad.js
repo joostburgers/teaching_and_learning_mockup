@@ -25,44 +25,62 @@ function loadTOC() {
 }
 
 
+
+
 function loadModal() {
-
 	$('#imageSource').on('click', function () {
-
 		var isZoomed = $(this).hasClass('zoomed-in');
-		if (!isZoomed) {
-			// Calculate the max size based on the viewport
-			var viewportWidth = $(window).width();
-			console.log("viewport Width",viewportWidth)
-			var viewportHeight = $(window).height();
-			console.log("viewport Height", viewportHeight)
-			var maxWidth = viewportWidth * 0.90; // 80% of viewport width
-			var maxHeight = viewportHeight * 0.90; // 80% of viewport height
+		var modalContent = $(this).closest('.modal-content'); // Find the closest .modal-content ancestor
+		var modalHeader = modalContent.find('.modal-header');
+		var modalFooter = modalContent.find('.modal-footer');
+		var modalBody = $(this).closest('.modal-body'); // Find the closest .modal-body ancestor
 
+		if (isZoomed) {
+			// Zooming out
+			$(this).removeClass('zoomed-in');
+			modalContent.removeClass('p-0'); // Add padding back to modal-content
+			modalBody.removeClass('p-0'); // Add padding back to modal-body
+			modalHeader.show(); // Show the modal header
+			modalFooter.show(); // Show the modal footer
 			$(this).css({
-				'max-width': maxWidth + 'px',
-				'max-height': maxHeight + 'px'
+				'max-width': '', // Remove max-width
+				'max-height': '' // Remove max-height
 			});
 		} else {
-			// Reset the max-width and max-height when zooming out
+			// Zooming in
+			$(this).addClass('zoomed-in');
+			modalContent.addClass('p-0'); // Remove padding from modal-content
+			modalBody.addClass('p-0'); // Remove padding from modal-body
+			modalHeader.hide(); // Hide the modal header to provide more space
+			modalFooter.hide(); // Hide the modal footer to provide more space
+			var viewportWidth = $(window).width();
+			var viewportHeight = $(window).height();
 			$(this).css({
-				'max-width': '',
-				'max-height': ''
+				'max-width': viewportWidth * 0.9 + 'px', // 90% of viewport width
+				'max-height': viewportHeight * 0.9 + 'px' // 90% of viewport height
 			});
 		}
-		$(this).toggleClass('img-fluid')
-		$(this).toggleClass('zoomed-in');
 	});
-	$('#imageSource').on('hidden.bs.modal', function () {
 
-		$('#imageSource').removeClass('zoomed-in').css({
+	// Ensure the modal resets to its original state when closed
+	$('#imageModal').on('hidden.bs.modal', function () {
+		var imageSource = $('#imageSource');
+		imageSource.removeClass('zoomed-in').css({
 			'max-width': '',
 			'max-height': ''
 		});
-		console.log("modal hidden")
+		var modalContent = $(this).find('.modal-content');
+		modalContent.removeClass('p-0'); // Add padding back to modal-content
+		$(this).find('.modal-body').removeClass('p-0'); // Add padding back to modal-body
+		$(this).find('.modal-header').show(); // Show the modal header
+		$(this).find('.modal-footer').show(); // Show the modal footer
 	});
-
 }
+
+
+
+
+
 	
 
 

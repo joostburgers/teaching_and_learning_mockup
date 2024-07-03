@@ -344,6 +344,35 @@
 		"first_name": "Johannes"
 	  }
 	],
+	"title": "Video Tutorial of Character in Event Keyword Search",
+	"description": "Instructional video for understanding how to search for keywords in events based on the character present using As I Lay Dying as an example",
+	"duration": "00:00:31",
+	"file_size": "1.99 MB",
+	"created": "2024-07-03T00:00:00Z",
+	"filename": "video_tutorial_character_in_event_keyword_search.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Quick Tutorial",
+	"tool": "Event Keyword Search",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Instructional video for understanding how to search for keywords in events based on the character present using As I Lay Dying as an example",
+	"url": "http://faulkner.iath.virginia.edu/family/events/",
+	"full_demo_url": null,
+	"full_demo_duration": null,
+	"full_demo_title": null
+  },
+
+
+  {
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
 	"title": "Video Tutorial of Genealogies Commentary",
 	"description": "Instructional video for demonstrating the basic functionality of the genealogies commentaries",
 	"duration": "00:00:30",
