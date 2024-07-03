@@ -622,8 +622,8 @@ function setGlanceData(data) {
 	} else {
 
 		data.story.forEach(function (storyObj) {
-
-			storyTitle += `<span class = ${storyObj.type}>${storyObj.title}</span>, `
+			let fancyTitle = fancyQuotes(storyObj.title)
+			storyTitle += `<span class = ${storyObj.type}>${fancyTitle}</span>, `
 
 		});
 		storyTitle = storyTitle.slice(0, -2);
@@ -650,12 +650,16 @@ function setGlanceData(data) {
 
 	if (data.paired_author !== null) {
 		data.paired_author.forEach(function (authorObj) {
+			fancyTitle = fancyQuotes(authorObj.title)
+			console.log("fancy title", fancyTitle)
+
 			pairedAuthorText = `<span>${authorObj.author_first_name} ${authorObj.author_last_name} - </span ><span class = ${authorObj.type} id = ${authorObj.title}>${authorObj.title}</span><span> (${authorObj.year}) </span>`
 		})
 	}
 
 	const paired_authorHTML = data.paired_author !== null ? `<span class= "font-weight-bold">Paired text: </span>${pairedAuthorText}` : ''
 
+	
 
 
 	const institutionHTML = (data.institution !== null && data.institution !== undefined) ? `<span>, ${data.institution}</span>` : '';
@@ -673,15 +677,19 @@ function setGlanceData(data) {
 	
 	const bannerImageHTML = data.image.banner !== null ? `<img src="../images/${data.image.banner}" class="img-fluid w-100" alt="Banner image for ${data.title}">` : '';
 
+	const fancyBannerImageTitle = fancyQuotes(data.title)
+
 	const bannerHTML = `<div class="glance-info">
 				${bannerImageHTML}		
-	<h1 class="glance-title glance-centered">${data.title}<div class="glance-subtitle">${instructorHTML}</div></h1>
+	<h1 class="glance-title glance-centered">${fancyBannerImageTitle}<div class="glance-subtitle">${instructorHTML}</div></h1>
 			<div class="glance-bottom">
 				
 				<div class="right">${createdHTML} </div></div>
 			</div>`
 
-	const descriptionHTML = `<span class="font-weight-bold">Description: </span>${data.description}`
+	const fancyDescription = fancyQuotes(data.description)
+
+	const descriptionHTML = `<span class="font-weight-bold">Description: </span>${fancyDescription}`
 
 	// const textsHTML = Load in texts through cardload functions
 	const glanceTextHTML = `<div class=glance-text><div class="row"><div class="col"><p>${descriptionHTML}</p><p>${storyHTML}</p>
@@ -742,3 +750,24 @@ function createSamples(data, filename) {
 	return samples;
 }
 
+function fancyQuotes(text) {
+
+	console.log(text)
+	// Replace straight double quotes at the beginning of a word with left curly double quote
+	text = text.replace(/"(\w)/g, '\u201C$1');
+
+	// Replace straight double quotes at the end of a word with right curly double quote
+	text = text.replace(/(\w)"/g, '$1\u201D');
+
+	// Replace straight single quotes at the beginning of a word with left curly single quote
+	text = text.replace(/(\s)'(\w)/g, '$1\u2018$2');
+
+	// Replace straight single quotes in the middle of a word with right curly single quote
+	text = text.replace(/(\S)'(\S)/g, '$1\u2019$2');
+
+
+	// Replace straight single quotes at the end of a word with right curly single quote
+	text = text.replace(/(.)'(\s)/g, '$1\u2019$2');;
+
+	return text;
+}
