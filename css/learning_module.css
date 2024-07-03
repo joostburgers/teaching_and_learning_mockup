@@ -161,6 +161,12 @@ ol.activity-list {
 	font-weight: 400;
 }
 
+.activity-instructions-title {
+	padding: 15px 0px 0px 15px;
+	font-weight: bold;
+	margin-left: 0px;
+	
+}
 
 .activity-section {
 	border-top: 1px solid #ddd;
