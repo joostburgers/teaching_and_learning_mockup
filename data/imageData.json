@@ -590,6 +590,35 @@
   },
 
   {
+	"media_type": "student_sample",
+	"creators": [
+	  {
+		"last_name": "Hunziker",
+		"first_name": "Casey"
+	  }
+	],
+
+	"title": "Textual map of Cooper's <em>Templeton</em> in The Pioneers by Casey Hunziker",
+
+
+	"description": "This textual map of Cooper's Templeton in <em>The Pioneers</em> by Casey Hunziker maps the novel from Elizabeth's point of view, mapping significant events in her development and putting the Temple Manor at the center.",
+	"filename": "student_sample_joiner_casey_hunziker.jpg",
+
+	"alt_text": "This textual map of Cooper's Templeton in <em>The Pioneers</em> by Casey Hunziker maps the novel from Elizabeth's point of view, mapping significant events in her development and putting the Temple Manor at the center.",
+
+	"course": {
+	  "name": "Mapping Faulkner",
+	  "number": "Eng 101",
+	  "institution": "Keuka College",
+	  "place": "Keuka Park, MS",
+	  "semester": "2024 Fall",
+	  "instructor": "Jennie Joiner",
+	  "url": null
+	}
+
+  },
+
+  {
 	"media_type": "screen_capture",
 	"creators": [
 	  {
