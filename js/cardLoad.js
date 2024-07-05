@@ -40,6 +40,7 @@ function getCards() {
 				if ($(this).is(':checked')) {
 					// Toggle is on, show or recreate the Common Core State Standards filters.
 					populateFiltersFromCommonCore(data, 'common_core', 'Common Core State Standards');
+					console.log("common core filters created")
 					defineCommonCoreCheckboxes();
 					$("#common_core-categories-filters input[type='checkbox']").on('change', function () {
 						filterCards(data);
