@@ -289,7 +289,9 @@ function student_sample(image) {
 function setImageData(source, image) {
 	const imageTitle = $('#imageTitle');
 	const imageSource = $('#imageSource');
-	const imageCitation = $('#imageCitation')
+	const imageCitation = $('#imageCitation');
+	const carouselModalLabel = $('#carouselModalLabel'); // Title for the carousel modal
+	const carouselImageCitation = $('#imageCarouselModal .modal-footer #imageCitation'); // Citation for the carousel modal
 
 	const citationTemplate = (() => {
 		switch (image.media_type) {
@@ -308,12 +310,17 @@ function setImageData(source, image) {
 		}
 	})();
 
+	// Update the modal for a single image
 	imageTitle.html(image.title);
 	imageSource.attr('src', source);
 	imageSource.attr('alt', image.alt_text);
-
 	imageCitation.html(citationTemplate);
+
+	// Update the carousel modal title and citation
+	carouselModalLabel.text(image.title); // Set the title for the carousel modal
+	carouselImageCitation.html(citationTemplate); // Set the citation for the carousel modal
 }
+
 
 
 

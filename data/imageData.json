@@ -617,7 +617,34 @@
 	}
 
   },
+  {
+	"media_type": "student_sample",
+	"creators": [
+	  {
+		"last_name": "Sisson",
+		"first_name": "Elizabeth"
+	  }
+	],
 
+	"title": "Hand-drawn Map of Cooper's Templeton in <em>The Pioneers</em> by Elizabeth Sisson",
+
+
+	"description": "This hand-drawn map of Cooper's Templeton in <em>The Pioneers</em> by Elizabeth Sisson focuses on the narrator's point of view, focusing on straight lines symbolic of roads and civilization all leading to the Judge's house in the center.",
+	"filename": "student_sample_joiner_elizabeth_sisson.jpg",
+
+	"alt_text": "This hand-drawn map of Cooper's Templeton in <em>The Pioneers</em> by Elizabeth Sisson focuses on the narrator's point of view, focusing on straight lines symbolic of roads and civilization all leading to the Judge's house in the center.",
+
+	"course": {
+	  "name": "Mapping Faulkner",
+	  "number": "Eng 101",
+	  "institution": "Keuka College",
+	  "place": "Keuka Park, MS",
+	  "semester": "2024 Fall",
+	  "instructor": "Jennie Joiner",
+	  "url": null
+	}
+
+  },
   {
 	"media_type": "screen_capture",
 	"creators": [
