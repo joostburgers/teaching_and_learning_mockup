@@ -220,7 +220,9 @@ function site_photograph(image) {
 	//define html strings. This could probably be more efficient.
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 
-	const imageTitleHTML = image.title !== null && image.title !== undefined ? `" ${image.title}."` : '';
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201c${fancyQuotes(image.title)}.\u201D` : '';
+
+
 	const imageYearHTML = image.year !== null && image.year !== undefined ? `${image.year}, ` : '';
 	const imagePlaceHTML = image.place !== null && image.place !== undefined ? `${image.place}.` : '';
 
@@ -248,7 +250,7 @@ function external_image(image) {
 	//define html strings. This could probably be more efficient.
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 
-	const imageTitleHTML = image.title !== null && image.title !== undefined ? `" ${image.title}."` : '';
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotes(image.title)}.\u201D` : '';
 	const imageWebsiteTitleHTML = image.website.title !== null && image.website.title !== undefined ? `<em>${image.website.title}</em>` : '';
 
 	const imageYearHTML = image.year !== null && image.year !== undefined ? `${image.year}, ` : '';
@@ -268,7 +270,7 @@ function screen_capture(image) {
 	//define html strings. This could probably be more efficient.
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 
-	const imageTitleHTML = image.title !== null && image.title !== undefined ? `" ${image.title}."` : '';
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyquotes(image.title)}.\u201D` : '';
 	const imageYearHTML = image.year !== null && image.year !== undefined ? `${image.year}, ` : '';
 	const imageRepositoryNameHTML = image.repository.name !== null && image.repository.name !== undefined ? `${image.repository.name}, ` : '';
 	const imageRepositoryPlaceHTML = image.repository.place !== null && image.repository.place !== undefined ? `${image.repository.place}. ` : '';
@@ -285,7 +287,7 @@ function archive(image) {
 	//define html strings. This could probably be more efficient.
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 
-	const imageTitleHTML = image.title !== null && image.title !== undefined ? `" ${image.title}."` : '';
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotes(image.title)}.\u201D` : '';
 
 	const imageRepositoryCollectionHTML = image.repository.collection !== null && image.repository.collection !== undefined ? `${image.repository.collection}, ` : '';
 
@@ -295,7 +297,7 @@ function archive(image) {
 
 	const imageRepositoryPlaceHTML = image.repository.place !== null && image.repository.place !== undefined ? `${image.repository.place}. ` : '';
 
-	const imageRepositoryURLHTML = image.repository.url !== null && image.repository.url !== undefined ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>. ` : '';
+	const imageRepositoryURLHTML = image.repository.url !== null && image.repository.url !== undefined ? `URL: <a href="${image.repository.url}\u201D>${image.repository.url}</a>. ` : '';
 
 	let citationTemplate = `${creatorsStringHTML}${imageTitleHTML} ${imageRepositoryCollectionHTML} ${imageRepositoryAccessionHTML} ${imageRepositoryNameHTML} ${imageRepositoryPlaceHTML} ${imageRepositoryURLHTML}`
 
@@ -305,12 +307,12 @@ function archive(image) {
 function student_sample(image) {
 	//define html strings. This could probably be more efficient.
 
-	const descriptionHTML = image.description !== null && image.description !== undefined ? `<div class='carousel-image-description'>${image.description}</div>` : '';
+	const descriptionHTML = image.description !== null && image.description !== undefined ? `<div class='carousel-image-description'>${fancyQuotes(image.description)}</div>` : '';
 
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
-	const imageTitleHTML = image.title !== null && image.title !== undefined ? `"${image.title}."` : '';
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotes(image.title)}.\u201D` : '';
 
-	const imageCourseNameHTML = image.course.name !== null && image.course.name !== undefined ? `"${image.course.name}." ` : '';
+	const imageCourseNameHTML = image.course.name !== null && image.course.name !== undefined ? `\u201c${image.course.name}.\u201D ` : '';
 	const imageCourseNumberHTML = image.course.number !== null && image.course.number !== undefined ? `${image.course.number}: ` : '';
 	const imageCourseInstructorHTML = image.course.instructor !== null && image.course.instructor !== undefined ? `Instructor: ${image.course.instructor}. ` : '';
 	const imageCourseInstitutionHTML = image.course.institution !== null && image.course.institution !== undefined ? `${image.course.institution}, ` : '';
@@ -379,7 +381,9 @@ function setCarouselImageData(source, image) {
 
 	// Update the carousel modal with the image title and citation
 	console.log(image.title)
-	carouselImageTitle.html(image.title);
+	let fancyTitle = fancyQuotes(image.title)
+
+	carouselImageTitle.html(fancyTitle);
 	carouselImageCitation.html(citationTemplate);
 }
 
@@ -409,7 +413,7 @@ function setVideoData(video) {
 	const creatorsString = extractCreators(video);
 
 	let citationTemplate = '';
-	const videoTitleHTML = video.title !== null ? `"${video.title}."` : '';
+	const videoTitleHTML = video.title !== null ? `\u201C${video.title}.\u201D` : '';
 
 
 
@@ -422,7 +426,7 @@ function setVideoData(video) {
 			break;
 		case 'external_video':
 			citationTemplate =
-				`${creatorsString}. "${video.title}." <em>${video.website_title}</em>, ${video.date}, <a href="${video.original_url}">${video.original_url}</a>. Accessed ${new Date(video.access_date).toLocaleDateString(
+				`${creatorsString}. \u201C${video.title}.\u201D <em>${video.website_title}</em>, ${video.date}, <a href="${video.original_url}">${video.original_url}</a>. Accessed ${new Date(video.access_date).toLocaleDateString(
 					'en-US',
 					{ month: 'short', day: 'numeric', year: 'numeric' }
 				)}.`;
@@ -464,7 +468,7 @@ function setImageCaptions(jsonData) {
 			const figure = img.closest('.activity-image');
 			const caption = figure.find('.activity-image-caption');
 
-			caption.html(`"${matchingImage.title}" ${creatorsStringHTML}`);
+			caption.html(`\u201C${matchingImage.title}\u201D ${creatorsStringHTML}`);
 
 
 			setElementMetaData(img, matchingImage);
