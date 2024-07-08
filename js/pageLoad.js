@@ -8,7 +8,7 @@ function loadTOC() {
 
 	const tocHtml = [];
 	headings.each((i, current) => {
-		console.log(current.tagName)
+	
 		const tagName = current.tagName.toLowerCase();
 		const title = current.textContent;
 		const anchorName = `tocheading${i}`;
@@ -103,10 +103,10 @@ function loadImageData() {
 
 		$('.activity-image').on('click', 'img', function () {
 			const source = $(this).attr('src');
-			console.log(source)
+			
 			// Get the image data object corresponding to the clicked image
 			const tempImageData = getImageData(source, jsonData);
-			console.log(tempImageData)
+			
 			// Set the image modal data using the obtained data object and show the modal
 			setImageData(source, tempImageData);
 			$("#imageModal").show();
@@ -123,6 +123,39 @@ function loadImageData() {
 		$("#imageModal").hide();
 	});
 }
+
+function loadCarouselImageData() {
+	const carouselDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/imageData.json';
+
+	// Get the JSON data via AJAX request
+	$.getJSON(carouselDataURL, function (jsonData) {
+		console.log("Carousel image data loaded successfully");
+		console.log(jsonData);
+
+		// Function to load image data for the active carousel item
+		const loadImageDataForActiveItem = () => {
+			const source = $('#carouselExampleIndicators .carousel-item.active img').attr('src');
+			console.log(source);
+			const tempImageData = getImageData(source, jsonData);
+			setCarouselImageData(source, tempImageData);
+		};
+
+		// Listen for the 'slid.bs.carousel' event which is fired after the carousel has completed its slide transition
+		$('#carouselExampleIndicators').on('slid.bs.carousel', function () {
+			loadImageDataForActiveItem();
+		});
+
+		// Also load image data when the modal is initially shown
+		$('#imageCarouselModal').on('show.bs.modal', function () {
+			loadImageDataForActiveItem();
+		});
+	})
+		.fail(function () {
+			console.warn("Carousel image data could not be loaded");
+		});
+}
+
+
 
 /**
  * Loads videos data from a JSON file and sets up click event listeners for video modals.
@@ -155,6 +188,7 @@ function loadVideoData() {
 function getImageData(source, jsonData) {
 	console.log(source)
 	const currentFilename = source.substring(source.lastIndexOf('/') + 1);
+	console.log("current file",currentFilename)
 	let imageData = null;
 	try {
 		imageData = jsonData.find(object => object.filename === currentFilename);
@@ -173,8 +207,9 @@ function getImageData(source, jsonData) {
 			"alt_text": "File not found",
 		}
 	}
-
+	console.log("Image Data", imageData)
 	return imageData;
+
 }
 
 
@@ -269,6 +304,9 @@ function archive(image) {
 
 function student_sample(image) {
 	//define html strings. This could probably be more efficient.
+
+	const descriptionHTML = image.description !== null && image.description !== undefined ? `<div class='carousel-image-description'>${image.description}</div>` : '';
+
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 	const imageTitleHTML = image.title !== null && image.title !== undefined ? `"${image.title}."` : '';
 
@@ -281,7 +319,7 @@ function student_sample(image) {
 	const imageCourseSemesterHTML = image.course.semester !== null && image.course.semester !== undefined ? `${image.course.semester}. ` : '';
 	const imageCourseURLHTML = image.course.url !== null && image.course.url !== undefined ? `URL: <a href="${image.course.url}">${image.course.url}</a>. ` : '';
 
-	let citationTemplate = `${creatorsStringHTML}${imageTitleHTML} ${imageCourseNumberHTML} ${imageCourseNameHTML} ${imageCourseSemesterHTML}${imageCourseInstitutionHTML}${imageCoursePlaceHTML}${imageCourseInstructorHTML}   ${imageCourseURLHTML} `;
+	let citationTemplate = `${descriptionHTML}${creatorsStringHTML}${ imageTitleHTML } ${ imageCourseNumberHTML } ${ imageCourseNameHTML } ${ imageCourseSemesterHTML }${ imageCourseInstitutionHTML }${ imageCoursePlaceHTML }${ imageCourseInstructorHTML }   ${ imageCourseURLHTML } `;
 
 	return citationTemplate;
 }
@@ -290,8 +328,7 @@ function setImageData(source, image) {
 	const imageTitle = $('#imageTitle');
 	const imageSource = $('#imageSource');
 	const imageCitation = $('#imageCitation');
-	const carouselModalLabel = $('#carouselModalLabel'); // Title for the carousel modal
-	const carouselImageCitation = $('#imageCarouselModal .modal-footer #imageCitation'); // Citation for the carousel modal
+	
 
 	const citationTemplate = (() => {
 		switch (image.media_type) {
@@ -315,13 +352,35 @@ function setImageData(source, image) {
 	imageSource.attr('src', source);
 	imageSource.attr('alt', image.alt_text);
 	imageCitation.html(citationTemplate);
-
-	// Update the carousel modal title and citation
-	carouselModalLabel.text(image.title); // Set the title for the carousel modal
-	carouselImageCitation.html(citationTemplate); // Set the citation for the carousel modal
+	
 }
 
 
+function setCarouselImageData(source, image) {
+	const carouselImageTitle = $('#carouselImageTitle');
+	const carouselImageCitation = $('#carouselImageCitation');
+
+	const citationTemplate = (() => {
+		switch (image.media_type) {
+			case 'site_photograph':
+				return site_photograph(image);
+			case 'external_image':
+				return external_image(image);
+			case 'screen_capture':
+				return screen_capture(image);
+			case 'archive':
+				return archive(image);
+			case 'student_sample':
+				return student_sample(image);
+			default:
+				return "Image metadata not found.";
+		}
+	})();
+
+	// Update the carousel modal with the image title and citation
+	carouselImageTitle.html(image.title);
+	carouselImageCitation.html(citationTemplate);
+}
 
 
 
@@ -568,7 +627,7 @@ function setLessonData(data) {
 
 	const studentSamplesHTML = data.student_samples !== null ? `<p>Student samples: <ul class="activity-list-unordered-blank">${createSamples(data.student_samples, data.filename)}</ul></p>` : '';
 
-	console.log(data.student_samples)
+	
 
 	const originalLessonsHTML = data.original_lesson_plan !== null ? `<p>Original lesson plan: <ul class="activity-list-unordered-blank">${createSamples(data.original_lesson_plan, data.filename)}</ul></p>` : '';
 
@@ -607,7 +666,7 @@ function createCommonCoreCodes(codes) {
 		} else {
 			acc[key] += `, ${number}`;
 		}
-		console.log(acc)
+		
 		return acc;
 	}, {});
 
@@ -658,7 +717,7 @@ function setGlanceData(data) {
 	if (data.paired_author !== null) {
 		data.paired_author.forEach(function (authorObj) {
 			fancyTitle = fancyQuotes(authorObj.title)
-			console.log("fancy title", fancyTitle)
+			
 
 			pairedAuthorText = `<span>${authorObj.author_first_name} ${authorObj.author_last_name} - </span ><span class = ${authorObj.type} id = ${authorObj.title}>${authorObj.title}</span><span> (${authorObj.year}) </span>`
 		})
@@ -759,7 +818,7 @@ function createSamples(data, filename) {
 
 function fancyQuotes(text) {
 
-	console.log(text)
+	
 	// Replace straight double quotes at the beginning of a word with left curly double quote
 	text = text.replace(/"(\w)/g, '\u201C$1');
 

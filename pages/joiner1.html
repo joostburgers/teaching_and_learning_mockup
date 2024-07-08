@@ -48,7 +48,7 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="carouselModalLabel">Image Carousel</h5>
+					<h5 class="modal-title" id="carouselImageTitle">Image Carousel</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -70,7 +70,7 @@
 						</ol>
 						<div class="carousel-inner">
 
-							<div class="carousel-item active">
+							<div class="carousel-item">
 								<img src="../images/student_sample_joiner_group_project_bear_animals.jpg" class="img-fluid" alt="...">
 							</div>
 							<div class="carousel-item">
@@ -89,7 +89,7 @@
 								<img src="../images/student_sample_joiner_elizabeth_sisson.jpg" class="img-fluid" alt="...">
 							</div>
 							<div class="carousel-item">
-								<img src="../images/student_sample_joiner_tea_dye.jpg" class="img-fluid" alt="...">
+								<img src="../images/student_sample_joiner_anna_black.jpg" class="img-fluid" alt="...">
 							</div>
 							<div class="carousel-item">
 								<img src="../images/student_sample_joiner_grace_decapua.jpg" class="img-fluid" alt="...">
@@ -112,7 +112,7 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<div id="imageCitation"></div>
+					<div id="carouselImageCitation"></div>
 				</div>
 			</div>
 		</div>
@@ -582,23 +582,56 @@
 
 						<!--List end-->
 						<!--This is the image on the right-->
-						<div class="col-5">
+						<div class="col-6">
 							<!--This is a column created on the right--><div class="activity-instructions-title">
 								Student Samples
 							</div>
+							<div class="carousel-preview">
+								
+
 							<div class="carousel-thumbnail">
-								<div class="thumbnail-container">
-									<img src="../images/student_sample_joiner_john_bond.jpg" alt="" class="img-fluid">
+								<img src="../images/student_sample_joiner_group_project_bear_animals_preview.jpg" class="img-fluid" alt="...">
+							</div>
+							<div class="carousel-thumbnail">
+								<img src="../images/student_sample_joiner_group_project_bear_sam_fathers_preview.jpg" class="img-fluid" alt="...">
+							</div>
+							<div class="carousel-thumbnail">
+								<img src="../images/student_sample_joiner_lauren_chamberlain_preview.jpg" class="img-fluid" alt="...">
+							</div>
+							<div class="carousel-thumbnail">
+								<img src="../images/student_sample_joiner_john_bond_preview.jpg" class="img-fluid" alt="...">
+							</div>
+							<div class="carousel-thumbnail">
+								<img src="../images/student_sample_joiner_casey_hunziker_preview.jpg" class="img-fluid" alt="...">
+							</div>
+							<div class="carousel-thumbnail">
+								<img src="../images/student_sample_joiner_elizabeth_sisson_preview.jpg" class="img-fluid" alt="...">
+							</div>
+							<div class="carousel-thumbnail">
+								<img src="../images/student_sample_joiner_anna_black_preview.jpg" class="img-fluid" alt="...">
+							</div>
+							<div class="carousel-thumbnail">
+								<img src="../images/student_sample_joiner_grace_decapua_preview.jpg" class="img-fluid" alt="...">
+							</div>
+							<div class="carousel-thumbnail">
+								<img src="../images/student_sample_joiner_sara_paradisio_preview.jpg" class="img-fluid" alt="...">
+							</div>
+							
+						</div>
+
+
+
+									
 								</div>
 								<div class="activity-image-caption"></div>
 							</div>
 
-						</div>
+					
 						<!--Image end-->
 
 
 					</div>
-				</div>
+				
 			</div>
 			<div class="activity">
 
@@ -763,9 +796,24 @@
 
 	<script>
 		$(document).ready(function () {
+			loadCarouselImageData()
 
 			$(".carousel-thumbnail").click(function () {
+				// Get the index of the clicked thumbnail
+				var index = $(this).index();
+
+				// Remove 'active' class from all carousel items
+				$('#carouselExampleIndicators .carousel-item').removeClass('active');
+
+				// Add 'active' class to the matching carousel item
+				$('#carouselExampleIndicators .carousel-item').eq(index).addClass('active');
+
+				// Show the modal
 				$('#imageCarouselModal').modal('show');
+			});
+
+			$('.carousel').carousel({
+				interval: false
 			});
 
 			loadTOC();

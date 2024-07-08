@@ -361,6 +361,64 @@ div.modal-image:hover {
 	padding: 10px;
 }
 
+
+.carousel-preview {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around; /* Adjust as needed for your design */
+	gap: 10px; /* Space between thumbnails */
+}
+
+.carousel-thumbnail {
+	flex: 0 0 auto;
+	max-width: calc(33% - 10px); /* Adjust width for responsiveness */
+	margin-bottom: 10px; /* Space below each thumbnail */
+}
+
+	.carousel-thumbnail img {
+		width: 100%; /* Make images responsive within their containers */
+		height: auto; /* Maintain aspect ratio */
+	}
+
+	.carousel-thumbnail img:hover {
+	cursor:pointer;
+
+	}
+	.carousel-image-description{
+	margin-bottom:10px;
+		font-size:1.1em;
+	
+	}
+
+.carousel-inner {
+	
+	/*justify-content: center;
+	align-items: center;*/ /* Optional: for vertical alignment */
+}
+.carousel-item {
+	text-align: center; /* Centers inline and inline-block elements */
+}
+
+	.carousel-item img {
+		
+		max-width: 100%; /* Ensures the image is responsive */
+		height: auto; /* Maintains the aspect ratio */
+	}
+
+/* Custom styles for carousel indicators */
+.carousel-indicators li {
+	background-color: #000; /* Makes the indicators black */
+}
+
+/* Custom styles for previous and next buttons */
+.carousel-control-prev, .carousel-control-next {
+	filter: invert(100%); /* Inverts the color to white */
+}
+
+
+
+
+
 .activity-paragraph{
 margin-bottom:10px;
 margin-top:10px;
