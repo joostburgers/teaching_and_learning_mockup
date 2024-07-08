@@ -378,6 +378,7 @@ function setCarouselImageData(source, image) {
 	})();
 
 	// Update the carousel modal with the image title and citation
+	console.log(image.title)
 	carouselImageTitle.html(image.title);
 	carouselImageCitation.html(citationTemplate);
 }

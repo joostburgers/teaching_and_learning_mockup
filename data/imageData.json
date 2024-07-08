@@ -242,12 +242,12 @@
 		"first_name": "William"
 	  }
 	],
-	"title": "'A Rose for Emily', Detail: page 15, carbon typescript.",
+	"title": "\"A Rose for Emily\", Detail: page 15, carbon typescript.",
 
-	"description": "'A Rose for Emily,' Carbon typescript, 17 p. (17 R, 0 V) on 17 l.",
+	"description": "\"A Rose for Emily,\" Carbon typescript, 17 p. (17 R, 0 V) on 17 l.",
 	"filename": "archive_typescript_a_rose_for_emily_15.jpg",
 
-	"alt_text": "'A Rose for Emily,' Carbon typescript, 17 p. (17 R, 0 V) on 17 l.",
+	"alt_text": "\"A Rose for Emily,\" Carbon typescript, 17 p. (17 R, 0 V) on 17 l.",
 	"repository": {
 	  "collection": "William Faulkner Foundation Collection, 1918-1959",
 	  "accession": "#6074 to 6074-d",
@@ -267,12 +267,12 @@
 		"first_name": "William"
 	  }
 	],
-	"title": "'The Bear' As published in The Saturday Evening Post, 9 May 1942; Illustrated by Edward Shenton. Page 30.",
+	"title": "\"The Bear\" as published in The Saturday Evening Post, 9 May 1942; Illustrated by Edward Shenton. Page 30.",
 
-	"description": "Magazine illustration for 'The Bear' in the Saturday Evening Post",
+	"description": "Magazine illustration for \"The Bear\" in the Saturday Evening Post",
 	"filename": "archive_magazine_illustration_the_bear_SEP.jpg",
 
-	"alt_text": "Magazine illustration for 'The Bear' in the Saturday Evening Post",
+	"alt_text": "Magazine illustration for \"The Bear\" in the Saturday Evening Post",
 	"repository": {
 	  "collection": "William Faulkner Foundation Collection, 1918-1959",
 	  "accession": "#6074 to 6074-d",
@@ -569,7 +569,7 @@
 	  }
 	],
 
-	"title": "Student Sample: Map of 'The Bear'",
+	"title": "Student Sample: Map of \"The Bear\"",
 
 
 	"description": "Student Sample of a map",
@@ -712,14 +712,14 @@
 	  }
 	],
 
-	"title": "Group Student Project remapping 'The Bear' from the viewpoint of animals in the text.",
+	"title": "Group Student Project remapping \"The Bear\" from the viewpoint of animals in the text.",
 
 
-	"description": "Group Student Project remapping 'The Bear' from the viewpoint of animals in the text. Note that only one animal--the one-eyed mule Kate--is the only animal that is seen in both the big woods of the hunting camp and the McCaslin plantation.  This was a great point of discussion.",
+	"description": "Group Student Project remapping \"The Bear\" from the viewpoint of animals in the text. Note that only one animal--the one-eyed mule Kate--is the only animal that is seen in both the big woods of the hunting camp and the McCaslin plantation.  This was a great point of discussion.",
 
 	"filename": "student_sample_joiner_group_project_bear_animals.jpg",
 
-	"alt_text": "Group Student Project remapping 'The Bear' from the viewpoint of animals in the text. Note that only one animal--the one-eyed mule Kate--is the only animal that is seen in both the big woods of the hunting camp and the McCaslin plantation. This was a great point of discussion.",
+	"alt_text": "Group Student Project remapping \"The Bear\" from the viewpoint of animals in the text. Note that only one animal--the one-eyed mule Kate--is the only animal that is seen in both the big woods of the hunting camp and the McCaslin plantation. This was a great point of discussion.",
 
 	"course": {
 	  "name": "Mapping Faulkner",
@@ -741,19 +741,19 @@
 	  }
 	],
 
-	"title": "Group Student Project remapping 'The Bear' from the viewpoint of animals in the text.",
+	"title": "Group Student Project remapping \"The Bear\" from the viewpoint of animals in the text.",
 
-	"description": "Group Student remappings of 'The Bear' from perspectives of Sam Fathers and Boon Hogganbeck. Looking at this text from these perspectives led to a great discussion of the important Native American perspectives of the text.",
+	"description": "Group Student remappings of \"The Bear\" from the perspectives of Sam Fathers and Boon Hogganbeck. Looking at this text from these perspectives led to a great discussion of the important Native American perspectives of the text.",
 
 	"filename": "student_sample_joiner_group_project_bear_sam_fathers.jpg",
 
-	"alt_text": "Group Student remappings of 'The Bear' from perspectives of Sam Fathers and Boon Hogganbeck. Looking at this text from these perspectives led to a great discussion of the important Native American perspectives of the text.",
+	"alt_text": "Group Student remappings of \"The Bear\" from the perspectives of Sam Fathers and Boon Hogganbeck. Looking at this text from these perspectives led to a great discussion of the important Native American perspectives of the text.",
 
 	"course": {
 	  "name": "Mapping Faulkner",
 	  "number": "Eng 101",
 	  "institution": "Keuka College",
-	  "place": "Keuka Park, MS",
+	  "place": "Keuka Park, NY",
 	  "semester": "2024 Fall",
 	  "instructor": "Jennie Joiner",
 	  "url": null
@@ -761,7 +761,122 @@
 
   },
 
+  {
+	"media_type": "student_sample",
+	"creators": [
+	  {
+		"last_name": "Bond",
+		"first_name": "John"
+	  }
+	],
 
+	"title": "Game board \"Map\" of <em>The Pioneers</em> by John Bond",
+
+
+	"description": "This \"map\" Cooper's Templeton in <em>The Pioneers</em> by John Bond is a game board allowing differing points of view to take precedence as characters move around the board and land on significant events chosen from the novel. Note that whether one proceeds through the wilderness (counter-clockwise) or through civilization (clockwise), characters end up in the same place which is the establishment of the United States symbolized by the flag in the top left-hand corner.",
+
+	"filename": "student_sample_joiner_john_bond.jpg",
+
+	"alt_text": "This \"map\" Cooper's Templeton in <em>The Pioneers</em> by John Bond is a game board allowing differing points of view to take precedence as characters move around the board and land on significant events chosen from the novel. Note that whether one proceeds through the wilderness (counter-clockwise) or through civilization (clockwise), characters end up in the same place which is the establishment of the United States symbolized by the flag in the top left-hand corner.",
+
+	"course": {
+	  "name": "Mapping Faulkner",
+	  "number": "Eng 101",
+	  "institution": "Keuka College",
+	  "place": "Keuka Park, NY",
+	  "semester": "2024 Fall",
+	  "instructor": "Jennie Joiner",
+	  "url": null
+	}
+
+  },
+  {
+	"media_type": "student_sample",
+	"creators": [
+	  {
+		"last_name": "Chamberlain",
+		"first_name": "Lauren"
+	  }
+	],
+
+	"title": "Cooper's Templeton in <em>The Pioneers</em> by Lauren Chamberlain",
+
+
+	"description": "This map of Cooper's Templeton in <em>The Pioneers</em> by Lauren Chamberlain focuses on the narrator's point of view and centers the lake as the focal point with clear demarcations between town and wilderness.",
+	"filename": "student_sample_joiner_lauren_chamberlain.jpg",
+
+	"alt_text": "This map of Cooper's Templeton in <em>The Pioneers</em> by Lauren Chamberlain focuses on the narrator's point of view and centers the lake as the focal point with clear demarcations between town and wilderness.",
+
+	"course": {
+	  "name": "Mapping Faulkner",
+	  "number": "Eng 101",
+	  "institution": "Keuka College",
+	  "place": "Keuka Park, NY",
+	  "semester": "2024 Fall",
+	  "instructor": "Jennie Joiner",
+	  "url": null
+	}
+
+  },
+  {
+	"media_type": "student_sample",
+	"creators": [
+	  {
+		"last_name": "Paradisio",
+		"first_name": "Sara"
+	  }
+	],
+
+	"title": "Cooper's Templeton in <em>The Pioneers</em> by Sara Paradisio",
+
+
+	"description": "This map of Cooper's Templeton in <em>The Pioneers</em> by Sara Paradisio is intended to be an interpretive visitor's map of Natty's experience as one would find at a state or national park. The map also included diary entries by Natty that imagine how Natty would describe locations on the map.",
+	"filename": "student_sample_joiner_sara_paradisio.jpg",
+
+	"alt_text": "This map of Cooper's Templeton in <em>The Pioneers</em> by Sara Paradisio is intended to be an interpretive visitor's map of Natty's experience as one would find at a state or national park. The map also included diary entries by Natty that imagine how Natty would describe locations on the map.",
+
+
+	"course": {
+	  "name": "Mapping Faulkner",
+	  "number": "Eng 101",
+	  "institution": "Keuka College",
+	  "place": "Keuka Park, NY",
+	  "semester": "2024 Fall",
+	  "instructor": "Jennie Joiner",
+	  "url": null
+	}
+
+  },
+  {
+	"media_type": "student_sample",
+	"creators": [
+	  {
+		"last_name": "Paradisio",
+		"first_name": "Sara"
+	  }
+	],
+
+	"title": "Zoomen in map of Cooper's Templeton in <em>The Pioneers</em> by Sara Paradisio",
+
+
+	"description": "This map of Cooper's Templeton in <em>The Pioneers</em> by Sara Paradisio is intended to be an interpretive visitor's map of Natty's experience as one would find at a state or national park. The map also included diary entries by Natty that imagine how Natty would describe locations on the map.",
+	"filename": "student_sample_joiner_sara_paradisio_zoom.jpg",
+
+
+	"alt_text": "This map of Cooper's Templeton in <em>The Pioneers</em> by Sara Paradisio is intended to be an interpretive visitor's map of Natty's experience as one would find at a state or national park. The map also included diary entries by Natty that imagine how Natty would describe locations on the map.",
+
+
+	"course": {
+	  "name": "Mapping Faulkner",
+	  "number": "Eng 101",
+	  "institution": "Keuka College",
+	  "place": "Keuka Park, NY",
+	  "semester": "2024 Fall",
+	  "instructor": "Jennie Joiner",
+	  "url": null
+	}
+
+  },
   {
 	"media_type": "screen_capture",
 	"creators": [
@@ -784,13 +899,13 @@
 
 	],
 
-	"title": "Screen Capture: Character-Character Force Directed Graph: 'A Rose for Emily'",
+	"title": "Screen Capture: Character-Character Force Directed Graph: \"A Rose for Emily\"",
 	"year": "2018",
 	"place": null,
-	"description": "Visualization of upper-class social relations in 'A Rose for Emily.'",
+	"description": "Visualization of upper-class social relations in \"A Rose for Emily\".",
 	"filename": "screen_capture_character_character_force_directed_graph_a_rose_for_emily.png",
 
-	"alt_text": "Visualization of upper-class social relations in 'A Rose for Emily.'",
+	"alt_text": "Visualization of upper-class social relations in \"A Rose for Emily\".",
 	"repository": {
 	  "name": "Digital Yoknapatawpha",
 	  "place": "University of Virginia",
