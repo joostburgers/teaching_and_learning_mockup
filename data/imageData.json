@@ -707,8 +707,8 @@
 	"media_type": "student_sample",
 	"creators": [
 	  {
-		"last_name": "Various contributors",
-		"first_name": null
+		"last_name": null,
+		"first_name": "Various contributors"
 	  }
 	],
 
@@ -736,8 +736,8 @@
 	"media_type": "student_sample",
 	"creators": [
 	  {
-		"last_name": "Various contributors",
-		"first_name": null
+		"last_name": null,
+		"first_name": "Various contributors"
 	  }
 	],
 
