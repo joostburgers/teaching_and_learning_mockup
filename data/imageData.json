@@ -712,7 +712,7 @@
 	  }
 	],
 
-	"title": "Hand-drawn Map of Cooper's Templeton in <em>The Pioneers</em> by Elizabeth Sisson",
+	"title": "Group Student Project remapping 'The Bear' from the viewpoint of animals in the text.",
 
 
 	"description": "Group Student Project remapping 'The Bear' from the viewpoint of animals in the text. Note that only one animal--the one-eyed mule Kate--is the only animal that is seen in both the big woods of the hunting camp and the McCaslin plantation.  This was a great point of discussion.",
@@ -732,6 +732,36 @@
 	}
 
   },
+  {
+	"media_type": "student_sample",
+	"creators": [
+	  {
+		"last_name": "Various contributors",
+		"first_name": null
+	  }
+	],
+
+	"title": "Group Student Project remapping 'The Bear' from the viewpoint of animals in the text.",
+
+	"description": "Group Student remappings of 'The Bear' from perspectives of Sam Fathers and Boon Hogganbeck. Looking at this text from these perspectives led to a great discussion of the important Native American perspectives of the text.",
+
+	"filename": "student_sample_joiner_group_project_bear_sam_fathers.jpg",
+
+	"alt_text": "Group Student remappings of 'The Bear' from perspectives of Sam Fathers and Boon Hogganbeck. Looking at this text from these perspectives led to a great discussion of the important Native American perspectives of the text.",
+
+	"course": {
+	  "name": "Mapping Faulkner",
+	  "number": "Eng 101",
+	  "institution": "Keuka College",
+	  "place": "Keuka Park, MS",
+	  "semester": "2024 Fall",
+	  "instructor": "Jennie Joiner",
+	  "url": null
+	}
+
+  },
+
+
   {
 	"media_type": "screen_capture",
 	"creators": [
