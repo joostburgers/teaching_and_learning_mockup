@@ -401,19 +401,29 @@ div.modal-image:hover {
 
 	.carousel-item img {
 		
-		max-width: 100%; /* Ensures the image is responsive */
-		height: auto; /* Maintains the aspect ratio */
+
+
+	height: 100%; /* Adjust the height to fit the carousel item */
+	width: auto; /* Allows the width to automatically adjust */
+	object-fit: contain; /* Ensures images fit without cropping and maintain aspect ratio */
+	margin: auto; /* Centers the image horizontally and vertically if there's extra space */
+}
+
+
 	}
 
 /* Custom styles for carousel indicators */
 .carousel-indicators li {
-	background-color: #000; /* Makes the indicators black */
+	filter: drop-shadow(0 0 2px #313131);
 }
 
 /* Custom styles for previous and next buttons */
 .carousel-control-prev, .carousel-control-next {
-	filter: invert(100%); /* Inverts the color to white */
+	filter: drop-shadow(0 0 1px #313131);
 }
+
+
+
 
 
 
