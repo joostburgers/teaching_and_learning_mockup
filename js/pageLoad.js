@@ -746,7 +746,7 @@ function setGlanceData(data) {
 	const createdHTML = data.created !== null ? `Created: ${new Date(data.created).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric' })}${pageLastUpdate}` : '';
 
 	
-	const bannerImageHTML = data.image.banner !== null ? `<img src="../images/${data.image.banner}" class="img-fluid w-100" alt="Banner image for ${data.title}">` : '';
+	const bannerImageHTML = data.image.banner !== null ? `<img src="../images/${data.image.banner}" class="w-100" alt="Banner image for ${data.title}">` : '';
 
 	const fancyBannerImageTitle = fancyQuotes(data.title)
 

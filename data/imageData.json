@@ -553,41 +553,13 @@
 	  "number": "Course Number",
 	  "institution": "University of Virginia",
 	  "place": "some place",
-	  "semester": "2024 Fall",
+	  "semester": "Spring 2023",
 	  "instructor": "Instructor Name",
 	  "url": "http://faulkner.iath.virginia.edu/characters-bipart.html"
 	}
 
   },
 
-  {
-	"media_type": "student_sample",
-	"creators": [
-	  {
-		"last_name": "McCaslin",
-		"first_name": "Buck"
-	  }
-	],
-
-	"title": "Student Sample: Map of \"The Bear\"",
-
-
-	"description": "Student Sample of a map",
-	"filename": "joiner_student_sample_1.jpg",
-
-	"alt_text": "student_sample",
-
-	"course": {
-	  "name": "Mapping Faulkner",
-	  "number": "Eng 101",
-	  "institution": "Random University",
-	  "place": "Oxford, MS",
-	  "semester": "2024 Fall",
-	  "instructor": "Joseph Blotner",
-	  "url": "http://faulkner.iath.virginia.edu/characters-bipart.html"
-	}
-
-  },
 
   {
 	"media_type": "student_sample",
@@ -607,11 +579,11 @@
 	"alt_text": "This textual map of Cooper's Templeton in <em>The Pioneers</em> by Casey Hunziker maps the novel from Elizabeth's point of view, mapping significant events in her development and putting the Temple Manor at the center.",
 
 	"course": {
-	  "name": "Mapping Faulkner",
-	  "number": "Eng 101",
+	  "name": "Advanced Studies in Literature: Faulkner and Cooper",
+	  "number": "Eng 320",
 	  "institution": "Keuka College",
 	  "place": "Keuka Park, NY",
-	  "semester": "2024 Fall",
+	  "semester": "Spring 2023",
 	  "instructor": "Jennie Joiner",
 	  "url": null
 	}
@@ -635,11 +607,11 @@
 	"alt_text": "This hand-drawn map of Cooper's Templeton in <em>The Pioneers</em> by Elizabeth Sisson focuses on the narrator's point of view, focusing on straight lines symbolic of roads and civilization all leading to the Judge's house in the center.",
 
 	"course": {
-	  "name": "Mapping Faulkner",
-	  "number": "Eng 101",
+	  "name": "Advanced Studies in Literature: Faulkner and Cooper",
+	  "number": "Eng 320",
 	  "institution": "Keuka College",
 	  "place": "Keuka Park, NY",
-	  "semester": "2024 Fall",
+	  "semester": "Spring 2023",
 	  "instructor": "Jennie Joiner",
 	  "url": null
 	}
@@ -664,11 +636,11 @@
 	"alt_text": "This tea-dyed map by Anna Black is intended to convey antiquity in Cooper's Templeton in The Pioneers and locates the field where a pigeon massacre occurs as the center of the map, conveying the importance of the destruction of the wilderness in the novel.   ",
 
 	"course": {
-	  "name": "Mapping Faulkner",
-	  "number": "Eng 101",
+	  "name": "Advanced Studies in Literature: Faulkner and Cooper",
+	  "number": "Eng 320",
 	  "institution": "Keuka College",
 	  "place": "Keuka Park, NY",
-	  "semester": "2024 Fall",
+	  "semester": "Spring 2023",
 	  "instructor": "Jennie Joiner",
 	  "url": null
 	}
@@ -693,11 +665,11 @@
 	"alt_text": "This creative map of Cooper's Templeton in <em>The Pioneers</em> by Grace DeCapua interprets the landscape quite differently than other maps for this project, which resulted in great discussion. Locating Natty's hut at the center of it focuses on his perspective.",
 
 	"course": {
-	  "name": "Mapping Faulkner",
-	  "number": "Eng 101",
+	  "name": "Advanced Studies in Literature: Faulkner and Cooper",
+	  "number": "Eng 320",
 	  "institution": "Keuka College",
 	  "place": "Keuka Park, NY",
-	  "semester": "2024 Fall",
+	  "semester": "Spring 2023",
 	  "instructor": "Jennie Joiner",
 	  "url": null
 	}
@@ -722,11 +694,11 @@
 	"alt_text": "Group Student Project remapping \"The Bear\" from the viewpoint of animals in the text. Note that only one animal--the one-eyed mule Kate--is the only animal that is seen in both the big woods of the hunting camp and the McCaslin plantation. This was a great point of discussion.",
 
 	"course": {
-	  "name": "Mapping Faulkner",
-	  "number": "Eng 101",
+	  "name": "Advanced Studies in Literature: Faulkner and Cooper",
+	  "number": "Eng 320",
 	  "institution": "Keuka College",
 	  "place": "Keuka Park, NY",
-	  "semester": "2024 Fall",
+	  "semester": "Spring 2023",
 	  "instructor": "Jennie Joiner",
 	  "url": null
 	}
@@ -750,11 +722,11 @@
 	"alt_text": "Group Student remappings of \"The Bear\" from the perspectives of Sam Fathers and Boon Hogganbeck. Looking at this text from these perspectives led to a great discussion of the important Native American perspectives of the text.",
 
 	"course": {
-	  "name": "Mapping Faulkner",
-	  "number": "Eng 101",
+	  "name": "Advanced Studies in Literature: Faulkner and Cooper",
+	  "number": "Eng 320",
 	  "institution": "Keuka College",
 	  "place": "Keuka Park, NY",
-	  "semester": "2024 Fall",
+	  "semester": "Spring 2023",
 	  "instructor": "Jennie Joiner",
 	  "url": null
 	}
@@ -780,11 +752,11 @@
 	"alt_text": "This \"map\" Cooper's Templeton in <em>The Pioneers</em> by John Bond is a game board allowing differing points of view to take precedence as characters move around the board and land on significant events chosen from the novel. Note that whether one proceeds through the wilderness (counter-clockwise) or through civilization (clockwise), characters end up in the same place which is the establishment of the United States symbolized by the flag in the top left-hand corner.",
 
 	"course": {
-	  "name": "Mapping Faulkner",
-	  "number": "Eng 101",
+	  "name": "Advanced Studies in Literature: Faulkner and Cooper",
+	  "number": "Eng 320",
 	  "institution": "Keuka College",
 	  "place": "Keuka Park, NY",
-	  "semester": "2024 Fall",
+	  "semester": "Spring 2023",
 	  "instructor": "Jennie Joiner",
 	  "url": null
 	}
@@ -808,11 +780,11 @@
 	"alt_text": "This map of Cooper's Templeton in <em>The Pioneers</em> by Lauren Chamberlain focuses on the narrator's point of view and centers the lake as the focal point with clear demarcations between town and wilderness.",
 
 	"course": {
-	  "name": "Mapping Faulkner",
-	  "number": "Eng 101",
+	  "name": "Advanced Studies in Literature: Faulkner and Cooper",
+	  "number": "Eng 320",
 	  "institution": "Keuka College",
 	  "place": "Keuka Park, NY",
-	  "semester": "2024 Fall",
+	  "semester": "Spring 2023",
 	  "instructor": "Jennie Joiner",
 	  "url": null
 	}
@@ -837,11 +809,11 @@
 
 
 	"course": {
-	  "name": "Mapping Faulkner",
-	  "number": "Eng 101",
+	  "name": "Advanced Studies in Literature: Faulkner and Cooper",
+	  "number": "Eng 320",
 	  "institution": "Keuka College",
 	  "place": "Keuka Park, NY",
-	  "semester": "2024 Fall",
+	  "semester": "Spring 2023",
 	  "instructor": "Jennie Joiner",
 	  "url": null
 	}
@@ -867,11 +839,11 @@
 
 
 	"course": {
-	  "name": "Mapping Faulkner",
-	  "number": "Eng 101",
+	  "name": "Advanced Studies in Literature: Faulkner and Cooper",
+	  "number": "Eng 320",
 	  "institution": "Keuka College",
 	  "place": "Keuka Park, NY",
-	  "semester": "2024 Fall",
+	  "semester": "Spring 2023",
 	  "instructor": "Jennie Joiner",
 	  "url": null
 	}
