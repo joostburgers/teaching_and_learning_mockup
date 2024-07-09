@@ -21,11 +21,11 @@
 }
 
 
-h3.content_sub_title {
+/*h3.content_sub_title {
 	font-size: 1.5em;
 	margin: 0px 0px 0px 0px;
 	border-bottom: 2px solid rgba(52, 88, 77, 0.60);
-}
+}*/
 
 
 /*Components for activities*/
@@ -36,7 +36,7 @@ h3.content_sub_title {
 	border-radius: 4px;
 	margin-bottom: 10px;
 	line-height: 1.5em;
-	background-color: rgba(253, 245, 230, 0.10);
+/*	background-color: rgba(253, 245, 230, 0.10);*/
 }
 
 
@@ -44,14 +44,46 @@ h3.content_sub_title {
 	padding: 15px;
 	font-weight: bold;
 	background-color: rgba(52, 88, 77, 0.20);
+	border-bottom: 1px solid rgba(52, 88, 77, 0.60);
+	font-size: 1.25em;
+	margin: 0px 0px 0px 0px;
 }
 
 .activity-subtitle {
-	font-size: 1em;
+	font-size: 1.1em;
+	
 	font-weight: 400;
-	font-style: italic;
-	padding-left: 30px;
+	padding: 10px 10px 10px 50px;
+	background-color: rgba(52, 88, 77, 0.10);
 }
+
+
+.activity-section {
+	/*border-top: 1px solid #ddd;*/
+	padding: 0px 0px 30px 00px;
+}
+
+.activity-instructions-title {
+	padding: 15px 0px 0px 15px;
+	font-weight: bold;
+	margin-left: 0px;
+}
+
+.activity-instructions {
+	padding: 15px;
+	font-weight: 400;
+	line-height: 1.5em;
+}
+
+	.activity-instructions p {
+		margin-bottom: 1em;
+	}
+
+		.activity-instructions p:last-of-type {
+			margin-bottom: 0em;
+		}
+
+
 
 ol.activity-list {
 	font-weight: 400;
@@ -156,30 +188,7 @@ ol.activity-list {
 	margin-right: 15px;
 }*/
 
-.activity-section {
-	border-top: 1px solid #ddd;
-	padding: 5px;
-}
 
-.activity-instructions-title {
-	padding: 15px 0px 0px 15px;
-	font-weight: bold;
-	margin-left: 0px;
-}
-
-.activity-instructions {
-	padding: 15px;
-	font-weight: 400;
-	line-height: 1.5em;
-}
-
-	.activity-instructions p {
-		margin-bottom: 1em;
-	}
-
-.activity-instructions p:last-of-type {
-	margin-bottom: 0em;
-}
 
 
 
