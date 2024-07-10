@@ -468,7 +468,7 @@ function setImageCaptions(jsonData) {
 			const figure = img.closest('.activity-image');
 			const caption = figure.find('.activity-image-caption');
 
-			caption.html(`\u201C${matchingImage.title}\u201D ${creatorsStringHTML}`);
+			caption.html(`\u201C${fancyQuotes(matchingImage.title)}\u201D ${creatorsStringHTML}`);
 
 
 			setElementMetaData(img, matchingImage);

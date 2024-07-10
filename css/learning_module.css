@@ -390,10 +390,10 @@
 				box-shadow: 2px 5px 10px 2px rgba(0, 0, 0, 0.3);
 			}
 
-		.img-fluid {
+		/*.img-fluid {
 			vertical-align: bottom;
 			max-height: calc(100vh - 400px);
-		}
+		}*/
 
 		.img-fluid-opacity-50 {
 			opacity: 0.25;
@@ -406,19 +406,19 @@
 		}
 
 
-		.carousel-preview {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-around; /* Adjust as needed for your design */
-			gap: 10px; /* Space between thumbnails */
-			padding:10px;
-		}
+        .carousel-preview {
+									display: flex;
+									flex-wrap: wrap;
+									justify-content: flex-start; /* Change to flex-start to align thumbnails to the left */
+									gap: 10px; /* Space between thumbnails */
+									padding:10px;
+        }
 
-		.carousel-thumbnail {
-			flex: 0 0 auto;
-			max-width: calc(33% - 10px); /* Adjust width for responsiveness */
-			margin-bottom: 10px; /* Space below each thumbnail */
-		}
+        .carousel-thumbnail {
+									flex: 0 0 auto;
+									max-width: calc(50% - 10px); /* Adjust width for responsiveness */
+									margin-bottom: 10px; /* Space below each thumbnail */
+        }
 
 			.carousel-thumbnail img {
 				width: 100%; /* Make images responsive within their containers */
