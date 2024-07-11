@@ -988,7 +988,7 @@
 	"year": "ca. 1900",
 	"place": null,
 	"description": "Half-length portrait, seated, facing right.",
-	"filename": "archive_charlotte_perkins_gillman.jpg",
+	"filename": "archive_charlotte_perkins_gilman.jpg",
 	"alt_text": "Half-length portrait, seated, facing right.",
 	"access_date": "2024-07-03",
 	"repository": {
@@ -997,6 +997,30 @@
 	  "name": "Library of Congress",
 	  "place": "Washington, DC",
 	  "url": "https://lccn.loc.gov/2001704015"
+	}
+  },
+
+  {
+	"media_type": "archive",
+	"creators": [
+	  {
+		"last_name": "Albertin",
+		"first_name": "Walter"
+	  }
+	],
+	"title": "[Tennessee Williams, full-length portrait, walking, at service for Dylan Thomas, facing front] [graphic] / World Telegram & Sun photo by Walter Albertin.",
+	"year": "1953",
+	"place": null,
+	"description": "Full-length portrait, walking, at service for Dylan Thomas, facing front. 1 photographic print: cyanotype.",
+	"filename": "archive_tennessee_williams.jpg",
+	"alt_text": "Tennessee Williams, full-length portrait, walking, at service for Dylan Thomas, facing front.",
+	"access_date": "2024-07-11",
+	"repository": {
+	  "collection": "Prints and Photographs Division",
+	  "accession": "LC-USZ62-115075 (b&w film copy neg.)",
+	  "name": "Library of Congress",
+	  "place": "Washington, DC",
+	  "url": "https://lccn.loc.gov/95514132"
 	}
   }
 ]
