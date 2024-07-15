@@ -1,48 +1,50 @@
 ﻿
 .glance-title {
-	font-size: 1.5vw; /* Adjust the size according to your needs */
+	font-size: 2vw; /* Adjust the size according to your needs */
 	color: #9d4040;
 	width: 100%;
 	padding: 10px;
 }
 
 .glance-subtitle {
-	font-size: 1vw; /* Adjust the size according to your needs */
+	font-size: 1.5vw; /* Adjust the size according to your needs */
 	color: #333333;
 	width: 100%;
 	padding-top: 10px;
 }
 
+
+
 /* Media queries for smaller screens */
 @media screen and (max-width: 768px) {
 	.glance-title {
-		font-size: 1.25vw; /* Slightly larger on smaller screens */
+		font-size: 3vw; /* Slightly larger on smaller screens */
 	}
 
 	.glance-subtitle {
-		font-size: 1.1vw; /* Slightly larger on smaller screens */
+		font-size: 2.5vw; /* Slightly larger on smaller screens */
 	}
 }
 
 /* Media queries for very small screens */
 @media screen and (max-width: 480px) {
 	.glance-title {
-		font-size: 2vw; /* Adjust for very small screens */
+		font-size: 4vw; /* Adjust for very small screens */
 	}
 
 	.glance-subtitle {
-		font-size: 1.5vw; /* Adjust for very small screens */
+		font-size: 3vw; /* Adjust for very small screens */
 	}
 }
 
 /* Media queries to cap the font sizes for very large screens */
 @media screen and (min-width: 1200px) {
 	.glance-title {
-		font-size: 1.5vw; /* Maximum size */
+		font-size: 2vw; /* Maximum size */
 	}
 
 	.glance-subtitle {
-		font-size: 1vw; /* Maximum size */
+		font-size: 1.5vw; /* Maximum size */
 	}
 }
 

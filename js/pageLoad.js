@@ -270,7 +270,7 @@ function screen_capture(image) {
 	//define html strings. This could probably be more efficient.
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 
-	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyquotes(image.title)}.\u201D` : '';
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotes(image.title)}.\u201D` : '';
 	const imageYearHTML = image.year !== null && image.year !== undefined ? `${image.year}, ` : '';
 	const imageRepositoryNameHTML = image.repository.name !== null && image.repository.name !== undefined ? `${image.repository.name}, ` : '';
 	const imageRepositoryPlaceHTML = image.repository.place !== null && image.repository.place !== undefined ? `${image.repository.place}. ` : '';
