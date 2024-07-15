@@ -485,18 +485,6 @@ ol.activity-list-alpha {
 
 
 
-.activity-paragraph{
-margin-bottom:10px;
-margin-top:10px;
-font-weight:400;
-}
-
-.activity-paragraph-indent {
-	margin-bottom: 10px;
-	margin-top: 10px;
-	font-weight: 400;
-	margin-left: 30px;
-}
 
 ul.note-list {
 	list-style-type: circle;
@@ -511,25 +499,7 @@ div.activity-text {
 	margin-left: 10px;
 }
 
-/*h1.glance-title {
-	font-size: 2.5em;
-	color: #9d4040;
-	width: 100%;
-	padding:10px;
-	
-}
 
-
-
-	div.glance-subtitle {
-		font-size: .85em;
-		color: #333333;
-		width: 100%;
-		padding-top: 10px;
-				
-	}
-*/
-	
 
 		.glance-info {
 			position: relative;
@@ -561,11 +531,7 @@ div.activity-text {
 	color: rgba(51, 51, 51, 0.77);
 }
 
-			/*.glance-bottom h4 {
-				font-size: 1.5em;
-				color: #333333;
-			}*/
-
+		
 			.glance-bottom p {
 				font-size: 100%;
 				font-weight: 400;
@@ -618,6 +584,10 @@ div.activity-text {
 			padding: 10px;
 			width: 80%;
 			box-shadow: 3px 3px 0px 0px rgba(52, 88, 77, 0.15);
+		}
+
+		.tip p:not(:last-child){
+		margin-bottom: 1em;
 		}
 
 		.toc-h2 {
