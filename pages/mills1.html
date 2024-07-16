@@ -12,8 +12,8 @@
 	<link rel="stylesheet" href="../css/learning_module.css">
 </head>
 <body>
-	<!--Modal for looping instructional video-->
-	<div class="modal bd-example-modal-lg" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
+
+	<div class="modal bd-modal-lg" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -24,7 +24,7 @@
 				</div>
 				<div class="modal-body">
 					<div class="modal-image">
-						<img src="../images/site_photograph_gdm_cover.jpg" alt="modal-image" id="imageSource" class="img-fluid">
+						<img src="../images/placeholder_stamp.jpg" alt="modal-image" id="imageSource" class="img-fluid">
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -34,136 +34,146 @@
 		</div>
 	</div>
 
-	<!--This is the header menus no need to touch this.-->
 	<div id="page_header">
 		<div id="header_logo"><a class="logo" href="http://faulkner.iath.virginia.edu/"><span class="digital">DIGITAL</span> Yoknapatawpha</a> · Teaching &amp; Learning</div>
 		<!--#include virtual="../../family/include_menu-main.php" -->
 	</div>
 
-	<!--This is where the header ends-->
-	<!--This is the TOC menu. No need to touch this-->
 	<div class="container">
 
 		<div class="sidebar">
 			<div id="TableOfContents"></div>
 		</div>
-		<!--This is where the TOC ends-->
-		<!--This is where all the content for the lesson plan sits-->
 		<div class="main">
-
 
 			<div id="lessonGlance"></div>
 			<div class="lesson-section">
 				<h2 class="content_sub_title" id="Preface">Preface</h2>
-				<!--Enter the paragraph for Preface here. Put each individual paragaraph between <p></p>-->
 				<div class="row">
 					<div class="col">
-						<ul class="activity-list-unordered-blank">
-							<li>In <em>The Sound and the Fury</em>, Caddy is both <em>the</em> central character and <em>the</em> chapter-less character. In this series of activities (pick and choose or do them all), we will use DY to help us deepen our understanding of Caddy’s world.</li>
-							<li>
+						<div class="activity-instructions">
+							<p>In <em>The Sound and the Fury</em>, Caddy is both <em>the</em> central character and <em>the</em> chapter-less character. In this series of activities (pick and choose or do them all), we will use DY to help us deepen our understanding of Caddy’s world.</p>
+							<p>
 								This is DY at its best: the tools here can help us question what we know about Caddy, how we learn it, and will raise the question: do we really know anything about her? DY can help us think about Caddy in ways we have not before.
-							</li>
-						</ul>
+							</p>
+						</div>
 					</div>
 					<div class="col-5">
-						<p class="tip">Teaching Tip: You can do the following exercises with any central female character, such as Minnie from "Dry September" or Emily from "A Rose for Emily".</p>
+						<div class="tip"><p>Teaching Tip: You can do the following exercises with any central female character, such as Minnie from "Dry September" or Emily from "A Rose for Emily".</p> </div>
 					</div>
 				</div>
 			</div>
 
 			<h2 class="content_sub_title" id="Activities">Activities</h2>
-
 			<div class="activity">
 				<h3 class="content_sub_title activity-title">1. Who Does Caddy Spend Time With?</h3>
 
 				<div class="activity-section">
-
-					<div class="activity-title">
+					<h4 class="activity-subtitle">
 						<i class="bi bi-file-earmark-text"></i>
-						Study: The Sound and the Fury
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col">
-						<div class="activity-instructions">
-							Instructions
-							<div class="activity-text">
-								<p>Using the graph extrapolated from DY data, we can see that Caddy is never alone in the novel. This raises the question: who is she with? Who are her friends? Does she have any friends? Also: who else in the novel is never alone? (Hint: Caroline, Mr. Compson, Frony...)</p>
+						Study: <em>The Sound and the Fury</em>
+					</h4>
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">
+								Quantitative Analysis
+							</div>
+							<div class="activity-instructions">
+								<p>Using the graph extrapolated from DY data, we can see that Caddy is never alone in the novel.</p><p> This raises the questions:</p>
+								<ul class="activity-list-unordered">
+									<li>Who is she with?</li>
+									<li>Who are her friends?</li>
+									<li> Does she have any friends?</li>
+									<li>
+										Who else in the novel is never alone?
+										<ul class="activity-list-unordered-note"><li>Hint: Caroline, Mr. Compson, Frony...</li></ul>
+									</li>
+								</ul>
 							</div>
 						</div>
-					</div>
-
-					<!--This is where the fancy quote on the right is created.-->
-					<div class="col-5">
-						<div class="activity-image">
-							<div class="thumbnail-container">
-								<img src="../images/screen_capture_DY_character_appears_alone.png" class="img-fluid" alt="character appears alone image">
+						<div class="col-5">
+							<div class="activity-image">
+								<div class="thumbnail-container">
+									<img src="../images/screen_capture_DY_character_appears_alone.png" class="img-fluid" alt="character appears alone image">
+								</div>
+								<div class="activity-image-caption"></div>
 							</div>
-							<div class="activity-image-caption"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<!--This is where the activity section Study Ends-->
-			<!--This is where the activity section Explore begins-->
-
 			<div class="activity">
 
-				<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
-				Grab the line below to create a new activity heading.-->
 				<h3 class="content_sub_title activity-title">2. Who Does Caddy Spend Time With? (Pt. 2)</h3>
 
 				<div class="activity-section">
-					<div class="activity-title">
+					<h4 class="activity-subtitle">
 						<i class="bi bi-globe"></i>
-						Explore: Digital Yoknapatawpha: Character Networks
+						Explore: Character Networks
+					</h4>
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">
+								Overview: Character-Character Force Directed Graph
+							</div>
+							<div class="activity-instructions">
+								<p>
+									This graph shows how often characters are present or mentioned in the same event. A red line (<span class="red-line"></span>) between two blue boxes (<span class="blue-node"></span>) shows at least one interaction, and a thicker line indicates multiple interactions. Characters with more connections are closer to the center, but, importantly, the position of characters are not fixed.
+								</p>
+								<p>
+									Characters who appear close together in one graph may appear far apart in another. The graph is interactive, so you can click on a character’s name to see their connections. You can also click and drag characters to reposition them.
+								</p>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="activity-video">
+								<div class="thumbnail-container">
+									<video muted
+										   controls
+										   src="../video/video_tutorial_character_character_force_directed_emily.mp4">
+										Your browser does not support the video tag.
+									</video>
+								</div>
+								<div class="activity-video-caption">
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
-
-				<div class="row">
-
-					<!--Walthrough instructions on the left-->
-					<div class="col">
-						<div class="activity-instructions">
-							Walkthrough: Character-Character Force Directed Graph
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">
+								Instructions
+							</div>
 							<ol class="activity-list" type="1">
 								<li>
 									From the DY Main Menu, choose
 									<ul class="activity-list-unordered-arrow">
 										<li>Visualizations</li>
 										<li>Character-Character</li>
-
 									</ul>
 								</li>
 								<li> Select <em>Sound and the Fury</em></li>
 							</ol>
 						</div>
 					</div>
-					<div class="col-6">
-						<div class="activity-video">
-							<div class="thumbnail-container">
-								<video muted
-									   controls
-									   src="../video/video_tutorial_character_character_force_directed_emily.mp4">
-									Your browser does not support the video tag.
-								</video>
-							</div>
-							<div class="activity-video-caption">
-							</div>
-						</div>
-					</div>
 				</div>
 
-				<div class="row">
-					<div class="col">
-						<div class="activity-instructions">
-							Guided Questions
+				<div class="activity-section">
+					<h4 class="activity-subtitle">
+						<i class="bi bi-globe"></i>
+						Respond: Character Networks
+					</h4>
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">
+								Guided Questions
+							</div>
 
 							<ol class="activity-list">
 								<li>
-									We can get a better picture of Caddy's relationships by mapping with whom she spends the most time. The Character-Character Force Directed graph shows with whom characters interact and how often. A red line between two blue boxes shows at least one interaction, and a thicker line indicates multiple interactions. Let's assume that Caddy is most likely to be friends with other White, upper-class, females. We can map out this social network in <em>The Sound and the Fury</em> by selecting these parameters
+									<p>We can get a better picture of Caddy's relationships by mapping with whom she spends the most time.</p> <p>The Character-Character Force Directed graph shows with whom characters interact and how often. A red line (<span class="red-line"></span>) between two blue boxes (<span class="blue-node"></span>) shows at least one interaction, and a thicker line indicates multiple interactions.</p>
+									<p>Let's assume that Caddy is most likely to be friends with other White, upper-class, females. We can map out this social network in <em>The Sound and the Fury</em> by selecting these parameters:</p>
 
 									<ul class="activity-list-unordered-arrow">
 										<li>Set <span class="font-weight-bold">Text</span> to <em>The Sound and the Fury</em></li>
@@ -173,7 +183,6 @@
 										<li>Click "Search"</li>
 									</ul>
 								</li>
-
 								<li>
 									What do you see? (Below is the graph that should result)
 									<ul class="activity-list-unordered-blank">
@@ -188,7 +197,9 @@
 										</li>
 
 										<li>
-											<p class="tip">Tip: The thickness of the lines indicates how frequently these characters are together.</p>
+											<div class="tip">
+												<p>Tip: The thickness of the lines indicates how frequently these characters are together.</p>
+											</div>
 										</li>
 									</ul>
 								<li>
@@ -197,23 +208,29 @@
 										<li>Set <span class="font-weight-bold">Race</span> to blank</li>
 										<li>Set <span class="font-weight-bold">Class</span> to blank</li>
 										<li>Click "Search"</li>
-
 									</ul>
-
 								</li>
 								<li>
 									Let's look at the novel in its entirety. <ul class="activity-list-unordered-arrow">
 										<li>Click "Clear"</li>
 										<li>Set <span class="font-weight-bold">Text</span> as <em>The Sound and the Fury</em></li>
 										<li>Click "Search"</li>
-
 									</ul>
 
 									<p>This one is a bit overwhelming, but try to find the Caddy Compson square, and click on the blue box (node) to show all of her connections.</p>
-									<p class="tip">Tip: Characters with more connections tend to be closer to the center. You can zoom in and out with the <i class="bi bi-plus-square"></i>and <i class="bi bi-dash-square"></i>buttons.</p>
+									<div class="tip">
+										<p>Tip: Characters with more connections tend to be closer to the center. You can zoom in and out with the <i class="bi bi-plus-square"></i>and <i class="bi bi-dash-square"></i>buttons.</p>
+									</div>
 								</li>
 								<li>Play around with this function for a few minutes, using search parameters of your choice.</li>
-								<li>What makes up Caddy's social network? Does she appear mostly with her family or other characters? Does she have any real friends? What might this tell us about her life?</li>
+								<li>
+									Consider the following questions: <ul class="activity-list-unordered">
+										<li>What makes up Caddy's social network?</li>
+										<li>Does she appear mostly with her family or other characters? </li>
+										<li>Does she have any real friends?</li>
+										<li>What might this tell us about her life?</li>
+									</ul>
+								</li>
 							</ol>
 						</div>
 					</div>
@@ -226,176 +243,204 @@
 					3. Where Does Caddy Go? In Faulkner, Who Gets to Go Where?
 				</h3>
 				<div class="activity-section">
-					<div class="activity-title">
+					<h4 class="activity-subtitle">
 						<i class="bi bi-globe"></i>
-						Explore: Digital Yoknapatawpha: Characters in Events
+						Explore: Characters in Events
+					</h4>
+
+					<div class="row">
+
+						<div class="col">
+							<div class="activity-instructions-title">
+								Overview: MapIt Tool
+							</div>
+							<div class="activity-instructions">
+								<p>The MapIt tool allows users to display all of the events or characters that meet specific criteria. In this instance, we will use it to show all of the events in which a specific character occurs.</p>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="activity-video">
+								<div class="thumbnail-container">
+									<video muted
+										   controls
+										   src="../video/video_tutorial_character_event_mapit.mp4">
+										Your browser does not support the video tag.
+									</video>
+								</div>
+								<div class="activity-video-caption">
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
-
-				<div class="row">
-
-					<!--Walthrough instructions on the left-->
-					<div class="col">
-						<div class="activity-instructions">
-							Walkthrough: MapIt Tool
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">
+								Instructions
+							</div>
 							<ol class="activity-list">
 
 								<li>
-									The MapIt tool allows users to display all of the events or characters that meet specific criteria. In this instance, we will use it to show all of the events in which a specific character occurs.
+									On the DY Main Menu, choose:
 									<ul class="activity-list-unordered-arrow">
-										<li>Click "Search" on the navigation bar on the main page.</li>
-										<li>Select Events</li>
-										<li>Set <span class="font-weight-bold">Text</span> to <em>The Sound and the Fury</em></li>
-										<li>For <span class="font-weight-bold">Character</span>, type the name of your character</li>
-										<li>Set <span class="font-weight-bold">Present Mentioned Either</span> to Present</li>
-										<li>Click "Search"</li>
-										<li>Click "MapIt"</li>
+										<li>Search</li>
+										<li>Events</li>
 									</ul>
-
-
+								</li>
+								<li>Set <span class="font-weight-bold">Text</span> to <em>The Sound and the Fury</em></li>
+								<li>For <span class="font-weight-bold">Character</span>, type the name of your character</li>
+								<li>Set <span class="font-weight-bold">Present Mentioned Either</span> to Present</li>
+								<li>Click Search</li>
+								<li>Click MapIt</li>
 							</ol>
 						</div>
 					</div>
-					<div class="col-6">
-						<div class="activity-video">
-							<div class="thumbnail-container">
-								<video muted
-									   controls
-									   src="../video/video_tutorial_character_event_mapit.mp4">
-									Your browser does not support the video tag.
-								</video>
+				</div>
+				<div class="activity-section">
+					<h4 class="activity-subtitle">
+						<i class="bi bi-chat-left-text"></i>Respond: Characters in Events
+					</h4>
+
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">
+								Class Search
 							</div>
-							<div class="activity-video-caption">
+							<div class="activity-instructions">
+								<p>As a class, perform the above search and MapIt function for Benjy. You will see, as you would expect, that Benjy’s movements in the story are confined and limited. This makes sense: we know that as a character Benjy is limited emotionally and confined physically.</p>
 							</div>
+							<div class="activity-instructions-title">	Group Search</div>
+							<ol class="activity-list">
+								<li>Break into four or five groups</li>
+								<li>
+									perform one Search/Map It task for the following characters:
+									<ul class="activity-list-unordered">
+										<li>Caddy</li>
+										<li>Miss Quentin</li>
+										<li>Caroline</li>
+										<li>Dilsey</li>
+										<li>Jason</li>
+									</ul>
+								</li>
+								<li>
+									Report out what you map showed. <ul class="activity-list-unordered-note"><li>Hint: Jason gets to move all over the place, but the women are very confined in their movements.</li></ul>
+								</li>
+							</ol>
 						</div>
 					</div>
 				</div>
-
-				<div class="row">
-					<div class="col">
-						<ul class="activity-list-unordered">
-							<li>As a class, perform the above search and MapIt function for Benjy. You will see, as you would expect, that Benjy’s movements in the story are confined and limited. This makes sense: we know that as a character Benjy is limited emotionally and confined physically.</li>
-							<li>Now, break the class into four or five groups, and have each group perform one other Search/ Map It task for the following characters: Caddy, Miss Quentin, Caroline, Dilsey, Jason. Have each group report out what their maps showed. (Hint: Jason gets to move all over the place, but the women are very confined in their movements).</li>
-						</ul>
-					</div>
-				</div>
-
-
-
-
-				<!--Video on the right-->
-				<!--This is where the activity section Explore ends-->
-				<!--This is where the activity section Respond Begins -->
-				<!--This section stub contains the layout-->
 			</div>
 
 			<div class="activity">
 
-				<!-- Every activity has it's own heading'. If there is only one activity then obviously it is not activity 1.
-				Grab the line below to create a new activity heading.-->
 				<h3 class="content_sub_title activity-title">
 					4. Where Does Caddy Go After The Sound and the Fury?
 				</h3>
 
-
 				<div class="activity-section">
-					<div class="activity-title">
+					<h4 class="activity-subtitle">
 						<i class="bi bi-globe"></i>
-						Explore: Digital Yoknapatawpha: Cumulative Characters
-					</div>
-				</div>
+						Explore: Cumulative Characters
+					</h4>
 
-				<div class="row">
-
-					<!--Walthrough instructions on the left-->
-					<div class="col">
-						<div class="activity-instructions">
-							Walkthrough: Cumulative Characters
-							<ul class="activity-list-unordered-blank">
-
-								<li>
-									The Cumulative Character Tool provides an overview of each character across every Faulkner text. Only characters who appear in two or more texts appear in the Cumulative Character page. <ul class="activity-list-unordered-arrow">
-										<li>Click "Search" on the navigation bar on the main page.</li>
-										<li>Select Characters</li>
-										<li>Select Cumulative</li>
-										<li>For <span class="font-weight-bold">Name</span>, type Candace Compson</li>
-										<li>Select <span class="font-weight-bold">Locations</span> in the pop-up</li>
-
-									</ul>
-								</li>
-
-
-							</ul>
-						</div>
-					</div>
-					<div class="col-6">
-						<div class="activity-video">
-							<div class="thumbnail-container">
-								<video muted
-									   controls
-									   src="../video/video_tutorial_cumulative_character_search.mp4">
-									Your browser does not support the video tag.
-								</video>
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">
+								Overview: Cumulative Characters
 							</div>
-							<div class="activity-video-caption">
+							<div class="activity-instructions">
+								The Cumulative Character Tool provides an overview of each character across every Faulkner text. Only characters who appear in two or more texts appear in the Cumulative Character page.
+							</div>
+							<div class="activity-instructions-title">
+								Instructions
+							</div>
+
+							<ol class="activity-list">
+								<li>On the DY Main Menu, choose: <ul class="activity-list-unordered-arrow"><li>Search</li><li>Characters</li><li>Cumulative</li></ul></li>
+								<li>For <span class="font-weight-bold">Name</span>, type Candace Compson</li>
+								<li>Click <span class="font-weight-bold">Locations</span> in the pop-up</li>
+							</ol>
+						</div>
+
+						<div class="col-6">
+							<div class="activity-video">
+								<div class="thumbnail-container">
+									<video muted
+										   controls
+										   src="../video/video_tutorial_cumulative_character_search.mp4">
+										Your browser does not support the video tag.
+									</video>
+								</div>
+								<div class="activity-video-caption">
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="activity-section">
+					<h4 class="activity-subtitle">
+						<i class="bi bi-chat-left-text"></i>Respond: Caddy's Locations
+					</h4>
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions">
+								<p>Compare Caddy’s locations in <em>The Sound and the Fury</em> and "The Appendix".</p>
+								<p>Consider the following questions:</p>
 
-				<div class="row">
-					<div class="col">
-						<ul class="activity-list-unordered">
-							<li>
-								Compare Caddy’s locations in <em>The Sound and the Fury</em> and The Appendix
-							</li>
-							<li>How do we interpret this?</li>
-						</ul>
+								<ol class="activity-list">
+									<li>Does Caddy appear closer or farther away from Yoknapatawpha?</li>
+									<li>
+										Does this shift in "The Appendix" continue or contradict Caddy's representation in <em>The Sound and the Fury</em>?
+									</li>
+									<li>How do we interpret this?</li>
+								</ol>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-
-			<!--Video on the right-->
-
-
 			<div class="activity">
 
 				<h3 class="content_sub_title activity-title">5. How Do We Learn About Caddy?</h3>
 
-
-
 				<div class="activity-section">
 
-
-
-					<div class="activity-title">
+					<h4 class="activity-subtitle">
 						<i class="bi bi-file-earmark-text"></i>
 						Study: The Sound and the Fury Narrative Status Data
-					</div>
-				</div>
+					</h4>
 
-				<div class="row">
-					<div class="col">
+					<div class="row">
+						<div class="col">
 
-						<div class="activity-instructions">
-							Overview
+							<div class="activity-instructions-title">
+								Overview
+							</div>
 
-							<ul class="activity-list-unordered-blank">
-								<li>Each event in Digital Yoknapatawpha has been labeled with a different narrative status that indicates how that event is related to the reader. The chart on the right breaks down the narrative status of each event by character. It demonstrates what percentage of events about a character are narrated, told, and remembered. </li>
-
-								<li>We know that much of <em>The Sound and the Fury</em> swirls around the past, but what is interesting about this graph? What does it tell us?</li>
-							</ul>
-
+							<div class="activity-instructions">
+								<p>Each event in Digital Yoknapatawpha has been labeled with a different narrative status that indicates how that event is related to the reader.</p>
+								<p>The chart on the right breaks down the narrative status of each event by character. It demonstrates what percentage of events about a character are narrated, told, and remembered.</p>
+							</div>
+						</div>
+						<div class="col-5">
+							<div class="activity-image">
+								<div class="thumbnail-container">
+									<img src="../images/screen_capture_DY_data_percent_narrative_status_per_character.png" alt="Chart showing the percentage of the narrative statuses of each event for a character." class="img-fluid">
+								</div>
+								<div class="activity-image-caption"></div>
+							</div>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col">
 
-					<!--This is where the fancy quote on the right is created.-->
-					<div class="col-5">
-						<div class="activity-image">
-							<div class="thumbnail-container">
-								<img src="../images/screen_capture_DY_data_percent_narrative_status_per_character.png" alt="Chart showing the percentage of the narrative statuses of each event for a character." class="img-fluid">
+							<div class="activity-instructions-title">
+								Questions
 							</div>
-							<div class="activity-image-caption"></div>
+
+							<ul class="activity-list-unordered">
+								<li>We know that much of <em>The Sound and the Fury</em> swirls around the past, but what is interesting about this graph?</li>
+								<li> What does it tell us?</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -403,30 +448,26 @@
 
 			<div class="lesson-section">
 				<h2 class="content_sub_title">Final Product</h2>
-				<div class="activity-instructions">
+				<div class="activity-instructions-title">
 					Class Discussion
-					<ul class="activity-list-unordered">
-						<li>What are some conclusions you can make about what it is like to live Caddy’s life?</li>
-						<li>Is Caddy’s world big or small?</li>
-						<li>How does she respond to that reality? Does her world affect the decisions that she makes? </li>
-						<li>What decisions does she make?</li>
-						<li>What are the “proper tools” that Faulkner uses to tell Caddy’s story? Do they work?</li>
-						<li>Does the relative insular world of the Compson family contribute to her brothers’ obsessions with her? How do other characters affect her decisions?</li>
-						<li>What is it like to be Caddy?</li>
-					</ul>
 				</div>
+				<ul class="activity-list-unordered">
+					<li>What are some conclusions you can make about what it is like to live Caddy’s life?</li>
+					<li>Is Caddy’s world big or small?</li>
+					<li>How does she respond to that reality? Does her world affect the decisions that she makes? </li>
+					<li>What decisions does she make?</li>
+					<li>What are the “proper tools” that Faulkner uses to tell Caddy’s story? Do they work?</li>
+					<li>Does the relative insular world of the Compson family contribute to her brothers’ obsessions with her? How do other characters affect her decisions?</li>
+					<li>What is it like to be Caddy?</li>
+				</ul>
+
 			</div>
 			<div class="lesson-section">
 				<h2 class="content_sub_title">Teaching Resources</h2>
 				<div id="TeacherInfo"></div>
 			</div>
-
-
-
-
 		</div>
 	</div>
-
 
 	<script>
 		$(document).ready(function () {

@@ -144,6 +144,9 @@
 			counter-increment: item;
 			font-weight: 400;
 		}
+			.activity-list li p:not(:last-child){
+		margin-bottom: 10px;
+}
 
 ol.activity-list-alpha {
 	list-style-type: lower-alpha;
