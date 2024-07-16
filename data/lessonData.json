@@ -72,8 +72,8 @@
 	"description": "Students will use various DY tools to complete an escape room and acquire information regarding historical, geographical, and cultural context of the novel.",
 	"modality": [ "In-Person" ],
 	"paired_author": null,
-	"pilot_classroom": "Short description as string",
-	"learning_goals": [ "learning goals as array" ],
+	"pilot_classroom": null,
+	"learning_goals": [],
 	"common_core": [ "RL.11-12.3", "RL.11-12.5", "RL.11-12.6" ],
 	"student_samples": null,
 	"original_lesson_plan": null,
@@ -81,7 +81,7 @@
 	"institution": "Cape Central High School",
 	"contact": null,
 	"created": "2023-07-23",
-	"notes": [ "As the instructor, you will likely want to change the “intro” information to suit your students and your classroom. I don’t, however, recommend changing the passwords/passcodes, as this may affect the process of how the students move from one “room” to the next. However, if you feel comfortable doing so, you are certainly welcome to. Since you now have ownership of the form, you will also be provided with the answer key to each “room.”" ]
+	"notes": [ "As the instructor, you will likely want to change the “intro” information in the Google Form to suit your students and your classroom.", "Changing the passwords/passcodes affects the process of how the students move from one “room” to the next.", "Changing passwords/passcodes is only recommended for experienced users", "Since you now have ownership of the form, you will also be provided with the answer key to each “room.”" ]
   },
 
   {
