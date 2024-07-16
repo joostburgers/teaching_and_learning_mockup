@@ -117,15 +117,6 @@ h3.content_sub_title {
 		text-transform: capitalize uppercase;
 	}
 
-.activity-questions {
-	list-style-type: circle;
-	list-style-position: outside;
-	padding: 15px;
-	font-weight: 400;
-	line-height: 1.5em;
-	margin-left: 10px;
-	font-style: italic;
-}
 
 
 .activity-quote {
