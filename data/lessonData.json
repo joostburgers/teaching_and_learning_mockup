@@ -79,9 +79,14 @@
 	"original_lesson_plan": null,
 	"instructor": "Taylor Bryant",
 	"institution": "Cape Central High School",
-	"contact": null,
+	"contact": "bryantt@capetigers.com",
 	"created": "2023-07-23",
-	"notes": [ "As the instructor, you will likely want to change the “intro” information in the Google Form to suit your students and your classroom.", "Changing the passwords/passcodes affects the process of how the students move from one “room” to the next.", "Changing passwords/passcodes is only recommended for experienced users", "Since you now have ownership of the form, you will also be provided with the answer key to each “room.”" ]
+	"notes": [
+	  "As the instructor, you will likely want to change the “intro” information in the Google Form to suit your students and your classroom",
+	  "Changing the passwords or passcodes affects the process of how the students move from one “room” to the next",
+	  "Changing passwords or passcodes is only recommended for experienced users",
+	  "Since you now have ownership of the form, you will also be provided with the answer key to each “room.”"
+	]
   },
 
   {

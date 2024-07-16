@@ -781,7 +781,7 @@ function setGlanceData(data) {
 function createList(array) {
 	
 	if (array && Array.isArray(array)) {
-		array = array.sort();
+		
 		const list = array.map(items => `<li>${items}</li>`).join('');
 
 	
