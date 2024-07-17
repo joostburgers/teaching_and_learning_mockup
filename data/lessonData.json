@@ -683,43 +683,7 @@
 	"created": "2024-07-02",
 	"notes": null
   },
-  {
-	"filename": "dimock8.html",
-	"url": null,
-	"title": "Female Autonomy in <em>As I Lay Dying</em> and \"The Yellow Wallpaper\" by Charlotte Perkins Gillman",
-	"story": [
-	  {
-		"title": "As I Lay Dying",
-		"type": "novel",
-		"year": "1930"
-	  }
-	],
-	"image": {
-	  "card": "archive_manuscript_aild_35_card.jpg",
-	  "banner": "archive_manuscript_aild_35_banner.jpg"
-	},
-	"description": "This module pairs <em>As I Lay Dying</em> with \"The Yellow Wallpaper\" by Charlotte Perkins Gillman, and investigates how their female protagonists struggle for bodily autonomy",
-	"modality": [ "In-Person", "Online Asynchronous" ],
-	"paired_author": [
-	  {
-		"title": "The Yellow Wallpaper",
-		"type": "short_story",
-		"year": "1892",
-		"author_last_name": "Gillman",
-		"author_first_name": "Charlotte Perkins"
-	  }
-	],
-	"pilot_classroom": "This module was first taught in an online asynchronous course.",
-	"learning_goals": null,
-	"common_core": [ "RL.9-10.1", "RL.11-12.1", "RL.9-10.2", "RL.11-12.2", "RL.9-10.3", "RL.11-12.3", "RL.9-10.6", "RL.11-12.6", "RL.11-12.9", "W.9-10.1", "W.11-12.1", "W.9-10.6", "W.11-12.6", "W.9-10.8", "W.11-12.8" ],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "Chase Dimock",
-	"institution": "College of the Canyons",
-	"contact": "chase.dimock@canyons.edu",
-	"created": "2024-07-02",
-	"notes": null
-  },
+  
   {
 	"filename": "dimock5.html",
 	"url": null,
@@ -848,15 +812,15 @@
 	  "card": "archive_manuscript_aild_35_card.jpg",
 	  "banner": "archive_manuscript_aild_35_banner.jpg"
 	},
-	"description": "This module pairs <em>As I Lay Dying</em> with in Tennessee Williams’ play <em>A Streetcar Named Desire</em>, and investigates how their female protagonists struggle for bodily autonomy.",
+	"description": "This module pairs <em>As I Lay Dying</em> with in Tennessee Williams’s play <em>A Streetcar Named Desire</em>, and investigates how their female protagonists struggle for bodily autonomy.",
 	"modality": [ "In-Person", "Online Asynchronous" ],
 	"paired_author": [
 	  {
-		"title": "Woman Hollering Creek",
-		"type": "short_story",
-		"year": "1991",
-		"author_last_name": "Cisneros",
-		"author_first_name": "Sandra"
+		"title": "A Streetcar Named Desire",
+		"type": "novel",
+		"year": "1947",
+		"author_last_name": "Williams",
+		"author_first_name": "Tennessee"
 	  }
 	],
 	"pilot_classroom": "This module was first taught in an online asynchronous course.",
