@@ -349,6 +349,8 @@ ol.activity-list-alpha {
 	padding-right: 0.5em;
 }
 
+
+
 .modal-header {
 	font-size: 1.1em;
 	font-weight: 600;
@@ -387,6 +389,13 @@ div.modal-image {
 	justify-content: center;
 	align-items: center;
 }
+
+
+	div.modal-image img {
+		max-height: 65vh;
+		object-fit: contain;
+		width: auto;
+	}
 
 	div.modal-image:hover {
 		cursor: zoom-in;

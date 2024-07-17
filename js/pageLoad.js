@@ -467,8 +467,10 @@ function setImageCaptions(jsonData) {
 			const creatorsStringHTML = creatorsString !== null ? `by ${creatorsString}` : '';
 			const figure = img.closest('.activity-image');
 			const caption = figure.find('.activity-image-caption');
+			const imageTitle = matchingImage.short_title !== undefined ? matchingImage.short_title:matchingImage.title ;
 
-			caption.html(`\u201C${fancyQuotes(matchingImage.title)}\u201D ${creatorsStringHTML}`);
+
+			caption.html(`\u201C${fancyQuotesEmbedded(imageTitle)}\u201D ${creatorsStringHTML}`);
 
 
 			setElementMetaData(img, matchingImage);
@@ -825,20 +827,42 @@ function fancyQuotes(text) {
 
 	
 	// Replace straight double quotes at the beginning of a word with left curly double quote
-	text = text.replace(/"(\w)/g, '\u201C$1');
+	text = text.replace(/"(\w)/g, '&ldquo;$1');
 
 	// Replace straight double quotes at the end of a word with right curly double quote
-	text = text.replace(/(\w)"/g, '$1\u201D');
+	text = text.replace(/(\w)"/g, '$1&rdquo;');
 
 	// Replace straight single quotes at the beginning of a word with left curly single quote
-	text = text.replace(/(\s)'(\w)/g, '$1\u2018$2');
+	text = text.replace(/(\s)'(\w)/g, '$1&lsquo;$2');
 
 	// Replace straight single quotes in the middle of a word with right curly single quote
-	text = text.replace(/(\S)'(\S)/g, '$1\u2019$2');
+	text = text.replace(/(\S)'(\S)/g, '$1&rsquo;$2');
 
 
 	// Replace straight single quotes at the end of a word with right curly single quote
-	text = text.replace(/(.)'(\s)/g, '$1\u2019$2');;
+	text = text.replace(/(.)'(\s)/g, '$1&rsquo;$2');;
+
+	return text;
+}
+
+
+function fancyQuotesEmbedded (text){
+
+	// Replace straight double quotes at the beginning of a word with left curly single quote
+	text = text.replace(/"(\w)/g, '&lsquo;$1');
+
+	// Replace straight double quotes at the end of a word with right curly single quote
+	text = text.replace(/(\w)"/g, '$1&rsquo;');
+
+	// Replace straight single quotes at the beginning of a word with left curly single quote
+	text = text.replace(/(\s)'(\w)/g, '$1&lsquo;$2');
+
+	// Replace straight single quotes in the middle of a word with right curly single quote
+	text = text.replace(/(\S)'(\S)/g, '$1&rsquo;$2');
+
+
+	// Replace straight single quotes at the end of a word with right curly single quote
+	text = text.replace(/(.)'(\s)/g, '$1&rsquo;$2');;
 
 	return text;
 }
