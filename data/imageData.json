@@ -34,6 +34,7 @@
 	  }
 	],
 	"title": "Untitled photograph, Woman and children picking cotton",
+	"short_title": "Woman and children picking cotton",
 	"year": "1935",
 	"place": "Mississippi",
 	"description": "Woman and children picking cotton. Photograph possibly related to other photographs in Lauderdale County, Mississippi",
@@ -60,6 +61,7 @@
 	  }
 	],
 	"title": "These cotton hoers work from 6 a.m. to 7 p.m. for one dollar near Clarksdale, Mississippi",
+	"short_title": "Cotton hoers near Clarksdale, Mississippi",
 	"year": "1937",
 	"place": "Clarksdale, Mississippi",
 	"description": "These cotton hoers work from 6 a.m. to 7 p.m. for one dollar near Clarksdale, Mississippi",
@@ -86,6 +88,7 @@
 	  }
 	],
 	"title": "House of sharecroppers near Pace, Mississippi. Background photo for Sunflower Plantation",
+	"short_title": "House of sharecroppers near Pace, Mississippi",
 	"year": "1939",
 	"place": "near Pace, Mississippi",
 	"description": "House of sharecroppers near Pace, Mississippi. Background photo for Sunflower Plantation",
@@ -112,6 +115,7 @@
 	  }
 	],
 	"title": "Daughter of Cube Walker, Negro tenant purchase client, Belzoni, Mississippi Delta, bringing home cow from the fields in the evening",
+	"short_title": "Daughter of Cube Walker",
 	"year": "1939",
 	"place": "Mississippi Delta, Mississippi",
 	"description": "Daughter of Cube Walker, Negro tenant purchase client, Belzoni, Mississippi Delta, bringing home cow from the fields in the evening. Mississippi Delta, Mississippi",
@@ -192,6 +196,7 @@
 	  }
 	],
 	"title": "<em>As I Lay Dying</em>, Manuscript, page 35.(detail)",
+	"short_title": "<em>As I Lay Dying</em>, Manuscript",
 
 	"description": "<em>As I Lay Dying</em>, Manuscript, page 35.(detail).",
 	"filename": "archive_manuscript_aild_35.jpg",
@@ -243,7 +248,7 @@
 	  }
 	],
 	"title": "\"A Rose for Emily\", Detail: page 15, carbon typescript",
-
+	"short_title": "\"A Rose for Emily\", typescript",
 	"description": "\"A Rose for Emily,\" Carbon typescript, 17 p. (17 R, 0 V) on 17 l.",
 	"filename": "archive_typescript_a_rose_for_emily_15.jpg",
 
@@ -268,7 +273,7 @@
 	  }
 	],
 	"title": "\"The Bear\" as published in The Saturday Evening Post, 9 May 1942; Illustrated by Edward Shenton. Page 30",
-
+	"short_title": "\"The Bear\" in <em>The Saturday Evening Post</em>",
 	"description": "Magazine illustration for \"The Bear\" in the Saturday Evening Post",
 	"filename": "archive_magazine_illustration_the_bear_SEP.jpg",
 
@@ -342,7 +347,7 @@
 
 	],
 
-	"title": "Barn Burning (Map)",
+	"title": "\"Barn Burning\" (Map)",
 	"year": "2012",
 	"place": null,
 	"description": "Digital Yoknapatawpha map of Barn Burning",
@@ -406,7 +411,7 @@
 
 	],
 
-	"title": "Plot Structure: `A Rose for Emily` (Date Order)",
+	"title": "Plot Structure: \"A Rose for Emily\" (Date Order)",
 	"year": "2019",
 	"place": null,
 	"description": "Digital Yoknapatawpha screen shot of the plot structure of `A Rose for Emily`. The order of events weighted by date.",
@@ -516,7 +521,7 @@
 
 	],
 
-	"title": "Screen Capture: Character-Location BiPartite Graph <em>Go Down, Moses</em>",
+	"title": "Screen Capture: Character-Location Bipartite Graph <em>Go Down, Moses</em>",
 	"year": "2018",
 	"place": null,
 	"description": "Visualization Character-Location Force Directed Graph <em>Go Down, Moses</em>",
@@ -531,34 +536,7 @@
 
   },
 
-  {
-	"media_type": "student_sample",
-	"creators": [
-	  {
-		"last_name": "Last Name",
-		"first_name": "First Name"
-	  }
-	],
-
-	"title": "Student Sample: Work Title",
-
-
-	"description": "Visualization Character-Location Force Directed Graph <em>Go Down, Moses</em>",
-	"filename": "student_sample_work_title.png",
-
-	"alt_text": "student_sample",
-
-	"course": {
-	  "name": "Title",
-	  "number": "Course Number",
-	  "institution": "University of Virginia",
-	  "place": "some place",
-	  "semester": "Spring 2023",
-	  "instructor": "Instructor Name",
-	  "url": "http://faulkner.iath.virginia.edu/characters-bipart.html"
-	}
-
-  },
+  
 
 
   {
@@ -828,7 +806,7 @@
 	  }
 	],
 
-	"title": "Zoomen in map of Cooper's Templeton in <em>The Pioneers</em> by Sara Paradisio",
+	"title": "Zoomed in map of Cooper's Templeton in <em>The Pioneers</em> by Sara Paradisio",
 
 
 	"description": "This map of Cooper's Templeton in <em>The Pioneers</em> by Sara Paradisio is intended to be an interpretive visitor's map of Natty's experience as one would find at a state or national park. The map also included diary entries by Natty that imagine how Natty would describe locations on the map.",
@@ -1008,7 +986,8 @@
 		"first_name": "Walter"
 	  }
 	],
-	"title": "[Tennessee Williams, full-length portrait, walking, at service for Dylan Thomas, facing front] [graphic] / World Telegram & Sun photo by Walter Albertin.",
+	"title": "[Tennessee Williams, full-length portrait, walking, at service for Dylan Thomas, facing front] [graphic] / World Telegram & Sun photo by Walter Albertin",
+	"short_title": "Tennessee Williams",
 	"year": "1953",
 	"place": null,
 	"description": "Full-length portrait, walking, at service for Dylan Thomas, facing front. 1 photographic print: cyanotype.",
