@@ -173,6 +173,35 @@
 		"first_name": "Johannes"
 	  }
 	],
+	"title": "Video Tutorial of Locations on the Main Map Display: \"Barn Burning\"",
+	"description": "Instructional video showing the location functionality of the main map display",
+	"duration": "00:00:17",
+	"file_size": "1.43 MB",
+	"created": "2024-07-17T00:00:00Z",
+	"filename": "video_tutorial_main_map_display_locations_bb.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Tutorial",
+	"tool": "Main Map Display: \"Barn Burning\"",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Quick Tutorial Locations on Main Map Display",
+	"url": "http://faulkner.iath.virginia.edu/?text=BB",
+	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/TextMapDemo.mp4",
+	"full_demo_duration": "11:17",
+	"full_demo_title": "Using the text-map pages"
+  },
+
+
+  {
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
 	"title": "Video Tutorial for the Narrative Analysis visualization tool",
 	"description": "Instructional video showing the basic functionality of the narrative analysis tool",
 	"duration": "00:00:20",
