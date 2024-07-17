@@ -54,7 +54,33 @@
 	"full_demo_duration": "05:57",
 	"full_demo_title": "Force-Directed Location-Character Graphs"
   },
+  {
 
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Video Tutorial of Photographs by Repository",
+	"description": "Instructional video for navigating to photograph repositories",
+	"duration": "00:00:16",
+	"file_size": "3.57 MB",
+	"created": "2024-07-17T00:00:00Z",
+	"filename": "video_tutorial_photographs_by_repository.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Tutorial",
+	"tool": "Photographs by Repository",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Video Tutorial of Photographs by Repository",
+	"url": "http://faulkner.iath.virginia.edu/family/photograph_repositories.php",
+	"full_demo_url": "http://faulkner.iath.virginia.edu/family/videos-burgersre.php",
+	"full_demo_duration": "02:46",
+	"full_demo_title": "Photographs and \"A Rose for Emily\""
+  },
   {
 
 	"creators": [
@@ -64,7 +90,7 @@
 	  }
 	],
 	"title": "Video Tutorial of Character-Character Force Directed Graph",
-	"description": "Instructional video for understanding character character force directed graph",
+	"description": "Instructional video for understanding character-character force directed graph",
 	"duration": "00:00:34",
 	"file_size": "7.68 MB",
 	"created": "2023-08-10T00:00:00Z",
