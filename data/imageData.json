@@ -536,7 +536,7 @@
 
   },
 
-  
+
 
 
   {
@@ -950,10 +950,32 @@
 	  "accession": "LC-USZ61-1100 (b&w film copy neg.)",
 	  "name": "Library of Congress",
 	  "place": "Washington, DC",
-	  "url": "https://lccn.loc.gov/2002736785"
+	  "url": "https://www.loc.gov/pictures/item/2002736785/"
 	}
   },
-
+  {
+	"media_type": "archive",
+	"creators": [
+	  {
+		"last_name": "Skidmore",
+		"first_name": "Gage"
+	  }
+	],
+	"title": "Sandra Cisneros",
+	"year": "2017",
+	"place": "Phoenix, AZ",
+	"description": "Sandra Cisneros speaking with attendees at an event titled \"Legacies: A Conversation with Sandra Cisneros, Rita Dove and Joy Harjo\" hosted by archiTEXTS and the Virginia G. Piper Center for Creative Writing at the Beus Center for Law and Society at the Sandra Day O'Connor College of Law at Arizona State University in Phoenix, Arizona.",
+	"filename": "archive_sandra_cisneros.jpg",
+	"alt_text": "Sandra Cisneros speaking with attendees at an event titled \"Legacies: A Conversation with Sandra Cisneros, Rita Dove and Joy Harjo\" hosted by archiTEXTS and the Virginia G. Piper Center for Creative Writing at the Beus Center for Law and Society at the Sandra Day O'Connor College of Law at Arizona State University in Phoenix, Arizona.",
+	"access_date": "2024-07-17",
+	"repository": {
+	  "collection": "CC BY-SA 2.0",
+	  "accession": "https://creativecommons.org/licenses/by-sa/2.0",
+	  "name": "Wikimedia Commons",
+	  "place": "Peoria, AZ",
+	  "url": "https://commons.wikimedia.org/wiki/File:Sandra_Cisneros_(38794178561).jpg"
+	}
+  },
   {
 	"media_type": "archive",
 	"creators": [
@@ -974,7 +996,7 @@
 	  "accession": "LC-USZ62-49035 (b&w film copy neg.)",
 	  "name": "Library of Congress",
 	  "place": "Washington, DC",
-	  "url": "https://lccn.loc.gov/2001704015"
+	  "url": "https://www.loc.gov/pictures/item/2001704015/"
 	}
   },
 
@@ -999,7 +1021,7 @@
 	  "accession": "LC-USZ62-115075 (b&w film copy neg.)",
 	  "name": "Library of Congress",
 	  "place": "Washington, DC",
-	  "url": "https://lccn.loc.gov/95514132"
+	  "url": "https://www.loc.gov/item/95514132/"
 	}
   }
 ]

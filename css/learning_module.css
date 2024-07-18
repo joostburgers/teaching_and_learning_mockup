@@ -526,10 +526,31 @@ div.activity-text {
 	box-shadow: 3px 3px 0px 0px rgba(52, 88, 77, 0.15);
 }
 
+	/* Apply bottom margin only to <p> elements with the 'has-siblings' class */
+	.tip p{
+	margin-bottom:1em;
+	}
+	
+	
+	.tip p:last-of-type {
+	margin-bottom:0em;
+	}
+/*
+	.tip p:not(:only-child),
 	.tip p:not(:last-child) {
 		margin-bottom: 1em;
 	}
 
+	.tip p:only-child,
+	.tip p:last-child {
+		margin-bottom: 0;
+	}*/
+
+
+	
+	
+
+	
 .toc-h2 {
 	padding-left: 0;
 	margin-bottom: 5px;

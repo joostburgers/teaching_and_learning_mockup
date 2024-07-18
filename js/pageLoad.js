@@ -220,7 +220,7 @@ function site_photograph(image) {
 	//define html strings. This could probably be more efficient.
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 
-	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201c${fancyQuotes(image.title)}.\u201D` : '';
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201c${fancyQuotesEmbedded(image.title)}.\u201D` : '';
 
 
 	const imageYearHTML = image.year !== null && image.year !== undefined ? `${image.year}, ` : '';
@@ -250,7 +250,7 @@ function external_image(image) {
 	//define html strings. This could probably be more efficient.
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 
-	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotes(image.title)}.\u201D` : '';
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotesEmbedded(image.title)}.\u201D` : '';
 	const imageWebsiteTitleHTML = image.website.title !== null && image.website.title !== undefined ? `<em>${image.website.title}</em>` : '';
 
 	const imageYearHTML = image.year !== null && image.year !== undefined ? `${image.year}, ` : '';
@@ -270,7 +270,7 @@ function screen_capture(image) {
 	//define html strings. This could probably be more efficient.
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 
-	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotes(image.title)}.\u201D` : '';
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotesEmbedded(image.title)}.\u201D` : '';
 	const imageYearHTML = image.year !== null && image.year !== undefined ? `${image.year}, ` : '';
 	const imageRepositoryNameHTML = image.repository.name !== null && image.repository.name !== undefined ? `${image.repository.name}, ` : '';
 	const imageRepositoryPlaceHTML = image.repository.place !== null && image.repository.place !== undefined ? `${image.repository.place}. ` : '';
@@ -287,7 +287,7 @@ function archive(image) {
 	//define html strings. This could probably be more efficient.
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 
-	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotes(image.title)}.\u201D` : '';
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotesEmbedded(image.title)}.\u201D` : '';
 
 	const imageRepositoryCollectionHTML = image.repository.collection !== null && image.repository.collection !== undefined ? `${image.repository.collection}, ` : '';
 
@@ -297,7 +297,7 @@ function archive(image) {
 
 	const imageRepositoryPlaceHTML = image.repository.place !== null && image.repository.place !== undefined ? `${image.repository.place}. ` : '';
 
-	const imageRepositoryURLHTML = image.repository.url !== null && image.repository.url !== undefined ? `URL: <a href="${image.repository.url}\u201D>${image.repository.url}</a>. ` : '';
+	const imageRepositoryURLHTML = image.repository.url !== null && image.repository.url !== undefined ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>. ` : '';
 
 	let citationTemplate = `${creatorsStringHTML}${imageTitleHTML} ${imageRepositoryCollectionHTML} ${imageRepositoryAccessionHTML} ${imageRepositoryNameHTML} ${imageRepositoryPlaceHTML} ${imageRepositoryURLHTML}`
 
@@ -310,7 +310,7 @@ function student_sample(image) {
 	const descriptionHTML = image.description !== null && image.description !== undefined ? `<div class='carousel-image-description'>${fancyQuotes(image.description)}</div>` : '';
 
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
-	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotes(image.title)}.\u201D` : '';
+	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotesEmbedded(image.title)}.\u201D` : '';
 
 	const imageCourseNameHTML = image.course.name !== null && image.course.name !== undefined ? `\u201c${image.course.name}.\u201D ` : '';
 	const imageCourseNumberHTML = image.course.number !== null && image.course.number !== undefined ? `${image.course.number}: ` : '';
@@ -350,7 +350,7 @@ function setImageData(source, image) {
 	})();
 
 	// Update the modal for a single image
-	imageTitle.html(image.title);
+	imageTitle.html(fancyQuotes(image.title));
 	imageSource.attr('src', source);
 	imageSource.attr('alt', image.alt_text);
 	imageCitation.html(citationTemplate);
@@ -731,9 +731,6 @@ function setGlanceData(data) {
 	}
 
 	const paired_authorHTML = data.paired_author !== null ? `<span class= "font-weight-bold">Paired text: </span>${pairedAuthorText}` : ''
-
-	
-
 
 	const institutionHTML = (data.institution !== null && data.institution !== undefined) ? `<span>, ${data.institution}</span>` : '';
 
