@@ -218,6 +218,9 @@ function getImageData(source, jsonData) {
 // Wrap each case into a function loading necessary constants on each call.
 function site_photograph(image) {
 	//define html strings. This could probably be more efficient.
+
+	const imageDescriptionHTML = image.description !== null && image.description !== undefined ? `<div class='image-description'>${fancyQuotes(image.description)}</div>` : '';
+
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 
 	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201c${fancyQuotesEmbedded(image.title)}.\u201D` : '';
@@ -237,7 +240,7 @@ function site_photograph(image) {
 	const imageRepositoryURLHTML = image.repository.url !== null && image.repository.url !== undefined ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>. ` : '';
 
 	let citationTemplate =
-		`${creatorsStringHTML}
+		`${imageDescriptionHTML}${ creatorsStringHTML }
     ${imageTitleHTML} ${imageYearHTML} ${imagePlaceHTML} 
     ${imageRepositoryCollectionHTML}
     ${imageRepositoryAccessionHTML}
@@ -248,6 +251,8 @@ function site_photograph(image) {
 
 function external_image(image) {
 	//define html strings. This could probably be more efficient.
+	const imageDescriptionHTML = image.description !== null && image.description !== undefined ? `<div class='image-description'>${fancyQuotes(image.description)}</div>` : '';
+
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 
 	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotesEmbedded(image.title)}.\u201D` : '';
@@ -260,7 +265,7 @@ function external_image(image) {
 	const imageAccessDateHTML = image.access_date !== null && image.access_date !== undefined ? `Accessed ${new Date(image.access_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}.` : '';
 
 	let citationTemplate =
-		`${creatorsStringHTML}${imageTitleHTML} ${imageWebsiteTitleHTML} ${imageYearHTML} ${imageWebsiteURLHTML}
+		`${imageDescriptionHTML}{ creatorsStringHTML }${ imageTitleHTML } ${ imageWebsiteTitleHTML } ${ imageYearHTML } ${ imageWebsiteURLHTML }
     ${imageAccessDateHTML}`;
 
 	return citationTemplate;
@@ -268,6 +273,8 @@ function external_image(image) {
 
 function screen_capture(image) {
 	//define html strings. This could probably be more efficient.
+	const imageDescriptionHTML = image.description !== null && image.description !== undefined ? `<div class='image-description'>${fancyQuotes(image.description)}</div>` : '';
+
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 
 	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotesEmbedded(image.title)}.\u201D` : '';
@@ -277,7 +284,7 @@ function screen_capture(image) {
 	const imageRepositoryURLHTML = image.repository.url !== null && image.repository.url !== undefined ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>. ` : '';
 
 	let citationTemplate =
-		`${creatorsStringHTML}${imageTitleHTML}
+		`${imageDescriptionHTML}${creatorsStringHTML}${imageTitleHTML}
             ${imageYearHTML}${imageRepositoryNameHTML}${imageRepositoryPlaceHTML}${imageRepositoryURLHTML}`;
 
 	return citationTemplate;
@@ -285,6 +292,9 @@ function screen_capture(image) {
 
 function archive(image) {
 	//define html strings. This could probably be more efficient.
+
+	const imageDescriptionHTML = image.description !== null && image.description !== undefined ? `<div class='image-description'>${fancyQuotes(image.description)}</div>` : '';
+
 	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
 
 	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotesEmbedded(image.title)}.\u201D` : '';
@@ -299,7 +309,8 @@ function archive(image) {
 
 	const imageRepositoryURLHTML = image.repository.url !== null && image.repository.url !== undefined ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>. ` : '';
 
-	let citationTemplate = `${creatorsStringHTML}${imageTitleHTML} ${imageRepositoryCollectionHTML} ${imageRepositoryAccessionHTML} ${imageRepositoryNameHTML} ${imageRepositoryPlaceHTML} ${imageRepositoryURLHTML}`
+	let citationTemplate = `${imageDescriptionHTML}
+	${creatorsStringHTML}${imageTitleHTML} ${imageRepositoryCollectionHTML} ${imageRepositoryAccessionHTML} ${imageRepositoryNameHTML} ${imageRepositoryPlaceHTML} ${imageRepositoryURLHTML}`
 
 	return citationTemplate
 }

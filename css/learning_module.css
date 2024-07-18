@@ -485,8 +485,9 @@ div .note {
 		width: auto; /* Allows the width to automatically adjust */
 		object-fit: contain; /* Ensures images fit without cropping and maintain aspect ratio */
 		margin: auto; /* Centers the image horizontally and vertically if there's extra space */
+		max-height:65vh;
 	}
-}
+
 
 /* Custom styles for carousel indicators */
 .carousel-indicators li {
@@ -644,3 +645,146 @@ div.activity-text {
 	.short_story::after {
 		content: close-quote;
 	}
+
+@media print {
+	/* Adjust the body */
+	
+	@page{
+	margin-top:20mm;
+	}
+	
+	body {
+		
+		font-size: 12pt;
+		color: black;
+		background: white;
+	}
+
+	/* Hide elements that are not necessary for the print version */
+	.navbar, .footer, .sidebar, #page_header, #TableOfContents, .glance-info img,.glance-text, .blockquote,.activity-video {
+		display: none;
+	}
+
+	.glance-title, .glance-centered, .glance-bottom{
+		/* Reset positioning */
+		position: static; /* Default value, not positioned */
+		top: auto; /* Reset top position */
+		right: auto; /* Reset right position */
+		bottom: auto; /* Reset bottom position */
+		left: auto; /* Reset left position */
+		transform: none; /* No transformation */
+		/* Reset background styles if needed */
+		background: none; /* No background */
+		background-color: transparent; /* Transparent background color */
+		/* Reset other potentially customized properties to defaults */
+		
+		padding: 0; /* Remove any custom padding */
+		border: none; /* No border */
+		outline: none; /* No outline */
+		width: auto; /* Auto width based on content */
+		height: auto; /* Auto height based on content */
+		
+		font-weight: normal; /* Default font weight, h1 is usually bold */
+		text-align: left; /* Default text alignment, adjust as needed */
+		color: inherit; /* Inherits color from parent */
+		display: block; /* h1 is a block-level element, adjust if needed */
+	}
+
+	.glance-title{
+	font-size:20pt;
+	margin:20pt 0pt 20pt 0pt;
+	}
+	.glance-subtitle h4 {
+		font-size: 14pt;
+		margin: 14pt 0pt 14pt 0pt;
+	}
+	.glance-bottom{
+	font-size:12pt;
+	}
+
+	.activity {
+		border: none;
+		page-break-after: auto;
+	}
+
+	h1, h2, h3, h4, h5, h6, div.activity-instructions-title {
+		page-break-after: avoid;
+	}
+
+	
+		ol > li, ul {
+			page-break-inside: avoid;
+		}
+	
+
+    
+
+	.container, .row, .row > div[class*='col-'] {
+		display: block !important;
+		width: 100% !important;
+		height: auto !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		flex: none !important; /* Reset flex properties */
+		max-width: none !important; /* Ensure max-width does not limit the width */
+	}
+
+	/* Additional resets for common Bootstrap container and grid classes */
+	.container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+		width: 100% !important;
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+		margin-right: auto !important;
+		margin-left: auto !important;
+	}
+
+
+
+		/* Increase specificity by repeating the class */
+		
+
+	.tip{
+	width:100%;
+	}
+
+	/* Ensure images are not cut off */
+	img {
+		width:50%;
+		height:auto;
+		page-break-inside: avoid;
+	}
+
+	/* Adjust the width of sections for printing */
+	.content, .main {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	/* Use black text on white background for articles */
+	article {
+		color: black;
+		background: white;
+	}
+
+	/* Avoid page breaks inside articles */
+	article {
+		page-break-inside: avoid;
+	}
+
+	/* Style links to display the URL after the text */
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+
+	/* Modify table styles for better readability */
+	table {
+		border-collapse: collapse;
+	}
+
+	th, td {
+		border: 1px solid black;
+		padding: 5px;
+	}
+}
+
