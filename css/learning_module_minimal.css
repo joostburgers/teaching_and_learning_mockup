@@ -132,12 +132,12 @@ div.activity-text {
 	line-height: 1.5em;
 }
 
-.activity-resource-list{
+/*.activity-resource-list{
 list-style-type: circle;
 list-style-position: outside;
 padding: 15px;
 line-height:1.5em;
-}
+}*/
 
 
 .blockquote:before {

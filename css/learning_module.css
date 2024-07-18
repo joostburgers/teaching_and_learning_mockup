@@ -21,121 +21,260 @@
 
 
 
+.toc-h2 {
+	padding-left: 0;
+	margin-bottom: 5px;
+	font-family: Geneva, Helvetica, Arial, sans-serif;
+	font-weight: 600;
+}
+
+.toc-h3 {
+	list-style-type: none;
+	padding-left: 5%;
+	border-left: 1px solid lightgray;
+	padding-bottom: 10px;
+}
+
+	.toc-h3 a {
+		color: #474646;
+	}
+
+
+/*glance components
+This also includes media queries.
+
+*/
+
+
+
+.glance-text {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding: 20px 10px 20px 10px;
+	border-bottom: 1px solid rgba(24%, 24%, 24%, 0.15);
+}
+
+.banner-container {
+	position: relative;
+	display: inline-block; 
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.banner-img {
+	width: 100%;
+	display: block;
+	height: auto;
+}
+
+.glance-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	justify-content: space-between;
+	padding: 0px;
+}
+
+.glance-title-container {
+	position: absolute;
+	top: 20%;
+	left: 0;
+	right: 0;
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(2px);
+}
+
+.glance-title, .glance-subtitle {
+	margin: 0;
+}
 
 .glance-title {
-	font-size: 2vw; /* Adjust the size according to your needs */
+	font-size: 2vw;
 	color: #9d4040;
-	width: 100%;
-	padding: 10px;
+	padding: 10px 20px 5px 20px;
 }
 
 .glance-subtitle {
-	font-size: 1.5vw; /* Adjust the size according to your needs */
+	font-size: 1.5vw;
 	color: #333333;
-	width: 100%;
-	padding-top: 10px;
+	padding: 5px 20px 10px 20px;
 }
 
-.glance-bottom {
-	font-size: .6em;
-	position: absolute;
-	bottom: 2px;
-	right: 0px;
-	padding: 5px 5px 3px 5px;
-	border-radius: 2px;
+
+
+.glance-meta {
+	font-size: 10pt;
+	margin-top: auto; /* Pushes the meta information to the bottom */
+	align-self: flex-end;
 	background: radial-gradient(rgba(255, 255, 255, .7),rgba(245, 245, 245, .10));
 	backdrop-filter: blur(1px);
 	color: rgba(51, 51, 51, 0.77);
 }
 
+
+
 /* Media queries for smaller screens */
 @media screen and (max-width: 768px) {
+
+	.main {
+		width: 95%;
+	}
+
+
 	.glance-title {
-		font-size: 2.5vw; /* Slightly larger on smaller screens */
+		font-size: 20px;
+		padding: 5px;
 	}
 
 	.glance-subtitle {
-		font-size: 2vw; /* Slightly larger on smaller screens */
+		font-size: 14px;
+		padding: 5px;
 	}
-}
 
-/* Media queries for very small screens */
+	.glance-meta {
+		font-size: 10px;
+		backdrop-filter: none;
+		background: none;
+		align-self: flex-start;
+		padding: 5px;
+	}
+
+	.container {
+		padding: 0px;
+	}
+
+	.activity {
+		margin-left: 0px;
+	}
+
+
+	.sidebar {
+		display: none;
+	}
+
+	.container, .row, .row > div[class*='col-'] {
+		display: block !important;
+		width: 100% !important;
+		height: auto !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		flex: none !important; /* Reset flex properties */
+		max-width: none !important; /* Ensure max-width does not limit the width */
+	}
+
+	/* Additional resets for common Bootstrap container and grid classes */
+	.container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+		width: 100% !important;
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+		margin-right: auto !important;
+		margin-left: auto !important;
+	}
+
+}
+ 
 @media screen and (max-width: 480px) {
+	
+	.main{
+	width:95%;
+	}
+
+	.glance-overlay{
+	position:relative;
+	}
+
+	.glance-title-container {
+		position: relative;
+	}
 	.glance-title {
-		font-size: 3vw; /* Adjust for very small screens */
+		font-size: 20px;
+		padding:5px;
 	}
 
 	.glance-subtitle {
-		font-size: 2.5vw; /* Adjust for very small screens */
+		font-size: 14px;
+		padding:5px;
 	}
 
-	.glance-bottom {
-		font-size: .5em;
+	.glance-meta{
+	font-size:10px;
+	backdrop-filter:none;
+	background:none;
+	align-self:flex-start;
+	padding:5px;
 	}
+
+	.container{
+	padding:0px;
+	}
+
+	.activity{
+	margin-left:0px;
+	}
+	
+
+.sidebar, .banner-container img  {
+	display: none;
 }
-/* Media queries to cap the font sizes for very large screens */
+
+	.container, .row, .row > div[class*='col-'] {
+		display: block !important;
+		width: 100% !important;
+		height: auto !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		flex: none !important; /* Reset flex properties */
+		max-width: none !important; /* Ensure max-width does not limit the width */
+	}
+
+	/* Additional resets for common Bootstrap container and grid classes */
+	.container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+		width: 100% !important;
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+		margin-right: auto !important;
+		margin-left: auto !important;
+	}
+
+
+
+
+}
+
+ 
 @media screen and (min-width: 1200px) {
 	.glance-title {
-		font-size: 2vw; /* Maximum size */
+		font-size: 1.75vw; 
 	}
 
 	.glance-subtitle {
-		font-size: 1.5vw; /* Maximum size */
+		font-size: 1.25vw; 
 	}
 }
 
 
-.glance-info {
-	position: relative;
-	text-align: left;
-	max-width: 100%;
-}
-
-.glance-centered {
-	position: absolute;
-	top: 50%;
-	left: 25%;
-	transform: translate(-25%, -50%);
-	background: rgba(255, 255, 255, 0.5);
-	padding: 3%;
-	backdrop-filter: blur(2px)
-}
 
 
 
-	/*.glance-bottom p {*/
-		/*font-size: 100%;
-		font-weight: 400;*/
-	/*}
-
-	.glance-bottom a {*/
-	/*	float: left;*/
-	/*}*/
-
-/*.glance-bottom div.right {
-	float: right;
-}*/
-
-.glance-text {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	/*font-size: 1em;
-	line-height: 1.5em;*/
-	/*color: #333333;*/
-	
-	padding: 20px 10px 20px 10px;
+.lesson-section {
 	border-bottom: 1px solid rgba(24%, 24%, 24%, 0.15);
+	padding-bottom: 20px;
 }
-/*
-	.glance-text:first-child {
-		display: inline;
-	}*/
+
+	.lesson-section p {
+		margin-left: 10px;
+	}
 
 
 
 
 /*Components for activities*/
 
-.activity {
+	.activity {
 	border: 1px solid #ddd;
 	margin-left: 20px;
 	border-radius: 4px;
@@ -183,21 +322,21 @@
 			margin-bottom: 0em;
 		}
 
-ol.activity-list {
+/*ol.activity-list {
 	font-weight: 400;
 	list-style-type: decimal;
 	list-style-position: outside;
 	margin-left: 30px;
 	margin-right: 15px;
 	padding: 15px;
-	font-weight: 400;
+	
 	line-height: 1.5em;
 	counter-reset: item;
 }
 
 .activity-list li {
 	counter-increment: item;
-	font-weight: 400;
+	
 }
 
 	.activity-list li p:not(:last-child) {
@@ -274,31 +413,103 @@ ol.activity-list-alpha {
 }
 
 	.activity-list-unordered-2col li {
-		flex: 0 0 50%; /* Each item will take up roughly a third of the container's width */
-		box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-		padding: 5px; /* Adds some padding around each item */
+		flex: 0 0 50%;
+		box-sizing: border-box; 
+		padding: 5px; 
 	}
 
 .activity-list-unordered-note {
 	list-style-type: circle;
 	list-style-position: outside;
 	margin-left: 30px;
-	font-weight: 400;
 	line-height: 1.5em;
+}*/
+
+
+:root {
+	--list-margin-left: 30px;
+	--list-padding: 15px;
+	--list-font-weight: 400;
+	--list-line-height: 1.5em;
 }
 
-
-
-
-.activity-questions {
-	list-style-type: circle;
+ol.activity-list, ol.activity-list-alpha, .activity-list-unordered, .activity-list-unordered-blank, .activity-list-unordered-note {
+	margin-left: var(--list-margin-left);
+	padding: var(--list-padding);
+	font-weight: var(--list-font-weight);
+	line-height: var(--list-line-height);
 	list-style-position: outside;
-	padding: 15px;
-	font-weight: 400;
-	line-height: 1.5em;
-	margin-left: 10px;
-	font-style: italic;
 }
+
+ol.activity-list {
+	list-style-type: decimal;
+	counter-reset: item;
+}
+
+.activity-list li {
+	counter-increment: item;
+}
+
+	.activity-list li p:not(:last-child), .activity-list-unordered-blank li {
+		margin-bottom: 1em;
+	}
+
+ol.activity-list-alpha {
+	list-style-type: lower-alpha;
+	padding-top: 0;
+}
+
+.activity-list li:before {
+	content: counters(item ". ") ". ";
+	display: inline-block;
+}
+
+.activity-list-unordered {
+	list-style-type: circle;
+}
+
+.activity-list-unordered-blank {
+	list-style-type: none;
+}
+
+.activity-list-unordered-arrow {
+	list-style-type: none;
+	padding-left:20px;
+}
+
+	.activity-list-unordered-arrow li:before {
+		content: "\F138";
+		font-family: "bootstrap-icons";
+		margin-right: 5px;
+		vertical-align: middle;
+	}
+
+	.activity-list-unordered-arrow ul > li:before {
+		display: none;
+	}
+
+.activity-list-unordered-2col {
+	display: flex;
+	width: 60%;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	list-style-type: none;
+}
+
+	.activity-list-unordered-2col li {
+		flex: 0 0 50%;
+		box-sizing: border-box;
+		padding: 5px;
+	}
+
+.activity-list-unordered-note {
+	list-style-type: circle;
+	padding-top:0px;
+	padding-bottom:0px;
+
+}
+
+
 
 .activity-quote {
 	padding: 15px;
@@ -433,15 +644,6 @@ div.modal-image {
 	font-size: 1.1em;
 }
 
-.img-fluid-opacity-50 {
-	opacity: 0.25;
-}
-/*For any notes on the sample page*/
-div .note {
-	border: 1px solid red;
-	margin: 10px;
-	padding: 10px;
-}
 
 .carousel-preview {
 	display: flex;
@@ -472,55 +674,32 @@ div .note {
 }
 
 .carousel-inner {
-	/*justify-content: center;
-	align-items: center;*/ /* Optional: for vertical alignment */
+	
 }
 
 .carousel-item {
-	text-align: center; /* Centers inline and inline-block elements */
+	text-align: center; 
 }
 
 	.carousel-item img {
-		height: 100%; /* Adjust the height to fit the carousel item */
-		width: auto; /* Allows the width to automatically adjust */
-		object-fit: contain; /* Ensures images fit without cropping and maintain aspect ratio */
-		margin: auto; /* Centers the image horizontally and vertically if there's extra space */
+		height: 100%; 
+		width: auto; 
+		object-fit: contain; 
+		margin: auto; 
 		max-height:65vh;
 	}
 
-
-/* Custom styles for carousel indicators */
 .carousel-indicators li {
 	filter: drop-shadow(0 0 2px #313131);
 }
 
-/* Custom styles for previous and next buttons */
+
 .carousel-control-prev, .carousel-control-next {
 	filter: drop-shadow(0 0 1px #313131);
 }
 
-ul.note-list {
-	list-style-type: circle;
-	padding-left: 20px;
-	line-height: 1.5em;
-}
-
-div.activity-text {
-	padding: 15px;
-	font-weight: 400;
-	line-height: 1.5em;
-	margin-left: 10px;
-}
 
 
-.lesson-section {
-	border-bottom: 1px solid rgba(24%, 24%, 24%, 0.15);
-	padding-bottom: 20px;
-}
-
-	.lesson-section p {
-		margin-left: 10px;
-	}
 
 
 
@@ -532,7 +711,6 @@ div.activity-text {
 	box-shadow: 3px 3px 0px 0px rgba(52, 88, 77, 0.15);
 }
 
-	/* Apply bottom margin only to <p> elements with the 'has-siblings' class */
 	.tip p{
 	margin-bottom:1em;
 	}
@@ -542,29 +720,8 @@ div.activity-text {
 	margin-bottom:0em;
 	}
 
-
+/*Additional Styling components*/
 	
-	
-
-	
-.toc-h2 {
-	padding-left: 0;
-	margin-bottom: 5px;
-	font-family: Geneva, Helvetica, Arial, sans-serif;
-	font-weight: 600;
-}
-
-.toc-h3 {
-	list-style-type: none;
-	padding-left: 5%;
-	border-left: 1px solid lightgray;
-	padding-bottom: 10px;
-}
-
-	.toc-h3 a {
-		color: #474646;
-	}
-
 .google-slides-container {
 	position: relative;
 	width: 100%;
@@ -600,34 +757,44 @@ div.activity-text {
 	vertical-align: text-bottom;
 	border-radius: 50%;
 }
-
-.black-line {
-	border-bottom: 2px solid #888;
+/* Base styles for all lines */
+.line {
 	width: 1em;
 	display: inline-block;
 	vertical-align: middle;
+}
+
+/* Extend base styles with color and style specifics */
+.black-line, .red-line, .red-line-dashed, .red-line-overlay {
+	border-bottom-width: 2px;
+}
+
+.black-line {
+	border-bottom-style: solid;
+	border-bottom-color: #888;
 }
 
 .red-line {
-	border-bottom: 2px solid red;
-	width: 1em;
-	display: inline-block;
-	vertical-align: middle;
+	border-bottom-style: solid;
+	border-bottom-color: red;
 }
 
 .red-line-dashed {
-	border-bottom: 2px dashed red;
-	width: 1em;
-	display: inline-block;
-	vertical-align: middle;
+	border-bottom-style: dashed;
+	border-bottom-color: red;
 }
 
 .red-line-overlay {
-	border-bottom: 2px dashed #888;
+	border-bottom-style: dashed;
+	border-bottom-color: #888;
+	background-color: red;
+}
+
+/* Apply base styles to specific classes using a more specific selector */
+[class*="-line"] {
 	width: 1em;
 	display: inline-block;
 	vertical-align: middle;
-	background-color: red;
 }
 
 .novel {
@@ -666,28 +833,27 @@ div.activity-text {
 	}
 
 	.glance-title, .glance-centered, .glance-bottom{
-		/* Reset positioning */
-		position: static; /* Default value, not positioned */
-		top: auto; /* Reset top position */
-		right: auto; /* Reset right position */
-		bottom: auto; /* Reset bottom position */
-		left: auto; /* Reset left position */
-		transform: none; /* No transformation */
-		/* Reset background styles if needed */
-		background: none; /* No background */
-		background-color: transparent; /* Transparent background color */
-		/* Reset other potentially customized properties to defaults */
 		
-		padding: 0; /* Remove any custom padding */
-		border: none; /* No border */
-		outline: none; /* No outline */
-		width: auto; /* Auto width based on content */
-		height: auto; /* Auto height based on content */
+		position: static; 
+		top: auto; 
+		right: auto; 
+		bottom: auto;
+		left: auto; 
+		transform: none; 
 		
-		font-weight: normal; /* Default font weight, h1 is usually bold */
-		text-align: left; /* Default text alignment, adjust as needed */
-		color: inherit; /* Inherits color from parent */
-		display: block; /* h1 is a block-level element, adjust if needed */
+		background: none;
+		background-color: transparent; 
+		padding: 0; 
+		border: none; 
+		outline: none; 
+		width: auto;
+		height: auto;
+		
+		font-weight: normal; 
+		text-align: left; 
+		
+		color: inherit; 
+		display: block; 
 	}
 
 	.glance-title{
@@ -744,14 +910,19 @@ div.activity-text {
 		
 
 	.tip{
-	width:100%;
+	width:95%;
 	}
+
+	
 
 	/* Ensure images are not cut off */
 	img {
-		width:50%;
-		height:auto;
+		width: 50%;
+		height: auto;
 		page-break-inside: avoid;
+		display: block; 
+		margin-left: auto; 
+		margin-right: auto;
 	}
 
 	/* Adjust the width of sections for printing */
@@ -761,30 +932,11 @@ div.activity-text {
 		padding: 0;
 	}
 
-	/* Use black text on white background for articles */
-	article {
-		color: black;
-		background: white;
-	}
-
-	/* Avoid page breaks inside articles */
-	article {
-		page-break-inside: avoid;
-	}
-
+	
 	/* Style links to display the URL after the text */
 	a[href]:after {
 		content: " (" attr(href) ")";
 	}
 
-	/* Modify table styles for better readability */
-	table {
-		border-collapse: collapse;
-	}
-
-	th, td {
-		border: 1px solid black;
-		padding: 5px;
-	}
 }
 

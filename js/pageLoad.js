@@ -780,7 +780,7 @@ function setGlanceData(data) {
 
 	const institutionHTML = (data.institution !== null && data.institution !== undefined) ? `<span>, ${data.institution}</span>` : '';
 
-	const instructorHTML = data.instructor !== null ? `<h4>${data.instructor}${institutionHTML}</h4>` : '';
+	const instructorHTML = data.instructor !== null ? `${data.instructor}${institutionHTML}` : '';
 
 
 	const lastUpdatedDate = new Date(document.lastModified);
@@ -791,17 +791,23 @@ function setGlanceData(data) {
 	const createdHTML = data.created !== null ? `Created: ${new Date(data.created).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric' })}${pageLastUpdate}` : '';
 
 	
-	const bannerImageHTML = data.image.banner !== null ? `<img src="../images/${data.image.banner}" class="w-100" alt="Banner image for ${data.title}">` : '';
+	const bannerImageHTML = data.image.banner !== null ? `<img src="../images/${data.image.banner}" class="banner-img" alt="Banner image for ${data.title}">` : '';
 
 	const fancyBannerImageTitle = fancyQuotes(data.title)
 
-	const bannerHTML = `<div class="glance-info">
+	const bannerHTML = `
+	<div class="banner-container">
+	
 				${bannerImageHTML}		
-	<h1 class="glance-title glance-centered">${fancyBannerImageTitle}<div class="glance-subtitle">${instructorHTML}</div></h1>
-			<div class="glance-bottom">
-				
-				<div class="right">${createdHTML} </div></div>
-			</div>`
+				<div class="glance-overlay">
+				<div class="glance-title-container">
+	<h1 class="glance-title">${fancyBannerImageTitle}</h1>
+	<h2 class="glance-subtitle">${instructorHTML}</h2>
+	</div>
+			<div class="glance-meta">${createdHTML}</div>
+			</div>
+			</div>
+			`
 
 	const fancyDescription = fancyQuotes(data.description)
 
