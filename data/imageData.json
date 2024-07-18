@@ -954,7 +954,7 @@
 	}
   },
   {
-	"media_type": "archive",
+	"media_type": "wikimedia",
 	"creators": [
 	  {
 		"last_name": "Skidmore",
@@ -963,16 +963,17 @@
 	],
 	"title": "Sandra Cisneros",
 	"year": "2017",
+	"creator_place": "Phoenix, AZ",
 	"place": "Phoenix, AZ",
 	"description": "Sandra Cisneros speaking with attendees at an event titled \"Legacies: A Conversation with Sandra Cisneros, Rita Dove and Joy Harjo\" hosted by archiTEXTS and the Virginia G. Piper Center for Creative Writing at the Beus Center for Law and Society at the Sandra Day O'Connor College of Law at Arizona State University in Phoenix, Arizona.",
 	"filename": "archive_sandra_cisneros.jpg",
 	"alt_text": "Sandra Cisneros speaking with attendees at an event titled \"Legacies: A Conversation with Sandra Cisneros, Rita Dove and Joy Harjo\" hosted by archiTEXTS and the Virginia G. Piper Center for Creative Writing at the Beus Center for Law and Society at the Sandra Day O'Connor College of Law at Arizona State University in Phoenix, Arizona.",
 	"access_date": "2024-07-17",
 	"repository": {
-	  "collection": "CC BY-SA 2.0",
-	  "accession": "https://creativecommons.org/licenses/by-sa/2.0",
+	  "license": "CC BY-SA 2.0",
+	  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
 	  "name": "Wikimedia Commons",
-	  "place": "Peoria, AZ",
+	  "place": null,
 	  "url": "https://commons.wikimedia.org/wiki/File:Sandra_Cisneros_(38794178561).jpg"
 	}
   },
