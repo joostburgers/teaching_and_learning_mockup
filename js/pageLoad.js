@@ -328,26 +328,33 @@ function student_sample(image) {
 
 function wikimedia(image) {
 	//define html strings. This could probably be more efficient.
-	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)}. ` : '';
+	const creatorsStringHTML = extractCreators(image) !== null && extractCreators(image) !== undefined ? `${extractCreators(image)} ` : '';
 
-	const creatorPlaceHTML = image.creator_place !== null && image.creator_place !== undefined ? `${image.creator_place} from ` : '';
+	const creatorPlaceHTML = image.creator_place !== null && image.creator_place !== undefined ? `from ${image.creator_place}.` : '.';
 
 	const imageTitleHTML = image.title !== null && image.title !== undefined ? `\u201C${fancyQuotesEmbedded(image.title)}.\u201D` : '';
 
+	console.log("creator string", creatorsStringHTML)
 	
 
-	const imageRepositoryLicenseHTML = image.repository.license !== null && image.repository.license !== undefined ? `<a href="${image.repository.license_url}">${image.repository.license}</a>. ` : '';
+	const imageRepositoryLicenseHTML = image.repository.license !== null && image.repository.license !== undefined ? `<a href="${image.repository.license_url}">${image.repository.license}</a> ` : '';
 
-	const imageRepositoryNameHTML = image.repository.name !== null && image.repository.name !== undefined ? `via ${image.repository.name}` : '';
+	const imageRepositoryNameHTML = image.repository.name !== null && image.repository.name !== undefined ? `via ${image.repository.name}.` : '';
 	
 	const imageRepositoryURLHTML = image.repository.url !== null && image.repository.url !== undefined ? `URL: <a href="${image.repository.url}">${image.repository.url}</a>. ` : '';
 
-	let citationTemplate = `${creatorsStringHTML}${CreatorPlaceHTML}
+	const imageDescriptionHTML = image.description !== null && image.description !== undefined ? `<div class='image-description'>${fancyQuotes(image.description)}</div>` : '';
+	
+
+	let citationTemplate = `
+	${imageDescriptionHTML}${creatorsStringHTML}${creatorPlaceHTML}
 		${imageTitleHTML}
 		${imageRepositoryLicenseHTML}
 		${imageRepositoryNameHTML} ${imageRepositoryURLHTML}`
 
+	console.log(citationTemplate)
 	return citationTemplate
+	
 }
 
 function setImageData(source, image) {
@@ -366,6 +373,8 @@ function setImageData(source, image) {
 				return screen_capture(image);
 			case 'archive':
 				return archive(image);
+			case 'wikimedia':
+				return wikimedia(image);
 			case 'student_sample':
 				return student_sample(image);
 			default:

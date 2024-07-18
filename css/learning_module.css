@@ -428,6 +428,11 @@ div.modal-image {
 		display: block;
 	}
 
+.image-description {
+	margin-bottom: 10px;
+	font-size: 1.1em;
+}
+
 .img-fluid-opacity-50 {
 	opacity: 0.25;
 }
@@ -535,16 +540,6 @@ div.activity-text {
 	.tip p:last-of-type {
 	margin-bottom:0em;
 	}
-/*
-	.tip p:not(:only-child),
-	.tip p:not(:last-child) {
-		margin-bottom: 1em;
-	}
-
-	.tip p:only-child,
-	.tip p:last-child {
-		margin-bottom: 0;
-	}*/
 
 
 	

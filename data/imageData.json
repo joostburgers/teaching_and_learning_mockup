@@ -898,7 +898,7 @@
 	"title": "Screen Capture: Percent Narrative Status per Character in <em>The Sound and the Fury</em>",
 	"year": "2022",
 	"place": null,
-	"description": "Data visualization of the number of times characters appear alone in the <em>The Sound and the Fury</em>",
+	"description": "Data visualization that divides up the how often a character appears based on the narrative status in the <em>The Sound and the Fury</em>",
 	"filename": "screen_capture_DY_data_percent_narrative_status_per_character.png",
 	"alt_text": "Chart showing the percentage of the narrative statuses of each event for a character.",
 	"repository": {
@@ -963,10 +963,10 @@
 	],
 	"title": "Sandra Cisneros",
 	"year": "2017",
-	"creator_place": "Phoenix, AZ",
+	"creator_place": "Peoria, AZ",
 	"place": "Phoenix, AZ",
 	"description": "Sandra Cisneros speaking with attendees at an event titled \"Legacies: A Conversation with Sandra Cisneros, Rita Dove and Joy Harjo\" hosted by archiTEXTS and the Virginia G. Piper Center for Creative Writing at the Beus Center for Law and Society at the Sandra Day O'Connor College of Law at Arizona State University in Phoenix, Arizona.",
-	"filename": "archive_sandra_cisneros.jpg",
+	"filename": "wikimedia_sandra_cisneros.jpg",
 	"alt_text": "Sandra Cisneros speaking with attendees at an event titled \"Legacies: A Conversation with Sandra Cisneros, Rita Dove and Joy Harjo\" hosted by archiTEXTS and the Virginia G. Piper Center for Creative Writing at the Beus Center for Law and Society at the Sandra Day O'Connor College of Law at Arizona State University in Phoenix, Arizona.",
 	"access_date": "2024-07-17",
 	"repository": {
@@ -975,6 +975,30 @@
 	  "name": "Wikimedia Commons",
 	  "place": null,
 	  "url": "https://commons.wikimedia.org/wiki/File:Sandra_Cisneros_(38794178561).jpg"
+	}
+  },
+  {
+	"media_type": "wikimedia",
+	"creators": [
+	  {
+		"last_name": "Coukouma",
+		"first_name": "Nikolas"
+	  }
+	],
+	"title": "Octavia Butler",
+	"year": "2005",
+	"creator_place": null,
+	"place": null,
+	"description": "Octavia Estelle Butler signing a copy of <em>Fledgling</em> after speaking and answering questions from the audience. The event was part of a promotional tour for the book.",
+	"filename": "wikimedia_octavia_butler.jpg",
+	"alt_text": "Octavia Estelle Butler signing a copy of <em>Fledgling</em> after speaking and answering questions from the audience. The event was part of a promotional tour for the book.",
+	"access_date": "2024-07-17",
+	"repository": {
+	  "license": "CC BY-SA 2.5",
+	  "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+	  "name": "Wikimedia Commons",
+	  "place": null,
+	  "url": "https://commons.wikimedia.org/wiki/File:Butler_signing.jpg"
 	}
   },
   {
