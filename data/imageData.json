@@ -171,7 +171,7 @@
 	"title": "<em>Go Down, Moses</em> cover",
 	"year": null,
 	"place": null,
-	"description": "Cover image of Go Down, Moses, Random House Edition",
+	"description": "Cover image of <em>Go Down, Moses</em>, Random House Edition",
 	"filename": "site_photograph_gdm_cover.jpg",
 
 	"alt_text": "Image showing a cabin belonging to a an African American on a plantation near Vicksburg, Mississippi.",
@@ -313,10 +313,10 @@
 	"title": "Main Map: <em>Go Down, Moses</em>",
 	"year": "2016",
 	"place": null,
-	"description": "Digital Yoknapatawpha map of Go Down, Moses",
+	"description": "Digital Yoknapatawpha map of <em>Go Down, Moses</em>",
 	"filename": "screen_capture_main_map_go_down_moses.png",
 
-	"alt_text": "Digital Yoknapatawpha map of Go Down, Moses",
+	"alt_text": "Digital Yoknapatawpha map of <em>Go Down, Moses</em>",
 	"repository": {
 	  "name": "Digital Yoknapatawpha",
 	  "place": "University of Virginia",
@@ -350,9 +350,9 @@
 	"title": "\"Barn Burning\" (Map)",
 	"year": "2012",
 	"place": null,
-	"description": "Digital Yoknapatawpha map of Barn Burning",
+	"description": "Digital Yoknapatawpha map of \"Barn Burning\"",
 
-	"alt_text": "Digital Yoknapatawpha map of Go Barn Burning",
+	"alt_text": "Digital Yoknapatawpha map of \"Barn Burning\"",
 	"repository": {
 	  "name": "Digital Yoknapatawpha",
 	  "place": "University of Virginia",
@@ -414,9 +414,9 @@
 	"title": "Plot Structure: \"A Rose for Emily\" (Date Order)",
 	"year": "2019",
 	"place": null,
-	"description": "Digital Yoknapatawpha screen shot of the plot structure of `A Rose for Emily`. The order of events weighted by date.",
+	"description": "Digital Yoknapatawpha screen shot of the plot structure of \"A Rose for Emily\". The order of events weighted by date.",
 	"filename": "screen_capture_plot_structure_a_rose_for_emily_date_order.png",
-	"alt_text": "Screen capture of narrative structure of `A Rose for Emily`",
+	"alt_text": "Screen capture of narrative structure of \"A Rose for Emily\"",
 	"repository": {
 	  "name": "Digital Yoknapatawpha",
 	  "place": "University of Virginia",
@@ -548,7 +548,7 @@
 	  }
 	],
 
-	"title": "Textual map of Cooper's <em>Templeton</em> in The Pioneers by Casey Hunziker",
+	"title": "Textual map of Cooper's Templeton in <em>The Pioneers</em> by Casey Hunziker",
 
 
 	"description": "This textual map of Cooper's Templeton in <em>The Pioneers</em> by Casey Hunziker maps the novel from Elizabeth's point of view, mapping significant events in her development and putting the Temple Manor at the center.",
@@ -611,7 +611,7 @@
 	"description": "This tea-dyed map by Anna Black is intended to convey antiquity in Cooper's Templeton in <em>The Pioneers</em> and locates the field where a pigeon massacre occurs as the center of the map, conveying the importance of the destruction of the wilderness in the novel.",
 	"filename": "student_sample_joiner_anna_black.jpg",
 
-	"alt_text": "This tea-dyed map by Anna Black is intended to convey antiquity in Cooper's Templeton in The Pioneers and locates the field where a pigeon massacre occurs as the center of the map, conveying the importance of the destruction of the wilderness in the novel.   ",
+	"alt_text": "This tea-dyed map by Anna Black is intended to convey antiquity in Cooper's Templeton in <em>The Pioneers</em> and locates the field where a pigeon massacre occurs as the center of the map, conveying the importance of the destruction of the wilderness in the novel.   ",
 
 	"course": {
 	  "name": "Advanced Studies in Literature: Faulkner and Cooper",
