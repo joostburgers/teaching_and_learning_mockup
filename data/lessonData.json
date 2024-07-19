@@ -73,7 +73,7 @@
 	"modality": [ "In-Person" ],
 	"paired_author": null,
 	"pilot_classroom": null,
-	"learning_goals": ["Students will use Digital Yoknapatawpha to deepen their understanding of how an author’s structural choices contribute to a text’s overall meaning and its aesthetic impact."],
+	"learning_goals": [ "Students will use Digital Yoknapatawpha to deepen their understanding of how an author’s structural choices contribute to a text’s overall meaning and its aesthetic impact." ],
 	"common_core": [ "RL.11-12.3", "RL.11-12.5", "RL.11-12.6" ],
 	"student_samples": null,
 	"original_lesson_plan": null,
@@ -87,6 +87,36 @@
 	  "Changing passwords or passcodes is only recommended for experienced users",
 	  "Since you now have ownership of the form, you will also be provided with the answer key to each “room.”"
 	]
+  },
+
+  {
+	"filename": "denton",
+	"url": "https://faulkner.drupal.shanti.virginia.edu/sites/default/files/documents/DY_Rose_for_Emily.pdf",
+	"title": "Faulkner, Narration, and the New South Digital Yoknapatawpha \"A Rose for Emily\"",
+	"story": [
+	  {
+		"title": "A Rose for Emily",
+		"type": "short_story",
+		"year": "1930"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_rural_mississippi_scene_card.jpg",
+	  "banner": null
+	},
+	"description": "This lesson leads students to new discoveries of textual meaning and introduces them to twenty-first century job market skills.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": [ "RL.9-10.1", "RL.9-10.2", "RL.9-10.3", "RL.9-10.5", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "RL.11-12.1", "RL.11-12.2", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "RI.11-12.7", "W.11-12.6", "W.11-12.8" ],
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Ren Denton",
+	"institution": "East Georgia State College",
+	"contact": null,
+	"created": "2024-06-21",
+	"notes": null
   },
 
   {
@@ -134,6 +164,197 @@
 	"created": "2023-07-23",
 	"notes": null
   },
+
+  {
+	"filename": "dimock2.html",
+	"url": null,
+	"title": "Bodily Autonomy in <em>As I Lay Dying</em> and \"Bloodchild\" by Octavia Butler",
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
+	],
+	"image": {
+	  "card": "archive_manuscript_aild_35_card.jpg",
+	  "banner": "archive_manuscript_aild_35_banner.jpg"
+	},
+	"description": "This module pairs <em>As I Lay Dying</em> with \"Bloodchild\" by Octavia Butler, and investigates how their protagonists struggle for bodily autonomy",
+	"modality": [ "In-Person", "Online Asynchronous" ],
+	"paired_author": [
+	  {
+		"title": "Bloodchild",
+		"type": "short_story",
+		"year": "1984",
+		"author_last_name": "Butler",
+		"author_first_name": "Octavia"
+	  }
+	],
+	"pilot_classroom": "This module was first taught in an online asynchronous course.",
+	"learning_goals": null,
+	"common_core": [ "RL.9-10.1", "RL.11-12.1", "RL.9-10.2", "RL.11-12.2", "RL.9-10.3", "RL.11-12.3", "RL.9-10.6", "RL.11-12.6", "RL.11-12.9", "W.9-10.1", "W.11-12.1", "W.9-10.6", "W.11-12.6", "W.9-10.8", "W.11-12.8" ],
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Chase Dimock",
+	"institution": "College of the Canyons",
+	"contact": "chase.dimock@canyons.edu",
+	"created": "2024-07-11",
+	"notes": null
+  },
+
+  {
+	"filename": "dimock3.html",
+	"url": null,
+	"title": "Bodily Autonomy in <em>As I Lay Dying</em> and \"Woman Hollering Creek\" by Sandra Cisneros",
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
+	],
+	"image": {
+	  "card": "archive_manuscript_aild_35_card.jpg",
+	  "banner": "archive_manuscript_aild_35_banner.jpg"
+	},
+	"description": "This module pairs <em>As I Lay Dying</em> with \"Woman Hollering Creek\" by Sandra Cisneros, and investigates how their female protagonists struggle for bodily autonomy.",
+	"modality": [ "In-Person", "Online Asynchronous" ],
+	"paired_author": [
+	  {
+		"title": "Woman Hollering Creek",
+		"type": "short_story",
+		"year": "1991",
+		"author_last_name": "Cisneros",
+		"author_first_name": "Sandra"
+	  }
+	],
+	"pilot_classroom": "This module was first taught in an online asynchronous course.",
+	"learning_goals": null,
+	"common_core": [ "RL.9-10.1", "RL.11-12.1", "RL.9-10.2", "RL.11-12.2", "RL.9-10.3", "RL.11-12.3", "RL.9-10.6", "RL.11-12.6", "RL.11-12.9", "W.9-10.1", "W.11-12.1", "W.9-10.6", "W.11-12.6", "W.9-10.8", "W.11-12.8" ],
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Chase Dimock",
+	"institution": "College of the Canyons",
+	"contact": "chase.dimock@canyons.edu",
+	"created": "2024-07-11",
+	"notes": null
+  },
+
+  {
+	"filename": "dimock4.html",
+	"url": null,
+	"title": "Female Autonomy in <em>As I Lay Dying</em> and \"The Yellow Wallpaper\" by Charlotte Perkins Gilman",
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
+	],
+	"image": {
+	  "card": "archive_manuscript_aild_35_card.jpg",
+	  "banner": "archive_manuscript_aild_35_banner.jpg"
+	},
+	"description": "This module pairs <em>As I Lay Dying</em> with \"The Yellow Wallpaper\" by Charlotte Perkins Gilman, and investigates how their female protagonists struggle for bodily autonomy",
+	"modality": [ "In-Person", "Online Asynchronous" ],
+	"paired_author": [
+	  {
+		"title": "The Yellow Wallpaper",
+		"type": "short_story",
+		"year": "1892",
+		"author_last_name": "Gilman",
+		"author_first_name": "Charlotte Perkins"
+	  }
+	],
+	"pilot_classroom": "This module was first taught in an online asynchronous course.",
+	"learning_goals": null,
+	"common_core": [ "RL.9-10.1", "RL.11-12.1", "RL.9-10.2", "RL.11-12.2", "RL.9-10.3", "RL.11-12.3", "RL.9-10.6", "RL.11-12.6", "RL.11-12.9", "W.9-10.1", "W.11-12.1", "W.9-10.6", "W.11-12.6", "W.9-10.8", "W.11-12.8" ],
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Chase Dimock",
+	"institution": "College of the Canyons",
+	"contact": "chase.dimock@canyons.edu",
+	"created": "2024-07-02",
+	"notes": null
+  },
+
+  {
+	"filename": "dimock5.html",
+	"url": null,
+	"title": "Female Autonomy in <em>As I Lay Dying</em> and \"Hills Like White Elephants\" by Ernest Hemingway",
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
+	],
+	"image": {
+	  "card": "archive_manuscript_aild_35_card.jpg",
+	  "banner": "archive_manuscript_aild_35_banner.jpg"
+	},
+	"description": "This module pairs <em>As I Lay Dying</em> with \"Hills Like White Elephants\" by Ernest Hemingway, and investigates how their female protagonists struggle for bodily autonomy",
+	"modality": [ "In-Person", "Online Asynchronous" ],
+	"paired_author": [
+	  {
+		"title": "Hills Like White Elephants",
+		"type": "short_story",
+		"year": "1927",
+		"author_last_name": "Hemingway",
+		"author_first_name": "Ernest"
+	  }
+	],
+	"pilot_classroom": "This module was first taught in an online asynchronous course.",
+	"learning_goals": null,
+	"common_core": [ "RL.9-10.1", "RL.11-12.1", "RL.9-10.2", "RL.11-12.2", "RL.9-10.3", "RL.11-12.3", "RL.9-10.6", "RL.11-12.6", "RL.11-12.9", "W.9-10.1", "W.11-12.1", "W.9-10.6", "W.11-12.6", "W.9-10.8", "W.11-12.8" ],
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Chase Dimock",
+	"institution": "College of the Canyons",
+	"contact": "chase.dimock@canyons.edu",
+	"created": "2024-07-02",
+	"notes": null
+  },
+
+  {
+	"filename": "dimock6.html",
+	"url": null,
+	"title": "Bodily Autonomy in <em>As I Lay Dying</em> and <em>A Streetcar Named Desire</em> by Tennessee Williams",
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
+	],
+	"image": {
+	  "card": "archive_manuscript_aild_35_card.jpg",
+	  "banner": "archive_manuscript_aild_35_banner.jpg"
+	},
+	"description": "This module pairs <em>As I Lay Dying</em> with in Tennessee Williams’s play <em>A Streetcar Named Desire</em>, and investigates how their female protagonists struggle for bodily autonomy.",
+	"modality": [ "In-Person", "Online Asynchronous" ],
+	"paired_author": [
+	  {
+		"title": "A Streetcar Named Desire",
+		"type": "novel",
+		"year": "1947",
+		"author_last_name": "Williams",
+		"author_first_name": "Tennessee"
+	  }
+	],
+	"pilot_classroom": "This module was first taught in an online asynchronous course.",
+	"learning_goals": null,
+	"common_core": [ "RL.9-10.1", "RL.11-12.1", "RL.9-10.2", "RL.11-12.2", "RL.9-10.3", "RL.11-12.3", "RL.9-10.6", "RL.11-12.6", "RL.11-12.9", "W.9-10.1", "W.11-12.1", "W.9-10.6", "W.11-12.6", "W.9-10.8", "W.11-12.8" ],
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Chase Dimock",
+	"institution": "College of the Canyons",
+	"contact": "chase.dimock@canyons.edu",
+	"created": "2024-07-11",
+	"notes": null
+  },
+
   {
 	"filename": "hayes1.html",
 	"url": null,
@@ -187,8 +408,6 @@
 	"notes": null
   },
 
-
-
   {
 	"filename": "joiner1.html",
 	"url": null,
@@ -239,7 +458,7 @@
 	"paired_author": null,
 	"pilot_classroom": "This lesson was designed for a high school junior/senior advanced English elective at an all boys independent school in Washington, DC",
 	"learning_goals": null,
-	"common_core": ["RL.9-10.1", "RL.9-10.3", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "SL.9-10.1", "RL.11-12.1", "RL.11-12.3", "RL.11-12.6", "RI.11-12.7", "W.11-12.6", "W.11-12.8", "SL.11-12.1"],
+	"common_core": [ "RL.9-10.1", "RL.9-10.3", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "SL.9-10.1", "RL.11-12.1", "RL.11-12.3", "RL.11-12.6", "RI.11-12.7", "W.11-12.6", "W.11-12.8", "SL.11-12.1" ],
 	"student_samples": null,
 	"original_lesson_plan": [
 	  {
@@ -255,6 +474,65 @@
 	"notes": [ "One of the most remarkable aspects of using DY to delve further into Caddy was the effect that it had on the teenage boys in my class. The act of visualizing Caddy's movements through DY and thus thinking about her beyond what we had heard about her from her brothers made them consider and ask important questions not just about Caddy, but about women in the American south in Faulkner's time (and now). DY allowed them to 'see' what it was like to be Caddy, and our consequent discussions--about how male writers write female characters, about how brothers view sisters, about Caddy herself--were memorable." ]
   },
 
+  {
+	"filename": "padgett",
+	"url": "http://faulkner.iath.virginia.edu/family/videos-padgettaa.php",
+	"title": "Using Digital Yoknapatawpha to Analyze Faulkner’s <em>Absalom, Absalom!</em> as a Gothic Text",
+	"story": [
+	  {
+		"title": "Absalom, Absalom!",
+		"type": "novel",
+		"year": "1936"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_carter_tate_house_card.jpg",
+	  "banner": null
+	},
+	"description": "This video presentation shows how to use DY's maps, visualizations, and indexes to analyze the Gothic in <em>Absalom, Absalom!</em>",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": [ "RL.9-10.2", "RL.9-10.3", "RL.9-10.5", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "RL.11-12.2", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "RI.11-12.7", "W.11-12.6", "W.11-12.8" ],
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "John B. Padgett",
+	"institution": "Brevard College",
+	"contact": null,
+	"created": "2024-06-20",
+	"notes": null
+  },
+
+  {
+	"filename": "peeker",
+	"url": "https://faulkner.drupal.shanti.virginia.edu/content/tlcfspeeker",
+	"title": "Seeing Memory: Using Digital Yoknapatawpha to Teach Cognitive Literary Studies",
+	"story": [
+	  {
+		"title": "The Sound and the Fury",
+		"type": "novel",
+		"year": "1929"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_fig3_mound_near_oliver_bridge_card.jpg",
+	  "banner": null
+	},
+	"description": "This essay outlines how the instructor used DY to visualize Faulkner characters' struggles with the past and its persistence, entering a philosophical and scientific discussion.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": [ "RL.9-10.3", "RL.9-10.5", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "RI.11-12.7", "W.11-12.6", "W.11-12.8" ],
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Aili Pettersson Peeker",
+	"institution": "University of California, Santa Barbara",
+	"contact": null,
+	"created": "2024-06-22",
+	"notes": null
+  },
 
   {
 	"filename": "penner1.html",
@@ -291,6 +569,157 @@
 	"created": "2023-07-23",
 	"institution": "Asbury University",
 	"notes": [ "The student-presentation component makes this assignment work best in a seminar-sized class, where all have time to present. But it could be made to work in larger classes with a few adjustments to the presentation mode." ]
+  },
+
+  {
+	"filename": "penner2",
+	"url": "https://faulkner.iath.virginia.edu/family/videos-penneraild.php",
+	"title": "Using Digital Yoknapatawpha to Compare Interpretive Lenses for <em>As I Lay Dying</em>",
+	"story": [
+	  {
+		"title": "As I Lay Dying",
+		"type": "novel",
+		"year": "1930"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_house_of_sharecroppers_card.jpg",
+	  "banner": null
+	},
+	"description": "These videos compare the interpretive lenses that can be applied to <em>As I Lay Dying</em> using DY.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": [ "RL.9-10.1", "RL.9-10.2", "RL.9-10.3", "RL.9-10.5", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "RL.11-12.1", "RL.11-12.2", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "RI.11-12.7", "W.11-12.6", "W.11-12.8" ],
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Erin Penner",
+	"institution": "Asbury University",
+	"contact": null,
+	"created": "2024-06-22",
+	"notes": null
+  },
+
+  {
+	"filename": "penner3",
+	"url": "https://faulkner.iath.virginia.edu/family/videos-pennerds.php",
+	"title": "DY When You Only Know 1 Faulkner Story",
+	"story": [
+	  {
+		"title": "Dry September",
+		"type": "short_story",
+		"year": "1931"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_gathering_for_a_political_rally_card.jpg",
+	  "banner": null
+	},
+	"description": "This video demonstrates how to use DY's <em>search</em> and <em>keyword</em> functions to take students deeper into \"Dry September\".",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": [ "RL.9-10.2", "RL.9-10.4", "RL.9-10.5", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "RL.11-12.2", "RL.11-12.4", "RL.11-12.5", "RI.11-12.7", "W.11-12.6", "W.11-12.8" ],
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Erin Penner",
+	"institution": "Asbury University",
+	"contact": null,
+	"created": "2024-06-23",
+	"notes": null
+  },
+
+  {
+	"filename": "railton",
+	"url": "https://faulkner.iath.virginia.edu/family/videos-sfdemos.php",
+	"title": "Space and Time in <em>The Sound and the Fury</em>",
+	"story": [
+	  {
+		"title": "The Sound and the Fury",
+		"type": "novel",
+		"year": "1929"
+	  }
+
+	],
+	"image": {
+	  "card": "screen_capture_main_map_sound_and_fury_card.jpg",
+	  "banner": null
+	},
+	"description": "These videos demonstrate some of the ways to use DY in your classroom or research as well as develop a reading of some of <em>The Sound and the Fury</em>'s major themes.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": [ "RL.9-10.2", "RL.9-10.3", "RL.9-10.5", "RI.9-10.7", "RI.11-12.7", "W.9-10.6", "W.9-10.8", "RL.11-12.2", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "W.11-12.6", "W.11-12.8" ],
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Stephen Railton",
+	"institution": "University of Virginia",
+	"contact": null,
+	"created": "2024-06-21",
+	"notes": null
+  },
+
+  {
+	"filename": "robbins",
+	"url": "https://faulkner.iath.virginia.edu/family/videos-robbinsemily.php",
+	"title": "Using Digital Yoknapatawpha to Analyze \"A Rose for Emily\" as a Gothic Literary Work",
+	"story": [
+	  {
+		"title": "A Rose for Emily",
+		"type": "short_story",
+		"year": "1930"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_large_antebellum_style_home_card.jpg",
+	  "banner": null
+	},
+	"description": "This video demonstration illustrates how to use DY to perform a Gothic reading of Faulkner's \"A Rose for Emily\".",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": [ "RL.9-10.2", "RL.9-10.3", "RL.9-10.5", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "RL.11-12.2", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "RI.11-12.7", "W.11-12.6", "W.11-12.8" ],
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Ben Robbins",
+	"institution": "University of Innsbruck",
+	"contact": null,
+	"created": "2024-06-21",
+	"notes": null
+  },
+
+  {
+	"filename": "sciuto",
+	"url": "https://faulkner.drupal.shanti.virginia.edu/content/tlcfsscutio",
+	"title": "Digital Yoknapatawpha and the Pedagogical Pitfalls of Faulkner's <em>The Sound and the Fury</em>",
+	"story": [
+	  {
+		"title": "The Sound and the Fury",
+		"type": "novel",
+		"year": "1929"
+	  }
+	],
+	"image": {
+	  "card": "site_photograph_thompson_chandler_house_card.jpg",
+	  "banner": null
+	},
+	"description": "This lesson is about some issues you might run into while teaching <em>The Sound and the Fury</em> using DY.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": [ "RL.9-10.5", "RL.9-10.7", "RL.9-10.9", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "RL.11-12.5", "RL.11-12.6", "RL.11-12.7", "RL.11-12.9", "RI.11-12.7", "W.11-12.6", "W.11-12.8" ],
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Jenna Sciuto",
+	"institution": "Massachusetts College of Liberal Arts",
+	"contact": null,
+	"created": "2024-06-20",
+	"notes": null
   },
 
   {
@@ -352,7 +781,7 @@
 	],
 	"pilot_classroom": null,
 	"learning_goals": [ "Formal literary analysis", "Compare two formally and thematically related novels" ],
-	"common_core": ["RL.9-10.1", "RL.9-10.2", "RL.9-10.3", "RL.9-10.5", "RL.9-10.9", "W.9-10.1", "W.9-10.2", "W.9-10.6", "W.9-10.8", "RL.11-12.1", "RL.11-12.2", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "W.11-12.1", "W.11-12.2", "W.11-12.6", "W.11-12.8" ],
+	"common_core": [ "RL.9-10.1", "RL.9-10.2", "RL.9-10.3", "RL.9-10.5", "RL.9-10.9", "W.9-10.1", "W.9-10.2", "W.9-10.6", "W.9-10.8", "RL.11-12.1", "RL.11-12.2", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "W.11-12.1", "W.11-12.2", "W.11-12.6", "W.11-12.8" ],
 	"student_samples": null,
 	"original_lesson_plan": null,
 	"instructor": "Rachel Watson",
@@ -360,478 +789,6 @@
 	"contact": "rachel.watson@howard.edu",
 	"created": "2023-09-25",
 	"notes": null
-  },
+  }
 
-  {
-	"filename": "padgett",
-	"url": "http://faulkner.iath.virginia.edu/family/videos-padgettaa.php",
-	"title": "Using Digital Yoknapatawpha to Analyze Faulkner’s <em>Absalom, Absalom!</em> as a Gothic Text",
-	"story": [
-	  {
-		"title": "Absalom, Absalom!",
-		"type": "novel",
-		"year": "1936"
-	  }
-	],
-	"image": {
-	  "card": "site_photograph_carter_tate_house_card.jpg",
-	  "banner": null
-	},
-	"description": "This video presentation shows how to use DY's maps, visualizations, and indexes to analyze the Gothic in <em>Absalom, Absalom!</em>",
-	"modality": [ "In-Person" ],
-	"paired_author": null,
-	"pilot_classroom": null,
-	"learning_goals": null,
-	"common_core": ["RL.9-10.2", "RL.9-10.3", "RL.9-10.5", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "RL.11-12.2", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "RI.11-12.7", "W.11-12.6", "W.11-12.8"],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "John B. Padgett",
-	"institution": "Brevard College",
-	"contact": null,
-	"created": "2024-06-20",
-	"notes": null
-  },
-
-
-  {
-	"filename": "sciuto",
-	"url": "https://faulkner.drupal.shanti.virginia.edu/content/tlcfsscutio",
-	"title": "Digital Yoknapatawpha and the Pedagogical Pitfalls of Faulkner's <em>The Sound and the Fury</em>",
-	"story": [
-	  {
-		"title": "The Sound and the Fury",
-		"type": "novel",
-		"year": "1929"
-	  }
-	],
-	"image": {
-	  "card": "site_photograph_thompson_chandler_house_card.jpg",
-	  "banner": null
-	},
-	"description": "This lesson is about some issues you might run into while teaching <em>The Sound and the Fury</em> using DY.",
-	"modality": [ "In-Person" ],
-	"paired_author": null,
-	"pilot_classroom": null,
-	"learning_goals": null,
-	"common_core": ["RL.9-10.5", "RL.9-10.7", "RL.9-10.9", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "RL.11-12.5", "RL.11-12.6", "RL.11-12.7", "RL.11-12.9", "RI.11-12.7", "W.11-12.6", "W.11-12.8"],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "Jenna Sciuto",
-	"institution": "Massachusetts College of Liberal Arts",
-	"contact": null,
-	"created": "2024-06-20",
-	"notes": null
-  },
-
-
-  {
-	"filename": "railton",
-	"url": "https://faulkner.iath.virginia.edu/family/videos-sfdemos.php",
-	"title": "Space and Time in <em>The Sound and the Fury</em>",
-	"story": [
-	  {
-		"title": "The Sound and the Fury",
-		"type": "novel",
-		"year": "1929"
-	  }
-
-	],
-	"image": {
-	  "card": "screen_capture_main_map_sound_and_fury_card.jpg",
-	  "banner": null
-	},
-	"description": "These videos demonstrate some of the ways to use DY in your classroom or research as well as develop a reading of some of <em>The Sound and the Fury</em>'s major themes.",
-	"modality": [ "In-Person" ],
-	"paired_author": null,
-	"pilot_classroom": null,
-	"learning_goals": null,
-	"common_core": ["RL.9-10.2", "RL.9-10.3", "RL.9-10.5", "RI.9-10.7", "RI.11-12.7", "W.9-10.6", "W.9-10.8", "RL.11-12.2", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "W.11-12.6", "W.11-12.8"],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "Stephen Railton",
-	"institution": "University of Virginia",
-	"contact": null,
-	"created": "2024-06-21",
-	"notes": null
-  },
-
-
-  {
-	"filename": "robbins",
-	"url": "https://faulkner.iath.virginia.edu/family/videos-robbinsemily.php",
-	"title": "Using Digital Yoknapatawpha to Analyze \"A Rose for Emily\" as a Gothic Literary Work",
-	"story": [
-	  {
-		"title": "A Rose for Emily",
-		"type": "short_story",
-		"year": "1930"
-	  }
-	],
-	"image": {
-	  "card": "site_photograph_large_antebellum_style_home_card.jpg",
-	  "banner": null
-	},
-	"description": "This video demonstration illustrates how to use DY to perform a Gothic reading of Faulkner's \"A Rose for Emily\".",
-	"modality": [ "In-Person" ],
-	"paired_author": null,
-	"pilot_classroom": null,
-	"learning_goals": null,
-	"common_core": ["RL.9-10.2", "RL.9-10.3", "RL.9-10.5", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "RL.11-12.2", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "RI.11-12.7", "W.11-12.6", "W.11-12.8"],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "Ben Robbins",
-	"institution": "University of Innsbruck",
-	"contact": null,
-	"created": "2024-06-21",
-	"notes": null
-  },
-
-
-  {
-	"filename": "denton",
-	"url": "https://faulkner.drupal.shanti.virginia.edu/sites/default/files/documents/DY_Rose_for_Emily.pdf",
-	"title": "Faulkner, Narration, and the New South Digital Yoknapatawpha \"A Rose for Emily\"",
-	"story": [
-	  {
-		"title": "A Rose for Emily",
-		"type": "short_story",
-		"year": "1930"
-	  }
-	],
-	"image": {
-	  "card": "site_photograph_rural_mississippi_scene_card.jpg",
-	  "banner": null
-	},
-	"description": "This lesson leads students to new discoveries of textual meaning and introduces them to twenty-first century job market skills.",
-	"modality": [ "In-Person" ],
-	"paired_author": null,
-	"pilot_classroom": null,
-	"learning_goals": null,
-	"common_core": ["RL.9-10.1", "RL.9-10.2", "RL.9-10.3", "RL.9-10.5", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "RL.11-12.1", "RL.11-12.2", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "RI.11-12.7", "W.11-12.6", "W.11-12.8"],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "Ren Denton",
-	"institution": "East Georgia State College",
-	"contact": null,
-	"created": "2024-06-21",
-	"notes": null
-  },
-
-
-  {
-	"filename": "peeker",
-	"url": "https://faulkner.drupal.shanti.virginia.edu/content/tlcfspeeker",
-	"title": "Seeing Memory: Using Digital Yoknapatawpha to Teach Cognitive Literary Studies",
-	"story": [
-	  {
-		"title": "The Sound and the Fury",
-		"type": "novel",
-		"year": "1929"
-	  }
-	],
-	"image": {
-	  "card": "site_photograph_fig3_mound_near_oliver_bridge_card.jpg",
-	  "banner": null
-	},
-	"description": "This essay outlines how the instructor used DY to visualize Faulkner characters' struggles with the past and its persistence, entering a philosophical and scientific discussion.",
-	"modality": [ "In-Person" ],
-	"paired_author": null,
-	"pilot_classroom": null,
-	"learning_goals": null,
-	"common_core": ["RL.9-10.3", "RL.9-10.5", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "RI.11-12.7", "W.11-12.6", "W.11-12.8"],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "Aili Pettersson Peeker",
-	"institution": "University of California, Santa Barbara",
-	"contact": null,
-	"created": "2024-06-22",
-	"notes": null
-  },
-
-
-  {
-	"filename": "penner2",
-	"url": "https://faulkner.iath.virginia.edu/family/videos-penneraild.php",
-	"title": "Using Digital Yoknapatawpha to Compare Interpretive Lenses for <em>As I Lay Dying</em>",
-	"story": [
-	  {
-		"title": "As I Lay Dying",
-		"type": "novel",
-		"year": "1930"
-	  }
-	],
-	"image": {
-	  "card": "site_photograph_house_of_sharecroppers_card.jpg",
-	  "banner": null
-	},
-	"description": "These videos compare the interpretive lenses that can be applied to <em>As I Lay Dying</em> using DY.",
-	"modality": [ "In-Person" ],
-	"paired_author": null,
-	"pilot_classroom": null,
-	"learning_goals": null,
-	"common_core": ["RL.9-10.1", "RL.9-10.2", "RL.9-10.3", "RL.9-10.5", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "RL.11-12.1", "RL.11-12.2", "RL.11-12.3", "RL.11-12.5", "RL.11-12.6", "RL.11-12.9", "RI.11-12.7", "W.11-12.6", "W.11-12.8"],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "Erin Penner",
-	"institution": "Asbury University",
-	"contact": null,
-	"created": "2024-06-22",
-	"notes": null
-  },
-
-
-  {
-	"filename": "penner3",
-	"url": "https://faulkner.iath.virginia.edu/family/videos-pennerds.php",
-	"title": "DY When You Only Know 1 Faulkner Story",
-	"story": [
-	  {
-		"title": "Dry September",
-		"type": "short_story",
-		"year": "1931"
-	  }
-	],
-	"image": {
-	  "card": "site_photograph_gathering_for_a_political_rally_card.jpg",
-	  "banner": null
-	},
-	"description": "This video demonstrates how to use DY's <em>search</em> and <em>keyword</em> functions to take students deeper into \"Dry September\".",
-	"modality": [ "In-Person" ],
-	"paired_author": null,
-	"pilot_classroom": null,
-	"learning_goals": null,
-	"common_core": ["RL.9-10.2", "RL.9-10.4", "RL.9-10.5", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "RL.11-12.2", "RL.11-12.4", "RL.11-12.5", "RI.11-12.7", "W.11-12.6", "W.11-12.8"],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "Erin Penner",
-	"institution": "Asbury University",
-	"contact": null,
-	"created": "2024-06-23",
-	"notes": null
-  },
-  {
-	"filename": "chase_template.html",
-	"url": null,
-	"title": "Female Autonomy in <em>As I Lay Dying</em> and \"Woman Hollering Creek\" by Sandra Cisneros",
-	"story": [
-	  {
-		"title": "As I Lay Dying",
-		"type": "novel",
-		"year": "1930"
-	  }
-	],
-	"image": {
-	  "card": "archive_manuscript_aild_35_card.jpg",
-	  "banner": "archive_manuscript_aild_35_banner.jpg"
-	},
-	"description": "This module pairs <em>As I Lay Dying</em> with \"Woman Hollering Creek\" by Sandra Cisneros, and investigates how their female protagonists struggle for bodily autonomy",
-	"modality": [ "In-Person", "Online Asynchronous" ],
-	"paired_author": [
-	  {
-		"title": "Woman Hollering Creek",
-		"type": "short_story",
-		"year": "1991",
-		"author_last_name": "Cisneros",
-		"author_first_name": "Sandra"
-	  }
-	],
-	"pilot_classroom": "This module was first taught in an online asynchronous course.",
-	"learning_goals": null,
-	"common_core": ["RL.9-10.1", "RL.11-12.1", "RL.9-10.2", "RL.11-12.2", "RL.9-10.3", "RL.11-12.3", "RL.9-10.6", "RL.11-12.6", "RL.11-12.9", "W.9-10.1", "W.11-12.1", "W.9-10.6", "W.11-12.6", "W.9-10.8", "W.11-12.8"],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "Chase Dimock",
-	"institution": "College of the Canyons",
-	"contact": "chase.dimock@canyons.edu",
-	"created": "2024-07-02",
-	"notes": null
-  },
-  {
-	"filename": "dimock4.html",
-	"url": null,
-	"title": "Female Autonomy in <em>As I Lay Dying</em> and \"The Yellow Wallpaper\" by Charlotte Perkins Gilman",
-	"story": [
-	  {
-		"title": "As I Lay Dying",
-		"type": "novel",
-		"year": "1930"
-	  }
-	],
-	"image": {
-	  "card": "archive_manuscript_aild_35_card.jpg",
-	  "banner": "archive_manuscript_aild_35_banner.jpg"
-	},
-	"description": "This module pairs <em>As I Lay Dying</em> with \"The Yellow Wallpaper\" by Charlotte Perkins Gilman, and investigates how their female protagonists struggle for bodily autonomy",
-	"modality": [ "In-Person", "Online Asynchronous" ],
-	"paired_author": [
-	  {
-		"title": "The Yellow Wallpaper",
-		"type": "short_story",
-		"year": "1892",
-		"author_last_name": "Gilman",
-		"author_first_name": "Charlotte Perkins"
-	  }
-	],
-	"pilot_classroom": "This module was first taught in an online asynchronous course.",
-	"learning_goals": null,
-	"common_core": [ "RL.9-10.1", "RL.11-12.1", "RL.9-10.2", "RL.11-12.2", "RL.9-10.3", "RL.11-12.3", "RL.9-10.6", "RL.11-12.6", "RL.11-12.9", "W.9-10.1", "W.11-12.1", "W.9-10.6", "W.11-12.6", "W.9-10.8", "W.11-12.8" ],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "Chase Dimock",
-	"institution": "College of the Canyons",
-	"contact": "chase.dimock@canyons.edu",
-	"created": "2024-07-02",
-	"notes": null
-  },
-  
-  {
-	"filename": "dimock5.html",
-	"url": null,
-	"title": "Female Autonomy in <em>As I Lay Dying</em> and \"Hills Like White Elephants\" by Ernest Hemingway",
-	"story": [
-	  {
-		"title": "As I Lay Dying",
-		"type": "novel",
-		"year": "1930"
-	  }
-	],
-	"image": {
-	  "card": "archive_manuscript_aild_35_card.jpg",
-	  "banner": "archive_manuscript_aild_35_banner.jpg"
-	},
-	"description": "This module pairs <em>As I Lay Dying</em> with \"Hills Like White Elephants\" by Ernest Hemingway, and investigates how their female protagonists struggle for bodily autonomy",
-	"modality": [ "In-Person", "Online Asynchronous" ],
-	"paired_author": [
-	  {
-		"title": "Hills Like White Elephants",
-		"type": "short_story",
-		"year": "1927",
-		"author_last_name": "Hemingway",
-		"author_first_name": "Ernest"
-	  }
-	],
-	"pilot_classroom": "This module was first taught in an online asynchronous course.",
-	"learning_goals": null,
-	"common_core": ["RL.9-10.1", "RL.11-12.1", "RL.9-10.2", "RL.11-12.2", "RL.9-10.3", "RL.11-12.3", "RL.9-10.6", "RL.11-12.6", "RL.11-12.9", "W.9-10.1", "W.11-12.1", "W.9-10.6", "W.11-12.6", "W.9-10.8", "W.11-12.8"],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "Chase Dimock",
-	"institution": "College of the Canyons",
-	"contact": "chase.dimock@canyons.edu",
-	"created": "2024-07-02",
-	"notes": null
-  },
-  {
-	"filename": "dimock2.html",
-	"url": null,
-	"title": "Bodily Autonomy in <em>As I Lay Dying</em> and \"Bloodchild\" by Octavia Butler",
-	"story": [
-	  {
-		"title": "As I Lay Dying",
-		"type": "novel",
-		"year": "1930"
-	  }
-	],
-	"image": {
-	  "card": "archive_manuscript_aild_35_card.jpg",
-	  "banner": "archive_manuscript_aild_35_banner.jpg"
-	},
-	"description": "This module pairs <em>As I Lay Dying</em> with \"Bloodchild\" by Octavia Butler, and investigates how their protagonists struggle for bodily autonomy",
-	"modality": [ "In-Person", "Online Asynchronous" ],
-	"paired_author": [
-	  {
-		"title": "Bloodchild",
-		"type": "short_story",
-		"year": "1984",
-		"author_last_name": "Butler",
-		"author_first_name": "Octavia"
-	  }
-	],
-	"pilot_classroom": "This module was first taught in an online asynchronous course.",
-	"learning_goals": null,
-	"common_core": ["RL.9-10.1", "RL.11-12.1", "RL.9-10.2", "RL.11-12.2", "RL.9-10.3", "RL.11-12.3", "RL.9-10.6", "RL.11-12.6", "RL.11-12.9", "W.9-10.1", "W.11-12.1", "W.9-10.6", "W.11-12.6", "W.9-10.8", "W.11-12.8"],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "Chase Dimock",
-	"institution": "College of the Canyons",
-	"contact": "chase.dimock@canyons.edu",
-	"created": "2024-07-11",
-	"notes": null
-  },
-
-   {
-	"filename": "dimock3.html",
-	"url": null,
-	"title": "Bodily Autonomy in <em>As I Lay Dying</em> and \"Woman Hollering Creek\" by Sandra Cisneros",
-	"story": [
-	  {
-		"title": "As I Lay Dying",
-		"type": "novel",
-		"year": "1930"
-	  }
-	],
-	"image": {
-	  "card": "archive_manuscript_aild_35_card.jpg",
-	  "banner": "archive_manuscript_aild_35_banner.jpg"
-	},
-	"description": "This module pairs <em>As I Lay Dying</em> with \"Woman Hollering Creek\" by Sandra Cisneros, and investigates how their female protagonists struggle for bodily autonomy.",
-	"modality": [ "In-Person", "Online Asynchronous" ],
-	"paired_author": [
-	  {
-		"title": "Woman Hollering Creek",
-		"type": "short_story",
-		"year": "1991",
-		"author_last_name": "Cisneros",
-		"author_first_name": "Sandra"
-	  }
-	],
-	"pilot_classroom": "This module was first taught in an online asynchronous course.",
-	"learning_goals": null,
-	"common_core": ["RL.9-10.1", "RL.11-12.1", "RL.9-10.2", "RL.11-12.2", "RL.9-10.3", "RL.11-12.3", "RL.9-10.6", "RL.11-12.6", "RL.11-12.9", "W.9-10.1", "W.11-12.1", "W.9-10.6", "W.11-12.6", "W.9-10.8", "W.11-12.8"],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "Chase Dimock",
-	"institution": "College of the Canyons",
-	"contact": "chase.dimock@canyons.edu",
-	"created": "2024-07-11",
-	"notes": null
-   },
-
-      {
-	"filename": "dimock6.html",
-	"url": null,
-	"title": "Bodily Autonomy in <em>As I Lay Dying</em> and <em>A Streetcar Named Desire</em> by Tennessee Williams",
-	"story": [
-	  {
-		"title": "As I Lay Dying",
-		"type": "novel",
-		"year": "1930"
-	  }
-	],
-	"image": {
-	  "card": "archive_manuscript_aild_35_card.jpg",
-	  "banner": "archive_manuscript_aild_35_banner.jpg"
-	},
-	"description": "This module pairs <em>As I Lay Dying</em> with in Tennessee Williams’s play <em>A Streetcar Named Desire</em>, and investigates how their female protagonists struggle for bodily autonomy.",
-	"modality": [ "In-Person", "Online Asynchronous" ],
-	"paired_author": [
-	  {
-		"title": "A Streetcar Named Desire",
-		"type": "novel",
-		"year": "1947",
-		"author_last_name": "Williams",
-		"author_first_name": "Tennessee"
-	  }
-	],
-	"pilot_classroom": "This module was first taught in an online asynchronous course.",
-	"learning_goals": null,
-	"common_core": ["RL.9-10.1", "RL.11-12.1", "RL.9-10.2", "RL.11-12.2", "RL.9-10.3", "RL.11-12.3", "RL.9-10.6", "RL.11-12.6", "RL.11-12.9", "W.9-10.1", "W.11-12.1", "W.9-10.6", "W.11-12.6", "W.9-10.8", "W.11-12.8"],
-	"student_samples": null,
-	"original_lesson_plan": null,
-	"instructor": "Chase Dimock",
-	"institution": "College of the Canyons",
-	"contact": "chase.dimock@canyons.edu",
-	"created": "2024-07-11",
-	"notes": null
-   }
 ]
