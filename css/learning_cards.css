@@ -419,14 +419,34 @@ a:hover {
 /* Media Queries for larger screens */
 @media (min-width: 769px) {
 	.card img {
-		opacity: 1; /* Reset opacity for larger screens */
+		opacity: .5; /* Reset opacity for larger screens */
+		
 	}
 
-	.card h5, .card-body p {
+	.card h5 {
 		color: darkred; /* Reset color for larger screens */
-		font-size: 1.25rem; /* Reset font size for larger screens */
-		text-shadow: -0.25px -0.25px 0 rgba(0, 0, 0, 0.25), 0.25px -0.25px 0 rgba(0, 0, 0, 0.25), -0.25px 0.25px 0 rgba(0, 0, 0, 0.25), 0.25px 0.25px 0 rgba(0, 0, 0, 0.25);
+		font-size: 1.2rem; /* Reset font size for larger screens */
+		/*text-shadow: -0.25px -0.25px 0 rgba(0, 0, 0, 0.25), 0.25px -0.25px 0 rgba(0, 0, 0, 0.25), -0.25px 0.25px 0 rgba(0, 0, 0, 0.25), 0.25px 0.25px 0 rgba(0, 0, 0, 0.25);*/
 	}
+
+	.card-body {
+		overflow: hidden;
+	}
+
+	.card-text {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 8;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.card-body p {
+		font-size:1em;
+		margin-bottom: 10px;
+		color: #1a1a1a;
+	}
+
 
 	.card .info {
 		position: relative; /* Reset position for larger screens */
@@ -440,18 +460,36 @@ a:hover {
 @media (min-width: 1201px) {
 	.card {
 		flex-basis: calc(50% - 10%);
-		height: 40vh; /* Reset height for larger screens */
-		padding: 5px; /* Reset padding for larger screens */
+		min-height: 40vh; /* Reset height for larger screens */
+		padding: 0px; /* Reset padding for larger screens */
 	}
 
+		.card h5 {
+			text-shadow: -0.25px -0.25px 0 rgba(0, 0, 0, 0.1), 0.25px -0.25px 0 rgba(0, 0, 0, 0.1), -0.25px 0.25px 0 rgba(0, 0, 0, 0.1), 0.25px 0.25px 0 rgba(0, 0, 0, 0.1);
+		}
+
 		.card img {
-			height: 95%; /* Adjust height automatically to maintain aspect ratio */
-			max-width: 95%; /* Make the image fill the width of the .card */
-			object-fit: scale-down; /* Cover the container, may crop the image */
-			width: 95%; /* Make the image fill the width of the .card */
+		opacity:.5;
+		border-top-left-radius:5px;
+		border-top-right-radius:5px;
+		border-bottom-left-radius:0px;
+		border-bottom-right-radius:0px;
+			/*height: 95%;*/ /* Adjust height automatically to maintain aspect ratio */
+			/*max-width: 95%;*/ /* Make the image fill the width of the .card */
+			/*object-fit: scale-down;*/ /* Cover the container, may crop the image */
+			/*width: 95%;*/ /* Make the image fill the width of the .card */
 		}
 
 	.card-body {
 		display: block; /* Ensure the card body is displayed for larger screens */
 	}
+}
+
+@media (min-width: 1921px) {
+
+.card h5{
+font-size: 1.75rem;
+}
+
+
 }
