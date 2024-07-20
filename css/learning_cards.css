@@ -418,10 +418,8 @@ a:hover {
 
 @media (max-width: 480px) {
 	.card {
-		margin: 5px; /* Smaller margins */
-		padding: 5px; /* Smaller padding */
-		max-width: 15vw;
-		min-width: 180px;
+				
+		min-width: 40vw;
 	}
 
 		.card h5 {
@@ -451,8 +449,9 @@ a:hover {
 	.card h5 {
 		color: darkred; /* Reset color for larger screens */
 		font-size: 1.2rem; /* Reset font size for larger screens */
-		/*text-shadow: -0.25px -0.25px 0 rgba(0, 0, 0, 0.25), 0.25px -0.25px 0 rgba(0, 0, 0, 0.25), -0.25px 0.25px 0 rgba(0, 0, 0, 0.25), 0.25px 0.25px 0 rgba(0, 0, 0, 0.25);*/
+		
 	}
+	
 
 	.card-body {
 		overflow: hidden;
@@ -478,7 +477,7 @@ a:hover {
 	}
 
 	.facet-outline, .note-footer {
-		margin-left: 15%; /* Adjust margin for larger screens */
+		margin-left: 10%; /* Adjust margin for larger screens */
 	}
 }
 
