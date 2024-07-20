@@ -416,6 +416,31 @@ a:hover {
 	text-decoration: none;
 }
 
+@media (max-width: 480px) {
+	.card {
+		margin: 5px; /* Smaller margins */
+		padding: 5px; /* Smaller padding */
+		max-width: 15vw;
+		min-width: 180px;
+	}
+
+		.card h5 {
+			font-size: 0.8rem; /* Even smaller font size for very small screens */
+		}
+
+	.facet-subfilter-item {
+		flex: 0 0 50%; /* Make filter items take more space to avoid squishing */
+	}
+
+	.facet-outline, .note-footer {
+		margin-left: 0; /* Adjust margins for smaller screens */
+		padding: 5px; /* Smaller padding */
+	}
+}
+
+
+
+
 /* Media Queries for larger screens */
 @media (min-width: 769px) {
 	.card img {
