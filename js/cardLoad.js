@@ -29,6 +29,9 @@ function getCards() {
 
 			filterCards(data);
 			$("#story-filters input[type='checkbox']").on('change', function () {
+				console.log("story filters changed")
+
+				
 				filterCards(data);
 			})
 			
@@ -395,11 +398,19 @@ function filterCards(data) {
 
 	// Get selected story filters
 	$("#story-filters input[type='checkbox']:checked").each(function () {
-		selectedStories.push($(this).val());
+		if (!this.indeterminate) {
+			selectedStories.push($(this).val());
+			console.log("selectedStories", selectedStories);
+		}
 	});
 
 	$("#paired_author-filters input[type='checkbox']:checked").each(function () {
-		selectedAuthors.push($(this).val());
+		
+		if (!this.indeterminate) {
+			selectedAuthors.push($(this).val());
+			console.log("selectedAuthors", selectedAuthors);
+		}
+		
 	});
 
 	
