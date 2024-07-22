@@ -84,7 +84,7 @@ margin-left:0px;
 	border-radius: 5px;
 	margin-bottom: 10px;
 	margin-left: 0; 
-	margin-top: 20px;
+	margin-top: 10px;
 	padding: 10px;
 }
 
@@ -208,14 +208,14 @@ a:hover {
 	}
 
 	.facet-outline, .note-footer {
-		margin-left: 10%; 
+		margin-left: 5%; 
 	}
 }
 
 @media (min-width: 1201px) {
 	.card {
 		flex-basis: calc(50% - 10%);
-		min-height: 40vh; 
+		height: 50vh; 
 		padding: 0px; 
 	}
 
