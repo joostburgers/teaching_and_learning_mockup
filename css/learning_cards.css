@@ -1,26 +1,18 @@
-﻿
-
-/* Base styles that apply to mobile and all screen sizes */
+﻿/* Base styles that apply to mobile and all screen sizes */
 #card-container{
-	/* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; This will space out the cards evenly */
     margin-left:0px;
 	margin-bottom: 20px;
 }
-
-
 
 .card {
 	background-color: #fff;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	display: flex;
 	flex-direction: column;
-	margin: 10px;
-	/* width: calc(100% - 20px); */
+	margin-top:10px;
+	margin-bottom: 10px;;
 	padding: 0px;
 	transition: box-shadow 0.3s;
-	
 }
 
 	.card img {
@@ -35,7 +27,7 @@
 
 	.card h5 {
 		display: block; 
-		font-size: .7rem;
+		font-size: 1rem;
 		max-width: 100%;
 		padding: 10px; 
 		text-shadow: none; 
@@ -51,19 +43,16 @@
 		
 		background-color: rgba(94%, 97%, 100%, 0.60);
 		backdrop-filter: blur(2px);
-		
-		
-		
 	}
 
 	.card .info {
-		position: initial; /* Adjusted for mobile-first */
+		position: initial; 
 		text-align: center;
 	}
 
 
 .card-body {
-	display: none; /* Adjusted for mobile-first */
+	display: none; 
 	overflow: hidden;
 }
 
@@ -73,11 +62,13 @@
 }
 
 .card-text {
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 8;
+	display: block;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	display:-webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 8;
+	
 }
 
 .card p {
@@ -155,19 +146,13 @@ a:hover {
 	text-decoration: none;
 }
 
-@media (max-width: 480px) {
-	/* .card {
-		/* min-width: 40vw; */
-	 
-
-		.card h5 {
-			font-size: 0.7rem; 
+@media (max-width: 575px) {
+	
+	.card h5 {
+		font-size: 1.4rem;
 		}
-
-	.facet-subfilter-item {
-		flex: 0 0 50%; 
-	}
-
+	
+		
 	.facet-outline, .note-footer {
 		margin-left: 0; 
 		padding: 5px; 
@@ -182,8 +167,7 @@ a:hover {
 	
 
 	.card h5 {
-		
-		 
+				 
 		font-size: .8rem;
 		}
 	
@@ -192,13 +176,7 @@ a:hover {
 		overflow: hidden;
 	}
 
-	.card-text {
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 8;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
+	
 
 	.card-body p {
 		font-size:1em;
@@ -226,11 +204,7 @@ a:hover {
 }
 
 @media (min-width: 1201px) {
-	/* .card {
-		flex-basis: calc(50% - 10%);
-		
-		padding: 0px; 
-	} */
+	
 
 		.card h5 {
 			top:10%;

@@ -438,7 +438,7 @@ function filterCards(data) {
 
 
 
-		var cardHtml = $(`<div class= "col-6 col-sm-6 col-md-6 col-lg-6 d-flex">
+		var cardHtml = $(`<div class= "col-12 col-sm-6 col-md-6 col-lg-6 d-flex">
 			<a href="${urlHTML}" class="d-flex flex-column"> <div class="card"> <div class="info"> ${imageHTML}${titleHTML}
 		 </div>
 		 <div class="card-body"> ${storyHTML} ${descriptionHTML}  </div > </div > </a > </div >`)
