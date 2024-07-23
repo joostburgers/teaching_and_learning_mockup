@@ -294,7 +294,7 @@ ol.activity-list-alpha {
 	color: rgba(0,0,0,0.1);
 }
 
-Custom padding for icons
+
 .bi::before {
 	padding-right: 0.5em;
 }
@@ -351,7 +351,7 @@ div.modal-image {
 		cursor: zoom-in;
 	}
 
-class that helps toggle zoom form modal images
+
 .zoomed-in {
 	position: fixed;
 	max-width: 100%;
@@ -412,9 +412,7 @@ height: auto;
 	font-size: 1.1em;
 }
 
-.carousel-inner {
-	
-}
+
 
 .carousel-item {
 	text-align: center; 
@@ -459,16 +457,15 @@ height: auto;
 	margin-bottom:0em;
 	}
 
-Additional Styling components
 
-.google-slides-container {
+.activity-section div.google-slides-container {
 	position: relative;
 	width: 100%;
 	padding-top: 60%;
 	overflow: hidden;
 }
 
-	.google-slides-container iframe {
+	div.google-slides-container iframe {
 		position: absolute;
 		top: 0;
 		left: 5%;
@@ -496,14 +493,14 @@ Additional Styling components
 	vertical-align: text-bottom;
 	border-radius: 50%;
 }
- Base styles for all lines 
+  
 .line {
 	width: 1em;
 	display: inline-block;
 	vertical-align: middle;
 }
 
- Extend base styles with color and style specifics 
+ 
 .black-line, .red-line, .red-line-dashed, .red-line-overlay {
 	border-bottom-width: 2px;
 }
@@ -529,7 +526,7 @@ Additional Styling components
 	background-color: red;
 }
 
- Apply base styles to specific classes using a more specific selector 
+
 [class*="-line"] {
 	width: 1em;
 	display: inline-block;
@@ -554,7 +551,7 @@ Additional Styling components
 
 
 
-/*/* Media query for tablets and above */
+/* Media query for tablets and above */
 @media screen and (min-width: 768px) {
 	.container {
 		display: flex;
@@ -662,7 +659,71 @@ Additional Styling components
 	}
 }
 
+@media print {
+	/* Adjust the body */
+	
+	@page{
+	margin-top:20mm;
+	}
+	
+	body {
+		
+		font-size: 12pt;
+		color: black;
+		background: white;
+	}
+	.content, .main {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
 
+	img, .activity-image-caption {
+		width: 50%;
+		height: auto;
+		page-break-inside: avoid;
+		display: block; 
+		margin-left: auto; 
+		margin-right: auto;
+	}
 
-/* Additional media queries can be added for larger breakpoints */
-
+	/* Hide elements that are not necessary for the print version */
+	.navbar, .footer, .sidebar, #page_header, #TableOfContents, .banner-img, .glance-info img,.glance-text, .blockquote,.activity-video {
+		display: none;
+	}
+	.glance-overlay {
+		position: relative;
+	}
+	.glance-title-container {
+		position: relative;
+	}
+	
+	.glance-title, .glance-subtitle, .glance-meta {
+	color:black;
+	margin-bottom:10pt;
+	padding:0;
+	}
+	.glance-title{
+	font-size:24pt;
+	}
+	.glance-subtitle {
+		font-size: 16pt;
+	}
+	.glance-meta {
+		backdrop-filter: none;
+		background: none;
+		align-self: flex-start;
+		font-size: 12pt;
+	}
+	.activity {
+		border: none;
+		page-break-after: auto;
+	}
+	h1, h2, h3, h4, h5, h6, div.activity-instructions-title {
+		page-break-after: avoid;
+	}
+	
+		ol > li, ul {
+			page-break-inside: avoid;
+		}
+}
