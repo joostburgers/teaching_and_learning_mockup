@@ -14,8 +14,6 @@ function getCards() {
 		async: true,
 		success: function (data) {
 
-
-
 			populateFilter(data, "paired_author", "paired texts")
 			populateFilter(data, "story", "stories");
 			populateFiltersFromCommonCore(data, "common_core", "common core")
@@ -52,7 +50,6 @@ function getCards() {
 					})
 
 
-
 					// Ensure the sections are visible.
 					$('.common_core_search').slideDown(200);
 
@@ -62,11 +59,6 @@ function getCards() {
 				}
 				filterCards(data)
 			});
-
-			
-
-
-
 
 		}
 	}).done(function () {
@@ -79,12 +71,8 @@ function getCards() {
 
 
 
-
-
 // Function to populate the story filters based on available stories in the cards
 // loop over each card, to get multiple stories for each card and add them to the storyFilters.
-
-
 
 
 /**

@@ -56,7 +56,7 @@
 	overflow: hidden;
 }
 
-.card-body p{
+.card p ,.card-body p{
 	color: #1a1a1a;
 	margin-bottom: 10px;
 }
@@ -71,10 +71,7 @@
 	
 }
 
-.card p {
-	color: #1a1a1a;
-	margin-bottom: 10px;
-}
+
 
 .facet-outline, .note-footer {
 	border: 1px solid #ddd;
@@ -111,10 +108,6 @@
 	flex: 0 0 25%;
 	margin-left: 20px;
 	padding: 0px; /* Adjust padding as needed */
-}
-
-.project-description {
-	font-size: 80%;
 }
 
 .novel {
@@ -166,22 +159,13 @@ a:hover {
 @media (min-width: 769px) {
 	
 
-	.card h5 {
-				 
+	.card h5 {				 
 		font-size: .8rem;
 		}
 	
-
-	.card-body {
-		overflow: hidden;
-	}
-
-	
-
 	.card-body p {
 		font-size:1em;
-		margin-bottom: 10px;
-		color: #1a1a1a;
+		
 	}
 
 
@@ -189,7 +173,7 @@ a:hover {
 		position: relative; 
 	}
 
-	.facet-outline, .note-footer {
+	.facet-outline {
 		margin-left: 5%; 
 	}
 }
