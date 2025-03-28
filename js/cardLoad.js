@@ -18,14 +18,18 @@ function getCards() {
 			populateFilter(data, "story", "stories");
 			populateFiltersFromCommonCore(data, "common_core", "common core")
 
-			
+			//populateFilter(data, "modality", "Formats");
 			defineCheckboxes("story")
+			/*defineCheckboxes("modality")*/
 			defineCheckboxes("paired_author")
 			defineCommonCoreCheckboxes()
 
 
 			filterCards(data);
 			$("#story-filters input[type='checkbox']").on('change', function () {
+				console.log("story filters changed")
+
+				
 				filterCards(data);
 			})
 			
@@ -327,16 +331,57 @@ function filterCards(data) {
 	var cards = data;
 	var selectedStories = [];
 	var selectedAuthors = [];
-	var searchStrings=[];
-	
+	let searchStrings = [];
 	if ($('#enableStateStandardsToggle').is(':checked')) {
 		searchStrings = constructCommonCoreSearchStrings(data);
 	}
-	
-	
+	console.log("searchStrings", searchStrings)
+	function constructCommonCoreSearchStrings(data) {
+		// Helper function to collect selected values from checkboxes
+		const collectSelectedValues = (selector) => {
+			return $(selector).filter(':checked').map(function () { return this.value; }).get();
+		};
+
+		// Collect selected values for each part of the Common Core standards
+		const selectedCategories = collectSelectedValues('.single-categories');
+		const selectedGradeLevels = collectSelectedValues('.single-gradeLevels');
+		const selectedStandards = collectSelectedValues('.single-standards');
+
+		// Initialize an empty set to store unique search strings
+		let searchStrings = new Set();
+
+		// Iterate over the data to find common_core codes that match the selected filters
+		data.forEach(card => {
+			if (card.common_core) {
+				card.common_core.forEach(code => {
+					const parts = code.split('.');
+					const category = parts[0];
+					const gradeLevel = parts[1];
+					const standard = parts[parts.length - 1];
+
+					// Check if the current code matches any of the selected filters
+					if ((selectedCategories.length === 0 || selectedCategories.includes(category)) &&
+						(selectedGradeLevels.length === 0 || selectedGradeLevels.includes(gradeLevel)) &&
+						(selectedStandards.length === 0 || selectedStandards.includes(standard))) {
+						// If it matches, add the code to the set of search strings
+						searchStrings.add(code);
+					}
+				});
+			}
+		});
+
+		// Convert the set to an array and return it
+		return Array.from(searchStrings);
+	}
 
 
 
+
+
+
+	// Existing code to collect selectedStories and selectedAuthors...
+
+	// Filter cards based on selected filters
 
 
 	// Get selected story filters
@@ -436,37 +481,6 @@ function filterCards(data) {
 
 		cardContainer.append(cardHtml);
 	});
-}
-
-function constructCommonCoreSearchStrings(data) {
-    const selectedCategories = collectSelectedValues('.single-categories');
-    const selectedGradeLevels = collectSelectedValues('.single-gradeLevels');
-    const selectedStandards = collectSelectedValues('.single-standards');
-
-    let searchStrings = new Set();
-
-    data.forEach(card => {
-        if (card.common_core) {
-            card.common_core.forEach(code => {
-                const parts = code.split('.');
-                const category = parts[0];
-                const gradeLevel = parts[1];
-                const standard = parts[parts.length - 1];
-
-                if ((selectedCategories.length === 0 || selectedCategories.includes(category)) &&
-                    (selectedGradeLevels.length === 0 || selectedGradeLevels.includes(gradeLevel)) &&
-                    (selectedStandards.length === 0 || selectedStandards.includes(standard))) {
-                    searchStrings.add(code);
-                }
-            });
-        }
-    });
-
-    return Array.from(searchStrings);
-}
-
-function collectSelectedValues(selector) {
-	return $(selector).filter(':checked').map(function () { return this.value; }).get();
 }
 
 //Helper functions
