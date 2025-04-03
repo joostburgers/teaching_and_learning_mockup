@@ -1,106 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First HTML Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multimodal Composition and &ldquo;A Rose for Emily&rdquo;</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/pageLoad.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!--<link rel="stylesheet" href="https://faulkner.iath.virginia.edu/family/family.css">-->
+    <link rel="stylesheet" href="https://faulkner.iath.virginia.edu/family/family.css">
     <link rel="stylesheet" href="../css/learning_module.css">
 </head>
 <body>
-    <!-- The main heading of your page -->
-    <h1>This is a heading (h1)</h1>
 
-    <!-- A subheading, often used for sections -->
-    <h2>This is a Subheading (h2)</h2>
+    <div class="container">
 
-    <!-- Additional subheadings to show hierarchy -->
-    <h3>This is a sub-subheading (h3)</h3>
-    <h4>This is a smaller heading (h4)</h4>
-    <h5>This is an even smaller heading (h5)</h5>
-    <h6>This is the smallest heading (h6)</h6>
+        <div class="sidebar">
+            <div id="TableOfContents"></div>
+        </div>
 
-    <!-- Explanation of header usage -->
-    <p>HTML headers range from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. <code>&lt;h1&gt;</code> is the most important, usually for the main title, while <code>&lt;h6&gt;</code> is the least important. Headers create structure and improve accessibility.</p>
+        <div class="main">
+            <!--BEGIN NARRATIVE ANALYSIS-->
 
-    <!-- Paragraphs contain regular text content -->
-    <p>This is a paragraph. You can write as much text here as you need. It will automatically wrap based on the size of the screen.</p>
+            <div class="activity-section">
+                <h4 class="activity-subtitle">
+                    <i class="bi bi-globe"></i>
+                    Explore: Narrative Analysis
+                </h4>
+                <div class="row">
+                    <div class="col">
+                        <div class="activity-instructions-title">
+                            Walkthrough: Narrative Analysis Visualizations
+                        </div>
+                        <div class="activity-instructions">
+                            <p>
+                                The narrative analysis visualization tool uses the event data from the main map to create a graphical representation of the plot structure.
+                            </p>
+                            <p>
+                                <em>Chronological order</em> is indicated on the y-axis and events that happen later are higher on the axis.
+                            </p>
+                            <p><em>Page order</em>is represented on the x-axis and moves from the first page to the last page from left to right</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="activity-video">
+                            <div class="thumbnail-container">
+                                <video muted
+                                       controls
+                                       src="../video/video_tutorial_narrative_analysis_basic_functions.mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="activity-video-caption">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Unordered list: used when order doesn't matter -->
-    <ul>
-        <li>First item</li>
-        <li>Second item</li>
-        <li>Third item</li>
-    </ul>
-  <!-- Ordered list: used when order does matter -->
-    <ol>
-        <li>Step one</li>
-        <li>Step two</li>
-        <li>Step three</li>
-    </ol>
-    <!-- Ordered list: used when order does matter -->
-    <ol>
-        <li>Step one</li>
-        <li>Step two</li>
-        <li>Step three</li>
-    </ol>
+                <div class="row">
+                    <div class="col">
+                        <div class="activity-instructions-title">
+                            Instructions
+                        </div>
+                        <ol class="activity-list" type="1">
+                            <li>
+                                From the DY Main Menu choose:<ul class="activity-list-unordered-arrow">
+                                    <li>Visualizations</li>
+                                    <li>Narrative Analysis</li>
+                                </ul>
+                            </li>
+                            <li>Select <span class="font-weight-bold"> &ldquo;A Rose for Emily&rdquo;</span> from the drop-down menu on the left.</li>
+                            <li>Hover over each chart to see more detailed information about each data point</li>
+                            <li>Click &ldquo;Add Chart&rdquo;</li>
+                            <li>Select <span class="font-weight-bold"> &ldquo;A Rose for Emily&rdquo;</span> from the new drop-down menu</li>
+                            <li>Click &ldquo;Date Order&rdquo; on one of the charts to compare the different time structures</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
 
-    <!-- A link to another page or website -->
-    <p>Visit <a href="https://www.example.com">this website</a> for more information.</p>
+            <!--END NARRATIVE ANALYSIS
 
-    <!-- An image with alternative text for accessibility -->
-    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+    ||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-    <!-- A horizontal line to separate sections -->
-    <hr>
+    BEGIN CHARACTER CHARACTER FORCE DIRECTED-->
 
-    <!-- Strong (bold) and emphasized (italic) text -->
-    <p><strong>This text is bold.</strong> <em>This text is italicized.</em></p>
-    <h1> Uncle Willy Lesson Plans</h1>
 
-<h3>Using the Map tool, answer the following questions</h3>
-<ul>
-    <li> Why would California seem appealing to a 60 year old drug addict? Verus, why is it appealing for the character of Uncle Willy? Is there a difference?</li>
-    <li> The Keely- how does the fact that both Faulkner's father and grandfather were treated for alcoholism here as well Uncle Willy, impact how we might view the character of Uncle Willy? </li>
-    <li> Unnamed Narrator- how does his unchanging age and mindset about Uncle Willy mirror some of Uncle Willy’s mannerisms? </li>
-    <li> Mrs. Merridew- from a glass of lemonade to rebirth, why is Mrs. Merridew not stopped in her attempts to “save” Uncle Willy? </li>
-</ul>
+            <div class="activity-section">
+                <div class="activity-instructions-title">Overview</div>
+                <div class="activity-instructions">
+                    <p>Digital Yoknapatawpha&rsquo;s tools allow users to generate visual representations of social relations in each text, which you  will utilize to think critically about the representations of race, class, and gender in Faulkner&rsquo;s fiction.</p>
+                    <p>This activity produces visualizations illustrating the story&rsquo;s centering of white upper-class characters and relative marginalization of working class and Black characters. The activity is to encourage you to better understand the limits of Faulkner&rsquo;s fiction as historical representation.</p>
+                </div>
+            </div>
 
-<h3> In Class activity, use the Location and Charcter graph to expand on the differences between the main characters and how those differences help further the plot.  </h3>
-<ul> 
-   <li>How does the differences of class affect the characters efforts to (change the narrative/ or change the town)? Merridew as “lower class” and Willy and Narrator and “middle”, trying to work to change-> to try to get that class change? </li>  
-   <li> Does the ratio of major men to women characters in this narrative hold any significance in how Faulkner chooses to push the plot?</li>
-</ul>
+            <div class="activity-section">
+                <h4 class="activity-subtitle">
+                    <i class="bi bi-globe"></i>
+                    Explore: Character Connections
+                </h4>
 
-<h3> Lastly, reflect on the context of the text by going through the About Text in person after reading the story, either do a class discussion or a written response to the questions. </h3>
+                <div class="row">
+                    <div class="col">
+                        <div class="activity-instructions-title">
+                            Walkthrough: Character-Character Force Directed Graph
+                        </div>
+                        <div class="activity-instructions">
+                            <p>
+                                This graph shows how often characters are present or mentioned in the same event. A red line (<span class="red-line"></span>) between two blue boxes (<span class="blue-node"></span>) shows at least one interaction, and a thicker line indicates multiple interactions. Characters with more connections are closer to the center, but, importantly, the position of characters are not fixed.
+                            </p>
+                            <p>
+                                Characters who appear close together in one graph may appear far apart in another. The graph is interactive, so you can click on a character&rsquo;s name to see their connections. You can also click and drag characters to reposition them.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="activity-video">
+                            <div class="thumbnail-container">
+                                <video muted
+                                       controls
+                                       src="../video/video_tutorial_character_character_force_directed_emily.mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="activity-video-caption">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<ul>
-    <li> How does Faulkner's own desperate need for money despite being successful connect to the themes narrative? </li>
-    <li> How is Faulkner an addict in that image? How is addiction different from living? Is trying to get uncle willy clean doing more harm than good after 40 years of dependences? </li>
-    <li> How is the importance of Uncle Willy’s drug story in The Town (1957), allowing readers to reinstate the significance of Uncle Willy's presence in keeping his community together in this narrative?</li>
-</ul>
+                <div class="row">
+                    <div class="col">
+                        <div class="activity-instructions-title">
+                            Instructions
+                        </div>
+                        <ol class="activity-list">
+                            <li>
+                                Click "Visualization" on the navigation bar at the top of the <a href="http://faulkner.iath.virginia.edu/" target="_blank" rel="noopener noreferrer">
+                                    Digital Yoknapatawpha
+                                </a> homepage<ul class="activity-list-unordered-arrow">
+                                    <li>Click Character-Character</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Set
+                                <span class="font-weight-bold"> Text </span> as &ldquo;A Rose for Emily&rdquo;
+                            </li>
+                            <li>
+                                Complete the following searches and answer the related questions:
 
-<hi> Lion Lesson Plan</hi>
-<h3> Using the Map, work together in groups to answer the following questions with quotes to support your claims. Present your answers and evidence to the class. </h3>
-<ul>
-    <li> What is the significance of the majority of the plot taking place outside of the main town?  </li>
-    <li> Boon- how does Boon being perceived as mixed race affect how his actions are interpreted by the others?    </li>
-    <li> Hunting camp- what sense of community does this camp inspire? Why is it significant that Lion’s final hours were there?    </li>
-    <li> Holly Knoll- what does the imagery of Lion’s grave being washed away evoke in the reader? Is this a generation call to forgetting life lessons? Or is it washing away sins?    </li>
-</ul>
-<h3> Using the About the Text section, use your best interpretation of the information to answer the following questions.</h3>
-<ul> 
-    <li> What could Faulkners numerous rewrites from different perspectives give more insight to without reading it? </li>
-    <li> How does having an outside views differ from being there in the moment?     </li>
-    <li> How is the vagueness of the dating of the narrative significant to the message Faulkner is trying to get across?    </li>
-</ul>
-<h3> Use this as a homework assignment after reading Lion. Use the Location-Character Graph to help visual and elaborate on the following questions.</h3>
-<ul> 
-    <li> What does the lack of women in the story demonstrate to the readers? +  What role does masculinity place in the narrative?    </li>
-    <li> How does the lower class versus upper class stereotype lead the others in their interpretation of one another? Does different classes' perspectives allow different views on the death of Lion?    </li>
-</ul>
+                                <ol class="activity-list-alpha" type="a">
+                                    <li>
+                                        <span class="font-weight-bold">All characters </span><ul class="activity-list-unordered-arrow">
+                                            <li>Set <span class="font-weight-bold">Text </span> as &ldquo;A Rose for Emily&rdquo;</li>
+                                            <li>Leave all other fields blank</li>
+                                            <li>Click Search</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="font-weight-bold">Race</span> <ul class="activity-list-unordered-arrow">
+                                            <li>Set <span class="font-weight-bold">Race </span> as &ldquo;White&rdquo;</li>
+                                            <li>Click Search</li>
+                                            <li>Repeat for each race</li>
+                                            <li>
+                                                Switch <span class="font-weight-bold">Rank </span>between &ldquo;Major&rdquo; and &ldquo;Major and Secondary&rdquo;
+                                                <div class="activity-instructions-title">
+                                                    Questions<ul class="activity-list-unordered-note">
+                                                        <li>Approximately how many total characters appear as white?</li>
+                                                        <li>How many total characters appear as Black?</li>
+                                                        <li>Which major and secondary characters appear as white? </li>
+                                                        <li>Which major and secondary characters appear as Black?</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="font-weight-bold">Gender</span>
+                                        <ul class="activity-list-unordered-arrow">
+                                            <li>Set <span class="font-weight-bold">Gender </span> as &ldquo;Male&rdquo;</li>
+                                            <li>Click Search</li>
+                                            <li>
+                                                Repeat for each gender<div class="activity-instructions-title">
+                                                    Questions<ul class="activity-list-unordered-note">
+                                                        <li>About how many male characters appear in the story, and how are they connected? </li>
+                                                        <li>About how many female characters appear in the story, and how are they connected?</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="font-weight-bold">Class</span> <ul class="activity-list-unordered-arrow">
+                                            <li>Set <span class="font-weight-bold">Class </span> as &ldquo;Upper Class&rdquo;</li>
+                                            <li>Click Search</li>
+                                            <li>
+                                                Repeat for each class <div class="activity-instructions-title">
+                                                    Questions
+                                                    <ul class="activity-list-unordered-note">
+                                                        <li>
+                                                            Which characters appear according to each social class designation: upper class, middle class, lower class, free Black?
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="font-weight-bold">Other</span> <ul class="activity-list-unordered-arrow">
+                                            <li>Select any remaining variables</li>
+                                            <li>
+                                                Click Search <div class="activity-instructions-title">
+                                                    Question
+                                                    <ul class="activity-list-unordered-note">
+                                                        <li>What data appears in your search?</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!--END CHARACTER CHARACTER FORCE DIRECTED-->
+            <!--|||||||||||||||||||||||||||||||||||||||||||||||||||-->
+            <!--BEGIN CHARACTER SEARCH MAIN MAP-->
+
+            <div class="activity-section">
+                <h4 class="activity-subtitle">
+                    <i class="bi bi-globe"></i>
+                    Explore: Character Search
+                </h4>
+
+                <div class="row">
+
+                    <div class="col">
+                        <div class="activity-instructions-title">
+                            Overview: Digital Yoknapatawpha Map Display Character Search
+                        </div>
+                        <div class="activity-instructions">
+                            <p>The map display allows users to pull up records for every location, character, and event in the story. These records contain an overview of each character, the events where they are present and mentioned, and the locations where those events take place.</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="activity-video">
+                            <div class="thumbnail-container">
+                                <video muted
+                                       controls
+                                       src="../video/video_tutorial_characters_in_map_barn_burning.mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="activity-video-caption">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="activity-instructions-title">
+                            Instructions
+                        </div>
+                        <ol class="activity-list" type="1">
+                            <li>Navigate to the <a href="faulkner.iath.virginia.edu">Digital Yoknapatawpha</a> home page</li>
+                            <li>Select &ldquo;Barn Burning&rdquo; from the bookshelf<ul class="activity-list-unordered-note"><li>This will open the main map display for &ldquo;Barn Burning&rdquo;</li></ul></li>
+
+                            <li>Select &ldquo;All&rdquo; or &ldquo;Major and Secondary&rdquo; under &ldquo;Show Characters&rdquo; on Display Controls</li>
+                            <li>Hover your cursor over the characters on the map to reveal their name
+                            <li>
+                                Select a character for your fan fic by clicking on it<ul class="activity-list-unordered-note">
+                                    <li>For a more targeted search, check the &ldquo;Alphabetical List&rdquo; box under &ldquo;Show Characters&rdquo;</li>
+                                    <li>Check the name of a specific character</li>
+                                    <li>Click &ldquo;Show&rdquo;</li>
+                                </ul>
+                            </li>
+                            <li>Click on your chosen character. An informational box will open with the following tabs: Biography, Information, Events, Location. Use the information from this box to complete the questions on the attached character chart.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!--END CHARACTER SEARCH MAIN MAP-->
+
+
+
+
+
+
+        </div>
+</div>
+
 </body>
 </html>
