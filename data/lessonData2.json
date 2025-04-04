@@ -862,7 +862,41 @@
 	"created": "2023-07-23",
 	"notes": [ "One of the most remarkable aspects of using DY to delve further into Caddy was the effect that it had on the teenage boys in my class. The act of visualizing Caddy's movements through DY and thus thinking about her beyond what we had heard about her from her brothers made them consider and ask important questions not just about Caddy, but about women in the American south in Faulkner's time (and now). DY allowed them to 'see' what it was like to be Caddy, and our consequent discussions--about how male writers write female characters, about how brothers view sisters, about Caddy herself--were memorable." ]
   },
-
+  {
+	"filename": "template_caroline2.html",
+	"url": null,
+	"title": "Uncle Willy",
+	"image": {
+	  "card": "site_photograph_a_child_of_scarbroughs_in_front_of_dresser_card.jpg",
+	  "banner": "site_photograph_a_child_of_scarbroughs_in_front_of_dresser_banner.jpg"
+	},
+	"story": [
+	  {
+		"title": "Uncle Willy",
+		"type": "short_story",
+		"year": "1935"
+	  }
+	],
+	"description": "Students consider how Faulkner writes about the impact of change in <em>Uncle Willy</em> using multiple features of DY. This lesson can be adapted for other Faulkner stories featuring cultural developments and shifts over time.",
+	"modality": [ "In-Person", "Online Synchronous" ],
+	"paired_author": null,
+	"pilot_classroom": "This lesson was designed for a high school junior/senior advanced English elective at an all boys independent school in Washington, DC",
+	"learning_goals": null,
+	"common_core": [ "RL.9-10.1", "RL.9-10.3", "RI.9-10.7", "W.9-10.6", "W.9-10.8", "SL.9-10.1", "RL.11-12.1", "RL.11-12.3", "RL.11-12.6", "RI.11-12.7", "W.11-12.6", "W.11-12.8", "SL.11-12.1" ],
+	"student_samples": null,
+	"original_lesson_plan": [
+	  {
+		"title": "Piloted Learning Module",
+		"filename": "original_lesson_plans_dy_and_caddy.pptx",
+		"file_type": "ppt"
+	  }
+	],
+	"instructor": "Caroline McKeown",
+	"institution": "James Madison University",
+	"contact": "nmagaziner@stalbansschool.org",
+	"created": "2023-07-23",
+	"notes": [ "One of the most remarkable aspects of using DY to delve further into Caddy was the effect that it had on the teenage boys in my class. The act of visualizing Caddy's movements through DY and thus thinking about her beyond what we had heard about her from her brothers made them consider and ask important questions not just about Caddy, but about women in the American south in Faulkner's time (and now). DY allowed them to 'see' what it was like to be Caddy, and our consequent discussions--about how male writers write female characters, about how brothers view sisters, about Caddy herself--were memorable." ]
+  },
   {
 	"filename": "template_tyler.html",
 	"url": null,
