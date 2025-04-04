@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Multimodal Composition and &ldquo;Lion&rdquo;</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../js/pageLoad.js"></script>
+    <script src="../js/pageLoad2.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="../css/learning_module.css">
 </head>
 <body>
+    <div id="page_header">
+        <div id="header_logo"><a class="logo" href="http://faulkner.iath.virginia.edu/"><span class="digital">DIGITAL</span> Yoknapatawpha</a> · Teaching &amp; Learning</div>
+        <!--#include virtual="../../family/include_menu-main.php" -->
+    </div>
 
     <div class="container">
 
@@ -22,7 +26,24 @@
 
         <div class="main">
             <!--BEGIN NARRATIVE ANALYSIS-->
+            <article id="lessonGlance"></article>
+            <div class="lesson-section">
+                <h2 class="content_sub_title">Preface</h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="activity-instructions">
+                            <p>Following reading William Faulkner's, Uncle Willy, use the following tools to evaluate and answer the provided response questions to interpret the message of the text.
+                            </p>
+                            <p>
 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="tip"><p>Teaching Tips for how to teach this lesson</p> </div>
+                    </div>
+                </div>
+            </div>
             <div class="activity-section">
                 <h4 class="activity-subtitle">
                     <i class="bi bi-globe"></i>
@@ -366,6 +387,16 @@
 
         </div>
 </div>
+<script>
+    $(document).ready(function () {
+        loadTOC();
+        loadModal();
+        loadImageData();
+        loadVideoData();
+        loadLessonData();
 
+    });
+</script>
+<!--#include virtual="../../family/include_footer.php" -->
 </body>
 </html>
