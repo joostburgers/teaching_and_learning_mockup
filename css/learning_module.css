@@ -170,6 +170,14 @@
 	color:red;
 }
 
+.activity-comment-cleared {
+	
+	padding: 15px;
+	font-size: 1.2em;
+	font-weight: 600;
+	line-height: 1.5em;
+	color: green;
+}
 
 :root {
 	--list-margin-left: 30px;
