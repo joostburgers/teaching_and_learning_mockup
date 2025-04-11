@@ -1,0 +1,552 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Multimodal Composition and &ldquo;A Rose for Emily&rdquo;</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="../js/pageLoad.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://faulkner.iath.virginia.edu/family/family.css">
+	<link rel="stylesheet" href="../css/learning_module.css">
+</head>
+<body>
+
+	<div class="modal bd-modal-lg" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 id="imageTitle" class="modal-title">No Title Found</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="modal-image">
+						<img src="../images/placeholder_stamp.jpg" alt="modal-image" id="imageSource" class="img-fluid">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div id="imageCitation"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="page_header">
+		<div id="header_logo"><a class="logo" href="http://faulkner.iath.virginia.edu/"><span class="digital">DIGITAL</span> Yoknapatawpha</a> · Teaching &amp; Learning</div>
+		<!--#include virtual="../../family/include_menu-main.php" -->
+	</div>
+
+	<!--This is where the header ends-->
+	<!--This is the TOC menu. No need to touch this-->
+	<div class="container">
+
+		<div class="sidebar">
+			<div id="TableOfContents"></div>
+		</div>
+		<!--This is where the TOC ends-->
+		<!--This is where all the content for the lesson plan sits-->
+		<div class="main">
+			<article id="lessonGlance"></article>
+
+			<div class="lesson-section">
+				<h2 class="content_sub_title" >Preface</h2>
+				
+				<p>Students will utilize a range digital tools and archival material to compose literary analysis essays about &ldquo;A Rose for Emily.&rdquo; Students will conduct searches using visualization and narrative analysis tools, and they will study an archival typescript of an unpublished version of the story.</p>
+				<p> Using the activities below, students will draft an essay that incorporates and cites Digital Yoknapatawpha tools with hyper links, charts, screenshots, and photographs.</p>
+			</div>
+
+			<!--The activities section is probably the most complex because there are a lot of components and not all of them will be there simultaneously-->
+			<h2 class="content_sub_title" id="Activities">Activities</h2>
+			<div class="activity">
+
+				<h3 class="content_sub_title activity-title">1. &ldquo;A Rose for Emily,&rdquo; an Unpublished Conversation, and the Great Migration </h3>
+
+				<div class="activity-section">
+					<div class="activity-instructions">
+						<p>Digitized copies of an unpublished section of &ldquo;A Rose for Emily&rdquo; illuminate aspects of the story that are unknown to most readers. This removed section, featuring a conversation between Emily and Tobe at the end of Section Four, marks the only time in the story that Tobe speaks.</p>
+						<p>As Stephen Railton notes on the linked page to the typescript below, we do not know who decided to remove the section from the story&rsquo;s publication in the April 1930 edition of Forum; however, by studying the removed section, you will reflect on the historical context of the story as well as the story&rsquo;s venue of publication and its readership.</p>
+					</div>
+				</div>
+				<!--This is the section title-->
+				<div class="activity-section">
+					<h4 class="activity-subtitle">
+						<i class="bi bi-file-earmark-text"></i>
+						Study: &ldquo;A Rose for Emily&rdquo; Typescript
+					</h4>
+
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">Instructions</div>
+							<ol class="activity-list">
+								<li>
+									Study the conversation between Emily and Tobe that appears in the typescript for &ldquo;A Rose for Emily&rdquo;. Note that the conversation ends Section Four of the story. Available at <a href="http://faulkner.drupal.shanti.virginia.edu/node/7862?canvas" target="_blank" rel="noopener noreferrer">Digital Yoknapatawpha.</a>
+								</li>
+								<li>
+									Study information about the Great Migration on <a href="https://www.history.com/topics/black-history/great-migration" target="_blank" rel="noopener noreferrer">History.com.</a>
+								</li>
+								<li>
+									Watch Professor Yohuru Williams&rsquo;s video on the Great Migration on the <a href="https://www.history.com/topics/black-history/great-migration" target="_blank" rel="noopener noreferrer">same page.</a>
+								</li>
+							</ol>
+						</div>
+						<div class="col-5">
+							<div class="activity-image">
+								<div class="thumbnail-container">
+									<img src="../images/archive_typescript_a_rose_for_emily_15.jpg" alt="Screen capture: Character-Character Force Directed Graph 'A Rose for Emily'" class="img-fluid">
+								</div>
+								<div class="activity-image-caption"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="activity-section">
+					<!--This is the title stub-->
+					<h4 class="activity-subtitle">
+						<i class="bi bi-chat-left-text"></i>Respond: Tobe&rsquo;s Perspective
+					</h4>
+
+					<!--This is the list of questions on the left. The div class="col" places all this in the column on the left-->
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions">
+								<p>Respond and reflect on the story&rsquo;s typescript version.</p><p> Prompts include:</p>
+							</div>
+							<ol class="activity-list-unordered">
+								<li>According to the article by editors at History.com, when did the Great Migration take place, and what were its causes? What connection does Yohuru Williams make between the Great Migration and the Civil Rights Movement?</li>
+
+								<li>What does Tobe&rsquo;s plan to go to Chicago say about the story&rsquo;s historical context? Why does Tobe eventually refuses to inherit the house? </li>
+
+								<li>Does the conversation between Tobe and Emily in the typescript of &ldquo;A Rose for Emily&rdquo; change any aspect of the story&rsquo;s meaning?</li>
+
+								<li>What do readers learn about Tobe in this conversation from the typescript? What does the story lose without this conversation? Is it more effective overall with or without the conversation?</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="activity">
+				<h3 class="content_sub_title activity-title">2. Visualizing Identity and Social Relations in &ldquo;A Rose for Emily&rdquo; </h3>
+
+				<div class="activity-section">
+					<div class="activity-instructions-title">Overview</div>
+					<div class="activity-instructions">
+						<p>Digital Yoknapatawpha&rsquo;s tools allow users to generate visual representations of social relations in each text, which you  will utilize to think critically about the representations of race, class, and gender in Faulkner&rsquo;s fiction.</p>
+						<p>This activity produces visualizations illustrating the story&rsquo;s centering of white upper-class characters and relative marginalization of working class and Black characters. The activity is to encourage you to better understand the limits of Faulkner&rsquo;s fiction as historical representation.</p>
+					</div>
+				</div>
+
+				<div class="activity-section">
+					<h4 class="activity-subtitle">
+						<i class="bi bi-globe"></i>
+						Explore: Character Connections
+					</h4>
+
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">
+								Walkthrough: Character-Character Force Directed Graph
+							</div>
+							<div class="activity-instructions">
+								<p>
+									This graph shows how often characters are present or mentioned in the same event. A red line (<span class="red-line"></span>) between two blue boxes (<span class="blue-node"></span>) shows at least one interaction, and a thicker line indicates multiple interactions. Characters with more connections are closer to the center, but, importantly, the position of characters are not fixed.
+								</p>
+								<p>
+									Characters who appear close together in one graph may appear far apart in another. The graph is interactive, so you can click on a character&rsquo;s name to see their connections. You can also click and drag characters to reposition them.
+								</p>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="activity-video">
+								<div class="thumbnail-container">
+									<video muted
+										  controls
+										  src="../video/video_tutorial_character_character_force_directed_emily.mp4">
+										Your browser does not support the video tag.
+									</video>
+								</div>
+								<div class="activity-video-caption">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">
+								Instructions
+							</div>
+							<ol class="activity-list">
+								<li>
+									Click "Visualization" on the navigation bar at the top of the <a href="http://faulkner.iath.virginia.edu/" target="_blank" rel="noopener noreferrer">
+										Digital Yoknapatawpha
+									</a> homepage<ul class="activity-list-unordered-arrow">
+										<li>Click Character-Character</li>
+									</ul>
+								</li>
+								<li>
+									Set
+									<span class="font-weight-bold"> Text </span> as &ldquo;A Rose for Emily&rdquo;
+								</li>
+								<li>
+									Complete the following searches and answer the related questions:
+
+									<ol class="activity-list-alpha" type="a">
+										<li>
+											<span class="font-weight-bold">All characters </span><ul class="activity-list-unordered-arrow">
+												<li>Set <span class="font-weight-bold">Text </span> as &ldquo;A Rose for Emily&rdquo;</li>
+												<li>Leave all other fields blank</li>
+												<li>Click Search</li>
+											</ul>
+										</li>
+										<li>
+											<span class="font-weight-bold">Race</span> <ul class="activity-list-unordered-arrow">
+												<li>Set <span class="font-weight-bold">Race </span> as &ldquo;White&rdquo;</li>
+												<li>Click Search</li>
+												<li>Repeat for each race</li>
+												<li>
+													Switch <span class="font-weight-bold">Rank </span>between &ldquo;Major&rdquo; and &ldquo;Major and Secondary&rdquo;
+													<div class="activity-instructions-title">
+														Questions<ul class="activity-list-unordered-note">
+															<li>Approximately how many total characters appear as white?</li>
+															<li>How many total characters appear as Black?</li>
+															<li>Which major and secondary characters appear as white? </li>
+															<li>Which major and secondary characters appear as Black?</li>
+														</ul>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="font-weight-bold">Gender</span>
+											<ul class="activity-list-unordered-arrow">
+												<li>Set <span class="font-weight-bold">Gender </span> as &ldquo;Male&rdquo;</li>
+												<li>Click Search</li>
+												<li>
+													Repeat for each gender<div class="activity-instructions-title">
+														Questions<ul class="activity-list-unordered-note">
+															<li>About how many male characters appear in the story, and how are they connected? </li>
+															<li>About how many female characters appear in the story, and how are they connected?</li>
+														</ul>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="font-weight-bold">Class</span> <ul class="activity-list-unordered-arrow">
+												<li>Set <span class="font-weight-bold">Class </span> as &ldquo;Upper Class&rdquo;</li>
+												<li>Click Search</li>
+												<li>
+													Repeat for each class <div class="activity-instructions-title">
+														Questions
+														<ul class="activity-list-unordered-note">
+															<li>
+																Which characters appear according to each social class designation: upper class, middle class, lower class, free Black?
+															</li>
+														</ul>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="font-weight-bold">Other</span> <ul class="activity-list-unordered-arrow">
+												<li>Select any remaining variables</li>
+												<li>
+													Click Search <div class="activity-instructions-title">
+														Question
+														<ul class="activity-list-unordered-note">
+															<li>What data appears in your search?</li>
+														</ul>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ol>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="activity-section">
+					<h4 class="activity-subtitle">
+						<i class="bi bi-chat-left-text"></i>Respond: Social Relations
+					</h4>
+
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">Instructions</div>
+							<div class="activity-instructions">
+								<p>Respond and reflect on the story by describing what appears in the search results in terms of race, gender, and class relations.</p>
+							</div>
+						</div>
+						<div class="col-5">
+							<div class="activity-image">
+								<div class="thumbnail-container">
+									<img src="../images/screen_capture_character_character_force_directed_graph_a_rose_for_emily.png" alt="Screen capture: Character-Character Force Directed Graph 'A Rose for Emily'" class="img-fluid">
+								</div>
+								<div class="activity-image-caption"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">Questions</div>
+							<ul class="activity-list-unordered">
+								<li>Compare the number of characters that are lower class, female, and/or Black to the number of characters that are white, male, and upper-class. Literally, what are the numbers for each category?</li>
+								<li> Given the story&rsquo;s character representations, what is the likely race, gender, and class demographic of the story&rsquo;s narrator? </li>
+								<li>What would be different if the story were told from Homer Barron&rsquo;s, Tobe&rsquo;s, or Emily Grierson&rsquo;s point of view? Consider any other character&rsquo;s specific point of view as well.</li>
+								<li>Reflect on DY&rsquo;s social categorizations of Faulkner&rsquo;s characters. Are the social designations pertaining to race, class, and gender fair/accurate representations of their social positions? For example, do you find it convincing that Homer Barron is designated lower class, or Tobe is designated free Black? What other social designations might be applied to any of the characters?</li>
+								<li>What are the strengths and weaknesses of Faulkner&rsquo;s choices in depicting the story with these primary and secondary characters as opposed to characters that are not primarily white, male, and upper or middle class?</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="activity">
+				<h3 class="content_sub_title activity-title">3. Visualizing Narrative </h3>
+
+				<div class="activity-section">
+
+					<div class="activity-instructions-title">Overview</div>
+
+					<div class="activity-instructions">
+						<p> &ldquo;A Rose for Emily&rdquo; features non-linear narrative shifts from its present time to events in the past. Visualization tools, including narrative analysis charts, can help you to understand the story&rsquo;s narrative structure. Reflecting on these visualizations helps you to think critically about the effects of Faulkner&rsquo;s storytelling strategies.</p>
+					</div>
+				</div>
+				<!--This is the section title-->
+				<!--This is where the activity section Study Ends-->
+				<!--This is where the activity section Explore begins-->
+				<div class="activity-section">
+					<h4 class="activity-subtitle">
+						<i class="bi bi-globe"></i>
+						Explore: Chronological Timeline
+					</h4>
+
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">
+								Walkthrough: Chronological Timeline Main Map Display
+							</div>
+							<div class="activity-instructions">
+								<p>
+									The chronological timeline on the main map display allows users to view the events in each story in both page and chronological order.
+								</p>
+								<p><em>Page order</em> is the order in which the events appear in the story.</p>
+								<p><em>Chronological order</em> is the order in which the events occur in time.</p> <p>
+									For example, &ldquo;A Rose for Emily&rdquo; begins with Emily&rsquo;s death on the first page, but since the events in the story occur in the past, this is actually much later in the chronological order.
+								</p>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="activity-video">
+								<div class="thumbnail-container">
+									<video muted
+										  controls
+										  src="../video/video_tutorial_main_map_display_timeline.mp4">
+										Your browser does not support the video tag.
+									</video>
+								</div>
+								<div class="activity-video-caption">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">
+								Instructions
+							</div>
+							<ol class="activity-list" type="1">
+								<li>
+									From the <a href="https://faulkner.iath.virginia.edu/" target="_blank" rel="noopener noreferrer">Digital Yoknapatawpha</a> homepage, select <span class="font-weight-bold"> &ldquo;A Rose for Emily&rdquo;</span> from the bookshelf.
+								</li>
+								<li>
+									Click the play button (<img src="http://faulkner.iath.virginia.edu/play.png" style="max-height: 1em; max-width: 1em; vertical-align:middle;" alt="play button">) above <span class="font-weight-bold">page order </span>to start the event animation.
+									<ul class="activity-list-unordered-note">
+										<li>Pay attention to the dates of each event in the chronology bar.</li>
+									</ul>
+								</li>
+								<li>Click Reset</li>
+								<li>
+									Click from event to event using the forward button (<img src="http://faulkner.iath.virginia.edu/ff.png" style="max-height: 1em; max-width: 1em; vertical-align:middle;" alt="fast forward button">).<ul class="activity-list-unordered-note">
+										<li>Note the dates of the story&rsquo;s events.</li>
+									</ul>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="activity-section">
+					<h4 class="activity-subtitle">
+						<i class="bi bi-globe"></i>
+						Explore: Narrative Analysis
+					</h4>
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">
+								Walkthrough: Narrative Analysis Visualizations
+							</div>
+							<div class="activity-instructions">
+								<p>
+									The narrative analysis visualization tool uses the event data from the main map to create a graphical representation of the plot structure.
+								</p>
+								<p>
+									<em>Chronological order</em> is indicated on the y-axis and events that happen later are higher on the axis.
+								</p>
+								<p><em>Page order</em>is represented on the x-axis and moves from the first page to the last page from left to right</p>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="activity-video">
+								<div class="thumbnail-container">
+									<video muted
+										  controls
+										  src="../video/video_tutorial_narrative_analysis_basic_functions.mp4">
+										Your browser does not support the video tag.
+									</video>
+								</div>
+								<div class="activity-video-caption">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">
+								Instructions
+							</div>
+							<ol class="activity-list" type="1">
+								<li>
+									From the DY Main Menu choose:<ul class="activity-list-unordered-arrow">
+										<li>Visualizations</li>
+										<li>Narrative Analysis</li>
+									</ul>
+								</li>
+								<li>Select <span class="font-weight-bold"> &ldquo;A Rose for Emily&rdquo;</span> from the drop-down menu on the left.</li>
+								<li>Hover over each chart to see more detailed information about each data point</li>
+								<li>Click &ldquo;Add Chart&rdquo;</li>
+								<li>Select <span class="font-weight-bold"> &ldquo;A Rose for Emily&rdquo;</span> from the new drop-down menu</li>
+								<li>Click &ldquo;Date Order&rdquo; on one of the charts to compare the different time structures</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="activity-section">
+					<!--This is the title stub-->
+					<h4 class="activity-subtitle">
+						<i class="bi bi-chat-left-text"></i>Respond: Narrative Structure
+					</h4>
+
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions">
+								<p>Respond and reflect on the story&rsquo;s narrative structure.</p>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="activity-image">
+								<div class="thumbnail-container">
+									<img src="../images/screen_capture_plot_structure_a_rose_for_emily_date_order.png" alt="Plot Structure Graph" class="img-fluid">
+								</div>
+								<div class="activity-image-caption"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+
+							<div class="activity-instructions-title">Questions</div>
+							<ul class="activity-list-unordered">
+
+								<li>What relationship do you see between the story&rsquo;s plot order and the dates of its events?</li>
+								<li>What do narrative analysis charts indicate about the relationship between the story&rsquo;s narration and the date of the events mentioned?</li>
+								<li>What do you think is the purpose of Faulkner telling this story with flashbacks?</li>
+								<li>As a representation of the historical past, whose points of view are prioritized, and whose are minimized or occluded? (Reflect on activities one and two to respond to this prompt.)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="activity">
+				<h3 class="content_sub_title activity-title" >4. Essay Draft</h3>
+				<div class="activity-section">
+					<h4 class="activity-subtitle">
+						<i class="bi bi-chat-left-text"></i>Respond: Provisional Thesis Statement
+					</h4>
+
+					<div class="row">
+						<div class="col">
+							<div class="activity-instructions-title">
+								Instructions
+							</div>
+							<div class="activity-instructions">
+								<p>Write a provisional thesis statement related to any of the above activities (or any other tools/activities you have explored from Digital Yoknapatawpha in class or on your own).</p>
+								<p>For example, your thesis statement could make a claim about one or more of the following aspects of the story:</p><ul class="activity-list-unordered">
+									<li>Character identities and social relations</li>
+									<li>Historical context(s)</li>
+									<li>Narrative structure and its effects</li>
+									<li>Any other aspect</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="lesson-section">
+				<h2 class="content_sub_title">Final Product</h2>
+
+				<div class="row">
+					<div class="col">
+						<div class=" activity-instructions-title">Requirements for final essays</div>
+						<ol class="activity-list">
+							<li>
+								Cite Digital Yoknapatawpha at least twice in any of the following ways:
+								<ol class="activity-list-alpha">
+									<li>A hyperlink to a relevant page on Digital Yoknapatawpha.</li>
+									<li>An image or screenshot of a tool or resource on a Digital Yoknapatawpha with caption citations. Students may choose images on the site, or they may include a self-generated image from the site.</li>
+									<li>Analyze a Faulkner text with self-generated video content focusing on a tool or feature of Digital Yoknapatawpha.</li>
+								</ol>
+							</li>
+							<li>Include citations of Digital Yoknapatawpha on a works cited page.</li>
+							<li>Essay length depends on level of students (secondary, undergraduate, or graduate) and course objectives</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div class="lesson-section">
+				<h2 class="content_sub_title" id="Resources">Assignment Resources</h2>
+				<ul class="activity-list-unordered">
+					<li><a href="http://faulkner.iath.virginia.edu/char-char-force.html" target="_blank" rel="noopener noreferrer">Character-Character Force Directed Graph</a></li>
+					<li><a href="https://www.history.com/topics/black-history/great-migration" target="_blank" rel="noopener noreferrer">History Channel - &ldquo;The Great Migration&rdquo;</a></li>
+					<li><a href="http://faulkner.drupal.shanti.virginia.edu/node/7862?canvas" target="_blank" rel="noopener noreferrer">Archival Material - &ldquo;A Rose for Emily&rdquo;</a></li>
+					<li><a href="http://faulkner.iath.virginia.edu/?text=RE" target="_blank" rel="noopener noreferrer">Digital Yoknapatawpha Main Map - &ldquo;A Rose for Emily&rdquo; </a></li>
+					<li><a href="http://faulkner.iath.virginia.edu/narrativeanalysis.html" target="_blank" rel="noopener noreferrer">Narrative Analysis Program</a></li>
+				</ul>
+			</div>
+
+			<div class="lesson-section">
+				<h2 class="content_sub_title" >Teaching Resources</h2>
+				<div id="TeacherInfo"></div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function () {
+			loadTOC();
+			loadModal();
+			loadImageData();
+			loadVideoData();
+			loadLessonData();
+		});
+	</script>
+	<!--#include virtual="../../family/include_footer.php" -->
+</body>
+</html>
