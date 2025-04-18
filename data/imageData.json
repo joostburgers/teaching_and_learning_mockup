@@ -537,7 +537,42 @@
   },
 
 
+  {
+	"media_type": "screen_capture",
+	"creators": [
+	  {
+		"last_name": "Alvarado",
+		"first_name": "R.C."
+	  },
+	  {
+		"last_name": "Bingler",
+		"first_name": "Robbie"
+	  },
+	  {
+		"last_name": "Worthy",
+		"first_name": "Martin"
+	  },
+	  {
+		"last_name": "Railton",
+		"first_name": "Steve"
+	  }
 
+	],
+
+	"title": "Screen Capture: Character-Character Force Directed Graph: Mrs. Merridew and White Women",
+	"year": "2018",
+	"place": null,
+	"description": "Visualization of social relations among White women in Uncle Willy",
+	"filename": "screen_capture_character_character_force_directed_graph_uncle_willy.png",
+
+	"alt_text": "Visualization of social relations among White women in Uncle Willy, the most prominent",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia",
+	  "url": "http://faulkner.iath.virginia.edu/char-char-force.html"
+	}
+
+  },
 
   {
 	"media_type": "student_sample",
