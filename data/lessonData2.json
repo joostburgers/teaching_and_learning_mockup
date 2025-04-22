@@ -865,14 +865,14 @@
   {
 	"filename": "template_caroline2.html",
 	"url": null,
-	"title": "Uncle Willy",
+	"title": "Lion",
 	"image": {
-	  "card": "site_photograph_lafayette_indian_mound_card.jpg",
-	  "banner": "site_photograph_lafayette_indian_mound_banner.jpg"
+	  "card": "site_photograph_hunting_camp_card.jpg",
+	  "banner": "site_photograph_hunting_camp_banner.jpg"
 	},
 	"story": [
 	  {
-		"title": "Uncle Willy",
+		"title": "Lion",
 		"type": "short_story",
 		"year": "1935"
 	  }
