@@ -1083,5 +1083,48 @@
 	  "place": "Washington, DC",
 	  "url": "https://www.loc.gov/item/95514132/"
 	}
+  },
+  {
+	"media_type": "screen_capture",
+	"creators": [
+	  {
+		"last_name": "Heron",
+		"first_name": "Tyler"
+	  }
+	],
+
+	"title": "Screen Capture: Spatial Heatmap for <em>A Rose For Emily</em>",
+	"year": "2022",
+	"place": null,
+	"description": "Data visualization that divides up the how often a character appears based on the narrative status in the <em>The Sound and the Fury</em>",
+	"filename": "screen_capture_spatial_heatmap_a_rose_for_emily.png",
+	"alt_text": "Chart showing the percentage of the narrative statuses of each event for a character.",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia",
+	  "url": "https://joostburgers.github.io/dy_data_dog_breakfast/"
+	}
+
+  },{
+	"media_type": "screen_capture",
+	"creators": [
+	  {
+		"last_name": "Heron",
+		"first_name": "Tyler"
+	  }
+	],
+
+	"title": "Screen Capture: Percent Narrative Status per Character in <em>The Sound and the Fury</em>",
+	"year": "2022",
+	"place": null,
+	"description": "Data visualization that divides up the how often a character appears based on the narrative status in the <em>The Sound and the Fury</em>",
+	"filename": "screen_capture_spatial_heatmap_elly.png",
+	"alt_text": "Chart showing the percentage of the narrative statuses of each event for a character.",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia",
+	  "url": "https://joostburgers.github.io/dy_data_dog_breakfast/"
+	}
+
   }
 ]
