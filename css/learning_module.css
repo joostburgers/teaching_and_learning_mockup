@@ -472,6 +472,10 @@ height: auto;
 	margin-bottom:0em;
 	}
 
+		.tip p:first-of-type {
+			font-weight: 600;
+			font-size: 1em;
+		}
 
 .activity-section div.google-slides-container {
 	position: relative;
