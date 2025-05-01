@@ -1142,7 +1142,7 @@
 	"place": null,
 	"description": "Data Visulaization that shows the frequency of a location in a <em>A Rose For Emily</em>",
 	"filename": "screen_capture_narrative_analysis_page_number_a_rose_for_emily.png",
-	"alt_text": "Map showing frequency that a location appears in text.",
+	"alt_text": "Digital Yoknapatawpha screen shot of the plot structure of <em>A Rose for Emily</em>.",
 	"repository": {
 	  "name": "Digital Yoknapatawpha",
 	  "place": "University of Virginia",
@@ -1163,8 +1163,8 @@
 	"year": "2025",
 	"place": null,
 	"description": "Data Visulaization that shows the frequency of a location in a <em>Elly</em>",
-	"filename": "screen_capture_narrative_analysis_page_number_elly.png.png",
-	"alt_text": "Map showing frequency that a location appears in text.",
+	"filename": "screen_capture_narrative_analysis_page_number_elly.png",
+	"alt_text": "Digital Yoknapatawpha screen shot of the plot structure of <em>Elly</em>.",
 	"repository": {
 	  "name": "Digital Yoknapatawpha",
 	  "place": "University of Virginia",
