@@ -1094,11 +1094,11 @@
 	],
 
 	"title": "Screen Capture: Spatial Heatmap for <em>A Rose For Emily</em>",
-	"year": "2022",
+	"year": "2025",
 	"place": null,
-	"description": "Data visualization that divides up the how often a character appears based on the narrative status in the <em>The Sound and the Fury</em>",
+	"description": "Data Visulaization that shows the frequency of a location in a <em>A Rose For Emily</em>",
 	"filename": "screen_capture_spatial_heatmap_a_rose_for_emily.png",
-	"alt_text": "Chart showing the percentage of the narrative statuses of each event for a character.",
+	"alt_text": "Map showing frequency that a location appears in text.",
 	"repository": {
 	  "name": "Digital Yoknapatawpha",
 	  "place": "University of Virginia",
@@ -1114,12 +1114,12 @@
 	  }
 	],
 
-	"title": "Screen Capture: Percent Narrative Status per Character in <em>The Sound and the Fury</em>",
-	"year": "2022",
+	"title": "Screen Capture: Spatial Heatmap for <em>Elly</em>",
+	"year": "2025",
 	"place": null,
-	"description": "Data visualization that divides up the how often a character appears based on the narrative status in the <em>The Sound and the Fury</em>",
+	"description": "Data Visulaization that shows the frequency of a location in a <em>Elly</em>",
 	"filename": "screen_capture_spatial_heatmap_elly.png",
-	"alt_text": "Chart showing the percentage of the narrative statuses of each event for a character.",
+	"alt_text": "Map showing frequency that a location appears in text.",
 	"repository": {
 	  "name": "Digital Yoknapatawpha",
 	  "place": "University of Virginia",
