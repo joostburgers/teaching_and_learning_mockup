@@ -362,6 +362,52 @@
   },
 
   {
+	"filename": "screen_capture_map_it_benjy_sound_and_the_fury.png",
+	"media_type": "screen_capture",
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  },
+	  {
+		"last_name": "Coleman",
+		"first_name": "Robert"
+	  },
+	  {
+		"last_name": "Denton",
+		"first_name": "Ren"
+	  },
+	  {
+		"last_name": "Hagood",
+		"first_name": "Taylor"
+	  },
+	  {
+		"last_name": "Napolin",
+		"first_name": "Julie"
+	  },
+	  {
+		"last_name": "Perkins",
+		"first_name": "Sarah"
+	  }
+
+
+	],
+
+	"title": "The Sound and the Fury (Map)",
+	"year": "2014",
+	"place": null,
+	"description": "Digital Yoknapatawpha map of The Sound and the Fury using the MapIT display for Benjy's movements",
+
+	"alt_text": "Digital Yoknapatawpha map of The Sound and the Fury",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia",
+	  "url": "http://faulkner.iath.virginia.edu/?text=BB"
+	}
+
+  },
+
+  {
 	"media_type": "screen_capture",
 	"creators": [
 	  {
