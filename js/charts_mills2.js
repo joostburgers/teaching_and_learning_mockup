@@ -152,7 +152,13 @@ function createNarrativeStatusChart() {
                 opacity: opacities,
                 line: { color: 'black', width: 1 }
             },
-            hovertemplate: '<b>%{y}</b><br>' + category + ': %{x}%<extra></extra>'
+            text: categoryData.map(val => val > 0 ? val + '%' : ''),
+            textposition: 'inside',
+            textfont: {
+                color: 'white',
+                size: 12
+            },
+            hovertemplate: '<b>%{y}</b><br>' + category + ': %{x}<extra></extra>'
         };
     });
 
@@ -184,7 +190,7 @@ function createNarrativeStatusChart() {
     const layout = {
         ...faulknerBaseLayout,
         title: {
-            text: 'Percent Narrative Status per Character',
+            text: 'Percent Narrative Status Compson Family',
             font: { size: 18 }
         },
         xaxis: {
