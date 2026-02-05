@@ -475,6 +475,36 @@
   },
 
   {
+	"filename": "mills2.html",
+	"url": null,
+	"title": "Using Digital Yoknapatawpha to make Faulkner Click for Teenage Boys",
+	"image": {
+	  "card": "archive_typescript_sf_51_card.jpg",
+	  "banner": "archive_typescript_sf_51_banner.jpg"
+	},
+	"story": [
+	  {
+		"title": "The Sound and the Fury",
+		"type": "novel",
+		"year": "1929"
+	  }
+	],
+	"description": "Reflection on using Digital Yoknapatawpha in an all male high school classroom.",
+	"modality": [ "In-Person" ],
+	"paired_author": null,
+	"pilot_classroom": null,
+	"learning_goals": null,
+	"common_core": null,
+	"student_samples": null,
+	"original_lesson_plan": null,
+	"instructor": "Nikki Magaziner Mills",
+	"institution": "St. Albans School",
+	"contact": "nmagaziner@stalbansschool.org",
+	"created": "2026-02-05",
+	"notes": null
+  },
+
+  {
 	"filename": "padgett",
 	"url": "http://faulkner.iath.virginia.edu/family/videos-padgettaa.php",
 	"title": "Using Digital Yoknapatawpha to Analyze Faulkner’s <em>Absalom, Absalom!</em> as a Gothic Text",
