@@ -393,7 +393,7 @@
 
 	],
 
-	"title": "The Sound and the Fury (Map)",
+	"title": "The Sound and the Fury (Map): Benjy's Movements",
 	"year": "2014",
 	"place": null,
 	"description": "Digital Yoknapatawpha map of The Sound and the Fury using the MapIT display for Benjy's movements",
@@ -402,7 +402,7 @@
 	"repository": {
 	  "name": "Digital Yoknapatawpha",
 	  "place": "University of Virginia",
-	  "url": "http://faulkner.iath.virginia.edu/?text=BB"
+	  "url": "https://faulkner.iath.virginia.edu/index.html?search=Event&characters_present=benjy&characters_mentioned=benjy&text=SF"
 	}
 
   },
@@ -1001,7 +1001,7 @@
 	"title": "Number of Times Characters Appear Alone in <em>The Sound and the Fury</em>",
 	"year": "2022",
 	"place": null,
-	"description": "Interactive data visualization of the number of times characters appear alone in <em>The Sound and the Fury</em>",
+	"description": "Visualization of the number of times characters appear alone in <em>The Sound and the Fury</em>. Notably, there are very few characters who appear alone throughout the text and the majority of them are male.",
 	"chart_id": "chart-character-alone",
 	"alt_text": "Data visualization of the number of times characters appear alone in <em>The Sound and the Fury</em>",
 	"repository": {
@@ -1021,7 +1021,7 @@
 	"title": "Percent Narrative Status per Character in <em>The Sound and the Fury</em>",
 	"year": "2022",
 	"place": null,
-	"description": "Interactive data visualization that divides up how often a character appears based on the narrative status in <em>The Sound and the Fury</em>",
+	"description": "Visualizations divides up how often a character appears based on the narrative status in <em>The Sound and the Fury</em>. Two characters appear in the novel almost entirely through the memories of other characters, Mr. Jason Compson and Caddy Compson.",
 	"chart_id": "chart-narrative-status",
 	"alt_text": "Chart showing the percentage of the narrative statuses of each event for a character.",
 	"repository": {

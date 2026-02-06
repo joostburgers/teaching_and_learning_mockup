@@ -558,11 +558,15 @@ function setInteractiveChartCaptions(jsonData) {
 		
 		if (chartDiv.length > 0) {
 			const creatorsString = extractCreators(chart);
-			const creatorsStringHTML = creatorsString !== null ? `by ${creatorsString}` : '';
+			const creatorsStringHTML = creatorsString !== null ? `${creatorsString}. ` : '';
 			const chartTitle = chart.short_title !== undefined ? chart.short_title : chart.title;
 			
-			// Create caption HTML
-			const captionHTML = `<div class="activity-image-caption">\u201C${fancyQuotesEmbedded(chartTitle)}\u201D ${creatorsStringHTML}</div>`;
+			// Format similar to modal: description first, then creator and title
+			const descriptionHTML = chart.description !== null && chart.description !== undefined ? `<div class='image-description'>${fancyQuotes(chart.description)}</div>` : '';
+			const creditHTML = `<div style="margin-top: 0.25em;">${creatorsStringHTML}\u201C${fancyQuotesEmbedded(chartTitle)}\u201D</div>`;
+			
+			// Create caption HTML with left align and indentation
+			const captionHTML = `<div class="activity-image-caption" style="padding-left: 2em; margin-bottom: 1em;">${descriptionHTML}${creditHTML}</div>`;
 			
 			// Insert caption after the chart div
 			chartDiv.after(captionHTML);
