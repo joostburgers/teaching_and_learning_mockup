@@ -1021,7 +1021,7 @@
 	"title": "Percent Narrative Status per Character in <em>The Sound and the Fury</em>",
 	"year": "2022",
 	"place": null,
-	"description": "Visualizations divides up how often a character appears based on the narrative status in <em>The Sound and the Fury</em>. Two characters appear in the novel almost entirely through the memories of other characters, Mr. Jason Compson and Caddy Compson.",
+	"description": "Visualization divides up how often a character appears based on the narrative status in <em>The Sound and the Fury</em>. Two characters appear in the novel almost entirely through the memories of other characters, Mr. Jason Compson and Caddy Compson.",
 	"chart_id": "chart-narrative-status",
 	"alt_text": "Chart showing the percentage of the narrative statuses of each event for a character.",
 	"repository": {
