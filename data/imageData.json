@@ -991,6 +991,47 @@
   },
 
   {
+	"media_type": "interactive_chart",
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Number of Times Characters Appear Alone in <em>The Sound and the Fury</em>",
+	"year": "2022",
+	"place": null,
+	"description": "Interactive data visualization of the number of times characters appear alone in <em>The Sound and the Fury</em>",
+	"chart_id": "chart-character-alone",
+	"alt_text": "Data visualization of the number of times characters appear alone in <em>The Sound and the Fury</em>",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia",
+	  "url": "https://joostburgers.github.io/dy_data_dog_breakfast/"
+	}
+  },
+  {
+	"media_type": "interactive_chart",
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Percent Narrative Status per Character in <em>The Sound and the Fury</em>",
+	"year": "2022",
+	"place": null,
+	"description": "Interactive data visualization that divides up how often a character appears based on the narrative status in <em>The Sound and the Fury</em>",
+	"chart_id": "chart-narrative-status",
+	"alt_text": "Chart showing the percentage of the narrative statuses of each event for a character.",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia",
+	  "url": "https://joostburgers.github.io/dy_data_dog_breakfast/"
+	}
+  },
+
+  {
 	"media_type": "external_image",
 	"creators": [
 	  {

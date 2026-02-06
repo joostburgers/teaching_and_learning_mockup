@@ -11,6 +11,10 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="https://faulkner.iath.virginia.edu/family/family.css">
 	<link rel="stylesheet" href="../css/learning_module.css">
+
+	<!-- Plotly for charts -->
+	<script src="https://cdn.plot.ly/plotly-2.26.0.min.js" charset="utf-8"></script>
+	<script type="module" src="../js/charts_mills2.js"></script>
 </head>
 <body>
 
@@ -79,7 +83,7 @@
 								Quantitative Analysis
 							</div>
 							<div class="activity-instructions">
-								<p>Using the graph extrapolated from DY data, we can see that Caddy is never alone in the novel.</p><p> This raises the questions:</p>
+								<p>The chart below shows the characters who appear alone throughout the novel. Tellingly, Caddy is not among these.</p><p> This raises the questions:</p>
 								<ul class="activity-list-unordered">
 									<li>Who is she with?</li>
 									<li>Who are her friends?</li>
@@ -90,13 +94,11 @@
 								</ul>
 							</div>
 						</div>
-						<div class="col-5">
-							<div class="activity-image">
-								<div class="thumbnail-container">
-									<img src="../images/screen_capture_DY_character_appears_alone.png" class="img-fluid" alt="character appears alone image">
-								</div>
-								<div class="activity-image-caption"></div>
-							</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<!-- Character Appearances Alone Chart -->
+						<div id="chart-character-alone" style="width:100%;height:400px;"></div>
 						</div>
 					</div>
 				</div>
@@ -416,16 +418,23 @@
 
 							<div class="activity-instructions">
 								<p>Each event in Digital Yoknapatawpha has been labeled with a different narrative status that indicates how that event is related to the reader.</p>
-								<p>The chart on the right breaks down the narrative status of each event by character. It demonstrates what percentage of events about a character are narrated, told, and remembered.</p>
-							</div>
+								<ul class="activity-list-unordered">
+									<li><em>Narrated</em> - third- or first-person narrator</li>
+									<li><em>Remembered</em> - readers are seeing the event as a character is remembering it in his/her mind</li>
+									<li><em>Told</em> - character in the novel or story is telling the event to other(s)</li>
+									<li><em>Hypothesized</em> - a character or characters are constructing a possible version of what happened</li>
+								
+									<li><em>Narration + consciousness</em> - when Faulkner combines third-person and stream-of-consciousness narrative.
+									</li>
+								</ul>
+							<p>The chart below breaks down the narrative status of each event by character. It demonstrates what percentage of events about a character are narrated, remembered, and other.</p>
 						</div>
-						<div class="col-5">
-							<div class="activity-image">
-								<div class="thumbnail-container">
-									<img src="../images/screen_capture_DY_data_percent_narrative_status_per_character.png" alt="Chart showing the percentage of the narrative statuses of each event for a character." class="img-fluid">
-								</div>
-								<div class="activity-image-caption"></div>
-							</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<!-- Narrative Status Chart -->
+						<div id="chart-narrative-status" class="my-4" style="width:100%;height:500px;"></div>
 						</div>
 					</div>
 					<div class="row">

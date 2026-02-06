@@ -99,6 +99,7 @@ function loadImageData() {
 
 
 		setImageCaptions(jsonData);
+		setInteractiveChartCaptions(jsonData);
 
 
 		$('.activity-image').on('click', 'img', function () {
@@ -535,6 +536,43 @@ function setImageCaptions(jsonData) {
 	}
 	)
 };
+
+function setInteractiveChartCaptions(jsonData) {
+	console.log('setInteractiveChartCaptions called');
+	console.log('Total JSON entries:', jsonData.length);
+	
+	// Filter JSON data to get only interactive_chart entries
+	const chartData = jsonData.filter(x => x.media_type === 'interactive_chart');
+	console.log('Interactive chart entries found:', chartData.length);
+	console.log('Chart data:', chartData);
+
+	if (chartData.length === 0) {
+		console.warn('No interactive_chart entries found in JSON data');
+		return;
+	}
+
+	chartData.forEach(chart => {
+		console.log(`Processing chart: ${chart.chart_id}`);
+		const chartDiv = $(`#${chart.chart_id}`);
+		console.log(`Chart div selector: #${chart.chart_id}, found: ${chartDiv.length}`);
+		
+		if (chartDiv.length > 0) {
+			const creatorsString = extractCreators(chart);
+			const creatorsStringHTML = creatorsString !== null ? `by ${creatorsString}` : '';
+			const chartTitle = chart.short_title !== undefined ? chart.short_title : chart.title;
+			
+			// Create caption HTML
+			const captionHTML = `<div class="activity-image-caption">\u201C${fancyQuotesEmbedded(chartTitle)}\u201D ${creatorsStringHTML}</div>`;
+			
+			// Insert caption after the chart div
+			chartDiv.after(captionHTML);
+			
+			console.log(`✓ Caption added for chart: ${chart.chart_id}`);
+		} else {
+			console.log(`✗ Chart div not found: ${chart.chart_id}`);
+		}
+	});
+}
 
 function setElementMetaData(element, data) {
 
