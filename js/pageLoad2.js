@@ -99,6 +99,7 @@ function loadImageData() {
 
 
 		setImageCaptions(jsonData);
+		setInteractiveChartCaptions(jsonData);
 
 
 		$('.activity-image').on('click', 'img', function () {
@@ -535,6 +536,47 @@ function setImageCaptions(jsonData) {
 	}
 	)
 };
+
+function setInteractiveChartCaptions(jsonData) {
+	console.log('setInteractiveChartCaptions called');
+	console.log('Total JSON entries:', jsonData.length);
+	
+	// Filter JSON data to get only interactive_chart entries
+	const chartData = jsonData.filter(x => x.media_type === 'interactive_chart');
+	console.log('Interactive chart entries found:', chartData.length);
+	console.log('Chart data:', chartData);
+
+	if (chartData.length === 0) {
+		console.warn('No interactive_chart entries found in JSON data');
+		return;
+	}
+
+	chartData.forEach(chart => {
+		console.log(`Processing chart: ${chart.chart_id}`);
+		const chartDiv = $(`#${chart.chart_id}`);
+		console.log(`Chart div selector: #${chart.chart_id}, found: ${chartDiv.length}`);
+		
+		if (chartDiv.length > 0) {
+			const creatorsString = extractCreators(chart);
+			const creatorsStringHTML = creatorsString !== null ? `${creatorsString}. ` : '';
+			const chartTitle = chart.short_title !== undefined ? chart.short_title : chart.title;
+			
+			// Format similar to modal: description first, then creator and title
+			const descriptionHTML = chart.description !== null && chart.description !== undefined ? `<div class='image-description' style="margin: 0;">${fancyQuotes(chart.description)}</div>` : '';
+			const creditHTML = `<div style="margin: 0;">${creatorsStringHTML}\u201C${fancyQuotesEmbedded(chartTitle)}\u201D</div>`;
+			
+			// Create caption HTML with left align and indentation
+			const captionHTML = `<div class="activity-image-caption" style="padding-left: 2em; margin-bottom: 1em;">${descriptionHTML}${creditHTML}</div>`;
+			
+			// Insert caption after the chart div
+			chartDiv.after(captionHTML);
+			
+			console.log(`✓ Caption added for chart: ${chart.chart_id}`);
+		} else {
+			console.log(`✗ Chart div not found: ${chart.chart_id}`);
+		}
+	});
+}
 
 function setElementMetaData(element, data) {
 

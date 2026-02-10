@@ -1042,6 +1042,7 @@
 	"year": null,
 	"place": null,
 	"description": null,
+	"filename": "HeatHPFig4.jpg",
 	"chart_id": "icon-heatmap-legend",
 	"alt_text": "Legend for the heatmap",
 	"repository": {
