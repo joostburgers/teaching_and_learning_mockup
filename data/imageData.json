@@ -1030,7 +1030,26 @@
 	  "url": "https://joostburgers.github.io/dy_data_dog_breakfast/"
 	}
   },
-
+{
+	"media_type": "interactive_chart",
+	"creators": [
+		{
+			"last_name":null,
+			"first_name": null
+		}
+	],
+	"title": "Heatmap Legend",
+	"year": null,
+	"place": null,
+	"description": null,
+	"chart_id": "icon-heatmap-legend",
+	"alt_text": "Legend for the heatmap",
+	"repository": {
+		"name": null,
+		"place": null,
+		"url": null
+	}
+},
   {
 	"media_type": "external_image",
 	"creators": [
