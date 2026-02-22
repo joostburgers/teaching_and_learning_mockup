@@ -158,6 +158,32 @@
 	}
 
   },
+ {
+	"media_type": "site_photograph",
+
+	"creators": [
+	  {
+		"last_name": "Mullen",
+		"first_name": "Phil"
+	  }
+	],
+	"title": "Aerial Photograph of Oxford, Looking North (zoomed)",
+	"year": "1949",
+	"place": "Oxford, Mississippi",
+	"description": "Aerial photograph of the town of Oxford, Mississippi. The layout of the town is similar to that of the fictional town of Jefferson.",
+	"filename": "site_photograph_aerial_photograph_oxford_zoom.jpg",
+
+	"alt_text": "Aerial photograph of the town of Oxford, Mississippi. The layout of the town is similar to that of the fictional town of Jefferson.",
+	"repository": {
+	  "name": "University of Tennessee Libraries, Special Collections.",
+	  "collection": "Clarence Brown Papers",
+	  "accession": "MS.0702",
+	  "place": "Knoxville, TN",
+	  "url": null
+	}
+
+  },
+
 
   {
 	"media_type": "site_photograph",
