@@ -419,6 +419,90 @@
 	"full_demo_title": null
   },
 
+  {
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Video Tutorial of Locations and Events on the Main Map Display",
+	"description": "Instructional video for understanding how to access Location records and play events with Elly as the example text.",
+	"duration": "00:00:25",
+	"file_size": "2.75 MB",
+	"created": "2026-03-18T00:00:00Z",
+	"filename": "video_tutorial_main_map_display_locations_and_events_elly.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Quick Tutorial",
+	"tool": "Main Map: Locations and Events",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Instructional video for understanding how to access Location records and play events with Elly as the example text.",
+	"url": "https://faulkner.iath.virginia.edu/?text=ELY",
+	"full_demo_url": null,
+	"full_demo_duration": null,
+	"full_demo_title": null
+  },
+
+
+{
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Video Tutorial of Characters on the Main Map Display",
+	"description": "Instructional video for understanding how to access Character records with Elly as the example text.",
+	"duration": "00:00:18",
+	"file_size": "1.9 MB",
+	"created": "2026-03-18T00:00:00Z",
+	"filename": "video_tutorial_main_map_display_characters_elly.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Quick Tutorial",
+	"tool": "Main Map: Characters",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Instructional video for understanding how to access Character records with Elly as the example text.",
+	"url": "https://faulkner.iath.virginia.edu/?text=ELY",
+	"full_demo_url": null,
+	"full_demo_duration": null,
+	"full_demo_title": null
+  },
+
+{
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Video Tutorial of Heatmap on the Main Map Display",
+	"description": "Instructional video for understanding how to toggle the Heatmap function with Elly as the example text.",
+	"duration": "00:00:13",
+	"file_size": "1.0 MB",
+	"created": "2026-03-18T00:00:00Z",
+	"filename": "video_tutorial_main_map_display_heatmaps_elly.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Quick Tutorial",
+	"tool": "Main Map: Characters",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Instructional video for understanding how toggle the Heatmap function with Elly as the example text.",
+	"url": "https://faulkner.iath.virginia.edu/?text=ELY",
+	"full_demo_url": null,
+	"full_demo_duration": null,
+	"full_demo_title": null
+  },
 
   {
 
