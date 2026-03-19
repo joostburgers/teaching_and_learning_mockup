@@ -1,0 +1,163 @@
+STRUCTURAL ISSUES IN BURGERS1-4.HTML
+=====================================
+Identified: 2026-03-19
+Status: NOT YET FIXED — for manual implementation
+
+NOTE: These are div nesting/structure issues. A separate CSS fix is also needed
+for print layout (see bottom of file).
+
+==============================================================================
+BURGERS1.HTML
+==============================================================================
+
+ISSUE 1 — Line 92
+  The <h2 class="content_sub_title">Activities</h2> is a bare child of .main.
+  It should be wrapped in <div class="lesson-section"> like the Preface section
+  at line 52 (and like burgers2 line 98, burgers3 line 89).
+  FIX: Add <div class="lesson-section"> before line 92 and close it with </div>
+  after all activity divs end (before "Final Product" lesson-section at line 527).
+
+ISSUE 2 — Lines 323–340
+  Activity 3 "Respond: Intersecting Biographies":
+  <div class="activity-instructions"> is opened INSIDE the still-open
+  <div class="activity-instructions-title"> (line 323).
+  The <ol> that follows is also trapped inside the title div.
+  FIX: Close the activity-instructions-title div before opening activity-instructions
+  as a sibling, not a child.
+
+ISSUE 3 — Lines 418–430
+  Activity 4 "Respond: Heatmaps":
+  Same error as Issue 2 — <div class="activity-instructions"> and the <ol> are
+  nested inside the still-open <div class="activity-instructions-title">.
+  FIX: Same as Issue 2 — close the title div before opening the instructions div.
+
+ISSUE 4 — Lines 432–433
+  Two </div> tags at column 0 (root indentation) inside Activity 4.
+  These escape the normal container hierarchy and prematurely close parent divs.
+  FIX: Remove these or relocate them to properly close Activity 4's structure.
+
+ISSUE 5 — Line 434
+  <div class="activity"> for Activity 5 "Narrative Analysis" opens at column 0
+  (body root level), not inside .container > .main.
+  FIX: Re-indent and re-nest inside .main correctly.
+
+ISSUE 6 — Line 527
+  <div class="lesson-section"> for "Final Product" is indented 24 spaces,
+  meaning it is nested inside Activity 5's unclosed structure.
+  It should be a direct child of .main at 12 spaces — same level as the
+  Preface lesson-section at line 52.
+  FIX: Close all open activity/container divs before this line, then move
+  lesson-section to correct nesting level.
+
+ISSUE 7 — Lines 592–593
+  Two orphan </div> tags after the Teaching Resources closing div.
+  These are closing Activity 5 divs that were never properly closed before
+  Final Product/Teaching Resources were opened inside them.
+  FIX: Remove once Activity 5 is properly restructured (see Issues 4–6).
+
+==============================================================================
+BURGERS2.HTML
+==============================================================================
+
+ISSUE 1 — Lines 474–487
+  Activity 4 "Respond: Heatmaps":
+  <div class="activity-instructions"> (line 476) opens inside the still-open
+  <div class="activity-instructions-title"> (line 474).
+  The <ol> is also inside the title div.
+  Same structural error as burgers1 Issues 2 and 3.
+  FIX: Close the title div before opening the instructions div as a sibling.
+
+ISSUE 2 — Line 492
+  <div class="activity"> for Activity 5 "Narrative Analysis" is at column 0
+  (root level).
+  Same root-level escape as burgers1 line 434.
+  FIX: Re-nest inside .main correctly; check matching </div> tags below.
+
+==============================================================================
+BURGERS3.HTML
+==============================================================================
+
+ISSUE 1 — Lines 526–545
+  Activity 4 "Respond: Heatmaps":
+  <div class="activity-instructions"> (line 528) opens inside the still-open
+  <div class="activity-instructions-title"> (line 526).
+  The <ol> is also inside the title div.
+  Same structural error as burgers1 and burgers2.
+  FIX: Close the title div before opening the instructions div as a sibling.
+
+ISSUE 2 — Line 546
+  <div class="activity"> for Activity 5 "Narrative Analysis" is at column 0
+  (root level).
+  Same root-level escape as burgers1 and burgers2.
+  FIX: Re-nest inside .main correctly.
+
+==============================================================================
+BURGERS4.HTML
+==============================================================================
+
+ISSUE 1 — Line 74
+  <h2 class="content_sub_title">Activities</h2> is a bare child of .main,
+  not wrapped in <div class="lesson-section">.
+  Same issue as burgers1 line 92.
+  FIX: Wrap in <div class="lesson-section"> and close it before "Final Product".
+
+ISSUE 2 — Lines 202–218
+  Activity 2 "Characters at Events" has two compounded errors:
+  (a) <h3 class="activity-title"> (line 204) is placed INSIDE
+      <div class="activity-section"> (line 203) — it should be a direct child
+      of <div class="activity">, not inside an activity-section.
+  (b) A second <div class="activity-section"> (line 205) is nested directly
+      inside the first one at line 203, creating activity-section inside
+      activity-section.
+  FIX: Move <h3 class="activity-title"> outside/before the activity-section;
+  remove the duplicate nested activity-section.
+
+ISSUE 3 — Lines 314–318
+  <div class="activity"> for Activity 3 "Deep Histories of Place" is at column 0
+  (root level). Additionally, <h3 class="activity-title"> (line 316) is inside
+  the first <div class="activity-section"> (line 315) instead of being a direct
+  child of <div class="activity">.
+  FIX: Re-nest activity div inside .main; move h3 above the activity-section.
+
+ISSUE 4 — Line 735
+  <div class="lesson-section"> for "Teaching Resources" is at column 0 (root
+  level), while "Final Product" at line 663 is correctly inside .main at 12
+  spaces. These two lesson-sections are at different DOM depths.
+  FIX: Re-indent Teaching Resources to match Final Product's nesting level.
+
+==============================================================================
+CROSS-CUTTING CSS NOTE (separate from div structure issues)
+==============================================================================
+
+ROOT CAUSE OF INVISIBLE PRINT CONTENT:
+  Bootstrap 4's .row { display: flex } persists into print mode.
+  Content inside .row > .col collapses and becomes invisible when printing.
+  The @media print block in css/learning_module.css has no override for .row or .col.
+
+  Content that sits DIRECTLY inside .activity-section (not inside a .row) DOES print.
+  This is why burgers3 Activity 1 Overview text prints but the Preface (in a .row) does not.
+
+RECOMMENDED FIX in css/learning_module.css, inside @media print { ... }:
+  .row {
+      display: block;
+  }
+  .col, [class*="col-"] {
+      width: 100%;
+      flex: none;
+  }
+
+BIAXIAL PLOT AXIS LINES (disappear in print):
+  Axis lines in the biaxial plot are rendered as background-color on
+  position:absolute divs. Browsers suppress background colors/images in print
+  by default (unless user enables "Print backgrounds").
+
+  RECOMMENDED FIX in css/biaxial-plot.css, add a new @media print block:
+  @media print {
+      #biaxial-plot > div[style*="background:#ccc"] {
+          background-color: #333 !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+      }
+  }
+  OR: change the axis line divs in the HTML to use border-top / border-left
+  instead of background-color (border styles do print by default).
