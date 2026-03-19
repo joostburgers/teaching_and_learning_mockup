@@ -753,19 +753,48 @@ div.google-slides-container iframe {
 		background: white;
 	}
 
+	.container,
+	.row,
+	[class^="col-"],
+	[class*=" col-"],
+	.col {
+		display: block !important;
+		float: none !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		flex: none !important;
+	}
+
 	.content, .main {
 		width: 100%;
 		margin: 0;
 		padding: 0;
 	}
 
-	img, .activity-image-caption {
+	.activity-image img,
+	.thumbnail-container > img,
+	.activity-image-caption {
 		width: 50%;
 		height: auto;
 		page-break-inside: avoid;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.activity-instructions img[style*="max-height: 1em"],
+	.activity-list img[style*="max-height: 1em"],
+	.activity-list-unordered img[style*="max-height: 1em"],
+	ol img[style*="max-height: 1em"],
+	ul img[style*="max-height: 1em"] {
+		display: inline !important;
+		width: auto !important;
+		height: 1em !important;
+		max-width: 1em !important;
+		max-height: 1em !important;
+		margin: 0 0.1em !important;
+		vertical-align: middle !important;
+		page-break-inside: avoid;
 	}
 
 	/* Hide elements that are not necessary for the print version */
@@ -775,10 +804,46 @@ div.google-slides-container iframe {
 
 	.glance-overlay {
 		position: relative;
+		top: auto;
+		left: auto;
+		right: auto;
+		bottom: auto;
+		display: block;
+		padding: 0;
 	}
 
 	.glance-title-container {
 		position: relative;
+		top: auto;
+		left: auto;
+		right: auto;
+		background: none;
+		backdrop-filter: none;
+	}
+
+	.banner-container,
+	#lessonGlance,
+	#lessonGlance * {
+		filter: none !important;
+		backdrop-filter: none !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	#lessonGlance {
+		overflow: visible !important;
+	}
+
+	.main .activity-section,
+	.main .activity-instructions,
+	.main .activity-instructions-title,
+	.main .activity-list,
+	.main .activity-list li,
+	.main p {
+		visibility: visible !important;
+		opacity: 1 !important;
+		color: #000 !important;
+		background: transparent !important;
 	}
 
 	.glance-title, .glance-subtitle, .glance-meta {
@@ -807,12 +872,18 @@ div.google-slides-container iframe {
 		page-break-after: auto;
 	}
 
-	h1, h2, h3, h4, h5, h6, div.activity-instructions-title {
+	h1, h2, h3, h4, h5, h6, .activity-title, .activity-subtitle, div.activity-instructions-title {
 		page-break-after: avoid;
 	}
 
-	ol > li, ul {
-		page-break-inside: avoid;
+	.activity-section,
+	.activity-instructions,
+	ol,
+	ul,
+	li,
+	p {
+		page-break-inside: auto;
+		break-inside: auto;
 	}
 
 	.chart-container {
