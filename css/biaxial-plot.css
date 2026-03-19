@@ -1,0 +1,82 @@
+/* Biaxial Character Plot — shared styles for the Gender & Modernization cluster */
+
+#char-bank {
+    border: 2px dashed #aaa;
+    border-radius: 6px;
+    padding: 0.4rem;
+    background: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.biaxial-token {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: grab;
+    user-select: none;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    font-family: 'Trebuchet MS', Tahoma, Verdana, Arial, sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.biaxial-token-icon {
+    height: 1.1em;
+    width: 1.1em;
+    flex-shrink: 0;
+}
+
+.biaxial-token-label {
+    font-size: 0.7rem;
+}
+
+.biaxial-token:active {
+    cursor: grabbing;
+}
+
+.biaxial-token-bank {
+    background: #dddddd;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.biaxial-token-plot {
+    background: #dddddd;
+    color: #000;
+    border: 1px solid #000;
+    position: absolute;
+    z-index: 10;
+}
+
+#biaxial-plot {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 2px solid #333;
+    background: #fff;
+    overflow: hidden;
+    cursor: crosshair;
+    min-width: 0;
+}
+
+#biaxial-save-btn {
+    padding: 0.4rem 0.8rem;
+    background: #dddddd;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: 'Trebuchet MS', Tahoma, Verdana, Arial, sans-serif;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+#biaxial-save-btn:hover {
+    background: #c8c8c8;
+}
