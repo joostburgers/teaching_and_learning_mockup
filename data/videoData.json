@@ -504,6 +504,91 @@
 	"full_demo_title": "A brief orientation tour of Digital Yoknapatawpha"
   },
 
+{
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Video Tutorial of Characters by Location in Events",
+	"description": "Instructional video for the characters by location in events visualization with Lion as the example text.",
+	"duration": "00:00:23",
+	"file_size": "1.1 MB",
+	"created": "2026-03-20T00:00:00Z",
+	"filename": "video_tutorial_characters_by_location_in_events.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Quick Tutorial",
+	"tool": "Characters by Location in Events Graph",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Instructional video for the characters by location in events visualization with Lion as the example text.",
+	"url": "https://faulkner.iath.virginia.edu/characters-graph.html",
+	"full_demo_url": null,
+	"full_demo_duration": null,
+	"full_demo_title": null
+  },
+
+{
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Video Tutorial of character demographics",
+	"description": "Instructional video for a demographic overview of characters with Uncle Willy as the example text.",
+	"duration": "00:00:14",
+	"file_size": "1.1 MB",
+	"created": "2026-03-20T00:00:00Z",
+	"filename": "video_tutorial_characters_demographic.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Quick Tutorial",
+	"tool": "Main Map Display: All Characters",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Instructional video for a demographic overview of characters with Uncle Willy as the example text.",
+	"url": "https://faulkner.iath.virginia.edu/?text=UW",
+	"full_demo_url": "https://faulkner.iath.virginia.edu/demo/FirstArrival.mp4",
+	"full_demo_duration": "4:36",
+	"full_demo_title": "A brief orientation tour of Digital Yoknapatawpha"
+  },
+
+{
+
+	"creators": [
+	  {
+		"last_name": "Burgers",
+		"first_name": "Johannes"
+	  }
+	],
+	"title": "Video Tutorial of cumulative locations",
+	"description": "Instructional video for cumulative locations through the main map display with Lion as the example text.",
+	"duration": "00:00:20",
+	"file_size": "2.5 MB",
+	"created": "2026-03-20T00:00:00Z",
+	"filename": "video_tutorial_cumulative_locations.mp4",
+	"media_type": "quick_tutorial",
+	"media_label": "Quick Tutorial",
+	"tool": "Main Map Display: Cumulative Locations",
+	"repository": {
+	  "name": "Digital Yoknapatawpha",
+	  "place": "University of Virginia"
+	},
+	"alt_text": "Instructional video for a demographic overview of characters with Lion as the example text.",
+	"url": "https://faulkner.iath.virginia.edu/?text=LIO",
+	"full_demo_url": "https://faulkner.iath.virginia.edu/demo/FirstArrival.mp4",
+	"full_demo_duration": "4:36",
+	"full_demo_title": "A brief orientation tour of Digital Yoknapatawpha"
+  },
+
+
   {
 
 	"creators": [
@@ -525,7 +610,7 @@
 	  "name": "Digital Yoknapatawpha",
 	  "place": "University of Virginia"
 	},
-	"alt_text": "nstructional video for demonstrating the basic functionality of the genealogies commentaries",
+	"alt_text": "Instructional video for demonstrating the basic functionality of the genealogies commentaries",
 	"url": "http://faulkner.iath.virginia.edu/family/",
 	"full_demo_url": "http://faulkner.iath.virginia.edu/demo/GenealogiesDemo.mp4",
 	"full_demo_duration": "07:28",
