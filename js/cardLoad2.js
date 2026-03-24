@@ -16,13 +16,13 @@ function getCards() {
 
 			populateFilter(data, "paired_author", "paired texts")
 			populateFilter(data, "story", "stories");
-			populateFilter(data, "module_type", "module types");
+			populateFilter(data, "theme", "themes");
 			populateFiltersFromCommonCore(data, "common_core", "common core")
 
 			
 			defineCheckboxes("story")
 			defineCheckboxes("paired_author")
-			defineCheckboxes("module_type")
+			defineCheckboxes("theme")
 			defineCommonCoreCheckboxes()
 
 
@@ -35,7 +35,7 @@ function getCards() {
 				filterCards(data);
 			})
 
-			$("#module_type-filters input[type='checkbox']").on('change', function () {
+			$("#theme-filters input[type='checkbox']").on('change', function () {
 				filterCards(data);
 			})
 
@@ -333,7 +333,7 @@ function filterCards(data) {
 	var cards = data;
 	var selectedStories = [];
 	var selectedAuthors = [];
-	var selectedTypes = [];
+	var selectedThemes = [];
 	var searchStrings=[];
 	
 	if ($('#enableStateStandardsToggle').is(':checked')) {
@@ -363,9 +363,9 @@ function filterCards(data) {
 		
 	});
 
-	$("#module_type-filters input[type='checkbox']:checked").each(function () {
+	$("#theme-filters input[type='checkbox']:checked").each(function () {
 		if (!this.indeterminate) {
-			selectedTypes.push($(this).val());
+			selectedThemes.push($(this).val());
 		}
 	});
 
@@ -375,7 +375,7 @@ function filterCards(data) {
 	var filteredCards = cards.filter(function (card) {
 		var storyMatch = selectedStories.includes("all") || (card.story && card.story.some(storyObj => selectedStories.includes(storyObj.title)));
 		var authorMatch = selectedAuthors.includes("all") || (card.paired_author && card.paired_author.some(paired_authorObj=>selectedAuthors.includes(paired_authorObj.title)));
-		var typeMatch = selectedTypes.includes("all") || selectedTypes.includes(card.module_type);
+		var typeMatch = selectedThemes.includes("all") || (card.theme && card.theme.some(t => selectedThemes.includes(t)));
 
 		// If State Standards Toggle is checked, further filter by Common Core search strings
 		var commonCoreMatch = !$('#enableStateStandardsToggle').is(':checked'); // Assume true if toggle is not checked
