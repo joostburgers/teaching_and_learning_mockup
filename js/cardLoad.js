@@ -388,6 +388,10 @@ function filterCards(data) {
 		}
 	});
 
+	if (selectedStories.length === 0) selectedStories.push("all");
+	if (selectedAuthors.length === 0) selectedAuthors.push("all");
+	if (selectedThemes.length === 0) selectedThemes.push("all");
+
 	// Filter cards based on selected filters
 	var filteredCards = cards.filter(function (card) {
 		var storyMatch = selectedStories.includes("all") || (card.story && card.story.some(storyObj => selectedStories.includes(storyObj.title)));
@@ -417,9 +421,12 @@ function filterCards(data) {
 	// Display filtered cards
 	var cardContainer = $("#card-container");
 	cardContainer.empty();
+	$('#result-count').text(`Showing ${filteredCards.length} of ${data.length} module${filteredCards.length !== 1 ? 's' : ''}`);
 
-
-
+	if (filteredCards.length === 0) {
+		cardContainer.append('<p class="text-muted p-3">No modules match the selected filters.</p>');
+		return;
+	}
 
 	$.each(filteredCards, function (index, card) {
 
@@ -438,7 +445,7 @@ function filterCards(data) {
 
 		const urlHTML = card.url ? card.url : `pages/${card.filename}`;
 
-		const imageHTML = `<img src="images/${((card.image.card == "") ? 'background2.png' : card.image.card)}" class="card-img-top">`
+		const imageHTML = `<img src="images/${((card.image.card === "") ? 'background2.png' : card.image.card)}" class="card-img-top">`
 
 		const titleFancy = fancyQuotes(card.title);
 
