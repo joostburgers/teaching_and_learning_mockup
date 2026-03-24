@@ -91,7 +91,7 @@ function loadModal() {
  * Loads image data from a JSON file and sets up click event listeners for image modals.
  */
 function loadImageData() {
-	const imageDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/imageData.json';
+	const imageDataURL = '../data/imageData.json';
 
 	// Get the JSON data via AJAX request
 	$.getJSON(imageDataURL, function (jsonData) {
@@ -126,7 +126,7 @@ function loadImageData() {
 }
 
 function loadCarouselImageData() {
-	const carouselDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/imageData.json';
+	const carouselDataURL = '../data/imageData.json';
 
 	// Get the JSON data via AJAX request
 	$.getJSON(carouselDataURL, function (jsonData) {
@@ -162,7 +162,7 @@ function loadCarouselImageData() {
  * Loads videos data from a JSON file and sets up click event listeners for video modals.
  */
 function loadVideoData() {
-	const videoDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/videoData.json';
+	const videoDataURL = '../data/videoData.json';
 
 
 
@@ -672,7 +672,7 @@ function setVideoCaptions(jsonData) {
 function loadLessonData() {
 
 
-	const lessonDataURL = 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/lessonData2.json';
+	const lessonDataURL = '../data/lessonData.json';
 	$.getJSON(lessonDataURL, function (jsonData) {
 		
 		const lessonData = getLessonData(jsonData);

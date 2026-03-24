@@ -9,31 +9,32 @@
 function getCards() {
 
 	$.ajax({
-		url: 'https://raw.githubusercontent.com/joostburgers/teaching_and_learning_mockup/master/data/lessonData.json',
+		url: 'data/lessonData.json',
 		dataType: 'json',
 		async: true,
 		success: function (data) {
 
 			populateFilter(data, "paired_author", "paired texts")
 			populateFilter(data, "story", "stories");
+			populateFilter(data, "theme", "themes");
 			populateFiltersFromCommonCore(data, "common_core", "common core")
 
-			//populateFilter(data, "modality", "Formats");
 			defineCheckboxes("story")
-			/*defineCheckboxes("modality")*/
 			defineCheckboxes("paired_author")
+			defineCheckboxes("theme")
 			defineCommonCoreCheckboxes()
 
 
 			filterCards(data);
 			$("#story-filters input[type='checkbox']").on('change', function () {
-				console.log("story filters changed")
-
-				
 				filterCards(data);
 			})
 			
 			$("#paired_author-filters input[type='checkbox']").on('change', function () {
+				filterCards(data);
+			})
+
+			$("#theme-filters input[type='checkbox']").on('change', function () {
 				filterCards(data);
 			})
 
@@ -325,101 +326,80 @@ function defineCommonCoreCheckboxes() {
 
 
 
+function constructCommonCoreSearchStrings(data) {
+    const selectedCategories = collectSelectedValues('.single-categories');
+    const selectedGradeLevels = collectSelectedValues('.single-gradeLevels');
+    const selectedStandards = collectSelectedValues('.single-standards');
+    let searchStrings = new Set();
+    data.forEach(card => {
+        if (card.common_core) {
+            card.common_core.forEach(code => {
+                const parts = code.split('.');
+                const category = parts[0];
+                const gradeLevel = parts[1];
+                const standard = parts[parts.length - 1];
+                if ((selectedCategories.length === 0 || selectedCategories.includes(category)) &&
+                    (selectedGradeLevels.length === 0 || selectedGradeLevels.includes(gradeLevel)) &&
+                    (selectedStandards.length === 0 || selectedStandards.includes(standard))) {
+                    searchStrings.add(code);
+                }
+            });
+        }
+    });
+    return Array.from(searchStrings);
+}
+function collectSelectedValues(selector) {
+        return $(selector).filter(':checked').map(function () { return this.value; }).get();
+}
+
 // Function to filter and display the information cards based on selected filters
 function filterCards(data) {
 
 	var cards = data;
 	var selectedStories = [];
 	var selectedAuthors = [];
-	let searchStrings = [];
+	var selectedThemes = [];
+	var searchStrings = [];
 	if ($('#enableStateStandardsToggle').is(':checked')) {
 		searchStrings = constructCommonCoreSearchStrings(data);
 	}
-	console.log("searchStrings", searchStrings)
-	function constructCommonCoreSearchStrings(data) {
-		// Helper function to collect selected values from checkboxes
-		const collectSelectedValues = (selector) => {
-			return $(selector).filter(':checked').map(function () { return this.value; }).get();
-		};
-
-		// Collect selected values for each part of the Common Core standards
-		const selectedCategories = collectSelectedValues('.single-categories');
-		const selectedGradeLevels = collectSelectedValues('.single-gradeLevels');
-		const selectedStandards = collectSelectedValues('.single-standards');
-
-		// Initialize an empty set to store unique search strings
-		let searchStrings = new Set();
-
-		// Iterate over the data to find common_core codes that match the selected filters
-		data.forEach(card => {
-			if (card.common_core) {
-				card.common_core.forEach(code => {
-					const parts = code.split('.');
-					const category = parts[0];
-					const gradeLevel = parts[1];
-					const standard = parts[parts.length - 1];
-
-					// Check if the current code matches any of the selected filters
-					if ((selectedCategories.length === 0 || selectedCategories.includes(category)) &&
-						(selectedGradeLevels.length === 0 || selectedGradeLevels.includes(gradeLevel)) &&
-						(selectedStandards.length === 0 || selectedStandards.includes(standard))) {
-						// If it matches, add the code to the set of search strings
-						searchStrings.add(code);
-					}
-				});
-			}
-		});
-
-		// Convert the set to an array and return it
-		return Array.from(searchStrings);
-	}
 
 
 
 
-
-
-	// Existing code to collect selectedStories and selectedAuthors...
-
-	// Filter cards based on selected filters
 
 
 	// Get selected story filters
 	$("#story-filters input[type='checkbox']:checked").each(function () {
 		if (!this.indeterminate) {
 			selectedStories.push($(this).val());
-			console.log("selectedStories", selectedStories);
 		}
 	});
 
 	$("#paired_author-filters input[type='checkbox']:checked").each(function () {
-		
 		if (!this.indeterminate) {
 			selectedAuthors.push($(this).val());
-			console.log("selectedAuthors", selectedAuthors);
 		}
-		
 	});
 
-	
+	$("#theme-filters input[type='checkbox']:checked").each(function () {
+		if (!this.indeterminate) {
+			selectedThemes.push($(this).val());
+		}
+	});
 
 	// Filter cards based on selected filters
 	var filteredCards = cards.filter(function (card) {
 		var storyMatch = selectedStories.includes("all") || (card.story && card.story.some(storyObj => selectedStories.includes(storyObj.title)));
 		var authorMatch = selectedAuthors.includes("all") || (card.paired_author && card.paired_author.some(paired_authorObj=>selectedAuthors.includes(paired_authorObj.title)));
+		var typeMatch = selectedThemes.includes("all") || (card.theme && card.theme.some(t => selectedThemes.includes(t)));
 
 		// If State Standards Toggle is checked, further filter by Common Core search strings
-		var commonCoreMatch = !$('#enableStateStandardsToggle').is(':checked'); // Assume true if toggle is not checked
+		var commonCoreMatch = !$('#enableStateStandardsToggle').is(':checked');
         if ($('#enableStateStandardsToggle').is(':checked') && searchStrings.length > 0) {
-            // Check if any of the card's common_core codes are included in the searchStrings
-            console.log("commonCoreMatch:", commonCoreMatch);
-            console.log("searchStrings:", searchStrings);
-            commonCoreMatch = card.common_core && card.common_core.some(code => {
-                console.log("code:", code);
-                return searchStrings.includes(code);
-            });
+            commonCoreMatch = card.common_core && card.common_core.some(code => searchStrings.includes(code));
         }
-		return storyMatch && authorMatch && commonCoreMatch;
+		return storyMatch && authorMatch && typeMatch && commonCoreMatch;
 	});
 
 	filteredCards.sort(function (a, b) {
