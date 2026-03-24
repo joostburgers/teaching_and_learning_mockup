@@ -16,11 +16,13 @@ function getCards() {
 
 			populateFilter(data, "paired_author", "paired texts")
 			populateFilter(data, "story", "stories");
+			populateFilter(data, "module_type", "types");
 			populateFiltersFromCommonCore(data, "common_core", "common core")
 
 			
 			defineCheckboxes("story")
 			defineCheckboxes("paired_author")
+			defineCheckboxes("module_type")
 			defineCommonCoreCheckboxes()
 
 
@@ -30,6 +32,10 @@ function getCards() {
 			})
 			
 			$("#paired_author-filters input[type='checkbox']").on('change', function () {
+				filterCards(data);
+			})
+
+			$("#module_type-filters input[type='checkbox']").on('change', function () {
 				filterCards(data);
 			})
 
@@ -327,6 +333,7 @@ function filterCards(data) {
 	var cards = data;
 	var selectedStories = [];
 	var selectedAuthors = [];
+	var selectedTypes = [];
 	var searchStrings=[];
 	
 	if ($('#enableStateStandardsToggle').is(':checked')) {
@@ -356,12 +363,19 @@ function filterCards(data) {
 		
 	});
 
+	$("#module_type-filters input[type='checkbox']:checked").each(function () {
+		if (!this.indeterminate) {
+			selectedTypes.push($(this).val());
+		}
+	});
+
 	
 
 	// Filter cards based on selected filters
 	var filteredCards = cards.filter(function (card) {
 		var storyMatch = selectedStories.includes("all") || (card.story && card.story.some(storyObj => selectedStories.includes(storyObj.title)));
 		var authorMatch = selectedAuthors.includes("all") || (card.paired_author && card.paired_author.some(paired_authorObj=>selectedAuthors.includes(paired_authorObj.title)));
+		var typeMatch = selectedTypes.includes("all") || selectedTypes.includes(card.module_type);
 
 		// If State Standards Toggle is checked, further filter by Common Core search strings
 		var commonCoreMatch = !$('#enableStateStandardsToggle').is(':checked'); // Assume true if toggle is not checked
@@ -374,7 +388,7 @@ function filterCards(data) {
                 return searchStrings.includes(code);
             });
         }
-		return storyMatch && authorMatch && commonCoreMatch;
+		return storyMatch && authorMatch && typeMatch && commonCoreMatch;
 	});
 
 	filteredCards.sort(function (a, b) {
