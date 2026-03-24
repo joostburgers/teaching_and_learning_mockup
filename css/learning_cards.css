@@ -87,6 +87,15 @@
 	font-weight: bold;
 }
 
+.form-check {
+	display: flex;
+	align-items: center;
+}
+
+.form-check-input {
+	margin-top: 0;
+}
+
 .facet-sub_title {
 	display: block;
 	font-size: 100%;
