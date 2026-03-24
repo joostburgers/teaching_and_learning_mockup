@@ -16,7 +16,7 @@ function getCards() {
 
 			populateFilter(data, "paired_author", "paired texts")
 			populateFilter(data, "story", "stories");
-			populateFilter(data, "module_type", "types");
+			populateFilter(data, "module_type", "module types");
 			populateFiltersFromCommonCore(data, "common_core", "common core")
 
 			
