@@ -5,6 +5,7 @@
 
 #root folders
 handoff/
+handoff_*/
 handoff_*.zip
 
 
